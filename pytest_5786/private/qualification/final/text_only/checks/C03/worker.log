@@ -1,0 +1,15 @@
+{"argv": ["/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/.venv/bin/python", "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/check.py", "--method", "test_C03_missing_traceback", "--output", "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/qualification/final/text_only/checks/C03/observation.json"], "cwd": "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/qualification/final/text_only/workspace"}
+test_C03_missing_traceback (eval_behavior.Behavior) ... ERROR
+
+======================================================================
+ERROR: test_C03_missing_traceback (eval_behavior.Behavior)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/tests/behavior.py", line 192, in test_C03_missing_traceback
+    self.assertEqual(restored.longrepr.reprcrash.message, "ValueError: outer-message-829")
+AttributeError: 'str' object has no attribute 'reprcrash'
+
+----------------------------------------------------------------------
+Ran 1 test in 0.034s
+
+FAILED (errors=1)

@@ -1,0 +1,3 @@
+/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/prepare.py:27: DeprecationWarning: Python 3.14 will, by default, filter extracted tar archives and reject files or modify their metadata. Use the filter argument to control this behavior.
+  archive.extractall(str(destination))
+/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/.artifacts/agent_export

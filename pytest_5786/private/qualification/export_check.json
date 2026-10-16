@@ -1,0 +1,14 @@
+{
+  "extra_files": [
+    "TASK.md",
+    "eval_public.json",
+    "eval_public/test_example.py",
+    "eval_requirements.txt",
+    "src/_pytest/_version.py"
+  ],
+  "commit_count": 1,
+  "remotes": "",
+  "private_files": [],
+  "allowlist_check": "passed",
+  "instruction_matches": true
+}

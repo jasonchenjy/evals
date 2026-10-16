@@ -1,0 +1,23 @@
+{
+  "python": "Python 3.8.20",
+  "interpreter_binary_sha256": "59fa3c3481707fb6b4453a1e98bf596e8dc91495dc937b52bf1b8f2868b05213",
+  "commands": [
+    {
+      "command": "research/benchmark_curation/.python/cpython-3.8.20-macos-aarch64-none/bin/python3.8 -m venv evals/pytest_5786/.venv",
+      "status": 0
+    },
+    {
+      "command": "research/benchmark_curation/.tools/bin/uv pip install --python evals/pytest_5786/.venv/bin/python --cache-dir evals/pytest_5786/.artifacts/uv-cache -r evals/pytest_5786/requirements.txt",
+      "sandbox_attempt_status": 101,
+      "sandbox_error": "macOS system-configuration NULL object panic",
+      "approved_retry_status": 0,
+      "log": "install.log"
+    },
+    {
+      "command": "evals/pytest_5786/.venv/bin/python -m pip uninstall -y pytest iniconfig exceptiongroup tomli typing-extensions",
+      "status": 0,
+      "reason": "Remove automatically resolved PyPI pytest/transitives; final environment imports historical source. Future bootstrap specifies --no-deps."
+    }
+  ],
+  "bootstrap_recommendation": "Use --no-deps with complete pinned requirements, never resolve modern pytest automatically."
+}

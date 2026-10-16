@@ -1,0 +1,60 @@
+{
+  "passed": true,
+  "meaning": "Public exported examples reproduce original serial/xdist discrepancy on base; two intentional failures in each mode",
+  "runs": [
+    {
+      "command": [
+        "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/.venv/bin/python",
+        "-m",
+        "pytest",
+        "--color=no",
+        "-q",
+        "--tb=long",
+        "eval_public/test_example.py"
+      ],
+      "cwd": "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/.artifacts/agent_export",
+      "returncode": 1,
+      "timeout": false,
+      "elapsed_seconds": 0.1820324579894077,
+      "log": "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/qualification/public_examples/serial/output.log",
+      "expected_intentional_failures": 2,
+      "exception_message_presence": {
+        "11": true,
+        "12": true,
+        "13": true,
+        "21": true,
+        "22": true,
+        "23": true
+      }
+    },
+    {
+      "command": [
+        "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/.venv/bin/python",
+        "-m",
+        "pytest",
+        "--color=no",
+        "-q",
+        "--tb=long",
+        "-p",
+        "xdist.plugin",
+        "-n",
+        "1",
+        "eval_public/test_example.py"
+      ],
+      "cwd": "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/.artifacts/agent_export",
+      "returncode": 1,
+      "timeout": false,
+      "elapsed_seconds": 0.4001625420060009,
+      "log": "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/qualification/public_examples/xdist/output.log",
+      "expected_intentional_failures": 2,
+      "exception_message_presence": {
+        "11": false,
+        "12": false,
+        "13": true,
+        "21": false,
+        "22": false,
+        "23": true
+      }
+    }
+  ]
+}

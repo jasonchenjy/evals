@@ -1,0 +1,93 @@
+{"argv": ["/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/.venv/bin/python", "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/check.py", "--method", "test_H01_historical_focused", "--output", "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/qualification/run_01/noop/checks/H01/observation.json"], "cwd": "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/qualification/run_01/noop/workspace"}
+test_H01_historical_focused (eval_behavior.Behavior) ... FAIL
+
+======================================================================
+FAIL: test_H01_historical_focused (eval_behavior.Behavior)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/tests/behavior.py", line 234, in test_H01_historical_focused
+    self.assertEqual(result.returncode, 0, result.stdout[-4000:])
+AssertionError: 1 != 0 :        [100%]
+=================================== FAILURES ===================================
+_________ TestReportSerialization.test_chained_exceptions[TestReport] __________
+../../../../../../workspace/testing/test_reports.py:308: in test_chained_exceptions
+    check_longrepr(loaded_report.longrepr)
+../../../../../../workspace/testing/test_reports.py:285: in check_longrepr
+    assert isinstance(longrepr, ExceptionChainRepr)
+E   AssertionError: assert False
+E    +  where False = isinstance(<<class '_pytest._code.code.ReprExceptionInfo'> instance at 1090682e0>, ExceptionChainRepr)
+----------------------------- Captured stdout call -----------------------------
+============================= test session starts ==============================
+platform darwin -- Python 3.8.20, pytest-5.1.0, py-1.8.1, pluggy-0.13.1
+rootdir: /Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/qualification/run_01/noop/checks/H01/tmp/pytest-of-junyuc/pytest-0/test_chained_exceptions0
+collected 1 item
+
+test_chained_exceptions.py F                                             [100%]
+
+=================================== FAILURES ===================================
+____________________________________ test_a ____________________________________
+
+    def test_a():
+        try:
+>           foo()
+
+test_chained_exceptions.py:5: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+    def foo():
+>       raise ValueError('value error')
+E       ValueError: value error
+
+test_chained_exceptions.py:2: ValueError
+
+The above exception was the direct cause of the following exception:
+
+    def test_a():
+        try:
+            foo()
+        except ValueError as e:
+>           raise RuntimeError('runtime error') from e
+E           RuntimeError: runtime error
+
+test_chained_exceptions.py:7: RuntimeError
+============================== 1 failed in 0.02s ===============================
+________ TestReportSerialization.test_chained_exceptions[CollectReport] ________
+../../../../../../workspace/testing/test_reports.py:308: in test_chained_exceptions
+    check_longrepr(loaded_report.longrepr)
+../../../../../../workspace/testing/test_reports.py:285: in check_longrepr
+    assert isinstance(longrepr, ExceptionChainRepr)
+E   AssertionError: assert False
+E    +  where False = isinstance(<<class '_pytest._code.code.ReprExceptionInfo'> instance at 109254850>, ExceptionChainRepr)
+----------------------------- Captured stdout call -----------------------------
+============================= test session starts ==============================
+platform darwin -- Python 3.8.20, pytest-5.1.0, py-1.8.1, pluggy-0.13.1
+rootdir: /Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/qualification/run_01/noop/checks/H01/tmp/pytest-of-junyuc/pytest-0/test_chained_exceptions1
+collected 0 items / 1 errors
+
+==================================== ERRORS ====================================
+_________________ ERROR collecting test_chained_exceptions.py __________________
+test_chained_exceptions.py:5: in test_a
+    foo()
+test_chained_exceptions.py:2: in foo
+    raise ValueError('value error')
+E   ValueError: value error
+
+The above exception was the direct cause of the following exception:
+test_chained_exceptions.py:9: in <module>
+    test_a()
+test_chained_exceptions.py:7: in test_a
+    raise RuntimeError('runtime error') from e
+E   RuntimeError: runtime error
+!!!!!!!!!!!!!!!!!!! Interrupted: 1 errors during collection !!!!!!!!!!!!!!!!!!!!
+=============================== 1 error in 0.02s ===============================
+- generated xml file: /Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/qualification/run_01/noop/checks/H01/historical.xml -
+=========================== short test summary info ============================
+FAILED testing/test_reports.py::TestReportSerialization::test_chained_exceptions[TestReport]
+FAILED testing/test_reports.py::TestReportSerialization::test_chained_exceptions[CollectReport]
+2 failed in 0.09s
+
+
+----------------------------------------------------------------------
+Ran 1 test in 0.218s
+
+FAILED (failures=1)

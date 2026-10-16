@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "method": "test_D02_existing_behavior",
+  "status": "passed",
+  "tests_run": 1,
+  "duration_seconds": 1.175902583,
+  "failures": [],
+  "skips": [],
+  "details": [
+    {
+      "command": [
+        "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/.venv/bin/python",
+        "-m",
+        "pytest",
+        "--color=no",
+        "-q",
+        "--tb=short",
+        "--junitxml=/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/qualification/final/last_only/checks/D02/existing.xml",
+        "testing/test_reports.py",
+        "testing/code/test_code.py",
+        "testing/code/test_excinfo.py",
+        "-k",
+        "not test_chained_exceptions and not test_xdist_longrepr_to_str_issue_241 and not test_deserialization_failure and not test_paths_support and not TestHooks"
+      ],
+      "cwd": "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/qualification/final/last_only/workspace",
+      "returncode": 0,
+      "log": "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/qualification/final/last_only/checks/D02/existing.log"
+    },
+    {
+      "existing_tests": 118,
+      "passed": 118,
+      "skipped": 0
+    }
+  ]
+}

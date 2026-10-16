@@ -1,0 +1,7 @@
+{"argv": ["/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/.venv/bin/python", "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/check.py", "--method", "test_D02_existing_behavior", "--output", "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/qualification/run_01/complete/checks/D02/observation.json"], "cwd": "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/qualification/run_01/complete/workspace"}
+test_D02_existing_behavior (eval_behavior.Behavior) ... ok
+
+----------------------------------------------------------------------
+Ran 1 test in 1.146s
+
+OK

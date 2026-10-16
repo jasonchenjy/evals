@@ -1,0 +1,39 @@
+[
+  {
+    "case": "isolation_refusal",
+    "command": [
+      "/opt/homebrew/opt/python@3.13/bin/python3.13",
+      "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/grader.py",
+      "--repo",
+      "/Users/junyuc/Documents/interview/SWE-bench/pytest",
+      "--python",
+      "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/.venv/bin/python",
+      "--patch",
+      "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/oracle/noop.patch",
+      "--output",
+      "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/qualification/isolation_refusal"
+    ],
+    "returncode": 2,
+    "status": "error",
+    "error": "RuntimeError: Execution requires an external isolation facility. --trusted-local only acknowledges reviewed qualification controls; it does not create a sandbox."
+  },
+  {
+    "case": "wrong_python",
+    "command": [
+      "/opt/homebrew/opt/python@3.13/bin/python3.13",
+      "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/grader.py",
+      "--repo",
+      "/Users/junyuc/Documents/interview/SWE-bench/pytest",
+      "--python",
+      "/opt/homebrew/opt/python@3.13/bin/python3.13",
+      "--patch",
+      "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/oracle/noop.patch",
+      "--output",
+      "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/qualification/wrong_python",
+      "--trusted-local"
+    ],
+    "returncode": 2,
+    "status": "error",
+    "error": "RuntimeError: Base environment preflight failed; see preflight.log"
+  }
+]

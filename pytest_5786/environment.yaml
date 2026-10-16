@@ -1,0 +1,83 @@
+{
+  "schema_version": 1,
+  "visibility": "runtime-controller-only; export only prepare.py allowlist",
+  "python": "3.8.20",
+  "dependencies": {
+    "manifest": "requirements.txt",
+    "installation": "python -m pip install --no-deps -r requirements.txt",
+    "offline_installation": "python -m pip install --no-index --find-links=/wheelhouse --no-deps -r requirements.txt",
+    "network": "Initial interpreter/wheel provisioning only; runtime must block network during trials and grading",
+    "do_not_install_pypi_pytest": true
+  },
+  "repository": {
+    "url": "https://github.com/pytest-dev/pytest",
+    "base_commit": "955e54221008aba577ecbaefa15679f6777d3bf8",
+    "bootstrap": "python prepare.py --repo /trusted/pytest --destination /fresh/agent-workspace",
+    "verification": "base_files.json SHA256 for every archived regular file before generated version shim",
+    "packaging_shim": {
+      "path": "src/_pytest/_version.py",
+      "version": "5.1.0",
+      "meaning": "release-family bootstrap value, not exact commit release version"
+    },
+    "history": "One synthetic baseline commit; no upstream Git history, remote, reference or curator metadata"
+  },
+  "agent_workspace": {
+    "export_allowlist": [
+      "base snapshot",
+      "TASK.md",
+      "eval_public/",
+      "eval_requirements.txt",
+      "eval_public.json",
+      "one synthetic .git baseline"
+    ],
+    "allowed_submission": "regular UTF-8 Python source changes/additions/deletions under src/, excluding _pytest/_version.py",
+    "writable": [
+      "workspace/src",
+      "workspace local debugging tests and scratch",
+      "per-trial temporary/cache dirs"
+    ],
+    "tools": [
+      "shell",
+      "git",
+      "Python 3.8.20",
+      "pytest via python -m pytest"
+    ],
+    "limits": {
+      "wall_seconds": 1800,
+      "cpu_cores": 2,
+      "memory_mib": 4096,
+      "disk_mib": 2048,
+      "process_limit": 128,
+      "enforcement": "Next runtime must enforce; local qualifier only enforces subprocess wall timeouts"
+    }
+  },
+  "grading": {
+    "fresh_snapshot_each_submission": true,
+    "private_entry_point": "private/grader.py",
+    "private_tests": "private/tests",
+    "candidate_patch_only": true,
+    "private_test_patch": "private/oracle/historical_tests.patch",
+    "network": false,
+    "outer_test_harness": "stdlib unittest; candidate pytest used only for integration and historical checks",
+    "isolation": "External VM/container or equivalent required before running untrusted submissions. venv/temp dirs/--trusted-local are not sandboxes. Controller metadata, reference solutions and results must never be mounted in agent runtime. Mount only required immutable tests in isolated grading worker; no credentials."
+  },
+  "reset": {
+    "fresh_source_and_git": true,
+    "fresh_home_tmp_and_caches": true,
+    "reuse": "Read-only dependency image/wheelhouse only; do not reuse writable venv or workspace across agents",
+    "grading": "Discards agent workspace state; only submitted source diff is applied to a new snapshot"
+  },
+  "determinism": {
+    "PYTEST_DISABLE_PLUGIN_AUTOLOAD": "1",
+    "PYTHONHASHSEED": "0",
+    "PYTHONNOUSERSITE": "1",
+    "PYTHONDONTWRITEBYTECODE": "1",
+    "PY_COLORS": "0",
+    "COLUMNS": "80",
+    "TERM": "dumb",
+    "LC_ALL": "C",
+    "TZ": "UTC",
+    "PYTHONPATH": "<fresh-workspace>/src"
+  },
+  "qualified_platform": "macOS arm64, locally reviewed controls only; Linux/Windows unqualified"
+}

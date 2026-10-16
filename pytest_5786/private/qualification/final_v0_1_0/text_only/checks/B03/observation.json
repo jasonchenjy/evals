@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "method": "test_B03_real_xdist",
+  "status": "passed",
+  "tests_run": 1,
+  "duration_seconds": 0.655005333,
+  "failures": [],
+  "skips": [],
+  "details": [
+    {
+      "command": [
+        "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/.venv/bin/python",
+        "-m",
+        "pytest",
+        "--color=no",
+        "-q",
+        "-p",
+        "xdist.plugin",
+        "-n",
+        "1",
+        "--tb=short",
+        "--junitxml=report.xml",
+        "test_transport.py"
+      ],
+      "cwd": "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/qualification/final_v0_1_0/text_only/checks/B03/call",
+      "returncode": 1,
+      "log": "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/qualification/final_v0_1_0/text_only/checks/B03/call.log"
+    },
+    {
+      "command": [
+        "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/.venv/bin/python",
+        "-m",
+        "pytest",
+        "--color=no",
+        "-q",
+        "-p",
+        "xdist.plugin",
+        "-n",
+        "1",
+        "--tb=short",
+        "--junitxml=report.xml",
+        "test_transport.py"
+      ],
+      "cwd": "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/qualification/final_v0_1_0/text_only/checks/B03/collect",
+      "returncode": 1,
+      "log": "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/qualification/final_v0_1_0/text_only/checks/B03/collect.log"
+    }
+  ]
+}

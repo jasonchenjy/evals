@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "eval_id": "pytest_5786",
+  "eval_version": "0.1.0",
+  "timestamp": "2026-10-16T19:54:22.631849+00:00",
+  "base_commit": "955e54221008aba577ecbaefa15679f6777d3bf8",
+  "overall_resolved": false,
+  "infrastructure_status": "error",
+  "submission_status": "pending",
+  "dimensions": {
+    "original_bug_resolution": {
+      "satisfied": null,
+      "checks": {}
+    },
+    "cross_component_consistency": {
+      "satisfied": null,
+      "checks": {}
+    },
+    "edge_case_robustness": {
+      "satisfied": null,
+      "checks": {}
+    },
+    "non_regression": {
+      "satisfied": null,
+      "checks": {}
+    }
+  },
+  "tests": [],
+  "execution": [],
+  "security_mode": "trusted-local-qualification-not-a-sandbox",
+  "error": "RuntimeError: Execution requires an external isolation facility. --trusted-local only acknowledges reviewed qualification controls; it does not create a sandbox."
+}

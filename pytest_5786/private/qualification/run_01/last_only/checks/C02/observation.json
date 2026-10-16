@@ -1,0 +1,12 @@
+{
+  "schema_version": 1,
+  "method": "test_C02_long_chain_and_render_option",
+  "status": "error",
+  "tests_run": 1,
+  "duration_seconds": 0.070981458,
+  "failures": [
+    "Traceback (most recent call last):\n  File \"/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/tests/behavior.py\", line 173, in test_C02_long_chain_and_render_option\n    self.assert_chain(transport(report(info, kind)), 4,\n  File \"/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/tests/behavior.py\", line 86, in assert_chain\n    positions = [text.index(x) for x in markers]\n  File \"/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/tests/behavior.py\", line 86, in <listcomp>\n    positions = [text.index(x) for x in markers]\nValueError: substring not found\n"
+  ],
+  "skips": [],
+  "details": []
+}

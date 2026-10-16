@@ -1,0 +1,11 @@
+{
+  "issue_url": "https://github.com/pytest-dev/pytest/issues/5786",
+  "original_issue_title": "exception serialization should include chained exceptions",
+  "original_issue_body_sha256": "9cd5e396bdafa7a61c4aa673714981019d8d5768893a38a7105a9d9456aadf62",
+  "research_source": "research/pytest_issues_raw.jsonl",
+  "original_collected_at": "2026-10-16T18:26:49.513646+00:00",
+  "base": "955e54221008aba577ecbaefa15679f6777d3bf8",
+  "historical_merge": "01082fea12649384aab44306f49503de1374c4a1",
+  "later_compatibility_evidence": "0e0006934019aba7a3bbec95e2fac7c1b82d1063",
+  "verified_instance": "pytest-dev__pytest-5787"
+}

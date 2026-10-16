@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites><testsuite errors="0" failures="2" hostname="JDY6VGTDXD-Junyu-Chen" name="pytest" skipped="0" tests="2" time="0.086" timestamp="2026-10-16T19:52:37.502687"><testcase classname="testing.test_reports.TestReportSerialization" file="testing/test_reports.py" line="245" name="test_chained_exceptions[TestReport]" time="0.028"><failure message="AssertionError: assert 1 == 2
+ +  where 1 = len([(&lt;&lt;class &apos;_pytest._code.code.ReprTraceback&apos;&gt; instance at 108ceaf70&gt;, &lt;&lt;class &apos;_pytest._code.code.ReprFileLocation&apos;&gt; instance at 108cea550&gt;, None)])
+ +    where [(&lt;&lt;class &apos;_pytest._code.code.ReprTraceback&apos;&gt; instance at 108ceaf70&gt;, &lt;&lt;class &apos;_pytest._code.code.ReprFileLocation&apos;&gt; instance at 108cea550&gt;, None)] = &lt;&lt;class &apos;_pytest._code.code.ExceptionChainRepr&apos;&gt; instance at 108b6af10&gt;.chain">../../../../../../workspace/testing/test_reports.py:308: in test_chained_exceptions
+    check_longrepr(loaded_report.longrepr)
+../../../../../../workspace/testing/test_reports.py:287: in check_longrepr
+    assert len(longrepr.chain) == 2
+E   AssertionError: assert 1 == 2
+E    +  where 1 = len([(&lt;&lt;class &apos;_pytest._code.code.ReprTraceback&apos;&gt; instance at 108ceaf70&gt;, &lt;&lt;class &apos;_pytest._code.code.ReprFileLocation&apos;&gt; instance at 108cea550&gt;, None)])
+E    +    where [(&lt;&lt;class &apos;_pytest._code.code.ReprTraceback&apos;&gt; instance at 108ceaf70&gt;, &lt;&lt;class &apos;_pytest._code.code.ReprFileLocation&apos;&gt; instance at 108cea550&gt;, None)] = &lt;&lt;class &apos;_pytest._code.code.ExceptionChainRepr&apos;&gt; instance at 108b6af10&gt;.chain</failure><system-out>============================= test session starts ==============================
+platform darwin -- Python 3.8.20, pytest-5.1.0, py-1.8.1, pluggy-0.13.1
+rootdir: /Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/qualification/run_03/last_only/checks/H01/tmp/pytest-of-junyuc/pytest-0/test_chained_exceptions0
+collected 1 item
+
+test_chained_exceptions.py F                                             [100%]
+
+=================================== FAILURES ===================================
+____________________________________ test_a ____________________________________
+
+    def test_a():
+        try:
+&gt;           foo()
+
+test_chained_exceptions.py:5: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+    def foo():
+&gt;       raise ValueError(&apos;value error&apos;)
+E       ValueError: value error
+
+test_chained_exceptions.py:2: ValueError
+
+The above exception was the direct cause of the following exception:
+
+    def test_a():
+        try:
+            foo()
+        except ValueError as e:
+&gt;           raise RuntimeError(&apos;runtime error&apos;) from e
+E           RuntimeError: runtime error
+
+test_chained_exceptions.py:7: RuntimeError
+============================== 1 failed in 0.02s ===============================
+</system-out></testcase><testcase classname="testing.test_reports.TestReportSerialization" file="testing/test_reports.py" line="245" name="test_chained_exceptions[CollectReport]" time="0.027"><failure message="AssertionError: assert 1 == 2
+ +  where 1 = len([(&lt;&lt;class &apos;_pytest._code.code.ReprTraceback&apos;&gt; instance at 108f98fd0&gt;, &lt;&lt;class &apos;_pytest._code.code.ReprFileLocation&apos;&gt; instance at 108f98b80&gt;, None)])
+ +    where [(&lt;&lt;class &apos;_pytest._code.code.ReprTraceback&apos;&gt; instance at 108f98fd0&gt;, &lt;&lt;class &apos;_pytest._code.code.ReprFileLocation&apos;&gt; instance at 108f98b80&gt;, None)] = &lt;&lt;class &apos;_pytest._code.code.ExceptionChainRepr&apos;&gt; instance at 108d637c0&gt;.chain">../../../../../../workspace/testing/test_reports.py:308: in test_chained_exceptions
+    check_longrepr(loaded_report.longrepr)
+../../../../../../workspace/testing/test_reports.py:287: in check_longrepr
+    assert len(longrepr.chain) == 2
+E   AssertionError: assert 1 == 2
+E    +  where 1 = len([(&lt;&lt;class &apos;_pytest._code.code.ReprTraceback&apos;&gt; instance at 108f98fd0&gt;, &lt;&lt;class &apos;_pytest._code.code.ReprFileLocation&apos;&gt; instance at 108f98b80&gt;, None)])
+E    +    where [(&lt;&lt;class &apos;_pytest._code.code.ReprTraceback&apos;&gt; instance at 108f98fd0&gt;, &lt;&lt;class &apos;_pytest._code.code.ReprFileLocation&apos;&gt; instance at 108f98b80&gt;, None)] = &lt;&lt;class &apos;_pytest._code.code.ExceptionChainRepr&apos;&gt; instance at 108d637c0&gt;.chain</failure><system-out>============================= test session starts ==============================
+platform darwin -- Python 3.8.20, pytest-5.1.0, py-1.8.1, pluggy-0.13.1
+rootdir: /Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/qualification/run_03/last_only/checks/H01/tmp/pytest-of-junyuc/pytest-0/test_chained_exceptions1
+collected 0 items / 1 errors
+
+==================================== ERRORS ====================================
+_________________ ERROR collecting test_chained_exceptions.py __________________
+test_chained_exceptions.py:5: in test_a
+    foo()
+test_chained_exceptions.py:2: in foo
+    raise ValueError(&apos;value error&apos;)
+E   ValueError: value error
+
+The above exception was the direct cause of the following exception:
+test_chained_exceptions.py:9: in &lt;module&gt;
+    test_a()
+test_chained_exceptions.py:7: in test_a
+    raise RuntimeError(&apos;runtime error&apos;) from e
+E   RuntimeError: runtime error
+!!!!!!!!!!!!!!!!!!! Interrupted: 1 errors during collection !!!!!!!!!!!!!!!!!!!!
+=============================== 1 error in 0.02s ===============================
+</system-out></testcase></testsuite></testsuites>

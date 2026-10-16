@@ -1,0 +1,19 @@
+{"argv": ["/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/.venv/bin/python", "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/check.py", "--method", "test_C02_long_chain_and_render_option", "--output", "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/qualification/run_01/testreport_only/checks/C02/observation.json"], "cwd": "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/qualification/run_01/testreport_only/workspace"}
+test_C02_long_chain_and_render_option (eval_behavior.Behavior) ... ERROR
+
+======================================================================
+ERROR: test_C02_long_chain_and_render_option (eval_behavior.Behavior)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/tests/behavior.py", line 173, in test_C02_long_chain_and_render_option
+    self.assert_chain(transport(report(info, kind)), 4,
+  File "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/tests/behavior.py", line 86, in assert_chain
+    positions = [text.index(x) for x in markers]
+  File "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/tests/behavior.py", line 86, in <listcomp>
+    positions = [text.index(x) for x in markers]
+ValueError: substring not found
+
+----------------------------------------------------------------------
+Ran 1 test in 0.051s
+
+FAILED (errors=1)

@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "method": "test_H01_historical_focused",
+  "status": "passed",
+  "tests_run": 1,
+  "duration_seconds": 0.2708655,
+  "failures": [],
+  "skips": [],
+  "details": [
+    {
+      "command": [
+        "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/.venv/bin/python",
+        "-m",
+        "pytest",
+        "--color=no",
+        "-q",
+        "--tb=short",
+        "--junitxml=/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/qualification/qualified_v0_1_0/historical/checks/H01/historical.xml",
+        "testing/test_reports.py::TestReportSerialization::test_chained_exceptions"
+      ],
+      "cwd": "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/qualification/qualified_v0_1_0/historical/workspace",
+      "returncode": 0,
+      "log": "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/qualification/qualified_v0_1_0/historical/checks/H01/historical.log"
+    },
+    {
+      "historical_cases": 2,
+      "passed": 2,
+      "failures": 0,
+      "skips": 0
+    }
+  ]
+}

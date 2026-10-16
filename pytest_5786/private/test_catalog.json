@@ -1,0 +1,167 @@
+[
+  {
+    "id": "A01",
+    "method": "test_A01_explicit",
+    "dimensions": [
+      "A"
+    ],
+    "mandatory": true,
+    "requirement": "Explicit two-level cause survives report hooks and JSON.",
+    "source": "Issue #5786; historical PR #5787 regression",
+    "expected_behavior": "Both exception messages remain in causal order, with one cause separator.",
+    "coverage_rationale": "Original defect with source-side sanity check.",
+    "timeout_seconds": 60
+  },
+  {
+    "id": "A02",
+    "method": "test_A02_implicit",
+    "dimensions": [
+      "A"
+    ],
+    "mandatory": true,
+    "requirement": "Implicit three-level context survives transport.",
+    "source": "Original #5786 implicit-context reproducer; Python exception chaining",
+    "expected_behavior": "Three messages in order and two context separators.",
+    "coverage_rationale": "Exercises the original non-raise-from execution path.",
+    "timeout_seconds": 60
+  },
+  {
+    "id": "B01",
+    "method": "test_B01_collect_report",
+    "dimensions": [
+      "B"
+    ],
+    "mandatory": true,
+    "requirement": "Collection failure and attached/captured sections survive transport.",
+    "source": "Historical TestReport/CollectReport regression; existing report API",
+    "expected_behavior": "CollectReport outcome and complete error/section content preserved.",
+    "coverage_rationale": "Rejects a TestReport-only repair.",
+    "timeout_seconds": 60
+  },
+  {
+    "id": "B02",
+    "method": "test_B02_structured_consumer",
+    "dimensions": [
+      "B"
+    ],
+    "mandatory": true,
+    "requirement": "Restored reports remain structured and mutable by existing consumers.",
+    "source": "Base reports.py; junitxml.py:222-223; ExceptionRepr.addsection",
+    "expected_behavior": "Crash location/message, traceback entries, metadata, captured output and pre/post sections survive a second round trip.",
+    "coverage_rationale": "Rejects stringification without enforcing a specific chain wire schema.",
+    "timeout_seconds": 60
+  },
+  {
+    "id": "B03",
+    "method": "test_B03_real_xdist",
+    "dimensions": [
+      "B"
+    ],
+    "mandatory": true,
+    "requirement": "Actual worker/controller test and collection failures preserve diagnostic information.",
+    "source": "Original issue xdist symptom; xdist 1.29.0 remote/workermanage hooks",
+    "expected_behavior": "One worker executes both paths; JUnit and terminal contain both messages; exactly one error/failure per run; no INTERNALERROR.",
+    "coverage_rationale": "Integration across process and report-consumer boundaries.",
+    "timeout_seconds": 90
+  },
+  {
+    "id": "C01",
+    "method": "test_C01_suppressed_context",
+    "dimensions": [
+      "C"
+    ],
+    "mandatory": true,
+    "requirement": "Python raise-from-None semantics remain intact.",
+    "source": "Python chaining semantics; base code.py repr_excinfo checks __suppress_context__",
+    "expected_behavior": "Only final exception diagnostic appears; suppressed contexts and separators absent.",
+    "coverage_rationale": "Rejects indiscriminately exposing all context.",
+    "timeout_seconds": 60
+  },
+  {
+    "id": "C02",
+    "method": "test_C02_long_chain_and_render_option",
+    "dimensions": [
+      "C"
+    ],
+    "mandatory": true,
+    "requirement": "Chain depth and explicit local chain=False rendering option retain semantics.",
+    "source": "Existing ExceptionInfo.getrepr(chain=...) and base formatter loop",
+    "expected_behavior": "Four levels preserved for both reports; chain=False remains final-only.",
+    "coverage_rationale": "Rejects fixed-depth and unconditional-chain repairs.",
+    "timeout_seconds": 60
+  },
+  {
+    "id": "C03",
+    "method": "test_C03_missing_traceback",
+    "dimensions": [
+      "C"
+    ],
+    "mandatory": true,
+    "requirement": "A valid cause without its own traceback remains reportable without a new crash.",
+    "source": "Base code.py:826-838 native fallback; independently documented #5971; later 0e0006934",
+    "expected_behavior": "Both cause and final error remain visible for both reports with no AttributeError.",
+    "coverage_rationale": "Valid missing-traceback cause must retain its information. Distinct from D03, which checks only pre-existing crash-free consumption.",
+    "timeout_seconds": 60
+  },
+  {
+    "id": "D01",
+    "method": "test_D01_ordinary_reports",
+    "dimensions": [
+      "D"
+    ],
+    "mandatory": true,
+    "requirement": "Pass/skip/plain-string/single-exception report behavior remains stable.",
+    "source": "Base report contract and pre-existing report tests",
+    "expected_behavior": "Outcome, node identity, captured text, skip tuple content and single-error rendering unchanged.",
+    "coverage_rationale": "Measures unaffected behavior separately from the original bug.",
+    "timeout_seconds": 60
+  },
+  {
+    "id": "D02",
+    "method": "test_D02_existing_behavior",
+    "dimensions": [
+      "D"
+    ],
+    "mandatory": true,
+    "requirement": "Pre-existing reports/code/exception behavior remains valid.",
+    "source": "Fixed base tests with historical helper relocation; inventory pinned",
+    "expected_behavior": "Exactly 118 named existing tests pass; zero skips/errors/xfails.",
+    "coverage_rationale": "Broad neighboring behavior. Seven wire-layout assertions remain diagnostic in H02, not mandatory; round-trip public behavior is covered independently.",
+    "timeout_seconds": 60
+  },
+  {
+    "id": "D03",
+    "method": "test_D03_missing_traceback_no_new_crash",
+    "dimensions": [
+      "D"
+    ],
+    "mandatory": true,
+    "requirement": "Previously accepted missing-traceback cause must not introduce a report transport crash.",
+    "source": "Base behavior experimentally passes; historical #5971 compatibility regression",
+    "expected_behavior": "Both report types still serialize/deserialize/render the outer error without an internal exception; does not require fixing lost cause content.",
+    "coverage_rationale": "Separates non-regression from C03 completeness: no-op passes D while the historical reference fails.",
+    "timeout_seconds": 60
+  },
+  {
+    "id": "H01",
+    "method": "test_H01_historical_focused",
+    "dimensions": [],
+    "mandatory": false,
+    "requirement": "Unmodified historical focused regressions.",
+    "source": "PR #5787 testing diff",
+    "expected_behavior": "Two historical parametrized tests pass for references.",
+    "coverage_rationale": "Diagnostic: exact internal class/chain assertions are not mandatory for alternative-solution fairness.",
+    "timeout_seconds": 60
+  },
+  {
+    "id": "H02",
+    "method": "test_H02_full_existing_suite",
+    "dimensions": [],
+    "mandatory": false,
+    "requirement": "Run full neighboring pre-existing suites including seven representation-specific checks.",
+    "source": "Historical reports/code/exception suites at fixed base plus PR helper relocation",
+    "expected_behavior": "125 existing tests pass for reference implementations; no skips.",
+    "coverage_rationale": "Diagnostic compatibility signal; wire encoding assertions cannot veto an otherwise behaviorally valid implementation.",
+    "timeout_seconds": 60
+  }
+]

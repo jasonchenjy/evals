@@ -1,0 +1,12 @@
+{
+  "schema_version": 1,
+  "method": "test_A01_explicit",
+  "status": "failed",
+  "tests_run": 1,
+  "duration_seconds": 0.064172833,
+  "failures": [
+    "Traceback (most recent call last):\n  File \"/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/tests/behavior.py\", line 95, in test_A01_explicit\n    self.assert_chain(rep, 2, \"direct cause of the following exception\")\n  File \"/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/tests/behavior.py\", line 87, in assert_chain\n    self.assertIn(marker, text)\nAssertionError: 'ValueError: layer-0' not found in '../../../../tests/behavior.py:36: in exception_info\\n    raise_level(depth - 1)\\n../../../../tests/behavior.py:31: in raise_level\\n    raise ValueError(\"layer-%d\" % level) from cause\\nE   ValueError: layer-1'\n"
+  ],
+  "skips": [],
+  "details": []
+}

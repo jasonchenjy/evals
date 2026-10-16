@@ -1,0 +1,17 @@
+{
+  "passed": true,
+  "core_files_verified": 21,
+  "core_lock_sha256": "9fef8ea14b0fdeb9abd051d7aed56fbe5ee9bf676953b5fcb0aa31e15159848e",
+  "controls_verified": 7,
+  "outer_checks_verified": 91,
+  "mandatory_checks_per_control": 11,
+  "diagnostic_checks_per_control": 2,
+  "prior_research_files_unchanged": 177,
+  "pytest_checkout_clean": true,
+  "pytest_checkout_head": "c9c19f8e62c12834ad83193a1869cc82fe9c700e",
+  "public_examples_reproduced": true,
+  "grader_contract_tests_passed": 6,
+  "agent_trials_run": false,
+  "final_run_directory": "private/qualification/qualified_v0_1_0",
+  "scope": "artifact integrity and trusted deterministic qualification; not security certification"
+}

@@ -1,0 +1,12 @@
+{
+  "schema_version": 1,
+  "method": "test_A02_implicit",
+  "status": "error",
+  "tests_run": 1,
+  "duration_seconds": 0.060610334,
+  "failures": [
+    "Traceback (most recent call last):\n  File \"/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/tests/behavior.py\", line 98, in test_A02_implicit\n    self.assert_chain(transport(original), 3, \"During handling of the above exception\")\n  File \"/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/tests/behavior.py\", line 86, in assert_chain\n    positions = [text.index(x) for x in markers]\n  File \"/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/tests/behavior.py\", line 86, in <listcomp>\n    positions = [text.index(x) for x in markers]\nValueError: substring not found\n"
+  ],
+  "skips": [],
+  "details": []
+}

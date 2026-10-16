@@ -1,0 +1,38 @@
+{"argv": ["/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/.venv/bin/python", "-m", "pytest", "--color=no", "-q", "--tb=long", "-p", "xdist.plugin", "-n", "1", "eval_public/test_example.py"], "cwd": "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/.artifacts/agent_export"}
+bringing up nodes...
+bringing up nodes...
+
+FF                                                                       [100%]
+=================================== FAILURES ===================================
+____________________________ test_explicit_example _____________________________
+[gw0] darwin -- Python 3.8.20 /Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/.venv/bin/python
+
+    def test_explicit_example():
+        try:
+            try:
+                raise ValueError(11)
+            except Exception as first:
+                raise ValueError(12) from first
+        except Exception as second:
+>           raise ValueError(13) from second
+E           ValueError: 13
+
+eval_public/test_example.py:11: ValueError
+____________________________ test_implicit_example _____________________________
+[gw0] darwin -- Python 3.8.20 /Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/.venv/bin/python
+
+    def test_implicit_example():
+        try:
+            try:
+                raise ValueError(21)
+            except Exception:
+                raise ValueError(22)
+        except Exception:
+>           raise ValueError(23)
+E           ValueError: 23
+
+eval_public/test_example.py:21: ValueError
+=========================== short test summary info ============================
+FAILED eval_public/test_example.py::test_explicit_example - ValueError: 13
+FAILED eval_public/test_example.py::test_implicit_example - ValueError: 23
+2 failed in 0.20s

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites><testsuite errors="1" failures="0" hostname="JDY6VGTDXD-Junyu-Chen" name="pytest" skipped="0" tests="1" time="0.182" timestamp="2026-10-16T19:53:54.258840"><testcase classname="" file="test_transport.py" name="test_transport" time="0.000"><error message="collection failure">test_transport.py:5: in fail
+    raise ValueError(&quot;worker-inner-503&quot;)
+E   ValueError: worker-inner-503
+
+The above exception was the direct cause of the following exception:
+test_transport.py:9: in &lt;module&gt;
+    fail()
+test_transport.py:7: in fail
+    raise RuntimeError(&quot;worker-outer-509&quot;) from e
+E   RuntimeError: worker-outer-509</error></testcase></testsuite></testsuites>

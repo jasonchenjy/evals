@@ -1,0 +1,19 @@
+{"argv": ["/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/.venv/bin/python", "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/check.py", "--method", "test_B01_collect_report", "--output", "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/qualification/run_01/noop/checks/B01/observation.json"], "cwd": "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/qualification/run_01/noop/workspace"}
+test_B01_collect_report (eval_behavior.Behavior) ... ERROR
+
+======================================================================
+ERROR: test_B01_collect_report (eval_behavior.Behavior)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/tests/behavior.py", line 105, in test_B01_collect_report
+    self.assert_chain(restored, 2, "direct cause of the following exception")
+  File "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/tests/behavior.py", line 86, in assert_chain
+    positions = [text.index(x) for x in markers]
+  File "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/tests/behavior.py", line 86, in <listcomp>
+    positions = [text.index(x) for x in markers]
+ValueError: substring not found
+
+----------------------------------------------------------------------
+Ran 1 test in 0.037s
+
+FAILED (errors=1)

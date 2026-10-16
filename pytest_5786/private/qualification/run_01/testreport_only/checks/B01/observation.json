@@ -1,0 +1,12 @@
+{
+  "schema_version": 1,
+  "method": "test_B01_collect_report",
+  "status": "error",
+  "tests_run": 1,
+  "duration_seconds": 0.061157833999999994,
+  "failures": [
+    "Traceback (most recent call last):\n  File \"/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/tests/behavior.py\", line 105, in test_B01_collect_report\n    self.assert_chain(restored, 2, \"direct cause of the following exception\")\n  File \"/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/tests/behavior.py\", line 86, in assert_chain\n    positions = [text.index(x) for x in markers]\n  File \"/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/tests/behavior.py\", line 86, in <listcomp>\n    positions = [text.index(x) for x in markers]\nValueError: substring not found\n"
+  ],
+  "skips": [],
+  "details": []
+}

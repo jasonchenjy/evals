@@ -1,0 +1,7 @@
+{"argv": ["/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/.venv/bin/python", "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/check.py", "--method", "test_B03_real_xdist", "--output", "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/qualification/run_02/text_only/checks/B03/observation.json"], "cwd": "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/qualification/run_02/text_only/workspace"}
+test_B03_real_xdist (eval_behavior.Behavior) ... ok
+
+----------------------------------------------------------------------
+Ran 1 test in 0.678s
+
+OK

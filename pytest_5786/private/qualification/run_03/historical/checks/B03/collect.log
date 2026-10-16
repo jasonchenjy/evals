@@ -1,0 +1,18 @@
+bringing up nodes...
+bringing up nodes...
+
+
+==================================== ERRORS ====================================
+______________________ ERROR collecting test_transport.py ______________________
+test_transport.py:5: in fail
+    raise ValueError("worker-inner-503")
+E   ValueError: worker-inner-503
+
+The above exception was the direct cause of the following exception:
+test_transport.py:9: in <module>
+    fail()
+test_transport.py:7: in fail
+    raise RuntimeError("worker-outer-509") from e
+E   RuntimeError: worker-outer-509
+- generated xml file: /Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/qualification/run_03/historical/checks/B03/collect/report.xml -
+1 error in 0.19s

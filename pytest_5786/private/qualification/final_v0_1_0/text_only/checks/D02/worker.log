@@ -1,0 +1,81 @@
+{"argv": ["/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/.venv/bin/python", "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/check.py", "--method", "test_D02_existing_behavior", "--output", "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/qualification/final_v0_1_0/text_only/checks/D02/observation.json"], "cwd": "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/qualification/final_v0_1_0/text_only/workspace"}
+test_D02_existing_behavior (eval_behavior.Behavior) ... FAIL
+
+======================================================================
+FAIL: test_D02_existing_behavior (eval_behavior.Behavior)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/tests/behavior.py", line 222, in test_D02_existing_behavior
+    self.assertEqual(result.returncode, 0, result.stdout[-4000:])
+AssertionError: 1 != 0 : =====================
+platform darwin -- Python 3.8.20, pytest-5.1.0, py-1.8.1, pluggy-0.13.1
+rootdir: /Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/qualification/final_v0_1_0/text_only/checks/D02/tmp/pytest-of-junyuc/pytest-0/test_xdist_report_longrepr_reprcrash_1300
+collected 1 item
+
+test_xdist_report_longrepr_reprcrash_130.py F                            [100%]
+
+=================================== FAILURES ===================================
+__________________________________ test_fail ___________________________________
+
+    def test_fail():
+>       assert False, 'Expected Message'
+E       AssertionError: Expected Message
+E       assert False
+
+test_xdist_report_longrepr_reprcrash_130.py:2: AssertionError
+============================== 1 failed in 0.00s ===============================
+__________ TestReportSerialization.test_reprentries_serialization_170 __________
+../../../../../../workspace/testing/test_reports.py:90: in test_reprentries_serialization_170
+    a_entries = a.longrepr.reprtraceback.reprentries
+E   AttributeError: 'str' object has no attribute 'reprtraceback'
+----------------------------- Captured stdout call -----------------------------
+============================= test session starts ==============================
+platform darwin -- Python 3.8.20, pytest-5.1.0, py-1.8.1, pluggy-0.13.1
+rootdir: /Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/qualification/final_v0_1_0/text_only/checks/D02/tmp/pytest-of-junyuc/pytest-0/test_reprentries_serialization_1700
+collected 1 item
+
+test_reprentries_serialization_170.py F                                  [100%]
+
+=================================== FAILURES ===================================
+_______________________________ test_repr_entry ________________________________
+
+    def test_repr_entry():
+        x = 0
+>       assert x
+E       assert 0
+
+x          = 0
+
+test_reprentries_serialization_170.py:3: AssertionError
+============================== 1 failed in 0.00s ===============================
+__________ TestReportSerialization.test_reprentries_serialization_196 __________
+../../../../../../workspace/testing/test_reports.py:125: in test_reprentries_serialization_196
+    a_entries = a.longrepr.reprtraceback.reprentries
+E   AttributeError: 'str' object has no attribute 'reprtraceback'
+----------------------------- Captured stdout call -----------------------------
+============================= test session starts ==============================
+platform darwin -- Python 3.8.20, pytest-5.1.0, py-1.8.1, pluggy-0.13.1
+rootdir: /Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/qualification/final_v0_1_0/text_only/checks/D02/tmp/pytest-of-junyuc/pytest-0/test_reprentries_serialization_1960
+collected 1 item
+
+test_reprentries_serialization_196.py F                                  [100%]
+
+=================================== FAILURES ===================================
+____________________________ test_repr_entry_native ____________________________
+Traceback (most recent call last):
+  File "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/qualification/final_v0_1_0/text_only/checks/D02/tmp/pytest-of-junyuc/pytest-0/test_reprentries_serialization_1960/test_reprentries_serialization_196.py", line 3, in test_repr_entry_native
+    assert x
+AssertionError: assert 0
+============================== 1 failed in 0.00s ===============================
+- generated xml file: /Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/qualification/final_v0_1_0/text_only/checks/D02/existing.xml -
+=========================== short test summary info ============================
+FAILED testing/test_reports.py::TestReportSerialization::test_xdist_report_longrepr_reprcrash_130
+FAILED testing/test_reports.py::TestReportSerialization::test_reprentries_serialization_170
+FAILED testing/test_reports.py::TestReportSerialization::test_reprentries_serialization_196
+3 failed, 115 passed, 9 deselected in 0.95s
+
+
+----------------------------------------------------------------------
+Ran 1 test in 1.093s
+
+FAILED (failures=1)

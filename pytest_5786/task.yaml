@@ -1,0 +1,56 @@
+{
+  "schema_version": 1,
+  "visibility": "runtime-controller-only; NEVER export this manifest to the agent",
+  "eval_id": "pytest_5786",
+  "eval_version": "0.1.0",
+  "status": "experimental-qualification-only",
+  "target_capability": "Cross-Component Reasoning & Bug Fixing",
+  "repository": {
+    "name": "pytest-dev/pytest",
+    "base_commit": "955e54221008aba577ecbaefa15679f6777d3bf8"
+  },
+  "instruction_file": "instruction.md",
+  "environment_specification": "environment.yaml",
+  "agent_export_entry_point": "prepare.py",
+  "public_test_policy": {
+    "existing_base_tests": "available",
+    "added_examples": "tests/public",
+    "examples_intentionally_fail": true,
+    "hidden_tests_and_reference": "never exported"
+  },
+  "private_tests": "private/tests",
+  "test_catalog": "private/test_catalog.json",
+  "grader_entry_point": "private/grader.py",
+  "grading": {
+    "primary": "all mandatory behavioral checks pass; no weighted sum",
+    "dimensions": [
+      "original_bug_resolution",
+      "cross_component_consistency",
+      "edge_case_robustness",
+      "non_regression"
+    ],
+    "schema_version": 1
+  },
+  "budgets": {
+    "trial_wall_seconds": 1800,
+    "grading_check_wall_seconds": 60,
+    "xdist_check_wall_seconds": 90,
+    "max_patch_bytes": 1048576
+  },
+  "submission": {
+    "format": "UTF-8 git unified diff; empty file means no-op",
+    "allowed_paths": "src/**/*.py excluding src/_pytest/_version.py",
+    "renames_binary_symlinks_modes": "rejected"
+  },
+  "qualification": {
+    "result_file": "private/qualification/summary.json",
+    "report": "qualification_report.md",
+    "untrusted_execution": "requires external runtime isolation; not qualified here",
+    "agent_trials": "not run"
+  },
+  "integrity": {
+    "eval_files": "checksums.json",
+    "base_file_sha256": "base_files.json",
+    "qualification_result_hashes": "private/qualification/summary.json"
+  }
+}

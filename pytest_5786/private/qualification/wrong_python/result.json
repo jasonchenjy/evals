@@ -1,0 +1,48 @@
+{
+  "schema_version": 1,
+  "eval_id": "pytest_5786",
+  "eval_version": "0.1.0",
+  "timestamp": "2026-10-16T19:54:22.678080+00:00",
+  "base_commit": "955e54221008aba577ecbaefa15679f6777d3bf8",
+  "overall_resolved": false,
+  "infrastructure_status": "error",
+  "submission_status": "pending",
+  "dimensions": {
+    "original_bug_resolution": {
+      "satisfied": null,
+      "checks": {}
+    },
+    "cross_component_consistency": {
+      "satisfied": null,
+      "checks": {}
+    },
+    "edge_case_robustness": {
+      "satisfied": null,
+      "checks": {}
+    },
+    "non_regression": {
+      "satisfied": null,
+      "checks": {}
+    }
+  },
+  "tests": [],
+  "execution": [
+    {
+      "command": [
+        "/opt/homebrew/opt/python@3.13/bin/python3.13",
+        "-c",
+        "import sys,json,pytest,pkg_resources; assert sys.version_info[:3] == (3,8,20), sys.version; reqs=[pkg_resources.Requirement.parse(x) for x in open(sys.argv[1]).read().splitlines()]; assert all(pkg_resources.get_distribution(r.project_name) in r for r in reqs); print(json.dumps({'python':sys.version,'pytest_file':pytest.__file__,'pytest_version':pytest.__version__,'packages':sorted(str(x) for x in pkg_resources.working_set)}))",
+        "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/requirements.txt"
+      ],
+      "cwd": "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/qualification/wrong_python/workspace",
+      "returncode": 1,
+      "timeout": false,
+      "elapsed_seconds": 0.07415400000172667,
+      "log": "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/qualification/wrong_python/preflight.log"
+    }
+  ],
+  "security_mode": "trusted-local-qualification-not-a-sandbox",
+  "package_lock_sha256": "24b15e18a2d941aad31dee73cab56f9de55a25a717d66562290e56759c3583cb",
+  "patch_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "error": "RuntimeError: Base environment preflight failed; see preflight.log"
+}

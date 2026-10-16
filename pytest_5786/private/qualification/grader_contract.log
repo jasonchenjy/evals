@@ -1,0 +1,11 @@
+test_complete_and_diagnostic_policy (__main__.GraderContract.test_complete_and_diagnostic_policy) ... ok
+test_control_patches_are_accepted (__main__.GraderContract.test_control_patches_are_accepted) ... ok
+test_disallowed_patch_boundaries (__main__.GraderContract.test_disallowed_patch_boundaries) ... ok
+test_every_nonpassing_mandatory_status_is_unresolved (__main__.GraderContract.test_every_nonpassing_mandatory_status_is_unresolved) ... ok
+test_missing_duplicate_and_extra_checks (__main__.GraderContract.test_missing_duplicate_and_extra_checks) ... ok
+test_timeout_is_not_a_zero_exit_success (__main__.GraderContract.test_timeout_is_not_a_zero_exit_success) ... ok
+
+----------------------------------------------------------------------
+Ran 6 tests in 0.169s
+
+OK

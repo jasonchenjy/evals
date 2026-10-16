@@ -1,0 +1,7 @@
+.venv/
+.artifacts/
+__pycache__/
+**/__pycache__/
+private/qualification/**/workspace/
+private/qualification/**/home/
+private/qualification/**/tmp/
