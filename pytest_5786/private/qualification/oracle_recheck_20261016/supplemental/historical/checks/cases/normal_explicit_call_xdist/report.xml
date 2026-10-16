@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites><testsuite errors="0" failures="1" hostname="JDY6VGTDXD-Junyu-Chen" name="pytest" skipped="0" tests="1" time="0.182" timestamp="2026-10-16T20:13:23.254252"><testcase classname="test_case" file="test_case.py" line="11" name="test_failure" time="0.001"><failure message="RuntimeError: consumer-side-failure-613">test_case.py:8: in trigger
+    raise ValueError(&apos;source-side-cause-607&apos;)
+E   ValueError: source-side-cause-607
+
+The above exception was the direct cause of the following exception:
+test_case.py:14: in test_failure
+    trigger()
+test_case.py:10: in trigger
+    raise RuntimeError(&apos;consumer-side-failure-613&apos;) from cause
+E   RuntimeError: consumer-side-failure-613</failure><system-out>capture-619
+</system-out></testcase></testsuite></testsuites>

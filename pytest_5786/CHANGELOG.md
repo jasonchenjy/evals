@@ -1,5 +1,17 @@
 # Changelog
 
+## 0.1.0 资格执行修复与 Oracle 专项复核 — 2026-10-16
+
+- Complete Oracle 原已正确处理 crash 编码/解码的 None，源码补丁保持不变；没有发现需要修改 Oracle 的已验证合同缺陷。
+- 修复 `evals/` 仓库化后 `git apply` 向上发现维护者 Git checkout、静默跳过 snapshot 补丁的资格缺陷；清除继承的 Git 上下文并限制 ancestor discovery，统一源码和 curator 测试补丁的应用路径。
+- 结果增加应用后源码 hashes 和历史测试 patch 身份；新增父 Git 仓库及继承 GIT_DIR/GIT_WORK_TREE 的回归测试。7 项 grader contract tests 通过。
+- 原 mandatory 测试、catalog、评分规则及历史/完整/替代/负对照补丁均未变；完整 grader 七个控制按预期重获资格。Complete 11/11 mandatory、2 个历史回归、125 个相邻旧用例全过。
+- 新增独立补充验证：两类报告、hooks/JSON、显式/隐式、正常/缺失 traceback、serial/真实 xdist、call/collect 共 32 项。Complete 32/32；base 和历史控制按预期暴露丢链或缺失 traceback 崩溃，无 skips。补充项不改变主评分。
+- 首次 Git 上下文导致的无效运行、补充断言对 xdist banner 的误报和随后修正均保留。历史研究、ground truth、patch 和资格日志不覆盖。
+- task version 仍为 experimental 0.1.0；当前核心锁与旧锁分开保存，后续重放须同时记录锁 hash。功能 Oracle 可交给下一 Runtime 阶段，隔离设施仍未实现，不宣称可以安全运行任意 Agent 提交。
+
+最新证据：[专项复核结果](private/qualification/oracle_recheck_20261016/summary.json)；完整解释见 [资格报告](qualification_report.md)。
+
 ## 0.1.0 — 2026-10-16 — experimental / qualification-only
 
 首次固定 pytest #5786 单任务 Eval；没有模型运行时或自动扩题系统。

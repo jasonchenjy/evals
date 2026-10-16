@@ -1,0 +1,12 @@
+{
+  "schema_version": 1,
+  "method": "test_B01_collect_report",
+  "status": "failed",
+  "tests_run": 1,
+  "duration_seconds": 0.064302375,
+  "failures": [
+    "Traceback (most recent call last):\n  File \"/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/tests/behavior.py\", line 107, in test_B01_collect_report\n    self.assert_chain(restored, 2, \"direct cause of the following exception\")\n  File \"/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/tests/behavior.py\", line 87, in assert_chain\n    self.assertIn(marker, text)\nAssertionError: 'ValueError: layer-0' not found in '../../../../../tests/behavior.py:36: in exception_info\\n    raise_level(depth - 1)\\n../../../../../tests/behavior.py:31: in raise_level\\n    raise ValueError(\"layer-%d\" % level) from cause\\nE   ValueError: layer-1\\n=============================== collector-detail ===============================\\npayload-443'\n"
+  ],
+  "skips": [],
+  "details": []
+}

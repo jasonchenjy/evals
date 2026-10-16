@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "method": "test_B03_real_xdist",
+  "status": "failed",
+  "tests_run": 1,
+  "duration_seconds": 0.36246870899999994,
+  "failures": [
+    "Traceback (most recent call last):\n  File \"/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/tests/behavior.py\", line 153, in test_B03_real_xdist\n    self.assertIn(\"ValueError: worker-inner-503\", result.stdout)\nAssertionError: 'ValueError: worker-inner-503' not found in 'bringing up nodes...\\nbringing up nodes...\\n\\nF                                                                        [100%]\\n=================================== FAILURES ===================================\\n_________________________________ test_remote __________________________________\\n[gw0] darwin -- Python 3.8.20 /Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/.venv/bin/python\\ntest_transport.py:10: in test_remote\\n    fail()\\ntest_transport.py:7: in fail\\n    raise RuntimeError(\"worker-outer-509\") from e\\nE   RuntimeError: worker-outer-509\\n- generated xml file: /Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/qualification/oracle_recheck_20261016/qualified/last_only/checks/B03/call/report.xml -\\n1 failed in 0.18s\\n'\n"
+  ],
+  "skips": [],
+  "details": [
+    {
+      "command": [
+        "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/.venv/bin/python",
+        "-m",
+        "pytest",
+        "--color=no",
+        "-q",
+        "-p",
+        "xdist.plugin",
+        "-n",
+        "1",
+        "--tb=short",
+        "--junitxml=report.xml",
+        "test_transport.py"
+      ],
+      "cwd": "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/qualification/oracle_recheck_20261016/qualified/last_only/checks/B03/call",
+      "returncode": 1,
+      "log": "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/qualification/oracle_recheck_20261016/qualified/last_only/checks/B03/call.log"
+    }
+  ]
+}

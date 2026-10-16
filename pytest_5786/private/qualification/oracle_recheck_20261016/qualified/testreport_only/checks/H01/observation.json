@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "method": "test_H01_historical_focused",
+  "status": "failed",
+  "tests_run": 1,
+  "duration_seconds": 0.251523416,
+  "failures": [
+    "Traceback (most recent call last):\n  File \"/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/tests/behavior.py\", line 249, in test_H01_historical_focused\n    self.assertEqual(result.returncode, 0, result.stdout[-4000:])\nAssertionError: 1 != 0 : .F                                                                       [100%]\n=================================== FAILURES ===================================\n________ TestReportSerialization.test_chained_exceptions[CollectReport] ________\n../../../../../../workspace/testing/test_reports.py:308: in test_chained_exceptions\n    check_longrepr(loaded_report.longrepr)\n../../../../../../workspace/testing/test_reports.py:285: in check_longrepr\n    assert isinstance(longrepr, ExceptionChainRepr)\nE   AssertionError: assert False\nE    +  where False = isinstance(<<class '_pytest._code.code.ReprExceptionInfo'> instance at 106771df0>, ExceptionChainRepr)\n----------------------------- Captured stdout call -----------------------------\n============================= test session starts ==============================\nplatform darwin -- Python 3.8.20, pytest-5.1.0, py-1.8.1, pluggy-0.13.1\nrootdir: /Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/qualification/oracle_recheck_20261016/qualified/testreport_only/checks/H01/tmp/pytest-of-junyuc/pytest-0/test_chained_exceptions1\ncollected 0 items / 1 errors\n\n==================================== ERRORS ====================================\n_________________ ERROR collecting test_chained_exceptions.py __________________\ntest_chained_exceptions.py:5: in test_a\n    foo()\ntest_chained_exceptions.py:2: in foo\n    raise ValueError('value error')\nE   ValueError: value error\n\nThe above exception was the direct cause of the following exception:\ntest_chained_exceptions.py:9: in <module>\n    test_a()\ntest_chained_exceptions.py:7: in test_a\n    raise RuntimeError('runtime error') from e\nE   RuntimeError: runtime error\n!!!!!!!!!!!!!!!!!!! Interrupted: 1 errors during collection !!!!!!!!!!!!!!!!!!!!\n=============================== 1 error in 0.02s ===============================\n- generated xml file: /Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/qualification/oracle_recheck_20261016/qualified/testreport_only/checks/H01/historical.xml -\n=========================== short test summary info ============================\nFAILED testing/test_reports.py::TestReportSerialization::test_chained_exceptions[CollectReport]\n1 failed, 1 passed in 0.09s\n\n"
+  ],
+  "skips": [],
+  "details": [
+    {
+      "command": [
+        "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/.venv/bin/python",
+        "-m",
+        "pytest",
+        "--color=no",
+        "-q",
+        "--tb=short",
+        "--junitxml=/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/qualification/oracle_recheck_20261016/qualified/testreport_only/checks/H01/historical.xml",
+        "testing/test_reports.py::TestReportSerialization::test_chained_exceptions"
+      ],
+      "cwd": "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/qualification/oracle_recheck_20261016/qualified/testreport_only/workspace",
+      "returncode": 1,
+      "log": "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/qualification/oracle_recheck_20261016/qualified/testreport_only/checks/H01/historical.log"
+    },
+    {
+      "historical_cases": 2,
+      "passed": 1,
+      "failures": 1,
+      "skips": 0
+    }
+  ]
+}

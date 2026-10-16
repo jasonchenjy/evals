@@ -1,0 +1,15 @@
+{"argv": ["/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/.venv/bin/python", "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/check.py", "--method", "test_D02_existing_behavior", "--output", "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/qualification/oracle_recheck_20261016/grader/testreport_only/checks/D02/observation.json"], "cwd": "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/qualification/oracle_recheck_20261016/grader/testreport_only/workspace"}
+test_D02_existing_behavior (eval_behavior.Behavior) ... FAIL
+
+======================================================================
+FAIL: test_D02_existing_behavior (eval_behavior.Behavior)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/tests/behavior.py", line 224, in test_D02_existing_behavior
+    self.assertEqual(len(cases), 118)
+AssertionError: 119 != 118
+
+----------------------------------------------------------------------
+Ran 1 test in 1.132s
+
+FAILED (failures=1)

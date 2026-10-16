@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites><testsuite errors="1" failures="0" hostname="JDY6VGTDXD-Junyu-Chen" name="pytest" skipped="0" tests="1" time="0.190" timestamp="2026-10-16T20:14:33.127263"><testcase time="0.000"></testcase><testcase classname="pytest" name="internal" time="0.000"><error message="internal error">Traceback (most recent call last):
+  File &quot;/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/qualification/oracle_recheck_20261016/supplemental_final/historical/workspace/src/_pytest/main.py&quot;, line 191, in wrap_session
+    session.exitstatus = doit(config, session) or 0
+  File &quot;/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/qualification/oracle_recheck_20261016/supplemental_final/historical/workspace/src/_pytest/main.py&quot;, line 235, in _main
+    config.hook.pytest_runtestloop(session=session)
+  File &quot;/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/.venv/lib/python3.8/site-packages/pluggy/hooks.py&quot;, line 286, in __call__
+    return self._hookexec(self, self.get_hookimpls(), kwargs)
+  File &quot;/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/.venv/lib/python3.8/site-packages/pluggy/manager.py&quot;, line 93, in _hookexec
+    return self._inner_hookexec(hook, methods, kwargs)
+  File &quot;/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/.venv/lib/python3.8/site-packages/pluggy/manager.py&quot;, line 84, in &lt;lambda&gt;
+    self._inner_hookexec = lambda hook, methods, kwargs: hook.multicall(
+  File &quot;/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/.venv/lib/python3.8/site-packages/pluggy/callers.py&quot;, line 208, in _multicall
+    return outcome.get_result()
+  File &quot;/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/.venv/lib/python3.8/site-packages/pluggy/callers.py&quot;, line 80, in get_result
+    raise ex[1].with_traceback(ex[2])
+  File &quot;/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/.venv/lib/python3.8/site-packages/pluggy/callers.py&quot;, line 187, in _multicall
+    res = hook_impl.function(*args)
+  File &quot;/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/.venv/lib/python3.8/site-packages/xdist/dsession.py&quot;, line 115, in pytest_runtestloop
+    self.loop_once()
+  File &quot;/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/.venv/lib/python3.8/site-packages/xdist/dsession.py&quot;, line 138, in loop_once
+    call(**kwargs)
+  File &quot;/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/.venv/lib/python3.8/site-packages/xdist/dsession.py&quot;, line 180, in worker_workerfinished
+    assert not crashitem, (crashitem, node)
+AssertionError: (&apos;test_case.py::test_failure&apos;, &lt;WorkerController gw0&gt;)</error></testcase></testsuite></testsuites>

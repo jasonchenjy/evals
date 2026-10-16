@@ -10,6 +10,7 @@ import re
 import signal
 import subprocess
 import sys
+import tempfile
 import time
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -27,6 +28,24 @@ def sha(path):
         for chunk in iter(lambda: source.read(65536), b""):
             digest.update(chunk)
     return digest.hexdigest()
+
+
+def isolated_git_env(directory):
+    # A snapshot may live below the curator's Git checkout. Git must not discover
+    # that parent repo and silently ignore patch paths outside its cwd prefix.
+    env = {key: value for key, value in os.environ.items() if not key.startswith("GIT_")}
+    env.update(GIT_CEILING_DIRECTORIES=str(Path(directory).resolve().parent),
+               GIT_CONFIG_GLOBAL=os.devnull, GIT_CONFIG_SYSTEM=os.devnull)
+    return env
+
+
+def git_apply(patch, workspace, check=False):
+    command = ["git", "apply", "--whitespace=nowarn"]
+    if check:
+        command.append("--check")
+    command.append(str(Path(patch).resolve()))
+    return subprocess.run(command, cwd=str(workspace), env=isolated_git_env(workspace),
+                          capture_output=True, text=True)
 
 
 def validate_patch(patch):
@@ -66,8 +85,10 @@ def validate_patch(patch):
             if not path.startswith(("a/", "b/")) or path[2:] not in allowed:
                 raise RejectedPatch("Noncanonical diff file header")
     # Cross-check git's own parser rather than trusting textual headers alone.
-    parsed = subprocess.run(["git", "apply", "--numstat", "-z", str(patch)],
-                            stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+    with tempfile.TemporaryDirectory(prefix="pytest-5786-patch-") as folder:
+        parsed = subprocess.run(["git", "apply", "--numstat", "-z", str(patch.resolve())],
+                                cwd=folder, env=isolated_git_env(folder),
+                                stdout=subprocess.PIPE, stderr=subprocess.PIPE)
     if parsed.returncode:
         raise RejectedPatch("Git cannot parse submitted diff")
     actual = set()
@@ -180,16 +201,23 @@ def grade(args):
         result["submitted_paths"] = paths
         if paths:
             for dry in [True, False]:
-                command = ["git", "apply", "--whitespace=nowarn"] + (["--check"] if dry else []) + [str(args.patch)]
-                applied = subprocess.run(command, cwd=str(workspace), capture_output=True, text=True)
-                result["execution"].append({"command": command, "cwd": str(workspace),
+                applied = git_apply(args.patch, workspace, check=dry)
+                result["execution"].append({"command": applied.args, "cwd": str(workspace),
                                              "returncode": applied.returncode, "stderr": applied.stderr})
                 if applied.returncode:
                     raise RejectedPatch("Patch does not apply cleanly to the fixed base")
+        result["applied_source_sha256"] = {
+            name: sha(workspace / name) if (workspace / name).is_file() else None
+            for name in paths
+        }
         result["submission_status"] = "accepted"
         # Curator test changes never enter the exported agent workspace.
-        subprocess.run(["git", "apply", str(ROOT / "private/oracle/historical_tests.patch")],
-                       cwd=str(workspace), check=True, capture_output=True)
+        test_patch = ROOT / "private/oracle/historical_tests.patch"
+        applied = git_apply(test_patch, workspace)
+        result["execution"].append({"command": applied.args, "cwd": str(workspace),
+                                   "returncode": applied.returncode, "stderr": applied.stderr})
+        applied.check_returncode()
+        result["historical_test_patch_sha256"] = sha(test_patch)
         catalog = json.loads((ROOT / "private/test_catalog.json").read_text())
         for entry in catalog:
             scratch = output / "checks" / entry["id"]

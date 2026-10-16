@@ -1,0 +1,14 @@
+
+==================================== ERRORS ====================================
+________________________ ERROR collecting test_case.py _________________________
+test_case.RemoteProblem: source-side-cause-607
+
+During handling of the above exception, another exception occurred:
+test_case.py:11: in <module>
+    trigger()
+test_case.py:9: in trigger
+    raise error
+E   RuntimeError: consumer-side-failure-613
+- generated xml file: /Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/qualification/oracle_recheck_20261016/supplemental/historical/checks/cases/missing_implicit_collect_serial/report.xml -
+!!!!!!!!!!!!!!!!!!! Interrupted: 1 errors during collection !!!!!!!!!!!!!!!!!!!!
+1 error in 0.04s

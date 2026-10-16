@@ -1,0 +1,7 @@
+{"argv": ["/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/.venv/bin/python", "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/check.py", "--method", "test_C01_suppressed_context", "--output", "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/qualification/oracle_recheck_20261016/grader/alternative/checks/C01/observation.json"], "cwd": "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/qualification/oracle_recheck_20261016/grader/alternative/workspace"}
+test_C01_suppressed_context (eval_behavior.Behavior) ... ok
+
+----------------------------------------------------------------------
+Ran 1 test in 0.043s
+
+OK

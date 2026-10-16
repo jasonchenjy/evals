@@ -1,0 +1,390 @@
+{"argv": ["/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/.venv/bin/python", "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/qualification/verify_oracle_behavior.py"], "cwd": "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/qualification/oracle_recheck_20261016/supplemental/historical/workspace"}
+test_integration_missing_explicit_call_serial (__main__.OracleBehavior) ... ok
+test_integration_missing_explicit_call_xdist (__main__.OracleBehavior) ... FAIL
+test_integration_missing_explicit_collect_serial (__main__.OracleBehavior) ... ok
+test_integration_missing_explicit_collect_xdist (__main__.OracleBehavior) ... FAIL
+test_integration_missing_implicit_call_serial (__main__.OracleBehavior) ... ok
+test_integration_missing_implicit_call_xdist (__main__.OracleBehavior) ... FAIL
+test_integration_missing_implicit_collect_serial (__main__.OracleBehavior) ... ok
+test_integration_missing_implicit_collect_xdist (__main__.OracleBehavior) ... FAIL
+test_integration_normal_explicit_call_serial (__main__.OracleBehavior) ... ok
+test_integration_normal_explicit_call_xdist (__main__.OracleBehavior) ... FAIL
+test_integration_normal_explicit_collect_serial (__main__.OracleBehavior) ... ok
+test_integration_normal_explicit_collect_xdist (__main__.OracleBehavior) ... ok
+test_integration_normal_implicit_call_serial (__main__.OracleBehavior) ... ok
+test_integration_normal_implicit_call_xdist (__main__.OracleBehavior) ... FAIL
+test_integration_normal_implicit_collect_serial (__main__.OracleBehavior) ... ok
+test_integration_normal_implicit_collect_xdist (__main__.OracleBehavior) ... ok
+test_structured_missing_explicit_CollectReport_hooks (__main__.OracleBehavior) ... ERROR
+test_structured_missing_explicit_CollectReport_json (__main__.OracleBehavior) ... ERROR
+test_structured_missing_explicit_TestReport_hooks (__main__.OracleBehavior) ... ERROR
+test_structured_missing_explicit_TestReport_json (__main__.OracleBehavior) ... ERROR
+test_structured_missing_implicit_CollectReport_hooks (__main__.OracleBehavior) ... ERROR
+test_structured_missing_implicit_CollectReport_json (__main__.OracleBehavior) ... ERROR
+test_structured_missing_implicit_TestReport_hooks (__main__.OracleBehavior) ... ERROR
+test_structured_missing_implicit_TestReport_json (__main__.OracleBehavior) ... ERROR
+test_structured_normal_explicit_CollectReport_hooks (__main__.OracleBehavior) ... ok
+test_structured_normal_explicit_CollectReport_json (__main__.OracleBehavior) ... ok
+test_structured_normal_explicit_TestReport_hooks (__main__.OracleBehavior) ... ok
+test_structured_normal_explicit_TestReport_json (__main__.OracleBehavior) ... ok
+test_structured_normal_implicit_CollectReport_hooks (__main__.OracleBehavior) ... ok
+test_structured_normal_implicit_CollectReport_json (__main__.OracleBehavior) ... ok
+test_structured_normal_implicit_TestReport_hooks (__main__.OracleBehavior) ... ok
+test_structured_normal_implicit_TestReport_json (__main__.OracleBehavior) ... ok
+
+======================================================================
+ERROR: test_structured_missing_explicit_CollectReport_hooks (__main__.OracleBehavior)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/qualification/verify_oracle_behavior.py", line 187, in check
+    self.structured(mode, kind, encoding)
+  File "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/qualification/verify_oracle_behavior.py", line 114, in structured
+    data = pytest_report_to_serializable(report)
+  File "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/qualification/oracle_recheck_20261016/supplemental/historical/workspace/src/_pytest/reports.py", line 328, in pytest_report_to_serializable
+    data = report._to_json()
+  File "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/qualification/oracle_recheck_20261016/supplemental/historical/workspace/src/_pytest/reports.py", line 164, in _to_json
+    return _report_to_json(self)
+  File "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/qualification/oracle_recheck_20261016/supplemental/historical/workspace/src/_pytest/reports.py", line 394, in _report_to_json
+    d["longrepr"] = serialize_longrepr(report)
+  File "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/qualification/oracle_recheck_20261016/supplemental/historical/workspace/src/_pytest/reports.py", line 381, in serialize_longrepr
+    serialize_repr_crash(repr_crash),
+  File "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/qualification/oracle_recheck_20261016/supplemental/historical/workspace/src/_pytest/reports.py", line 367, in serialize_repr_crash
+    return reprcrash.__dict__.copy()
+AttributeError: 'NoneType' object has no attribute '__dict__'
+
+======================================================================
+ERROR: test_structured_missing_explicit_CollectReport_json (__main__.OracleBehavior)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/qualification/verify_oracle_behavior.py", line 187, in check
+    self.structured(mode, kind, encoding)
+  File "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/qualification/verify_oracle_behavior.py", line 114, in structured
+    data = pytest_report_to_serializable(report)
+  File "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/qualification/oracle_recheck_20261016/supplemental/historical/workspace/src/_pytest/reports.py", line 328, in pytest_report_to_serializable
+    data = report._to_json()
+  File "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/qualification/oracle_recheck_20261016/supplemental/historical/workspace/src/_pytest/reports.py", line 164, in _to_json
+    return _report_to_json(self)
+  File "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/qualification/oracle_recheck_20261016/supplemental/historical/workspace/src/_pytest/reports.py", line 394, in _report_to_json
+    d["longrepr"] = serialize_longrepr(report)
+  File "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/qualification/oracle_recheck_20261016/supplemental/historical/workspace/src/_pytest/reports.py", line 381, in serialize_longrepr
+    serialize_repr_crash(repr_crash),
+  File "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/qualification/oracle_recheck_20261016/supplemental/historical/workspace/src/_pytest/reports.py", line 367, in serialize_repr_crash
+    return reprcrash.__dict__.copy()
+AttributeError: 'NoneType' object has no attribute '__dict__'
+
+======================================================================
+ERROR: test_structured_missing_explicit_TestReport_hooks (__main__.OracleBehavior)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/qualification/verify_oracle_behavior.py", line 187, in check
+    self.structured(mode, kind, encoding)
+  File "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/qualification/verify_oracle_behavior.py", line 114, in structured
+    data = pytest_report_to_serializable(report)
+  File "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/qualification/oracle_recheck_20261016/supplemental/historical/workspace/src/_pytest/reports.py", line 328, in pytest_report_to_serializable
+    data = report._to_json()
+  File "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/qualification/oracle_recheck_20261016/supplemental/historical/workspace/src/_pytest/reports.py", line 164, in _to_json
+    return _report_to_json(self)
+  File "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/qualification/oracle_recheck_20261016/supplemental/historical/workspace/src/_pytest/reports.py", line 394, in _report_to_json
+    d["longrepr"] = serialize_longrepr(report)
+  File "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/qualification/oracle_recheck_20261016/supplemental/historical/workspace/src/_pytest/reports.py", line 381, in serialize_longrepr
+    serialize_repr_crash(repr_crash),
+  File "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/qualification/oracle_recheck_20261016/supplemental/historical/workspace/src/_pytest/reports.py", line 367, in serialize_repr_crash
+    return reprcrash.__dict__.copy()
+AttributeError: 'NoneType' object has no attribute '__dict__'
+
+======================================================================
+ERROR: test_structured_missing_explicit_TestReport_json (__main__.OracleBehavior)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/qualification/verify_oracle_behavior.py", line 187, in check
+    self.structured(mode, kind, encoding)
+  File "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/qualification/verify_oracle_behavior.py", line 114, in structured
+    data = pytest_report_to_serializable(report)
+  File "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/qualification/oracle_recheck_20261016/supplemental/historical/workspace/src/_pytest/reports.py", line 328, in pytest_report_to_serializable
+    data = report._to_json()
+  File "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/qualification/oracle_recheck_20261016/supplemental/historical/workspace/src/_pytest/reports.py", line 164, in _to_json
+    return _report_to_json(self)
+  File "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/qualification/oracle_recheck_20261016/supplemental/historical/workspace/src/_pytest/reports.py", line 394, in _report_to_json
+    d["longrepr"] = serialize_longrepr(report)
+  File "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/qualification/oracle_recheck_20261016/supplemental/historical/workspace/src/_pytest/reports.py", line 381, in serialize_longrepr
+    serialize_repr_crash(repr_crash),
+  File "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/qualification/oracle_recheck_20261016/supplemental/historical/workspace/src/_pytest/reports.py", line 367, in serialize_repr_crash
+    return reprcrash.__dict__.copy()
+AttributeError: 'NoneType' object has no attribute '__dict__'
+
+======================================================================
+ERROR: test_structured_missing_implicit_CollectReport_hooks (__main__.OracleBehavior)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/qualification/verify_oracle_behavior.py", line 187, in check
+    self.structured(mode, kind, encoding)
+  File "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/qualification/verify_oracle_behavior.py", line 114, in structured
+    data = pytest_report_to_serializable(report)
+  File "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/qualification/oracle_recheck_20261016/supplemental/historical/workspace/src/_pytest/reports.py", line 328, in pytest_report_to_serializable
+    data = report._to_json()
+  File "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/qualification/oracle_recheck_20261016/supplemental/historical/workspace/src/_pytest/reports.py", line 164, in _to_json
+    return _report_to_json(self)
+  File "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/qualification/oracle_recheck_20261016/supplemental/historical/workspace/src/_pytest/reports.py", line 394, in _report_to_json
+    d["longrepr"] = serialize_longrepr(report)
+  File "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/qualification/oracle_recheck_20261016/supplemental/historical/workspace/src/_pytest/reports.py", line 381, in serialize_longrepr
+    serialize_repr_crash(repr_crash),
+  File "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/qualification/oracle_recheck_20261016/supplemental/historical/workspace/src/_pytest/reports.py", line 367, in serialize_repr_crash
+    return reprcrash.__dict__.copy()
+AttributeError: 'NoneType' object has no attribute '__dict__'
+
+======================================================================
+ERROR: test_structured_missing_implicit_CollectReport_json (__main__.OracleBehavior)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/qualification/verify_oracle_behavior.py", line 187, in check
+    self.structured(mode, kind, encoding)
+  File "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/qualification/verify_oracle_behavior.py", line 114, in structured
+    data = pytest_report_to_serializable(report)
+  File "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/qualification/oracle_recheck_20261016/supplemental/historical/workspace/src/_pytest/reports.py", line 328, in pytest_report_to_serializable
+    data = report._to_json()
+  File "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/qualification/oracle_recheck_20261016/supplemental/historical/workspace/src/_pytest/reports.py", line 164, in _to_json
+    return _report_to_json(self)
+  File "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/qualification/oracle_recheck_20261016/supplemental/historical/workspace/src/_pytest/reports.py", line 394, in _report_to_json
+    d["longrepr"] = serialize_longrepr(report)
+  File "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/qualification/oracle_recheck_20261016/supplemental/historical/workspace/src/_pytest/reports.py", line 381, in serialize_longrepr
+    serialize_repr_crash(repr_crash),
+  File "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/qualification/oracle_recheck_20261016/supplemental/historical/workspace/src/_pytest/reports.py", line 367, in serialize_repr_crash
+    return reprcrash.__dict__.copy()
+AttributeError: 'NoneType' object has no attribute '__dict__'
+
+======================================================================
+ERROR: test_structured_missing_implicit_TestReport_hooks (__main__.OracleBehavior)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/qualification/verify_oracle_behavior.py", line 187, in check
+    self.structured(mode, kind, encoding)
+  File "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/qualification/verify_oracle_behavior.py", line 114, in structured
+    data = pytest_report_to_serializable(report)
+  File "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/qualification/oracle_recheck_20261016/supplemental/historical/workspace/src/_pytest/reports.py", line 328, in pytest_report_to_serializable
+    data = report._to_json()
+  File "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/qualification/oracle_recheck_20261016/supplemental/historical/workspace/src/_pytest/reports.py", line 164, in _to_json
+    return _report_to_json(self)
+  File "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/qualification/oracle_recheck_20261016/supplemental/historical/workspace/src/_pytest/reports.py", line 394, in _report_to_json
+    d["longrepr"] = serialize_longrepr(report)
+  File "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/qualification/oracle_recheck_20261016/supplemental/historical/workspace/src/_pytest/reports.py", line 381, in serialize_longrepr
+    serialize_repr_crash(repr_crash),
+  File "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/qualification/oracle_recheck_20261016/supplemental/historical/workspace/src/_pytest/reports.py", line 367, in serialize_repr_crash
+    return reprcrash.__dict__.copy()
+AttributeError: 'NoneType' object has no attribute '__dict__'
+
+======================================================================
+ERROR: test_structured_missing_implicit_TestReport_json (__main__.OracleBehavior)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/qualification/verify_oracle_behavior.py", line 187, in check
+    self.structured(mode, kind, encoding)
+  File "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/qualification/verify_oracle_behavior.py", line 114, in structured
+    data = pytest_report_to_serializable(report)
+  File "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/qualification/oracle_recheck_20261016/supplemental/historical/workspace/src/_pytest/reports.py", line 328, in pytest_report_to_serializable
+    data = report._to_json()
+  File "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/qualification/oracle_recheck_20261016/supplemental/historical/workspace/src/_pytest/reports.py", line 164, in _to_json
+    return _report_to_json(self)
+  File "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/qualification/oracle_recheck_20261016/supplemental/historical/workspace/src/_pytest/reports.py", line 394, in _report_to_json
+    d["longrepr"] = serialize_longrepr(report)
+  File "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/qualification/oracle_recheck_20261016/supplemental/historical/workspace/src/_pytest/reports.py", line 381, in serialize_longrepr
+    serialize_repr_crash(repr_crash),
+  File "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/qualification/oracle_recheck_20261016/supplemental/historical/workspace/src/_pytest/reports.py", line 367, in serialize_repr_crash
+    return reprcrash.__dict__.copy()
+AttributeError: 'NoneType' object has no attribute '__dict__'
+
+======================================================================
+FAIL: test_integration_missing_explicit_call_xdist (__main__.OracleBehavior)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/qualification/verify_oracle_behavior.py", line 193, in check
+    self.integration(mode, phase, engine)
+  File "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/qualification/verify_oracle_behavior.py", line 156, in integration
+    self.assertEqual(result.returncode, expected_exit, result.stdout[-3000:])
+AssertionError: 3 != 1 : w/SWE-bench/evals/pytest_5786/private/qualification/oracle_recheck_20261016/supplemental/historical/workspace/src/_pytest/reports.py", line 367, in serialize_repr_crash
+INTERNALERROR>     return reprcrash.__dict__.copy()
+INTERNALERROR> AttributeError: 'NoneType' object has no attribute '__dict__'
+INTERNALERROR> Traceback (most recent call last):
+INTERNALERROR>   File "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/qualification/oracle_recheck_20261016/supplemental/historical/workspace/src/_pytest/main.py", line 191, in wrap_session
+INTERNALERROR>     session.exitstatus = doit(config, session) or 0
+INTERNALERROR>   File "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/qualification/oracle_recheck_20261016/supplemental/historical/workspace/src/_pytest/main.py", line 235, in _main
+INTERNALERROR>     config.hook.pytest_runtestloop(session=session)
+INTERNALERROR>   File "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/.venv/lib/python3.8/site-packages/pluggy/hooks.py", line 286, in __call__
+INTERNALERROR>     return self._hookexec(self, self.get_hookimpls(), kwargs)
+INTERNALERROR>   File "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/.venv/lib/python3.8/site-packages/pluggy/manager.py", line 93, in _hookexec
+INTERNALERROR>     return self._inner_hookexec(hook, methods, kwargs)
+INTERNALERROR>   File "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/.venv/lib/python3.8/site-packages/pluggy/manager.py", line 84, in <lambda>
+INTERNALERROR>     self._inner_hookexec = lambda hook, methods, kwargs: hook.multicall(
+INTERNALERROR>   File "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/.venv/lib/python3.8/site-packages/pluggy/callers.py", line 208, in _multicall
+INTERNALERROR>     return outcome.get_result()
+INTERNALERROR>   File "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/.venv/lib/python3.8/site-packages/pluggy/callers.py", line 80, in get_result
+INTERNALERROR>     raise ex[1].with_traceback(ex[2])
+INTERNALERROR>   File "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/.venv/lib/python3.8/site-packages/pluggy/callers.py", line 187, in _multicall
+INTERNALERROR>     res = hook_impl.function(*args)
+INTERNALERROR>   File "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/.venv/lib/python3.8/site-packages/xdist/dsession.py", line 115, in pytest_runtestloop
+INTERNALERROR>     self.loop_once()
+INTERNALERROR>   File "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/.venv/lib/python3.8/site-packages/xdist/dsession.py", line 138, in loop_once
+INTERNALERROR>     call(**kwargs)
+INTERNALERROR>   File "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/.venv/lib/python3.8/site-packages/xdist/dsession.py", line 180, in worker_workerfinished
+INTERNALERROR>     assert not crashitem, (crashitem, node)
+INTERNALERROR> AssertionError: ('test_case.py::test_failure', <WorkerController gw0>)
+
+no tests ran in 0.20s
+
+
+======================================================================
+FAIL: test_integration_missing_explicit_collect_xdist (__main__.OracleBehavior)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/qualification/verify_oracle_behavior.py", line 193, in check
+    self.integration(mode, phase, engine)
+  File "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/qualification/verify_oracle_behavior.py", line 156, in integration
+    self.assertEqual(result.returncode, expected_exit, result.stdout[-3000:])
+AssertionError: 5 != 1 : uc/Documents/interview/SWE-bench/evals/pytest_5786/.venv/lib/python3.8/site-packages/pluggy/hooks.py", line 286, in __call__
+INTERNALERROR>     return self._hookexec(self, self.get_hookimpls(), kwargs)
+INTERNALERROR>   File "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/.venv/lib/python3.8/site-packages/pluggy/manager.py", line 93, in _hookexec
+INTERNALERROR>     return self._inner_hookexec(hook, methods, kwargs)
+INTERNALERROR>   File "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/.venv/lib/python3.8/site-packages/pluggy/manager.py", line 84, in <lambda>
+INTERNALERROR>     self._inner_hookexec = lambda hook, methods, kwargs: hook.multicall(
+INTERNALERROR>   File "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/.venv/lib/python3.8/site-packages/pluggy/callers.py", line 208, in _multicall
+INTERNALERROR>     return outcome.get_result()
+INTERNALERROR>   File "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/.venv/lib/python3.8/site-packages/pluggy/callers.py", line 80, in get_result
+INTERNALERROR>     raise ex[1].with_traceback(ex[2])
+INTERNALERROR>   File "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/.venv/lib/python3.8/site-packages/pluggy/callers.py", line 187, in _multicall
+INTERNALERROR>     res = hook_impl.function(*args)
+INTERNALERROR>   File "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/qualification/oracle_recheck_20261016/supplemental/historical/workspace/src/_pytest/reports.py", line 328, in pytest_report_to_serializable
+INTERNALERROR>     data = report._to_json()
+INTERNALERROR>   File "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/qualification/oracle_recheck_20261016/supplemental/historical/workspace/src/_pytest/reports.py", line 164, in _to_json
+INTERNALERROR>     return _report_to_json(self)
+INTERNALERROR>   File "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/qualification/oracle_recheck_20261016/supplemental/historical/workspace/src/_pytest/reports.py", line 394, in _report_to_json
+INTERNALERROR>     d["longrepr"] = serialize_longrepr(report)
+INTERNALERROR>   File "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/qualification/oracle_recheck_20261016/supplemental/historical/workspace/src/_pytest/reports.py", line 381, in serialize_longrepr
+INTERNALERROR>     serialize_repr_crash(repr_crash),
+INTERNALERROR>   File "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/qualification/oracle_recheck_20261016/supplemental/historical/workspace/src/_pytest/reports.py", line 367, in serialize_repr_crash
+INTERNALERROR>     return reprcrash.__dict__.copy()
+INTERNALERROR> AttributeError: 'NoneType' object has no attribute '__dict__'
+
+- generated xml file: /Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/qualification/oracle_recheck_20261016/supplemental/historical/checks/cases/missing_explicit_collect_xdist/report.xml -
+no tests ran in 0.18s
+
+
+======================================================================
+FAIL: test_integration_missing_implicit_call_xdist (__main__.OracleBehavior)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/qualification/verify_oracle_behavior.py", line 193, in check
+    self.integration(mode, phase, engine)
+  File "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/qualification/verify_oracle_behavior.py", line 156, in integration
+    self.assertEqual(result.returncode, expected_exit, result.stdout[-3000:])
+AssertionError: 3 != 1 : w/SWE-bench/evals/pytest_5786/private/qualification/oracle_recheck_20261016/supplemental/historical/workspace/src/_pytest/reports.py", line 367, in serialize_repr_crash
+INTERNALERROR>     return reprcrash.__dict__.copy()
+INTERNALERROR> AttributeError: 'NoneType' object has no attribute '__dict__'
+INTERNALERROR> Traceback (most recent call last):
+INTERNALERROR>   File "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/qualification/oracle_recheck_20261016/supplemental/historical/workspace/src/_pytest/main.py", line 191, in wrap_session
+INTERNALERROR>     session.exitstatus = doit(config, session) or 0
+INTERNALERROR>   File "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/qualification/oracle_recheck_20261016/supplemental/historical/workspace/src/_pytest/main.py", line 235, in _main
+INTERNALERROR>     config.hook.pytest_runtestloop(session=session)
+INTERNALERROR>   File "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/.venv/lib/python3.8/site-packages/pluggy/hooks.py", line 286, in __call__
+INTERNALERROR>     return self._hookexec(self, self.get_hookimpls(), kwargs)
+INTERNALERROR>   File "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/.venv/lib/python3.8/site-packages/pluggy/manager.py", line 93, in _hookexec
+INTERNALERROR>     return self._inner_hookexec(hook, methods, kwargs)
+INTERNALERROR>   File "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/.venv/lib/python3.8/site-packages/pluggy/manager.py", line 84, in <lambda>
+INTERNALERROR>     self._inner_hookexec = lambda hook, methods, kwargs: hook.multicall(
+INTERNALERROR>   File "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/.venv/lib/python3.8/site-packages/pluggy/callers.py", line 208, in _multicall
+INTERNALERROR>     return outcome.get_result()
+INTERNALERROR>   File "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/.venv/lib/python3.8/site-packages/pluggy/callers.py", line 80, in get_result
+INTERNALERROR>     raise ex[1].with_traceback(ex[2])
+INTERNALERROR>   File "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/.venv/lib/python3.8/site-packages/pluggy/callers.py", line 187, in _multicall
+INTERNALERROR>     res = hook_impl.function(*args)
+INTERNALERROR>   File "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/.venv/lib/python3.8/site-packages/xdist/dsession.py", line 115, in pytest_runtestloop
+INTERNALERROR>     self.loop_once()
+INTERNALERROR>   File "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/.venv/lib/python3.8/site-packages/xdist/dsession.py", line 138, in loop_once
+INTERNALERROR>     call(**kwargs)
+INTERNALERROR>   File "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/.venv/lib/python3.8/site-packages/xdist/dsession.py", line 180, in worker_workerfinished
+INTERNALERROR>     assert not crashitem, (crashitem, node)
+INTERNALERROR> AssertionError: ('test_case.py::test_failure', <WorkerController gw0>)
+
+no tests ran in 0.19s
+
+
+======================================================================
+FAIL: test_integration_missing_implicit_collect_xdist (__main__.OracleBehavior)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/qualification/verify_oracle_behavior.py", line 193, in check
+    self.integration(mode, phase, engine)
+  File "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/qualification/verify_oracle_behavior.py", line 156, in integration
+    self.assertEqual(result.returncode, expected_exit, result.stdout[-3000:])
+AssertionError: 5 != 1 : uc/Documents/interview/SWE-bench/evals/pytest_5786/.venv/lib/python3.8/site-packages/pluggy/hooks.py", line 286, in __call__
+INTERNALERROR>     return self._hookexec(self, self.get_hookimpls(), kwargs)
+INTERNALERROR>   File "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/.venv/lib/python3.8/site-packages/pluggy/manager.py", line 93, in _hookexec
+INTERNALERROR>     return self._inner_hookexec(hook, methods, kwargs)
+INTERNALERROR>   File "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/.venv/lib/python3.8/site-packages/pluggy/manager.py", line 84, in <lambda>
+INTERNALERROR>     self._inner_hookexec = lambda hook, methods, kwargs: hook.multicall(
+INTERNALERROR>   File "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/.venv/lib/python3.8/site-packages/pluggy/callers.py", line 208, in _multicall
+INTERNALERROR>     return outcome.get_result()
+INTERNALERROR>   File "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/.venv/lib/python3.8/site-packages/pluggy/callers.py", line 80, in get_result
+INTERNALERROR>     raise ex[1].with_traceback(ex[2])
+INTERNALERROR>   File "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/.venv/lib/python3.8/site-packages/pluggy/callers.py", line 187, in _multicall
+INTERNALERROR>     res = hook_impl.function(*args)
+INTERNALERROR>   File "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/qualification/oracle_recheck_20261016/supplemental/historical/workspace/src/_pytest/reports.py", line 328, in pytest_report_to_serializable
+INTERNALERROR>     data = report._to_json()
+INTERNALERROR>   File "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/qualification/oracle_recheck_20261016/supplemental/historical/workspace/src/_pytest/reports.py", line 164, in _to_json
+INTERNALERROR>     return _report_to_json(self)
+INTERNALERROR>   File "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/qualification/oracle_recheck_20261016/supplemental/historical/workspace/src/_pytest/reports.py", line 394, in _report_to_json
+INTERNALERROR>     d["longrepr"] = serialize_longrepr(report)
+INTERNALERROR>   File "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/qualification/oracle_recheck_20261016/supplemental/historical/workspace/src/_pytest/reports.py", line 381, in serialize_longrepr
+INTERNALERROR>     serialize_repr_crash(repr_crash),
+INTERNALERROR>   File "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/qualification/oracle_recheck_20261016/supplemental/historical/workspace/src/_pytest/reports.py", line 367, in serialize_repr_crash
+INTERNALERROR>     return reprcrash.__dict__.copy()
+INTERNALERROR> AttributeError: 'NoneType' object has no attribute '__dict__'
+
+- generated xml file: /Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/qualification/oracle_recheck_20261016/supplemental/historical/checks/cases/missing_implicit_collect_xdist/report.xml -
+no tests ran in 0.18s
+
+
+======================================================================
+FAIL: test_integration_normal_explicit_call_xdist (__main__.OracleBehavior)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/qualification/verify_oracle_behavior.py", line 193, in check
+    self.integration(mode, phase, engine)
+  File "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/qualification/verify_oracle_behavior.py", line 178, in integration
+    self.assertEqual(remote["text"], local["text"])
+AssertionError: "[gw0] darwin -- Python 3.8.20 /Users/juny[436 chars]-613" != "test_case.py:8: in trigger\n    raise Val[326 chars]-613"
+- [gw0] darwin -- Python 3.8.20 /Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/.venv/bin/python
+  test_case.py:8: in trigger
+      raise ValueError('source-side-cause-607')
+  E   ValueError: source-side-cause-607
+  
+  The above exception was the direct cause of the following exception:
+  test_case.py:14: in test_failure
+      trigger()
+  test_case.py:10: in trigger
+      raise RuntimeError('consumer-side-failure-613') from cause
+  E   RuntimeError: consumer-side-failure-613
+
+======================================================================
+FAIL: test_integration_normal_implicit_call_xdist (__main__.OracleBehavior)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/qualification/verify_oracle_behavior.py", line 193, in check
+    self.integration(mode, phase, engine)
+  File "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/qualification/verify_oracle_behavior.py", line 178, in integration
+    self.assertEqual(remote["text"], local["text"])
+AssertionError: "[gw0] darwin -- Python 3.8.20 /Users/juny[424 chars]-613" != "test_case.py:8: in trigger\n    raise Val[314 chars]-613"
+- [gw0] darwin -- Python 3.8.20 /Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/.venv/bin/python
+  test_case.py:8: in trigger
+      raise ValueError('source-side-cause-607')
+  E   ValueError: source-side-cause-607
+  
+  During handling of the above exception, another exception occurred:
+  test_case.py:14: in test_failure
+      trigger()
+  test_case.py:10: in trigger
+      raise RuntimeError('consumer-side-failure-613')
+  E   RuntimeError: consumer-side-failure-613
+
+----------------------------------------------------------------------
+Ran 32 tests in 4.083s
+
+FAILED (failures=6, errors=8)

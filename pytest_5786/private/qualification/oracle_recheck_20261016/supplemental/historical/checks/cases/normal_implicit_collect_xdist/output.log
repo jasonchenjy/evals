@@ -1,0 +1,18 @@
+bringing up nodes...
+bringing up nodes...
+
+
+==================================== ERRORS ====================================
+________________________ ERROR collecting test_case.py _________________________
+test_case.py:8: in trigger
+    raise ValueError('source-side-cause-607')
+E   ValueError: source-side-cause-607
+
+During handling of the above exception, another exception occurred:
+test_case.py:12: in <module>
+    trigger()
+test_case.py:10: in trigger
+    raise RuntimeError('consumer-side-failure-613')
+E   RuntimeError: consumer-side-failure-613
+- generated xml file: /Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/qualification/oracle_recheck_20261016/supplemental/historical/checks/cases/normal_implicit_collect_xdist/report.xml -
+1 error in 0.19s

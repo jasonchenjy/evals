@@ -1,0 +1,17 @@
+{
+  "status": "reproduced",
+  "enclosing_repository": "/Users/junyuc/Documents/interview/SWE-bench/evals",
+  "workspace": "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/qualification/oracle_recheck_20261016/grader/complete/workspace",
+  "command": [
+    "git",
+    "apply",
+    "--numstat",
+    "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/oracle/complete.patch"
+  ],
+  "returncode": 0,
+  "stdout": "",
+  "stderr": "",
+  "complete_fix_present": false,
+  "historical_test_present": false,
+  "classification": "qualification harness defect; initial grader run invalid as oracle evidence"
+}

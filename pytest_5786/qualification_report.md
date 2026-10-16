@@ -1,5 +1,62 @@
 # Eval 0.1.0 资格报告
 
+## 2026-10-16 Complete Oracle 专项复核
+
+**最新结论：Complete Oracle 已通过完整 Eval 和补充的真实 serial/xdist 验证。Oracle 源码补丁无需更改；本轮发现并修复的是 Git 仓库化后出现的资格执行缺陷。** 本节记录最新复核；下文初始资格结果和原始日志保留，不追改历史记录。
+
+完整机器证据见 [专项复核 summary](private/qualification/oracle_recheck_20261016/summary.json)。Complete Oracle 仍是 [complete.patch](private/oracle/complete.patch)，SHA256 `767fe3bc51d431784b7cb1af61b0f4be5253f7e6cb86c5919cef81599c150c5d`；原始 [historical.patch](private/oracle/historical.patch) 和所有既有控制补丁均保持原字节。
+
+### 检查发现与实际修改
+
+原 Complete Oracle 已在 `serialize_repr_crash` 和 `deserialize_repr_crash` 中分别保留 `None`，非空值继续使用 `ReprFileLocation` 编解码。检查 base producer 的 native traceback 分支和后续修复 `0e0006934019aba7a3bbec95e2fac7c1b82d1063` 后，未发现该实现不满足本题合同的功能缺陷；没有为了“产生修复”而重写正确的 Oracle。
+
+本次首次重跑却发现所有控制态都表现为 base。根因是上一轮将 `evals/` 初始化为 Git 仓库后，普通私有 snapshot 位于该 Git 工作树的子目录；`git apply` 向上发现维护者仓库，对不符合子目录前缀的 patch 路径静默跳过，退出码仍为 0。源码补丁和 curator 历史测试补丁都未实际应用。此首次运行是无效资格证据，不能归为 Complete Oracle 失败；原始记录保存在 [缺陷复现](private/qualification/oracle_recheck_20261016/git_context_defect.json) 和 `oracle_recheck_20261016/grader/`，不覆盖或美化结果。
+
+修复范围限于资格执行：`private/grader.py` 清除继承的 `GIT_*` 上下文、设置 snapshot 的 Git ancestor discovery 边界，并隔离系统/用户 Git 配置；`--numstat` 校验在独立临时目录解析；源码与历史测试补丁共用相同的应用路径。结果额外记录实际应用后的源码 SHA256、历史测试 patch SHA256 及其应用命令。新增“父目录是 Git 仓库、snapshot 被 ignore、同时继承 GIT_DIR/GIT_WORK_TREE”的回归测试，7 个 grader contract tests 全过。这个 Git 边界只修复路径语义，不构成代码执行安全沙箱。
+
+`private/tests/behavior.py`、catalog、既有测试 inventory、评分阈值、全部 Oracle/负对照 patch 均未改。Eval 任务仍为 experimental v0.1.0；本次属于资格执行修复，比较和重放时必须同时标识最新 `checksums.json` 的 hash，不能把初始锁与当前锁混用。旧核心锁保存在 [core_lock_before.json](private/qualification/oracle_recheck_20261016/core_lock_before.json)。
+
+### 完整 grader 重跑
+
+- Complete：A/B/C/D 全通过，Overall=true，11/11 mandatory；H01 两个历史测试通过，H02 相邻完整旧 suite 125/125 通过。
+- No-op：A/B/C 失败、D 通过，Overall=false，4/11 mandatory；原始 bug 可复现，未受影响行为保持可测。
+- Historical：A/B 通过、C/D 失败，Overall=false，9/11 mandatory；C03/D03 均因 `reprcrash=None` 触发 AttributeError。125 个相邻旧测试通过，仍不足以满足扩展合同。
+- Last-only：4/11，Overall=false；TestReport-only：7/11，Overall=false；Text-only：7/11，Overall=false。三个刻意不完整的修复都被拒绝。
+- Alternative：11/11，Overall=true；保留 H02 的 124 passed / 1 failed wire-layout 诊断差异，没有改变其判定地位。
+
+最终七个控制均 `infrastructure_status=ok`，无 mandatory skip、timeout 或 execution_error。负对照中的 failed/error 是实际功能结果，不是通过。逐控制实际 argv、退出码、四维状态、补丁 hash、解释器/完整依赖版本、stdout/JUnit 和错误栈均在 [qualified/summary.json](private/qualification/oracle_recheck_20261016/qualified/summary.json) 引用的文件中。
+
+### 补充跨组件验证
+
+此前 C03/D03 覆盖了缺失 traceback 的报告往返，而 B03 的真实 xdist 输入是普通异常链。本轮新增独立资格脚本 [verify_oracle_behavior.py](private/qualification/verify_oracle_behavior.py) 补齐这两者组合的证据，**不加入或更改 mandatory catalog**。
+
+每个控制运行 32 项补充检查：16 项覆盖显式/隐式、普通/缺失 traceback、TestReport/CollectReport、直接 hooks/真实 JSON 的两次往返，并检查结构化消费者、sections 和 captured output；另 16 项覆盖同样四类异常输入的 serial/xdist、测试失败/收集失败。实际 worker 必须是 gw0，控制端和 worker 端异常表示须逐字一致，终端和 JUnit 必须保留原因、末端异常及顺序；还检查最终 crash message、traceback entries、预期退出码和没有 INTERNALERROR/AttributeError。
+
+最终补充结果：[supplemental_final/summary.json](private/qualification/oracle_recheck_20261016/supplemental_final/summary.json)。Complete **32/32 passed，0 skipped**；No-op **8/32 passed**，其余 24 项暴露传输丢链；Historical **20/32 passed**，8 项结构化检查 error、4 项真实 xdist 检查 failed，均与缺失 traceback 的崩溃一致。serial 的预期测试失败退出码为 1、收集失败为 2；xdist 两类均为 1。没有用非零退出码直接认定报告错误。
+
+补充脚本初版有四个误报：把含 worker banner 的 controller `report.longreprtext` 与 worker 端全文直接比较。base `BaseReport.toterminal` 合法添加该标识，因此修正为比较 `str(report.longrepr)` 的完整异常表示，同时保留文本、顺序、worker 和结构断言。该迭代及初版脚本留在 `supplemental/`，不是放宽现有必测标准；`supplemental_probe/` 还保留了 Git 上下文修复前的运行。
+
+### 独立性与保存边界
+
+[独立性审计](private/qualification/oracle_recheck_20261016/independence.json) 验证：Oracle 只改 `src/_pytest/reports.py`，不改测试；grader 的得分由行为观测与 catalog 决定，不比较提交与 Oracle 的内容或 hash。控制面的包完整性检查确实会校验 Oracle 文件 hash，这是材料身份校验，不是评分依据。不同 wire 编码的 alternative 仍通过 mandatory。
+
+重新导出 Agent payload 并核对 443 个 base 文件，只增加公开题面、公开示例、公开依赖、公开元信息和生成版本 shim；单一 synthetic commit、无 remotes、无 hidden tests/Oracle。普通本机目录仍可被向上遍历，公私 allowlist 是交付边界，不冒称宿主隔离。既有研究、原始 ground truth、历史 patch 和所有旧资格日志保持不变；见 [integrity.json](private/qualification/oracle_recheck_20261016/integrity.json)。
+
+### 实际命令与 Pilot 判断
+
+复用 CPython 3.8.20 及已有固定依赖；没有重新安装环境。以下命令从 `/Users/junyuc/Documents/interview/SWE-bench` 实际执行，输出目录必须全新：
+
+```sh
+python3 evals/pytest_5786/private/qualification/test_grader_contract.py
+python3 evals/pytest_5786/private/qualification/qualify.py --repo pytest --python evals/pytest_5786/.venv/bin/python --output evals/pytest_5786/private/qualification/oracle_recheck_20261016/qualified
+python3 evals/pytest_5786/private/qualification/run_oracle_verification.py --repo pytest --python evals/pytest_5786/.venv/bin/python --output evals/pytest_5786/private/qualification/oracle_recheck_20261016/supplemental_final
+python3 evals/pytest_5786/prepare.py --repo pytest --destination evals/pytest_5786/.artifacts/agent_oracle_recheck
+```
+
+**功能层面的 Oracle/Eval 资格已满足；尚不能直接启动不可信 Agent Pilot Trials。** 仍需下一阶段提供隔离 Runtime、真实资源和网络限制及私有资料隔离。只验证了 macOS arm64/Python 3.8.20/单 xdist worker；未证明跨平台、跨版本 wire 互通、全面插件兼容或对抗性防作弊。没有调用 Coding Agent、实现 Runtime 或改变模型比较标准。
+
+## 初始 package creation 资格记录（原结果保留）
+
 日期：2026-10-16。结论：**本机确定性控制资格通过；不可信 Agent 执行设施仍未资格验证。** 最终运行是 `private/qualification/qualified_v0_1_0`，其余 `run_01`～`run_03`、`final` 和 `final_v0_1_0` 为构建迭代记录。没有执行真实 Agent Trials，没有运行模型比较。
 
 ## 四个维度的准确含义

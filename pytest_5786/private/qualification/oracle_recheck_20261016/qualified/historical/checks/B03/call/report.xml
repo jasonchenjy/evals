@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites><testsuite errors="0" failures="1" hostname="JDY6VGTDXD-Junyu-Chen" name="pytest" skipped="0" tests="1" time="0.185" timestamp="2026-10-16T20:13:21.877075"><testcase classname="test_transport" file="test_transport.py" line="8" name="test_remote" time="0.001"><failure message="RuntimeError: worker-outer-509">test_transport.py:5: in fail
+    raise ValueError(&quot;worker-inner-503&quot;)
+E   ValueError: worker-inner-503
+
+The above exception was the direct cause of the following exception:
+test_transport.py:10: in test_remote
+    fail()
+test_transport.py:7: in fail
+    raise RuntimeError(&quot;worker-outer-509&quot;) from e
+E   RuntimeError: worker-outer-509</failure></testcase></testsuite></testsuites>

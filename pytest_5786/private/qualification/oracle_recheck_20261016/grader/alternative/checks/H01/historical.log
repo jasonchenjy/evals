@@ -1,0 +1,6 @@
+
+- generated xml file: /Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/qualification/oracle_recheck_20261016/grader/alternative/checks/H01/historical.xml -
+no tests ran in 0.02s
+ERROR: not found: /Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/qualification/oracle_recheck_20261016/grader/alternative/workspace/testing/test_reports.py::TestReportSerialization::test_chained_exceptions
+(no name '/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/qualification/oracle_recheck_20261016/grader/alternative/workspace/testing/test_reports.py::TestReportSerialization::test_chained_exceptions' in any of [<Instance ()>])
+

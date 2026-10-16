@@ -1,0 +1,31 @@
+{
+  "passed": true,
+  "command": [
+    "python3",
+    "evals/pytest_5786/prepare.py",
+    "--repo",
+    "pytest",
+    "--destination",
+    "evals/pytest_5786/.artifacts/agent_oracle_recheck"
+  ],
+  "extra_exported_files": [
+    "TASK.md",
+    "eval_public.json",
+    "eval_public/test_example.py",
+    "eval_requirements.txt",
+    "src/_pytest/_version.py"
+  ],
+  "base_files_verified": 443,
+  "synthetic_commit_count": 1,
+  "remotes": "",
+  "oracle_and_private_tests_exported": false,
+  "oracle_submitted_paths": [
+    "src/_pytest/reports.py"
+  ],
+  "oracle_test_modifications": false,
+  "complete_oracle_sha256_unchanged": "767fe3bc51d431784b7cb1af61b0f4be5253f7e6cb86c5919cef81599c150c5d",
+  "all_control_patches_unchanged": true,
+  "grader_submission_matching": "No comparison to oracle contents or patch hash; score derives from worker observations and mandatory catalog. Controller integrity hashes include oracle artifacts, but workers do not need their contents.",
+  "observed_alternative_implementation_pass": true,
+  "security_limit": "Local trusted execution only; parent directories remain visible on this host. Export allowlist is not a sandbox."
+}

@@ -1,0 +1,105 @@
+bringing up nodes...
+bringing up nodes...
+
+INTERNALERROR> Traceback (most recent call last):
+INTERNALERROR>   File "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/qualification/oracle_recheck_20261016/supplemental_final/historical/workspace/src/_pytest/main.py", line 191, in wrap_session
+INTERNALERROR>     session.exitstatus = doit(config, session) or 0
+INTERNALERROR>   File "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/qualification/oracle_recheck_20261016/supplemental_final/historical/workspace/src/_pytest/main.py", line 235, in _main
+INTERNALERROR>     config.hook.pytest_runtestloop(session=session)
+INTERNALERROR>   File "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/.venv/lib/python3.8/site-packages/pluggy/hooks.py", line 286, in __call__
+INTERNALERROR>     return self._hookexec(self, self.get_hookimpls(), kwargs)
+INTERNALERROR>   File "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/.venv/lib/python3.8/site-packages/pluggy/manager.py", line 93, in _hookexec
+INTERNALERROR>     return self._inner_hookexec(hook, methods, kwargs)
+INTERNALERROR>   File "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/.venv/lib/python3.8/site-packages/pluggy/manager.py", line 84, in <lambda>
+INTERNALERROR>     self._inner_hookexec = lambda hook, methods, kwargs: hook.multicall(
+INTERNALERROR>   File "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/.venv/lib/python3.8/site-packages/pluggy/callers.py", line 208, in _multicall
+INTERNALERROR>     return outcome.get_result()
+INTERNALERROR>   File "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/.venv/lib/python3.8/site-packages/pluggy/callers.py", line 80, in get_result
+INTERNALERROR>     raise ex[1].with_traceback(ex[2])
+INTERNALERROR>   File "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/.venv/lib/python3.8/site-packages/pluggy/callers.py", line 187, in _multicall
+INTERNALERROR>     res = hook_impl.function(*args)
+INTERNALERROR>   File "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/.venv/lib/python3.8/site-packages/xdist/remote.py", line 71, in pytest_runtestloop
+INTERNALERROR>     self.run_one_test(torun)
+INTERNALERROR>   File "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/.venv/lib/python3.8/site-packages/xdist/remote.py", line 85, in run_one_test
+INTERNALERROR>     self.config.hook.pytest_runtest_protocol(item=item, nextitem=nextitem)
+INTERNALERROR>   File "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/.venv/lib/python3.8/site-packages/pluggy/hooks.py", line 286, in __call__
+INTERNALERROR>     return self._hookexec(self, self.get_hookimpls(), kwargs)
+INTERNALERROR>   File "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/.venv/lib/python3.8/site-packages/pluggy/manager.py", line 93, in _hookexec
+INTERNALERROR>     return self._inner_hookexec(hook, methods, kwargs)
+INTERNALERROR>   File "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/.venv/lib/python3.8/site-packages/pluggy/manager.py", line 84, in <lambda>
+INTERNALERROR>     self._inner_hookexec = lambda hook, methods, kwargs: hook.multicall(
+INTERNALERROR>   File "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/.venv/lib/python3.8/site-packages/pluggy/callers.py", line 208, in _multicall
+INTERNALERROR>     return outcome.get_result()
+INTERNALERROR>   File "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/.venv/lib/python3.8/site-packages/pluggy/callers.py", line 80, in get_result
+INTERNALERROR>     raise ex[1].with_traceback(ex[2])
+INTERNALERROR>   File "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/.venv/lib/python3.8/site-packages/pluggy/callers.py", line 187, in _multicall
+INTERNALERROR>     res = hook_impl.function(*args)
+INTERNALERROR>   File "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/qualification/oracle_recheck_20261016/supplemental_final/historical/workspace/src/_pytest/runner.py", line 72, in pytest_runtest_protocol
+INTERNALERROR>     runtestprotocol(item, nextitem=nextitem)
+INTERNALERROR>   File "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/qualification/oracle_recheck_20261016/supplemental_final/historical/workspace/src/_pytest/runner.py", line 87, in runtestprotocol
+INTERNALERROR>     reports.append(call_and_report(item, "call", log))
+INTERNALERROR>   File "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/qualification/oracle_recheck_20261016/supplemental_final/historical/workspace/src/_pytest/runner.py", line 171, in call_and_report
+INTERNALERROR>     hook.pytest_runtest_logreport(report=report)
+INTERNALERROR>   File "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/.venv/lib/python3.8/site-packages/pluggy/hooks.py", line 286, in __call__
+INTERNALERROR>     return self._hookexec(self, self.get_hookimpls(), kwargs)
+INTERNALERROR>   File "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/.venv/lib/python3.8/site-packages/pluggy/manager.py", line 93, in _hookexec
+INTERNALERROR>     return self._inner_hookexec(hook, methods, kwargs)
+INTERNALERROR>   File "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/.venv/lib/python3.8/site-packages/pluggy/manager.py", line 84, in <lambda>
+INTERNALERROR>     self._inner_hookexec = lambda hook, methods, kwargs: hook.multicall(
+INTERNALERROR>   File "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/.venv/lib/python3.8/site-packages/pluggy/callers.py", line 208, in _multicall
+INTERNALERROR>     return outcome.get_result()
+INTERNALERROR>   File "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/.venv/lib/python3.8/site-packages/pluggy/callers.py", line 80, in get_result
+INTERNALERROR>     raise ex[1].with_traceback(ex[2])
+INTERNALERROR>   File "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/.venv/lib/python3.8/site-packages/pluggy/callers.py", line 187, in _multicall
+INTERNALERROR>     res = hook_impl.function(*args)
+INTERNALERROR>   File "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/.venv/lib/python3.8/site-packages/xdist/remote.py", line 108, in pytest_runtest_logreport
+INTERNALERROR>     data = self.config.hook.pytest_report_to_serializable(
+INTERNALERROR>   File "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/.venv/lib/python3.8/site-packages/pluggy/hooks.py", line 286, in __call__
+INTERNALERROR>     return self._hookexec(self, self.get_hookimpls(), kwargs)
+INTERNALERROR>   File "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/.venv/lib/python3.8/site-packages/pluggy/manager.py", line 93, in _hookexec
+INTERNALERROR>     return self._inner_hookexec(hook, methods, kwargs)
+INTERNALERROR>   File "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/.venv/lib/python3.8/site-packages/pluggy/manager.py", line 84, in <lambda>
+INTERNALERROR>     self._inner_hookexec = lambda hook, methods, kwargs: hook.multicall(
+INTERNALERROR>   File "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/.venv/lib/python3.8/site-packages/pluggy/callers.py", line 208, in _multicall
+INTERNALERROR>     return outcome.get_result()
+INTERNALERROR>   File "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/.venv/lib/python3.8/site-packages/pluggy/callers.py", line 80, in get_result
+INTERNALERROR>     raise ex[1].with_traceback(ex[2])
+INTERNALERROR>   File "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/.venv/lib/python3.8/site-packages/pluggy/callers.py", line 187, in _multicall
+INTERNALERROR>     res = hook_impl.function(*args)
+INTERNALERROR>   File "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/qualification/oracle_recheck_20261016/supplemental_final/historical/workspace/src/_pytest/reports.py", line 328, in pytest_report_to_serializable
+INTERNALERROR>     data = report._to_json()
+INTERNALERROR>   File "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/qualification/oracle_recheck_20261016/supplemental_final/historical/workspace/src/_pytest/reports.py", line 164, in _to_json
+INTERNALERROR>     return _report_to_json(self)
+INTERNALERROR>   File "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/qualification/oracle_recheck_20261016/supplemental_final/historical/workspace/src/_pytest/reports.py", line 394, in _report_to_json
+INTERNALERROR>     d["longrepr"] = serialize_longrepr(report)
+INTERNALERROR>   File "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/qualification/oracle_recheck_20261016/supplemental_final/historical/workspace/src/_pytest/reports.py", line 381, in serialize_longrepr
+INTERNALERROR>     serialize_repr_crash(repr_crash),
+INTERNALERROR>   File "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/qualification/oracle_recheck_20261016/supplemental_final/historical/workspace/src/_pytest/reports.py", line 367, in serialize_repr_crash
+INTERNALERROR>     return reprcrash.__dict__.copy()
+INTERNALERROR> AttributeError: 'NoneType' object has no attribute '__dict__'
+INTERNALERROR> Traceback (most recent call last):
+INTERNALERROR>   File "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/qualification/oracle_recheck_20261016/supplemental_final/historical/workspace/src/_pytest/main.py", line 191, in wrap_session
+INTERNALERROR>     session.exitstatus = doit(config, session) or 0
+INTERNALERROR>   File "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/qualification/oracle_recheck_20261016/supplemental_final/historical/workspace/src/_pytest/main.py", line 235, in _main
+INTERNALERROR>     config.hook.pytest_runtestloop(session=session)
+INTERNALERROR>   File "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/.venv/lib/python3.8/site-packages/pluggy/hooks.py", line 286, in __call__
+INTERNALERROR>     return self._hookexec(self, self.get_hookimpls(), kwargs)
+INTERNALERROR>   File "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/.venv/lib/python3.8/site-packages/pluggy/manager.py", line 93, in _hookexec
+INTERNALERROR>     return self._inner_hookexec(hook, methods, kwargs)
+INTERNALERROR>   File "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/.venv/lib/python3.8/site-packages/pluggy/manager.py", line 84, in <lambda>
+INTERNALERROR>     self._inner_hookexec = lambda hook, methods, kwargs: hook.multicall(
+INTERNALERROR>   File "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/.venv/lib/python3.8/site-packages/pluggy/callers.py", line 208, in _multicall
+INTERNALERROR>     return outcome.get_result()
+INTERNALERROR>   File "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/.venv/lib/python3.8/site-packages/pluggy/callers.py", line 80, in get_result
+INTERNALERROR>     raise ex[1].with_traceback(ex[2])
+INTERNALERROR>   File "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/.venv/lib/python3.8/site-packages/pluggy/callers.py", line 187, in _multicall
+INTERNALERROR>     res = hook_impl.function(*args)
+INTERNALERROR>   File "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/.venv/lib/python3.8/site-packages/xdist/dsession.py", line 115, in pytest_runtestloop
+INTERNALERROR>     self.loop_once()
+INTERNALERROR>   File "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/.venv/lib/python3.8/site-packages/xdist/dsession.py", line 138, in loop_once
+INTERNALERROR>     call(**kwargs)
+INTERNALERROR>   File "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/.venv/lib/python3.8/site-packages/xdist/dsession.py", line 180, in worker_workerfinished
+INTERNALERROR>     assert not crashitem, (crashitem, node)
+INTERNALERROR> AssertionError: ('test_case.py::test_failure', <WorkerController gw0>)
+
+no tests ran in 0.19s

@@ -1,0 +1,15 @@
+{"argv": ["/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/.venv/bin/python", "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/check.py", "--method", "test_B02_structured_consumer", "--output", "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/qualification/oracle_recheck_20261016/qualified/text_only/checks/B02/observation.json"], "cwd": "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/qualification/oracle_recheck_20261016/qualified/text_only/workspace"}
+test_B02_structured_consumer (eval_behavior.Behavior) ... ERROR
+
+======================================================================
+ERROR: test_B02_structured_consumer (eval_behavior.Behavior)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/tests/behavior.py", line 117, in test_B02_structured_consumer
+    self.assertEqual(restored.longrepr.reprcrash.message, "ValueError: layer-1")
+AttributeError: 'str' object has no attribute 'reprcrash'
+
+----------------------------------------------------------------------
+Ran 1 test in 0.040s
+
+FAILED (errors=1)

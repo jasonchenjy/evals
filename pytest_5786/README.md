@@ -1,5 +1,7 @@
 # pytest #5786 Eval v0.1.0
 
+最新 Complete Oracle 专项复核见 [资格报告](qualification_report.md) 和 [机器结果](private/qualification/oracle_recheck_20261016/summary.json)。Oracle 补丁未改；修复了父 Git 仓库导致 snapshot 补丁被静默跳过的 grader 问题。重跑 11 项必测与全部诊断通过，另有 32 项结构/serial/xdist 补充检查通过。原始 package creation 的资格日志及 manifest 中的原结果引用保留，最新复核使用更新后的核心锁。
+
 一个固定任务的 **experimental / qualification-only Eval Package**。已经执行本机确定性资格验证，可由下一阶段 Runtime 按下述接口接入；尚未获得安全运行不可信 Agent/补丁的资格。没有 Agent Runtime、模型调用、模型比较或通用任务生成器。
 
 目标能力：**Cross-Component Reasoning & Bug Fixing**。提交必须是可运行的源码修复；主结果是所有必测行为均满足的布尔值，没有加权平均分。仓库 `pytest-dev/pytest`，base `955e54221008aba577ecbaefa15679f6777d3bf8`，公开 Verified 实例 `pytest-dev__pytest-5787`。

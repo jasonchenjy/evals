@@ -1,0 +1,28 @@
+{
+  "passed": true,
+  "changed_existing_files": [
+    "pytest_5786/CHANGELOG.md",
+    "pytest_5786/README.md",
+    "pytest_5786/checksums.json",
+    "pytest_5786/delivery_hashes.json",
+    "pytest_5786/private/grader.py",
+    "pytest_5786/private/qualification/test_grader_contract.py",
+    "pytest_5786/qualification_report.md"
+  ],
+  "all_prior_files_except_declared_edits_unchanged": true,
+  "prior_tracked_files_checked": 1718,
+  "historical_qualification_logs_unchanged": true,
+  "all_oracle_control_patches_unchanged": true,
+  "mandatory_tests_catalog_inventory_unchanged": true,
+  "research_files_unchanged": 177,
+  "pytest_checkout_clean": true,
+  "core_lock_sha256": "93df7b9addc0016796eb5c7eebb85a00858dc47184eeb758dff9519fd695cab9",
+  "core_files_verified": 21,
+  "actual_grader_controls": 7,
+  "mandatory_per_control": 11,
+  "diagnostic_per_control": 2,
+  "supplemental_checks_per_control": 32,
+  "complete_all_mandatory_diagnostic_supplemental_passed": true,
+  "grader_contract_tests_passed": 7,
+  "security_qualification": false
+}

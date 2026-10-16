@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites><testsuite errors="1" failures="0" hostname="JDY6VGTDXD-Junyu-Chen" name="pytest" skipped="0" tests="1" time="0.204" timestamp="2026-10-16T20:11:34.734847"><testcase classname="" file="test_case.py" name="test_case" time="0.000"><error message="collection failure">test_case.py:12: in &lt;module&gt;
+    trigger()
+test_case.py:10: in trigger
+    raise RuntimeError(&apos;consumer-side-failure-613&apos;) from cause
+E   RuntimeError: consumer-side-failure-613</error></testcase></testsuite></testsuites>

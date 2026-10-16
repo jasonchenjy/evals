@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "method": "test_D03_missing_traceback_no_new_crash",
+  "status": "passed",
+  "tests_run": 1,
+  "duration_seconds": 0.061251291,
+  "failures": [],
+  "skips": [],
+  "details": []
+}

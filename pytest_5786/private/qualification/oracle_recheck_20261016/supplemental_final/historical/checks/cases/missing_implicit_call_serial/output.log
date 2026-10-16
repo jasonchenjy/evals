@@ -1,0 +1,15 @@
+F                                                                        [100%]
+=================================== FAILURES ===================================
+_________________________________ test_failure _________________________________
+test_case.RemoteProblem: source-side-cause-607
+
+During handling of the above exception, another exception occurred:
+test_case.py:13: in test_failure
+    trigger()
+test_case.py:9: in trigger
+    raise error
+E   RuntimeError: consumer-side-failure-613
+----------------------------- Captured stdout call -----------------------------
+capture-619
+- generated xml file: /Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/qualification/oracle_recheck_20261016/supplemental_final/historical/checks/cases/missing_implicit_call_serial/report.xml -
+1 failed in 0.03s

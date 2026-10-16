@@ -1,0 +1,118 @@
+{"argv": ["/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/.venv/bin/python", "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/qualification/verify_oracle_behavior.py"], "cwd": "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/qualification/oracle_recheck_20261016/supplemental/complete/workspace"}
+test_integration_missing_explicit_call_serial (__main__.OracleBehavior) ... ok
+test_integration_missing_explicit_call_xdist (__main__.OracleBehavior) ... FAIL
+test_integration_missing_explicit_collect_serial (__main__.OracleBehavior) ... ok
+test_integration_missing_explicit_collect_xdist (__main__.OracleBehavior) ... ok
+test_integration_missing_implicit_call_serial (__main__.OracleBehavior) ... ok
+test_integration_missing_implicit_call_xdist (__main__.OracleBehavior) ... FAIL
+test_integration_missing_implicit_collect_serial (__main__.OracleBehavior) ... ok
+test_integration_missing_implicit_collect_xdist (__main__.OracleBehavior) ... ok
+test_integration_normal_explicit_call_serial (__main__.OracleBehavior) ... ok
+test_integration_normal_explicit_call_xdist (__main__.OracleBehavior) ... FAIL
+test_integration_normal_explicit_collect_serial (__main__.OracleBehavior) ... ok
+test_integration_normal_explicit_collect_xdist (__main__.OracleBehavior) ... ok
+test_integration_normal_implicit_call_serial (__main__.OracleBehavior) ... ok
+test_integration_normal_implicit_call_xdist (__main__.OracleBehavior) ... FAIL
+test_integration_normal_implicit_collect_serial (__main__.OracleBehavior) ... ok
+test_integration_normal_implicit_collect_xdist (__main__.OracleBehavior) ... ok
+test_structured_missing_explicit_CollectReport_hooks (__main__.OracleBehavior) ... ok
+test_structured_missing_explicit_CollectReport_json (__main__.OracleBehavior) ... ok
+test_structured_missing_explicit_TestReport_hooks (__main__.OracleBehavior) ... ok
+test_structured_missing_explicit_TestReport_json (__main__.OracleBehavior) ... ok
+test_structured_missing_implicit_CollectReport_hooks (__main__.OracleBehavior) ... ok
+test_structured_missing_implicit_CollectReport_json (__main__.OracleBehavior) ... ok
+test_structured_missing_implicit_TestReport_hooks (__main__.OracleBehavior) ... ok
+test_structured_missing_implicit_TestReport_json (__main__.OracleBehavior) ... ok
+test_structured_normal_explicit_CollectReport_hooks (__main__.OracleBehavior) ... ok
+test_structured_normal_explicit_CollectReport_json (__main__.OracleBehavior) ... ok
+test_structured_normal_explicit_TestReport_hooks (__main__.OracleBehavior) ... ok
+test_structured_normal_explicit_TestReport_json (__main__.OracleBehavior) ... ok
+test_structured_normal_implicit_CollectReport_hooks (__main__.OracleBehavior) ... ok
+test_structured_normal_implicit_CollectReport_json (__main__.OracleBehavior) ... ok
+test_structured_normal_implicit_TestReport_hooks (__main__.OracleBehavior) ... ok
+test_structured_normal_implicit_TestReport_json (__main__.OracleBehavior) ... ok
+
+======================================================================
+FAIL: test_integration_missing_explicit_call_xdist (__main__.OracleBehavior)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/qualification/verify_oracle_behavior.py", line 193, in check
+    self.integration(mode, phase, engine)
+  File "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/qualification/verify_oracle_behavior.py", line 178, in integration
+    self.assertEqual(remote["text"], local["text"])
+AssertionError: '[gw0] darwin -- Python 3.8.20 /Users/juny[322 chars]-613' != 'test_case.RemoteProblem: source-side-caus[212 chars]-613'
+- [gw0] darwin -- Python 3.8.20 /Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/.venv/bin/python
+  test_case.RemoteProblem: source-side-cause-607
+  
+  The above exception was the direct cause of the following exception:
+  test_case.py:13: in test_failure
+      trigger()
+  test_case.py:9: in trigger
+      raise error
+  E   RuntimeError: consumer-side-failure-613
+
+======================================================================
+FAIL: test_integration_missing_implicit_call_xdist (__main__.OracleBehavior)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/qualification/verify_oracle_behavior.py", line 193, in check
+    self.integration(mode, phase, engine)
+  File "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/qualification/verify_oracle_behavior.py", line 178, in integration
+    self.assertEqual(remote["text"], local["text"])
+AssertionError: '[gw0] darwin -- Python 3.8.20 /Users/juny[321 chars]-613' != 'test_case.RemoteProblem: source-side-caus[211 chars]-613'
+- [gw0] darwin -- Python 3.8.20 /Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/.venv/bin/python
+  test_case.RemoteProblem: source-side-cause-607
+  
+  During handling of the above exception, another exception occurred:
+  test_case.py:13: in test_failure
+      trigger()
+  test_case.py:9: in trigger
+      raise error
+  E   RuntimeError: consumer-side-failure-613
+
+======================================================================
+FAIL: test_integration_normal_explicit_call_xdist (__main__.OracleBehavior)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/qualification/verify_oracle_behavior.py", line 193, in check
+    self.integration(mode, phase, engine)
+  File "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/qualification/verify_oracle_behavior.py", line 178, in integration
+    self.assertEqual(remote["text"], local["text"])
+AssertionError: "[gw0] darwin -- Python 3.8.20 /Users/juny[436 chars]-613" != "test_case.py:8: in trigger\n    raise Val[326 chars]-613"
+- [gw0] darwin -- Python 3.8.20 /Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/.venv/bin/python
+  test_case.py:8: in trigger
+      raise ValueError('source-side-cause-607')
+  E   ValueError: source-side-cause-607
+  
+  The above exception was the direct cause of the following exception:
+  test_case.py:14: in test_failure
+      trigger()
+  test_case.py:10: in trigger
+      raise RuntimeError('consumer-side-failure-613') from cause
+  E   RuntimeError: consumer-side-failure-613
+
+======================================================================
+FAIL: test_integration_normal_implicit_call_xdist (__main__.OracleBehavior)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/qualification/verify_oracle_behavior.py", line 193, in check
+    self.integration(mode, phase, engine)
+  File "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/qualification/verify_oracle_behavior.py", line 178, in integration
+    self.assertEqual(remote["text"], local["text"])
+AssertionError: "[gw0] darwin -- Python 3.8.20 /Users/juny[424 chars]-613" != "test_case.py:8: in trigger\n    raise Val[314 chars]-613"
+- [gw0] darwin -- Python 3.8.20 /Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/.venv/bin/python
+  test_case.py:8: in trigger
+      raise ValueError('source-side-cause-607')
+  E   ValueError: source-side-cause-607
+  
+  During handling of the above exception, another exception occurred:
+  test_case.py:14: in test_failure
+      trigger()
+  test_case.py:10: in trigger
+      raise RuntimeError('consumer-side-failure-613')
+  E   RuntimeError: consumer-side-failure-613
+
+----------------------------------------------------------------------
+Ran 32 tests in 4.163s
+
+FAILED (failures=4)

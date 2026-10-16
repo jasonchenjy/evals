@@ -1,0 +1,619 @@
+{
+  "schema_version": 1,
+  "eval_id": "pytest_5786",
+  "eval_version": "0.1.0",
+  "timestamp": "2026-10-16T20:09:48.485254+00:00",
+  "base_commit": "955e54221008aba577ecbaefa15679f6777d3bf8",
+  "overall_resolved": false,
+  "infrastructure_status": "ok",
+  "submission_status": "accepted",
+  "dimensions": {
+    "original_bug_resolution": {
+      "satisfied": false,
+      "checks": {
+        "A01": "failed",
+        "A02": "failed"
+      }
+    },
+    "cross_component_consistency": {
+      "satisfied": false,
+      "checks": {
+        "B01": "failed",
+        "B02": "failed",
+        "B03": "failed"
+      }
+    },
+    "edge_case_robustness": {
+      "satisfied": false,
+      "checks": {
+        "C01": "passed",
+        "C02": "failed",
+        "C03": "failed"
+      }
+    },
+    "non_regression": {
+      "satisfied": false,
+      "checks": {
+        "D01": "passed",
+        "D02": "failed",
+        "D03": "passed"
+      }
+    }
+  },
+  "tests": [
+    {
+      "id": "A01",
+      "dimensions": [
+        "A"
+      ],
+      "mandatory": true,
+      "execution": {
+        "command": [
+          "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/.venv/bin/python",
+          "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/check.py",
+          "--method",
+          "test_A01_explicit",
+          "--output",
+          "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/qualification/oracle_recheck_20261016/grader/complete/checks/A01/observation.json"
+        ],
+        "cwd": "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/qualification/oracle_recheck_20261016/grader/complete/workspace",
+        "returncode": 1,
+        "timeout": false,
+        "elapsed_seconds": 0.12724987501860596,
+        "log": "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/qualification/oracle_recheck_20261016/grader/complete/checks/A01/worker.log"
+      },
+      "observation": {
+        "schema_version": 1,
+        "method": "test_A01_explicit",
+        "status": "failed",
+        "tests_run": 1,
+        "duration_seconds": 0.067338167,
+        "failures": [
+          "Traceback (most recent call last):\n  File \"/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/tests/behavior.py\", line 95, in test_A01_explicit\n    self.assert_chain(rep, 2, \"direct cause of the following exception\")\n  File \"/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/tests/behavior.py\", line 87, in assert_chain\n    self.assertIn(marker, text)\nAssertionError: 'ValueError: layer-0' not found in '../../../../../tests/behavior.py:36: in exception_info\\n    raise_level(depth - 1)\\n../../../../../tests/behavior.py:31: in raise_level\\n    raise ValueError(\"layer-%d\" % level) from cause\\nE   ValueError: layer-1'\n"
+        ],
+        "skips": [],
+        "details": []
+      },
+      "status": "failed"
+    },
+    {
+      "id": "A02",
+      "dimensions": [
+        "A"
+      ],
+      "mandatory": true,
+      "execution": {
+        "command": [
+          "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/.venv/bin/python",
+          "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/check.py",
+          "--method",
+          "test_A02_implicit",
+          "--output",
+          "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/qualification/oracle_recheck_20261016/grader/complete/checks/A02/observation.json"
+        ],
+        "cwd": "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/qualification/oracle_recheck_20261016/grader/complete/workspace",
+        "returncode": 1,
+        "timeout": false,
+        "elapsed_seconds": 0.12756933402852155,
+        "log": "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/qualification/oracle_recheck_20261016/grader/complete/checks/A02/worker.log"
+      },
+      "observation": {
+        "schema_version": 1,
+        "method": "test_A02_implicit",
+        "status": "failed",
+        "tests_run": 1,
+        "duration_seconds": 0.06479325000000001,
+        "failures": [
+          "Traceback (most recent call last):\n  File \"/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/tests/behavior.py\", line 100, in test_A02_implicit\n    self.assert_chain(transport(original), 3, \"During handling of the above exception\")\n  File \"/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/tests/behavior.py\", line 87, in assert_chain\n    self.assertIn(marker, text)\nAssertionError: 'ValueError: layer-0' not found in '../../../../../tests/behavior.py:36: in exception_info\\n    raise_level(depth - 1)\\n../../../../../tests/behavior.py:34: in raise_level\\n    raise ValueError(\"layer-%d\" % level)\\nE   ValueError: layer-2'\n"
+        ],
+        "skips": [],
+        "details": []
+      },
+      "status": "failed"
+    },
+    {
+      "id": "B01",
+      "dimensions": [
+        "B"
+      ],
+      "mandatory": true,
+      "execution": {
+        "command": [
+          "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/.venv/bin/python",
+          "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/check.py",
+          "--method",
+          "test_B01_collect_report",
+          "--output",
+          "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/qualification/oracle_recheck_20261016/grader/complete/checks/B01/observation.json"
+        ],
+        "cwd": "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/qualification/oracle_recheck_20261016/grader/complete/workspace",
+        "returncode": 1,
+        "timeout": false,
+        "elapsed_seconds": 0.1823545419902075,
+        "log": "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/qualification/oracle_recheck_20261016/grader/complete/checks/B01/worker.log"
+      },
+      "observation": {
+        "schema_version": 1,
+        "method": "test_B01_collect_report",
+        "status": "failed",
+        "tests_run": 1,
+        "duration_seconds": 0.07011375,
+        "failures": [
+          "Traceback (most recent call last):\n  File \"/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/tests/behavior.py\", line 107, in test_B01_collect_report\n    self.assert_chain(restored, 2, \"direct cause of the following exception\")\n  File \"/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/tests/behavior.py\", line 87, in assert_chain\n    self.assertIn(marker, text)\nAssertionError: 'ValueError: layer-0' not found in '../../../../../tests/behavior.py:36: in exception_info\\n    raise_level(depth - 1)\\n../../../../../tests/behavior.py:31: in raise_level\\n    raise ValueError(\"layer-%d\" % level) from cause\\nE   ValueError: layer-1\\n=============================== collector-detail ===============================\\npayload-443'\n"
+        ],
+        "skips": [],
+        "details": []
+      },
+      "status": "failed"
+    },
+    {
+      "id": "B02",
+      "dimensions": [
+        "B"
+      ],
+      "mandatory": true,
+      "execution": {
+        "command": [
+          "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/.venv/bin/python",
+          "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/check.py",
+          "--method",
+          "test_B02_structured_consumer",
+          "--output",
+          "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/qualification/oracle_recheck_20261016/grader/complete/checks/B02/observation.json"
+        ],
+        "cwd": "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/qualification/oracle_recheck_20261016/grader/complete/workspace",
+        "returncode": 1,
+        "timeout": false,
+        "elapsed_seconds": 0.1308933749969583,
+        "log": "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/qualification/oracle_recheck_20261016/grader/complete/checks/B02/worker.log"
+      },
+      "observation": {
+        "schema_version": 1,
+        "method": "test_B02_structured_consumer",
+        "status": "failed",
+        "tests_run": 1,
+        "duration_seconds": 0.066885167,
+        "failures": [
+          "Traceback (most recent call last):\n  File \"/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/tests/behavior.py\", line 130, in test_B02_structured_consumer\n    self.assert_chain(again, 2, \"direct cause of the following exception\")\n  File \"/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/tests/behavior.py\", line 87, in assert_chain\n    self.assertIn(marker, text)\nAssertionError: 'ValueError: layer-0' not found in '../../../../../tests/behavior.py:36: in exception_info\\n    raise_level(depth - 1)\\n../../../../../tests/behavior.py:31: in raise_level\\n    raise ValueError(\"layer-%d\" % level) from cause\\nE   ValueError: layer-1\\n=============================== before-transport ===============================\\nsection-457\\n------------------------------- after-transport --------------------------------\\nsection-461'\n"
+        ],
+        "skips": [],
+        "details": []
+      },
+      "status": "failed"
+    },
+    {
+      "id": "B03",
+      "dimensions": [
+        "B"
+      ],
+      "mandatory": true,
+      "execution": {
+        "command": [
+          "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/.venv/bin/python",
+          "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/check.py",
+          "--method",
+          "test_B03_real_xdist",
+          "--output",
+          "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/qualification/oracle_recheck_20261016/grader/complete/checks/B03/observation.json"
+        ],
+        "cwd": "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/qualification/oracle_recheck_20261016/grader/complete/workspace",
+        "returncode": 1,
+        "timeout": false,
+        "elapsed_seconds": 0.4476296250068117,
+        "log": "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/qualification/oracle_recheck_20261016/grader/complete/checks/B03/worker.log"
+      },
+      "observation": {
+        "schema_version": 1,
+        "method": "test_B03_real_xdist",
+        "status": "failed",
+        "tests_run": 1,
+        "duration_seconds": 0.35473275,
+        "failures": [
+          "Traceback (most recent call last):\n  File \"/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/tests/behavior.py\", line 153, in test_B03_real_xdist\n    self.assertIn(\"ValueError: worker-inner-503\", result.stdout)\nAssertionError: 'ValueError: worker-inner-503' not found in 'bringing up nodes...\\nbringing up nodes...\\n\\nF                                                                        [100%]\\n=================================== FAILURES ===================================\\n_________________________________ test_remote __________________________________\\n[gw0] darwin -- Python 3.8.20 /Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/.venv/bin/python\\ntest_transport.py:10: in test_remote\\n    fail()\\ntest_transport.py:7: in fail\\n    raise RuntimeError(\"worker-outer-509\") from e\\nE   RuntimeError: worker-outer-509\\n- generated xml file: /Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/qualification/oracle_recheck_20261016/grader/complete/checks/B03/call/report.xml -\\n1 failed in 0.18s\\n'\n"
+        ],
+        "skips": [],
+        "details": [
+          {
+            "command": [
+              "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/.venv/bin/python",
+              "-m",
+              "pytest",
+              "--color=no",
+              "-q",
+              "-p",
+              "xdist.plugin",
+              "-n",
+              "1",
+              "--tb=short",
+              "--junitxml=report.xml",
+              "test_transport.py"
+            ],
+            "cwd": "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/qualification/oracle_recheck_20261016/grader/complete/checks/B03/call",
+            "returncode": 1,
+            "log": "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/qualification/oracle_recheck_20261016/grader/complete/checks/B03/call.log"
+          }
+        ]
+      },
+      "status": "failed"
+    },
+    {
+      "id": "C01",
+      "dimensions": [
+        "C"
+      ],
+      "mandatory": true,
+      "execution": {
+        "command": [
+          "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/.venv/bin/python",
+          "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/check.py",
+          "--method",
+          "test_C01_suppressed_context",
+          "--output",
+          "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/qualification/oracle_recheck_20261016/grader/complete/checks/C01/observation.json"
+        ],
+        "cwd": "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/qualification/oracle_recheck_20261016/grader/complete/workspace",
+        "returncode": 0,
+        "timeout": false,
+        "elapsed_seconds": 0.13138716699904762,
+        "log": "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/qualification/oracle_recheck_20261016/grader/complete/checks/C01/worker.log"
+      },
+      "observation": {
+        "schema_version": 1,
+        "method": "test_C01_suppressed_context",
+        "status": "passed",
+        "tests_run": 1,
+        "duration_seconds": 0.061688166,
+        "failures": [],
+        "skips": [],
+        "details": []
+      },
+      "status": "passed"
+    },
+    {
+      "id": "C02",
+      "dimensions": [
+        "C"
+      ],
+      "mandatory": true,
+      "execution": {
+        "command": [
+          "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/.venv/bin/python",
+          "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/check.py",
+          "--method",
+          "test_C02_long_chain_and_render_option",
+          "--output",
+          "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/qualification/oracle_recheck_20261016/grader/complete/checks/C02/observation.json"
+        ],
+        "cwd": "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/qualification/oracle_recheck_20261016/grader/complete/workspace",
+        "returncode": 1,
+        "timeout": false,
+        "elapsed_seconds": 0.129455540998606,
+        "log": "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/qualification/oracle_recheck_20261016/grader/complete/checks/C02/worker.log"
+      },
+      "observation": {
+        "schema_version": 1,
+        "method": "test_C02_long_chain_and_render_option",
+        "status": "failed",
+        "tests_run": 1,
+        "duration_seconds": 0.06414837500000001,
+        "failures": [
+          "Traceback (most recent call last):\n  File \"/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/tests/behavior.py\", line 175, in test_C02_long_chain_and_render_option\n    self.assert_chain(transport(report(info, kind)), 4,\n  File \"/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/tests/behavior.py\", line 87, in assert_chain\n    self.assertIn(marker, text)\nAssertionError: 'ValueError: layer-0' not found in '../../../../../tests/behavior.py:36: in exception_info\\n    raise_level(depth - 1)\\n../../../../../tests/behavior.py:31: in raise_level\\n    raise ValueError(\"layer-%d\" % level) from cause\\nE   ValueError: layer-3'\n"
+        ],
+        "skips": [],
+        "details": []
+      },
+      "status": "failed"
+    },
+    {
+      "id": "C03",
+      "dimensions": [
+        "C"
+      ],
+      "mandatory": true,
+      "execution": {
+        "command": [
+          "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/.venv/bin/python",
+          "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/check.py",
+          "--method",
+          "test_C03_missing_traceback",
+          "--output",
+          "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/qualification/oracle_recheck_20261016/grader/complete/checks/C03/observation.json"
+        ],
+        "cwd": "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/qualification/oracle_recheck_20261016/grader/complete/workspace",
+        "returncode": 1,
+        "timeout": false,
+        "elapsed_seconds": 0.1294531250023283,
+        "log": "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/qualification/oracle_recheck_20261016/grader/complete/checks/C03/worker.log"
+      },
+      "observation": {
+        "schema_version": 1,
+        "method": "test_C03_missing_traceback",
+        "status": "failed",
+        "tests_run": 1,
+        "duration_seconds": 0.056641125,
+        "failures": [
+          "Traceback (most recent call last):\n  File \"/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/tests/behavior.py\", line 188, in test_C03_missing_traceback\n    self.assertIn(\"RemoteCause: remote-message-713\", restored.longreprtext)\nAssertionError: 'RemoteCause: remote-message-713' not found in '../../../../../tests/behavior.py:48: in remote_info\\n    raise error\\nE   ValueError: outer-message-829'\n"
+        ],
+        "skips": [],
+        "details": []
+      },
+      "status": "failed"
+    },
+    {
+      "id": "D01",
+      "dimensions": [
+        "D"
+      ],
+      "mandatory": true,
+      "execution": {
+        "command": [
+          "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/.venv/bin/python",
+          "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/check.py",
+          "--method",
+          "test_D01_ordinary_reports",
+          "--output",
+          "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/qualification/oracle_recheck_20261016/grader/complete/checks/D01/observation.json"
+        ],
+        "cwd": "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/qualification/oracle_recheck_20261016/grader/complete/workspace",
+        "returncode": 0,
+        "timeout": false,
+        "elapsed_seconds": 0.1277122920146212,
+        "log": "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/qualification/oracle_recheck_20261016/grader/complete/checks/D01/worker.log"
+      },
+      "observation": {
+        "schema_version": 1,
+        "method": "test_D01_ordinary_reports",
+        "status": "passed",
+        "tests_run": 1,
+        "duration_seconds": 0.0628485,
+        "failures": [],
+        "skips": [],
+        "details": []
+      },
+      "status": "passed"
+    },
+    {
+      "id": "D02",
+      "dimensions": [
+        "D"
+      ],
+      "mandatory": true,
+      "execution": {
+        "command": [
+          "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/.venv/bin/python",
+          "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/check.py",
+          "--method",
+          "test_D02_existing_behavior",
+          "--output",
+          "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/qualification/oracle_recheck_20261016/grader/complete/checks/D02/observation.json"
+        ],
+        "cwd": "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/qualification/oracle_recheck_20261016/grader/complete/workspace",
+        "returncode": 1,
+        "timeout": false,
+        "elapsed_seconds": 1.312693208019482,
+        "log": "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/qualification/oracle_recheck_20261016/grader/complete/checks/D02/worker.log"
+      },
+      "observation": {
+        "schema_version": 1,
+        "method": "test_D02_existing_behavior",
+        "status": "failed",
+        "tests_run": 1,
+        "duration_seconds": 1.226421042,
+        "failures": [
+          "Traceback (most recent call last):\n  File \"/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/tests/behavior.py\", line 224, in test_D02_existing_behavior\n    self.assertEqual(len(cases), 118)\nAssertionError: 119 != 118\n"
+        ],
+        "skips": [],
+        "details": [
+          {
+            "command": [
+              "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/.venv/bin/python",
+              "-m",
+              "pytest",
+              "--color=no",
+              "-q",
+              "--tb=short",
+              "--junitxml=/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/qualification/oracle_recheck_20261016/grader/complete/checks/D02/existing.xml",
+              "testing/test_reports.py",
+              "testing/code/test_code.py",
+              "testing/code/test_excinfo.py",
+              "-k",
+              "not test_chained_exceptions and not test_xdist_longrepr_to_str_issue_241 and not test_deserialization_failure and not test_paths_support and not TestHooks"
+            ],
+            "cwd": "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/qualification/oracle_recheck_20261016/grader/complete/workspace",
+            "returncode": 0,
+            "log": "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/qualification/oracle_recheck_20261016/grader/complete/checks/D02/existing.log"
+          }
+        ]
+      },
+      "status": "failed"
+    },
+    {
+      "id": "D03",
+      "dimensions": [
+        "D"
+      ],
+      "mandatory": true,
+      "execution": {
+        "command": [
+          "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/.venv/bin/python",
+          "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/check.py",
+          "--method",
+          "test_D03_missing_traceback_no_new_crash",
+          "--output",
+          "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/qualification/oracle_recheck_20261016/grader/complete/checks/D03/observation.json"
+        ],
+        "cwd": "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/qualification/oracle_recheck_20261016/grader/complete/workspace",
+        "returncode": 0,
+        "timeout": false,
+        "elapsed_seconds": 0.1276756659790408,
+        "log": "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/qualification/oracle_recheck_20261016/grader/complete/checks/D03/worker.log"
+      },
+      "observation": {
+        "schema_version": 1,
+        "method": "test_D03_missing_traceback_no_new_crash",
+        "status": "passed",
+        "tests_run": 1,
+        "duration_seconds": 0.07042237500000001,
+        "failures": [],
+        "skips": [],
+        "details": []
+      },
+      "status": "passed"
+    },
+    {
+      "id": "H01",
+      "dimensions": [],
+      "mandatory": false,
+      "execution": {
+        "command": [
+          "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/.venv/bin/python",
+          "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/check.py",
+          "--method",
+          "test_H01_historical_focused",
+          "--output",
+          "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/qualification/oracle_recheck_20261016/grader/complete/checks/H01/observation.json"
+        ],
+        "cwd": "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/qualification/oracle_recheck_20261016/grader/complete/workspace",
+        "returncode": 1,
+        "timeout": false,
+        "elapsed_seconds": 0.2911299580009654,
+        "log": "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/qualification/oracle_recheck_20261016/grader/complete/checks/H01/worker.log"
+      },
+      "observation": {
+        "schema_version": 1,
+        "method": "test_H01_historical_focused",
+        "status": "failed",
+        "tests_run": 1,
+        "duration_seconds": 0.198209625,
+        "failures": [
+          "Traceback (most recent call last):\n  File \"/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/tests/behavior.py\", line 249, in test_H01_historical_focused\n    self.assertEqual(result.returncode, 0, result.stdout[-4000:])\nAssertionError: 4 != 0 : \n- generated xml file: /Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/qualification/oracle_recheck_20261016/grader/complete/checks/H01/historical.xml -\nno tests ran in 0.02s\nERROR: not found: /Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/qualification/oracle_recheck_20261016/grader/complete/workspace/testing/test_reports.py::TestReportSerialization::test_chained_exceptions\n(no name '/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/qualification/oracle_recheck_20261016/grader/complete/workspace/testing/test_reports.py::TestReportSerialization::test_chained_exceptions' in any of [<Instance ()>])\n\n\n"
+        ],
+        "skips": [],
+        "details": [
+          {
+            "command": [
+              "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/.venv/bin/python",
+              "-m",
+              "pytest",
+              "--color=no",
+              "-q",
+              "--tb=short",
+              "--junitxml=/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/qualification/oracle_recheck_20261016/grader/complete/checks/H01/historical.xml",
+              "testing/test_reports.py::TestReportSerialization::test_chained_exceptions"
+            ],
+            "cwd": "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/qualification/oracle_recheck_20261016/grader/complete/workspace",
+            "returncode": 4,
+            "log": "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/qualification/oracle_recheck_20261016/grader/complete/checks/H01/historical.log"
+          },
+          {
+            "historical_cases": 0,
+            "passed": 0,
+            "failures": 0,
+            "skips": 0
+          }
+        ]
+      },
+      "status": "failed"
+    },
+    {
+      "id": "H02",
+      "dimensions": [],
+      "mandatory": false,
+      "execution": {
+        "command": [
+          "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/.venv/bin/python",
+          "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/check.py",
+          "--method",
+          "test_H02_full_existing_suite",
+          "--output",
+          "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/qualification/oracle_recheck_20261016/grader/complete/checks/H02/observation.json"
+        ],
+        "cwd": "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/qualification/oracle_recheck_20261016/grader/complete/workspace",
+        "returncode": 0,
+        "timeout": false,
+        "elapsed_seconds": 1.3720690420013852,
+        "log": "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/qualification/oracle_recheck_20261016/grader/complete/checks/H02/worker.log"
+      },
+      "observation": {
+        "schema_version": 1,
+        "method": "test_H02_full_existing_suite",
+        "status": "passed",
+        "tests_run": 1,
+        "duration_seconds": 1.2812345,
+        "failures": [],
+        "skips": [],
+        "details": [
+          {
+            "command": [
+              "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/.venv/bin/python",
+              "-m",
+              "pytest",
+              "--color=no",
+              "-q",
+              "--tb=short",
+              "--junitxml=/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/qualification/oracle_recheck_20261016/grader/complete/checks/H02/full-existing.xml",
+              "testing/test_reports.py",
+              "testing/code/test_code.py",
+              "testing/code/test_excinfo.py",
+              "-k",
+              "not test_chained_exceptions"
+            ],
+            "cwd": "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/qualification/oracle_recheck_20261016/grader/complete/workspace",
+            "returncode": 0,
+            "log": "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/qualification/oracle_recheck_20261016/grader/complete/checks/H02/full-existing.log"
+          },
+          {
+            "existing_tests": 125,
+            "passed": 125,
+            "skipped": 0
+          }
+        ]
+      },
+      "status": "passed"
+    }
+  ],
+  "execution": [
+    {
+      "command": [
+        "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/.venv/bin/python",
+        "-c",
+        "import sys,json,pytest,pkg_resources; assert sys.version_info[:3] == (3,8,20), sys.version; reqs=[pkg_resources.Requirement.parse(x) for x in open(sys.argv[1]).read().splitlines()]; assert all(pkg_resources.get_distribution(r.project_name) in r for r in reqs); print(json.dumps({'python':sys.version,'pytest_file':pytest.__file__,'pytest_version':pytest.__version__,'packages':sorted(str(x) for x in pkg_resources.working_set)}))",
+        "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/requirements.txt"
+      ],
+      "cwd": "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/qualification/oracle_recheck_20261016/grader/complete/workspace",
+      "returncode": 0,
+      "timeout": false,
+      "elapsed_seconds": 0.18757700000423938,
+      "log": "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/qualification/oracle_recheck_20261016/grader/complete/preflight.log"
+    },
+    {
+      "command": [
+        "git",
+        "apply",
+        "--whitespace=nowarn",
+        "--check",
+        "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/oracle/complete.patch"
+      ],
+      "cwd": "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/qualification/oracle_recheck_20261016/grader/complete/workspace",
+      "returncode": 0,
+      "stderr": ""
+    },
+    {
+      "command": [
+        "git",
+        "apply",
+        "--whitespace=nowarn",
+        "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/oracle/complete.patch"
+      ],
+      "cwd": "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/qualification/oracle_recheck_20261016/grader/complete/workspace",
+      "returncode": 0,
+      "stderr": ""
+    }
+  ],
+  "security_mode": "trusted-local-qualification-not-a-sandbox",
+  "package_lock_sha256": "9fef8ea14b0fdeb9abd051d7aed56fbe5ee9bf676953b5fcb0aa31e15159848e",
+  "patch_sha256": "767fe3bc51d431784b7cb1af61b0f4be5253f7e6cb86c5919cef81599c150c5d",
+  "submitted_paths": [
+    "src/_pytest/reports.py"
+  ]
+}

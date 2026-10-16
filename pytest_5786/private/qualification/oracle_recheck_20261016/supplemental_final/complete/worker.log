@@ -1,0 +1,38 @@
+{"argv": ["/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/.venv/bin/python", "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/qualification/verify_oracle_behavior.py"], "cwd": "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/qualification/oracle_recheck_20261016/supplemental_final/complete/workspace"}
+test_integration_missing_explicit_call_serial (__main__.OracleBehavior) ... ok
+test_integration_missing_explicit_call_xdist (__main__.OracleBehavior) ... ok
+test_integration_missing_explicit_collect_serial (__main__.OracleBehavior) ... ok
+test_integration_missing_explicit_collect_xdist (__main__.OracleBehavior) ... ok
+test_integration_missing_implicit_call_serial (__main__.OracleBehavior) ... ok
+test_integration_missing_implicit_call_xdist (__main__.OracleBehavior) ... ok
+test_integration_missing_implicit_collect_serial (__main__.OracleBehavior) ... ok
+test_integration_missing_implicit_collect_xdist (__main__.OracleBehavior) ... ok
+test_integration_normal_explicit_call_serial (__main__.OracleBehavior) ... ok
+test_integration_normal_explicit_call_xdist (__main__.OracleBehavior) ... ok
+test_integration_normal_explicit_collect_serial (__main__.OracleBehavior) ... ok
+test_integration_normal_explicit_collect_xdist (__main__.OracleBehavior) ... ok
+test_integration_normal_implicit_call_serial (__main__.OracleBehavior) ... ok
+test_integration_normal_implicit_call_xdist (__main__.OracleBehavior) ... ok
+test_integration_normal_implicit_collect_serial (__main__.OracleBehavior) ... ok
+test_integration_normal_implicit_collect_xdist (__main__.OracleBehavior) ... ok
+test_structured_missing_explicit_CollectReport_hooks (__main__.OracleBehavior) ... ok
+test_structured_missing_explicit_CollectReport_json (__main__.OracleBehavior) ... ok
+test_structured_missing_explicit_TestReport_hooks (__main__.OracleBehavior) ... ok
+test_structured_missing_explicit_TestReport_json (__main__.OracleBehavior) ... ok
+test_structured_missing_implicit_CollectReport_hooks (__main__.OracleBehavior) ... ok
+test_structured_missing_implicit_CollectReport_json (__main__.OracleBehavior) ... ok
+test_structured_missing_implicit_TestReport_hooks (__main__.OracleBehavior) ... ok
+test_structured_missing_implicit_TestReport_json (__main__.OracleBehavior) ... ok
+test_structured_normal_explicit_CollectReport_hooks (__main__.OracleBehavior) ... ok
+test_structured_normal_explicit_CollectReport_json (__main__.OracleBehavior) ... ok
+test_structured_normal_explicit_TestReport_hooks (__main__.OracleBehavior) ... ok
+test_structured_normal_explicit_TestReport_json (__main__.OracleBehavior) ... ok
+test_structured_normal_implicit_CollectReport_hooks (__main__.OracleBehavior) ... ok
+test_structured_normal_implicit_CollectReport_json (__main__.OracleBehavior) ... ok
+test_structured_normal_implicit_TestReport_hooks (__main__.OracleBehavior) ... ok
+test_structured_normal_implicit_TestReport_json (__main__.OracleBehavior) ... ok
+
+----------------------------------------------------------------------
+Ran 32 tests in 5.107s
+
+OK

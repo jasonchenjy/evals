@@ -1,0 +1,21 @@
+{"argv": ["/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/.venv/bin/python", "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/check.py", "--method", "test_H01_historical_focused", "--output", "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/qualification/oracle_recheck_20261016/grader/noop/checks/H01/observation.json"], "cwd": "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/qualification/oracle_recheck_20261016/grader/noop/workspace"}
+test_H01_historical_focused (eval_behavior.Behavior) ... FAIL
+
+======================================================================
+FAIL: test_H01_historical_focused (eval_behavior.Behavior)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/tests/behavior.py", line 249, in test_H01_historical_focused
+    self.assertEqual(result.returncode, 0, result.stdout[-4000:])
+AssertionError: 4 != 0 : 
+- generated xml file: /Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/qualification/oracle_recheck_20261016/grader/noop/checks/H01/historical.xml -
+no tests ran in 0.02s
+ERROR: not found: /Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/qualification/oracle_recheck_20261016/grader/noop/workspace/testing/test_reports.py::TestReportSerialization::test_chained_exceptions
+(no name '/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/qualification/oracle_recheck_20261016/grader/noop/workspace/testing/test_reports.py::TestReportSerialization::test_chained_exceptions' in any of [<Instance ()>])
+
+
+
+----------------------------------------------------------------------
+Ran 1 test in 0.154s
+
+FAILED (failures=1)

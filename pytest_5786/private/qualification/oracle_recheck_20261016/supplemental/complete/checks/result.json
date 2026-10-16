@@ -1,0 +1,429 @@
+{
+  "schema_version": 1,
+  "scope": "supplemental verification, not Eval scoring",
+  "tests_run": 32,
+  "passed": 28,
+  "failures": [
+    {
+      "test": "__main__.OracleBehavior.test_integration_missing_explicit_call_xdist",
+      "traceback": "Traceback (most recent call last):\n  File \"/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/qualification/verify_oracle_behavior.py\", line 193, in check\n    self.integration(mode, phase, engine)\n  File \"/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/qualification/verify_oracle_behavior.py\", line 178, in integration\n    self.assertEqual(remote[\"text\"], local[\"text\"])\nAssertionError: '[gw0] darwin -- Python 3.8.20 /Users/juny[322 chars]-613' != 'test_case.RemoteProblem: source-side-caus[212 chars]-613'\n- [gw0] darwin -- Python 3.8.20 /Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/.venv/bin/python\n  test_case.RemoteProblem: source-side-cause-607\n  \n  The above exception was the direct cause of the following exception:\n  test_case.py:13: in test_failure\n      trigger()\n  test_case.py:9: in trigger\n      raise error\n  E   RuntimeError: consumer-side-failure-613\n"
+    },
+    {
+      "test": "__main__.OracleBehavior.test_integration_missing_implicit_call_xdist",
+      "traceback": "Traceback (most recent call last):\n  File \"/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/qualification/verify_oracle_behavior.py\", line 193, in check\n    self.integration(mode, phase, engine)\n  File \"/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/qualification/verify_oracle_behavior.py\", line 178, in integration\n    self.assertEqual(remote[\"text\"], local[\"text\"])\nAssertionError: '[gw0] darwin -- Python 3.8.20 /Users/juny[321 chars]-613' != 'test_case.RemoteProblem: source-side-caus[211 chars]-613'\n- [gw0] darwin -- Python 3.8.20 /Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/.venv/bin/python\n  test_case.RemoteProblem: source-side-cause-607\n  \n  During handling of the above exception, another exception occurred:\n  test_case.py:13: in test_failure\n      trigger()\n  test_case.py:9: in trigger\n      raise error\n  E   RuntimeError: consumer-side-failure-613\n"
+    },
+    {
+      "test": "__main__.OracleBehavior.test_integration_normal_explicit_call_xdist",
+      "traceback": "Traceback (most recent call last):\n  File \"/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/qualification/verify_oracle_behavior.py\", line 193, in check\n    self.integration(mode, phase, engine)\n  File \"/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/qualification/verify_oracle_behavior.py\", line 178, in integration\n    self.assertEqual(remote[\"text\"], local[\"text\"])\nAssertionError: \"[gw0] darwin -- Python 3.8.20 /Users/juny[436 chars]-613\" != \"test_case.py:8: in trigger\\n    raise Val[326 chars]-613\"\n- [gw0] darwin -- Python 3.8.20 /Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/.venv/bin/python\n  test_case.py:8: in trigger\n      raise ValueError('source-side-cause-607')\n  E   ValueError: source-side-cause-607\n  \n  The above exception was the direct cause of the following exception:\n  test_case.py:14: in test_failure\n      trigger()\n  test_case.py:10: in trigger\n      raise RuntimeError('consumer-side-failure-613') from cause\n  E   RuntimeError: consumer-side-failure-613\n"
+    },
+    {
+      "test": "__main__.OracleBehavior.test_integration_normal_implicit_call_xdist",
+      "traceback": "Traceback (most recent call last):\n  File \"/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/qualification/verify_oracle_behavior.py\", line 193, in check\n    self.integration(mode, phase, engine)\n  File \"/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/qualification/verify_oracle_behavior.py\", line 178, in integration\n    self.assertEqual(remote[\"text\"], local[\"text\"])\nAssertionError: \"[gw0] darwin -- Python 3.8.20 /Users/juny[424 chars]-613\" != \"test_case.py:8: in trigger\\n    raise Val[314 chars]-613\"\n- [gw0] darwin -- Python 3.8.20 /Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/.venv/bin/python\n  test_case.py:8: in trigger\n      raise ValueError('source-side-cause-607')\n  E   ValueError: source-side-cause-607\n  \n  During handling of the above exception, another exception occurred:\n  test_case.py:14: in test_failure\n      trigger()\n  test_case.py:10: in trigger\n      raise RuntimeError('consumer-side-failure-613')\n  E   RuntimeError: consumer-side-failure-613\n"
+    }
+  ],
+  "errors": [],
+  "skips": [],
+  "details": [
+    {
+      "test": "__main__.OracleBehavior.test_integration_missing_explicit_call_serial",
+      "command": [
+        "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/.venv/bin/python",
+        "-m",
+        "pytest",
+        "--color=no",
+        "-q",
+        "--tb=short",
+        "--junitxml=report.xml",
+        "test_case.py"
+      ],
+      "cwd": "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/qualification/oracle_recheck_20261016/supplemental/complete/checks/cases/missing_explicit_call_serial",
+      "returncode": 1,
+      "log": "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/qualification/oracle_recheck_20261016/supplemental/complete/checks/cases/missing_explicit_call_serial/output.log"
+    },
+    {
+      "test": "__main__.OracleBehavior.test_integration_missing_explicit_call_xdist",
+      "command": [
+        "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/.venv/bin/python",
+        "-m",
+        "pytest",
+        "--color=no",
+        "-q",
+        "--tb=short",
+        "--junitxml=report.xml",
+        "-p",
+        "xdist.plugin",
+        "-n",
+        "1",
+        "test_case.py"
+      ],
+      "cwd": "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/qualification/oracle_recheck_20261016/supplemental/complete/checks/cases/missing_explicit_call_xdist",
+      "returncode": 1,
+      "log": "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/qualification/oracle_recheck_20261016/supplemental/complete/checks/cases/missing_explicit_call_xdist/output.log"
+    },
+    {
+      "test": "__main__.OracleBehavior.test_integration_missing_explicit_collect_serial",
+      "command": [
+        "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/.venv/bin/python",
+        "-m",
+        "pytest",
+        "--color=no",
+        "-q",
+        "--tb=short",
+        "--junitxml=report.xml",
+        "test_case.py"
+      ],
+      "cwd": "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/qualification/oracle_recheck_20261016/supplemental/complete/checks/cases/missing_explicit_collect_serial",
+      "returncode": 2,
+      "log": "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/qualification/oracle_recheck_20261016/supplemental/complete/checks/cases/missing_explicit_collect_serial/output.log"
+    },
+    {
+      "test": "__main__.OracleBehavior.test_integration_missing_explicit_collect_xdist",
+      "command": [
+        "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/.venv/bin/python",
+        "-m",
+        "pytest",
+        "--color=no",
+        "-q",
+        "--tb=short",
+        "--junitxml=report.xml",
+        "-p",
+        "xdist.plugin",
+        "-n",
+        "1",
+        "test_case.py"
+      ],
+      "cwd": "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/qualification/oracle_recheck_20261016/supplemental/complete/checks/cases/missing_explicit_collect_xdist",
+      "returncode": 1,
+      "log": "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/qualification/oracle_recheck_20261016/supplemental/complete/checks/cases/missing_explicit_collect_xdist/output.log"
+    },
+    {
+      "test": "__main__.OracleBehavior.test_integration_missing_implicit_call_serial",
+      "command": [
+        "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/.venv/bin/python",
+        "-m",
+        "pytest",
+        "--color=no",
+        "-q",
+        "--tb=short",
+        "--junitxml=report.xml",
+        "test_case.py"
+      ],
+      "cwd": "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/qualification/oracle_recheck_20261016/supplemental/complete/checks/cases/missing_implicit_call_serial",
+      "returncode": 1,
+      "log": "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/qualification/oracle_recheck_20261016/supplemental/complete/checks/cases/missing_implicit_call_serial/output.log"
+    },
+    {
+      "test": "__main__.OracleBehavior.test_integration_missing_implicit_call_xdist",
+      "command": [
+        "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/.venv/bin/python",
+        "-m",
+        "pytest",
+        "--color=no",
+        "-q",
+        "--tb=short",
+        "--junitxml=report.xml",
+        "-p",
+        "xdist.plugin",
+        "-n",
+        "1",
+        "test_case.py"
+      ],
+      "cwd": "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/qualification/oracle_recheck_20261016/supplemental/complete/checks/cases/missing_implicit_call_xdist",
+      "returncode": 1,
+      "log": "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/qualification/oracle_recheck_20261016/supplemental/complete/checks/cases/missing_implicit_call_xdist/output.log"
+    },
+    {
+      "test": "__main__.OracleBehavior.test_integration_missing_implicit_collect_serial",
+      "command": [
+        "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/.venv/bin/python",
+        "-m",
+        "pytest",
+        "--color=no",
+        "-q",
+        "--tb=short",
+        "--junitxml=report.xml",
+        "test_case.py"
+      ],
+      "cwd": "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/qualification/oracle_recheck_20261016/supplemental/complete/checks/cases/missing_implicit_collect_serial",
+      "returncode": 2,
+      "log": "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/qualification/oracle_recheck_20261016/supplemental/complete/checks/cases/missing_implicit_collect_serial/output.log"
+    },
+    {
+      "test": "__main__.OracleBehavior.test_integration_missing_implicit_collect_xdist",
+      "command": [
+        "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/.venv/bin/python",
+        "-m",
+        "pytest",
+        "--color=no",
+        "-q",
+        "--tb=short",
+        "--junitxml=report.xml",
+        "-p",
+        "xdist.plugin",
+        "-n",
+        "1",
+        "test_case.py"
+      ],
+      "cwd": "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/qualification/oracle_recheck_20261016/supplemental/complete/checks/cases/missing_implicit_collect_xdist",
+      "returncode": 1,
+      "log": "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/qualification/oracle_recheck_20261016/supplemental/complete/checks/cases/missing_implicit_collect_xdist/output.log"
+    },
+    {
+      "test": "__main__.OracleBehavior.test_integration_normal_explicit_call_serial",
+      "command": [
+        "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/.venv/bin/python",
+        "-m",
+        "pytest",
+        "--color=no",
+        "-q",
+        "--tb=short",
+        "--junitxml=report.xml",
+        "test_case.py"
+      ],
+      "cwd": "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/qualification/oracle_recheck_20261016/supplemental/complete/checks/cases/normal_explicit_call_serial",
+      "returncode": 1,
+      "log": "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/qualification/oracle_recheck_20261016/supplemental/complete/checks/cases/normal_explicit_call_serial/output.log"
+    },
+    {
+      "test": "__main__.OracleBehavior.test_integration_normal_explicit_call_xdist",
+      "command": [
+        "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/.venv/bin/python",
+        "-m",
+        "pytest",
+        "--color=no",
+        "-q",
+        "--tb=short",
+        "--junitxml=report.xml",
+        "-p",
+        "xdist.plugin",
+        "-n",
+        "1",
+        "test_case.py"
+      ],
+      "cwd": "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/qualification/oracle_recheck_20261016/supplemental/complete/checks/cases/normal_explicit_call_xdist",
+      "returncode": 1,
+      "log": "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/qualification/oracle_recheck_20261016/supplemental/complete/checks/cases/normal_explicit_call_xdist/output.log"
+    },
+    {
+      "test": "__main__.OracleBehavior.test_integration_normal_explicit_collect_serial",
+      "command": [
+        "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/.venv/bin/python",
+        "-m",
+        "pytest",
+        "--color=no",
+        "-q",
+        "--tb=short",
+        "--junitxml=report.xml",
+        "test_case.py"
+      ],
+      "cwd": "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/qualification/oracle_recheck_20261016/supplemental/complete/checks/cases/normal_explicit_collect_serial",
+      "returncode": 2,
+      "log": "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/qualification/oracle_recheck_20261016/supplemental/complete/checks/cases/normal_explicit_collect_serial/output.log"
+    },
+    {
+      "test": "__main__.OracleBehavior.test_integration_normal_explicit_collect_xdist",
+      "command": [
+        "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/.venv/bin/python",
+        "-m",
+        "pytest",
+        "--color=no",
+        "-q",
+        "--tb=short",
+        "--junitxml=report.xml",
+        "-p",
+        "xdist.plugin",
+        "-n",
+        "1",
+        "test_case.py"
+      ],
+      "cwd": "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/qualification/oracle_recheck_20261016/supplemental/complete/checks/cases/normal_explicit_collect_xdist",
+      "returncode": 1,
+      "log": "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/qualification/oracle_recheck_20261016/supplemental/complete/checks/cases/normal_explicit_collect_xdist/output.log"
+    },
+    {
+      "test": "__main__.OracleBehavior.test_integration_normal_implicit_call_serial",
+      "command": [
+        "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/.venv/bin/python",
+        "-m",
+        "pytest",
+        "--color=no",
+        "-q",
+        "--tb=short",
+        "--junitxml=report.xml",
+        "test_case.py"
+      ],
+      "cwd": "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/qualification/oracle_recheck_20261016/supplemental/complete/checks/cases/normal_implicit_call_serial",
+      "returncode": 1,
+      "log": "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/qualification/oracle_recheck_20261016/supplemental/complete/checks/cases/normal_implicit_call_serial/output.log"
+    },
+    {
+      "test": "__main__.OracleBehavior.test_integration_normal_implicit_call_xdist",
+      "command": [
+        "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/.venv/bin/python",
+        "-m",
+        "pytest",
+        "--color=no",
+        "-q",
+        "--tb=short",
+        "--junitxml=report.xml",
+        "-p",
+        "xdist.plugin",
+        "-n",
+        "1",
+        "test_case.py"
+      ],
+      "cwd": "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/qualification/oracle_recheck_20261016/supplemental/complete/checks/cases/normal_implicit_call_xdist",
+      "returncode": 1,
+      "log": "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/qualification/oracle_recheck_20261016/supplemental/complete/checks/cases/normal_implicit_call_xdist/output.log"
+    },
+    {
+      "test": "__main__.OracleBehavior.test_integration_normal_implicit_collect_serial",
+      "command": [
+        "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/.venv/bin/python",
+        "-m",
+        "pytest",
+        "--color=no",
+        "-q",
+        "--tb=short",
+        "--junitxml=report.xml",
+        "test_case.py"
+      ],
+      "cwd": "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/qualification/oracle_recheck_20261016/supplemental/complete/checks/cases/normal_implicit_collect_serial",
+      "returncode": 2,
+      "log": "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/qualification/oracle_recheck_20261016/supplemental/complete/checks/cases/normal_implicit_collect_serial/output.log"
+    },
+    {
+      "test": "__main__.OracleBehavior.test_integration_normal_implicit_collect_xdist",
+      "command": [
+        "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/.venv/bin/python",
+        "-m",
+        "pytest",
+        "--color=no",
+        "-q",
+        "--tb=short",
+        "--junitxml=report.xml",
+        "-p",
+        "xdist.plugin",
+        "-n",
+        "1",
+        "test_case.py"
+      ],
+      "cwd": "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/qualification/oracle_recheck_20261016/supplemental/complete/checks/cases/normal_implicit_collect_xdist",
+      "returncode": 1,
+      "log": "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/qualification/oracle_recheck_20261016/supplemental/complete/checks/cases/normal_implicit_collect_xdist/output.log"
+    },
+    {
+      "test": "__main__.OracleBehavior.test_structured_missing_explicit_CollectReport_hooks",
+      "producer_none_crashes": 1,
+      "encoding": "hooks",
+      "round_trips": 2,
+      "result": "passed"
+    },
+    {
+      "test": "__main__.OracleBehavior.test_structured_missing_explicit_CollectReport_json",
+      "producer_none_crashes": 1,
+      "encoding": "json",
+      "round_trips": 2,
+      "result": "passed"
+    },
+    {
+      "test": "__main__.OracleBehavior.test_structured_missing_explicit_TestReport_hooks",
+      "producer_none_crashes": 1,
+      "encoding": "hooks",
+      "round_trips": 2,
+      "result": "passed"
+    },
+    {
+      "test": "__main__.OracleBehavior.test_structured_missing_explicit_TestReport_json",
+      "producer_none_crashes": 1,
+      "encoding": "json",
+      "round_trips": 2,
+      "result": "passed"
+    },
+    {
+      "test": "__main__.OracleBehavior.test_structured_missing_implicit_CollectReport_hooks",
+      "producer_none_crashes": 1,
+      "encoding": "hooks",
+      "round_trips": 2,
+      "result": "passed"
+    },
+    {
+      "test": "__main__.OracleBehavior.test_structured_missing_implicit_CollectReport_json",
+      "producer_none_crashes": 1,
+      "encoding": "json",
+      "round_trips": 2,
+      "result": "passed"
+    },
+    {
+      "test": "__main__.OracleBehavior.test_structured_missing_implicit_TestReport_hooks",
+      "producer_none_crashes": 1,
+      "encoding": "hooks",
+      "round_trips": 2,
+      "result": "passed"
+    },
+    {
+      "test": "__main__.OracleBehavior.test_structured_missing_implicit_TestReport_json",
+      "producer_none_crashes": 1,
+      "encoding": "json",
+      "round_trips": 2,
+      "result": "passed"
+    },
+    {
+      "test": "__main__.OracleBehavior.test_structured_normal_explicit_CollectReport_hooks",
+      "producer_none_crashes": 0,
+      "encoding": "hooks",
+      "round_trips": 2,
+      "result": "passed"
+    },
+    {
+      "test": "__main__.OracleBehavior.test_structured_normal_explicit_CollectReport_json",
+      "producer_none_crashes": 0,
+      "encoding": "json",
+      "round_trips": 2,
+      "result": "passed"
+    },
+    {
+      "test": "__main__.OracleBehavior.test_structured_normal_explicit_TestReport_hooks",
+      "producer_none_crashes": 0,
+      "encoding": "hooks",
+      "round_trips": 2,
+      "result": "passed"
+    },
+    {
+      "test": "__main__.OracleBehavior.test_structured_normal_explicit_TestReport_json",
+      "producer_none_crashes": 0,
+      "encoding": "json",
+      "round_trips": 2,
+      "result": "passed"
+    },
+    {
+      "test": "__main__.OracleBehavior.test_structured_normal_implicit_CollectReport_hooks",
+      "producer_none_crashes": 0,
+      "encoding": "hooks",
+      "round_trips": 2,
+      "result": "passed"
+    },
+    {
+      "test": "__main__.OracleBehavior.test_structured_normal_implicit_CollectReport_json",
+      "producer_none_crashes": 0,
+      "encoding": "json",
+      "round_trips": 2,
+      "result": "passed"
+    },
+    {
+      "test": "__main__.OracleBehavior.test_structured_normal_implicit_TestReport_hooks",
+      "producer_none_crashes": 0,
+      "encoding": "hooks",
+      "round_trips": 2,
+      "result": "passed"
+    },
+    {
+      "test": "__main__.OracleBehavior.test_structured_normal_implicit_TestReport_json",
+      "producer_none_crashes": 0,
+      "encoding": "json",
+      "round_trips": 2,
+      "result": "passed"
+    }
+  ],
+  "elapsed_seconds": 4.162713791
+}

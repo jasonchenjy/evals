@@ -1,0 +1,12 @@
+{
+  "schema_version": 1,
+  "method": "test_A02_implicit",
+  "status": "failed",
+  "tests_run": 1,
+  "duration_seconds": 0.06463041700000001,
+  "failures": [
+    "Traceback (most recent call last):\n  File \"/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/tests/behavior.py\", line 100, in test_A02_implicit\n    self.assert_chain(transport(original), 3, \"During handling of the above exception\")\n  File \"/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/tests/behavior.py\", line 87, in assert_chain\n    self.assertIn(marker, text)\nAssertionError: 'ValueError: layer-0' not found in '../../../../../tests/behavior.py:36: in exception_info\\n    raise_level(depth - 1)\\n../../../../../tests/behavior.py:34: in raise_level\\n    raise ValueError(\"layer-%d\" % level)\\nE   ValueError: layer-2'\n"
+  ],
+  "skips": [],
+  "details": []
+}

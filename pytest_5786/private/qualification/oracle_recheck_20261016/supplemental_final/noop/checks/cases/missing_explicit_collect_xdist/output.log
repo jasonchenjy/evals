@@ -1,0 +1,13 @@
+bringing up nodes...
+bringing up nodes...
+
+
+==================================== ERRORS ====================================
+________________________ ERROR collecting test_case.py _________________________
+test_case.py:11: in <module>
+    trigger()
+test_case.py:9: in trigger
+    raise error
+E   RuntimeError: consumer-side-failure-613
+- generated xml file: /Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/qualification/oracle_recheck_20261016/supplemental_final/noop/checks/cases/missing_explicit_collect_xdist/report.xml -
+1 error in 0.19s

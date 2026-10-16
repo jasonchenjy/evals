@@ -1,0 +1,27 @@
+{"argv": ["/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/.venv/bin/python", "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/check.py", "--method", "test_C03_missing_traceback", "--output", "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/qualification/oracle_recheck_20261016/qualified/historical/checks/C03/observation.json"], "cwd": "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/qualification/oracle_recheck_20261016/qualified/historical/workspace"}
+test_C03_missing_traceback (eval_behavior.Behavior) ... ERROR
+
+======================================================================
+ERROR: test_C03_missing_traceback (eval_behavior.Behavior)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/tests/behavior.py", line 187, in test_C03_missing_traceback
+    restored = transport(original)
+  File "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/tests/behavior.py", line 66, in transport
+    data = json.loads(json.dumps(pytest_report_to_serializable(rep)))
+  File "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/qualification/oracle_recheck_20261016/qualified/historical/workspace/src/_pytest/reports.py", line 328, in pytest_report_to_serializable
+    data = report._to_json()
+  File "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/qualification/oracle_recheck_20261016/qualified/historical/workspace/src/_pytest/reports.py", line 164, in _to_json
+    return _report_to_json(self)
+  File "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/qualification/oracle_recheck_20261016/qualified/historical/workspace/src/_pytest/reports.py", line 394, in _report_to_json
+    d["longrepr"] = serialize_longrepr(report)
+  File "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/qualification/oracle_recheck_20261016/qualified/historical/workspace/src/_pytest/reports.py", line 381, in serialize_longrepr
+    serialize_repr_crash(repr_crash),
+  File "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/qualification/oracle_recheck_20261016/qualified/historical/workspace/src/_pytest/reports.py", line 367, in serialize_repr_crash
+    return reprcrash.__dict__.copy()
+AttributeError: 'NoneType' object has no attribute '__dict__'
+
+----------------------------------------------------------------------
+Ran 1 test in 0.040s
+
+FAILED (errors=1)

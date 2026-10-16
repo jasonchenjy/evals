@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites><testsuite errors="1" failures="0" hostname="JDY6VGTDXD-Junyu-Chen" name="pytest" skipped="0" tests="1" time="0.031" timestamp="2026-10-16T20:13:17.051782"><testcase classname="" file="test_case.py" name="test_case" time="0.000"><error message="collection failure">test_case.RemoteProblem: source-side-cause-607
+
+The above exception was the direct cause of the following exception:
+test_case.py:11: in &lt;module&gt;
+    trigger()
+test_case.py:9: in trigger
+    raise error
+E   RuntimeError: consumer-side-failure-613</error></testcase></testsuite></testsuites>

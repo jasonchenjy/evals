@@ -6,6 +6,8 @@ from pathlib import Path
 import sys
 import tempfile
 import unittest
+from unittest.mock import patch as mock_patch
+import subprocess
 
 ROOT = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(ROOT / "private"))
@@ -66,6 +68,29 @@ class GraderContract(unittest.TestCase):
                                 folder, dict(os.environ), 0.1, folder / "timeout.log")
             self.assertTrue(result["timeout"])
             self.assertNotEqual(result["returncode"], 0)
+
+    def test_patch_application_inside_enclosing_repository(self):
+        with tempfile.TemporaryDirectory() as temp:
+            parent = Path(temp)
+            subprocess.run(["git", "init", "-q", str(parent)], check=True)
+            (parent / ".gitignore").write_text("scratch/\n")
+            workspace = parent / "scratch" / "workspace"
+            (workspace / "src").mkdir(parents=True)
+            source = workspace / "src" / "example.py"
+            source.write_text("value = 1\n")
+            patch = parent / "source.patch"
+            patch.write_text("diff --git a/src/example.py b/src/example.py\n"
+                             "--- a/src/example.py\n+++ b/src/example.py\n"
+                             "@@ -1 +1 @@\n-value = 1\n+value = 2\n")
+            # Inherited Git context must not override the clean snapshot either.
+            with mock_patch.dict(os.environ, {"GIT_DIR": str(parent / ".git"),
+                                               "GIT_WORK_TREE": str(parent)}):
+                self.assertEqual(grader.validate_patch(patch), ["src/example.py"])
+                grader.git_apply(patch, workspace, check=True).check_returncode()
+                self.assertEqual(source.read_text(), "value = 1\n")
+                grader.git_apply(patch, workspace).check_returncode()
+            self.assertEqual(source.read_text(), "value = 2\n")
+            self.assertFalse((parent / "src").exists())
 
 
 if __name__ == "__main__":

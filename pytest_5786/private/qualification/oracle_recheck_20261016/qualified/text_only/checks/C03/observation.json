@@ -1,0 +1,12 @@
+{
+  "schema_version": 1,
+  "method": "test_C03_missing_traceback",
+  "status": "error",
+  "tests_run": 1,
+  "duration_seconds": 0.05556362499999999,
+  "failures": [
+    "Traceback (most recent call last):\n  File \"/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/tests/behavior.py\", line 192, in test_C03_missing_traceback\n    self.assertEqual(restored.longrepr.reprcrash.message, \"ValueError: outer-message-829\")\nAttributeError: 'str' object has no attribute 'reprcrash'\n"
+  ],
+  "skips": [],
+  "details": []
+}
