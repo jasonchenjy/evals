@@ -1,0 +1,23 @@
+/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/prepare.py:27: DeprecationWarning: Python 3.14 will, by default, filter extracted tar archives and reject files or modify their metadata. Use the filter argument to control this behavior.
+  archive.extractall(str(destination))
+F
+======================================================================
+FAIL: test_merged_log_link_does_not_overwrite_controller (test_handoff.HandoffTests.test_merged_log_link_does_not_overwrite_controller)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/junyuc/Documents/interview/SWE-bench/evals/runtime/tests/test_handoff.py", line 76, in test_merged_log_link_does_not_overwrite_controller
+    result = self.simulated_grade('log_link')
+  File "/Users/junyuc/Documents/interview/SWE-bench/evals/runtime/tests/test_handoff.py", line 67, in simulated_grade
+    self.assertEqual(self.victim.read_text(), secret)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'normal stdout\nnormal stderr\n' != '<fake fixture value omitted>'
++ <fake fixture value omitted>
+- normal stdout
+- normal stderr
+- 
+
+
+----------------------------------------------------------------------
+Ran 1 test in 0.453s
+
+FAILED (failures=1)

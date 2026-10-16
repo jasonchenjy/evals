@@ -2,6 +2,8 @@
 
 **Final status: PARTIALLY_READY. Real Agent Trials: 0. Model calls: 0.**
 
+This is the original Stage 2 implementation evidence. The subsequent [controller handoff security fix](handoff_security_report.md) supersedes its file-handoff safety assumptions and adds a fresh native regression plus full requalification; historical logs below remain unchanged.
+
 Implemented a single-task native macOS controller in `runtime/`. It restores the fixed source, runs historical preflight and canaries under actual Seatbelt, builds fresh Codex CLI commands, collects source through a pristine mirror, and adapts the existing private grader's execution boundary. The deterministic pipeline works. The real participant path remains deliberately closed because tool enforcement, authentication and adequate aggregate resource/descendant containment are not all established.
 
 ## Preserved identities and Eval semantics

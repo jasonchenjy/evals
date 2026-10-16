@@ -7,7 +7,8 @@ from pathlib import Path
 import shutil
 from types import SimpleNamespace
 
-from core import InfrastructureError, save, sha
+from core import InfrastructureError, save, sha, clean_env
+from handoff import Directory, OBSERVATION_LIMIT, observation, read_bytes, write_bytes
 
 
 def grade(package, sandbox, patch, output, expected_hashes=None):
@@ -23,23 +24,53 @@ def grade(package, sandbox, patch, output, expected_hashes=None):
     original_run, original_apply = grader.run, grader.git_apply
     worker_records = []
     boundary_verified = False
+    worker_root = output.parent/(output.name+'-worker-scratch')
+    worker_root.mkdir(mode=0o700)
+    calls = 0
     def isolated_run(command, cwd, env, timeout, log):
-        nonlocal boundary_verified
+        nonlocal boundary_verified, calls
         if not boundary_verified:
             sandbox.canaries(cwd, output/"isolation", read_only=[staging], git_checks=False, readonly_canary=staging/"boundary_canary.txt")
             boundary_verified = True
         mapped = [str(x).replace(str(package.root/'private/check.py'), str(staging/'private/check.py'))
                   .replace(str(package.root/'requirements.txt'), str(staging/'requirements.txt')) for x in command]
-        env = dict(env)
+        calls += 1
+        scratch = worker_root/str(calls)
+        # The legacy grader paths remain controller-only. Never grant its check
+        # directory to a worker, even though clean_env created home/tmp there.
+        env = clean_env(cwd, scratch, sandbox.python)
+        advertised = None
+        method = None
+        if '--output' in mapped:
+            index = mapped.index('--output')+1
+            advertised = Path(mapped[index])
+            mapped[index] = str(scratch/'observation.json')
+            method = mapped[mapped.index('--method')+1]
         env['PATH'] = str(Path(sandbox.python).parent)+':/Library/Developer/CommandLineTools/usr/bin:/usr/bin:/bin'
         env['GIT_CONFIG_GLOBAL'] = '/dev/null'
         env['GIT_CONFIG_SYSTEM'] = '/dev/null'
         env['GIT_CONFIG_NOSYSTEM'] = '1'
-        result = sandbox.execute(mapped, cwd, env, timeout, log, [staging])
-        # Preserve a combined log at the original advertised grader path as well.
-        Path(log).write_text(Path(result['stdout']).read_text()+Path(result['stderr']).read_text())
+        # Pin the submission directory before candidate execution. Capture only
+        # the flat, named output; never traverse a worker-created directory.
+        with Directory(scratch) as submitted:
+            result = sandbox.execute(mapped, cwd, env, timeout, log, [staging])
+            worker_records.append(result)
+            try:
+                write_bytes(log, read_bytes(result['stdout']) + read_bytes(result['stderr']))
+                if advertised is not None:
+                    raw = submitted.read('observation.json', OBSERVATION_LIMIT, missing_ok=True)
+                    if raw is not None:
+                        validated = observation(raw, method)
+                        save(advertised, validated)
+                    # Missing retains legacy timeout/execution_error semantics;
+                    # unsafe/malformed PRESENT files abort as infrastructure errors.
+                result['handoff_status'] = 'accepted'
+            except InfrastructureError as error:
+                result['handoff_status'] = 'rejected'
+                save(output/'handoff_failure.json', {'call': calls, 'method': method,
+                     'reason': str(error), 'worker_execution': result})
+                raise
         result['log'] = str(log)
-        worker_records.append(result)
         return result
     def verified_apply(candidate, workspace, check=False):
         result = original_apply(candidate, workspace, check)
@@ -62,7 +93,7 @@ def grade(package, sandbox, patch, output, expected_hashes=None):
     finally:
         grader.run, grader.git_apply = original_run, original_apply
         os.environ.update(inherited_git)
-    (output/'controller.stdout').write_text(captured.getvalue())
+    write_bytes(output/'controller.stdout', captured.getvalue().encode())
     result = json.loads((output/'result.json').read_text())
     save(output/'runtime_execution.json', {'boundary': 'codex-native-seatbelt',
           'original_security_mode_label': result['security_mode'], 'all_python_calls_intercepted': True,

@@ -7,6 +7,7 @@ import shutil
 import sys
 
 from core import InfrastructureError, bounded, clean_env, save, sha
+from handoff import Directory, canonical_path, read_bytes
 
 
 class NativeSandbox:
@@ -38,18 +39,29 @@ class NativeSandbox:
                          'aggregate_disk_quota': False, 'cpu_core_allocation': False,
                          'detached_descendant_containment': False}
 
-    def permissions(self, workspace, scratch, read_only=()):
+    def permissions(self, workspace, scratch, read_only=(), controller_outputs=()):
         fs = {':root': 'deny', ':minimal': 'read', ':tmpdir': 'deny', ':slash_tmp': 'deny'}
         for name in self.readable + list(map(str, read_only)):
             fs[name] = 'read'
         # Exact per-run scratch; never permit its parent or global tmp.
-        fs[str(Path(scratch).absolute())] = 'write'
+        fs[str(canonical_path(scratch))] = 'write'
+        for name in [self.controller, *controller_outputs]:
+            fs[str(canonical_path(name))] = 'deny'
         return '{ trial = { extends = ":workspace", filesystem = { ' + ', '.join(
             json.dumps(k) + ' = ' + json.dumps(v) for k,v in fs.items()) + ' }, network = { enabled = false } } }'
 
     def execute(self, command, cwd, env, timeout, log_prefix, read_only=(), output_limit=8*1024*1024):
-        scratch = Path(env['EVAL_SCRATCH'])
-        policy = self.permissions(cwd, scratch, read_only)
+        scratch = canonical_path(env['EVAL_SCRATCH'])
+        capture = canonical_path(log_prefix).parent
+        # Parent paths are opened without links; no worker write root may
+        # contain a controller output directory (including its parents).
+        for protected in (capture, canonical_path(self.controller)):
+            with Directory(protected, create=True, trusted=True):
+                pass
+            for writable in (canonical_path(cwd), scratch):
+                if protected == writable or writable in protected.parents:
+                    raise InfrastructureError('Controller outputs overlap a worker-writable root')
+        policy = self.permissions(cwd, scratch, read_only, [capture])
         limit = {'cpu_seconds': max(2, int(timeout) * 2), 'file_bytes': 32*1024*1024}
         args = [self.codex, 'sandbox', '-P', 'trial', '-C', str(cwd), '-c', 'permissions=' + policy,
                 '--', '/usr/bin/env', '-i']
@@ -61,7 +73,7 @@ class NativeSandbox:
         result['policy'] = policy
         result['policy_sha256'] = hashlib.sha256(policy.encode()).hexdigest()
         result['limits'] = limit
-        result['worker_started'] = 'PYTEST5786_WORKER_READY\n' in Path(result['stderr']).read_text() if Path(result['stderr']).exists() else False
+        result['worker_started'] = b'PYTEST5786_WORKER_READY\n' in read_bytes(result['stderr'])
         result['log'] = result['stdout']
         save(Path(log_prefix).with_suffix('.execution.json'), result)
         if not result['worker_started'] or result.get('launch_error'):

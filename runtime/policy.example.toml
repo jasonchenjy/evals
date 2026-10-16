@@ -14,6 +14,9 @@ extends = ":workspace"
 ":slash_tmp" = "deny"
 # Add only exact qualified venv/runtime/Git/worker inputs as read.
 # Add only this invocation's scratch as write; never its parent.
+# Deny the controller and capture directories explicitly. Capture directories
+# must not be within workspace/scratch write roots; sandbox.py checks ancestry.
+# Legacy grader check/log paths are controller-only, not worker scratch.
 [permissions.trial.network]
 enabled = false
 

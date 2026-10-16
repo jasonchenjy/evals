@@ -1,0 +1,744 @@
+[
+  {
+    "control": "noop",
+    "raw_result_sha256": "d30263fd2334650c3d6902ef4673f8437d89cc656538dc94ea3d199186591386",
+    "infrastructure_status": "ok",
+    "overall_resolved": false,
+    "dimensions": {
+      "original_bug_resolution": {
+        "satisfied": false,
+        "checks": {
+          "A01": "failed",
+          "A02": "failed"
+        }
+      },
+      "cross_component_consistency": {
+        "satisfied": false,
+        "checks": {
+          "B01": "failed",
+          "B02": "failed",
+          "B03": "failed"
+        }
+      },
+      "edge_case_robustness": {
+        "satisfied": false,
+        "checks": {
+          "C01": "passed",
+          "C02": "failed",
+          "C03": "failed"
+        }
+      },
+      "non_regression": {
+        "satisfied": true,
+        "checks": {
+          "D01": "passed",
+          "D02": "passed",
+          "D03": "passed"
+        }
+      }
+    },
+    "checks": [
+      {
+        "id": "A01",
+        "mandatory": true,
+        "status": "failed"
+      },
+      {
+        "id": "A02",
+        "mandatory": true,
+        "status": "failed"
+      },
+      {
+        "id": "B01",
+        "mandatory": true,
+        "status": "failed"
+      },
+      {
+        "id": "B02",
+        "mandatory": true,
+        "status": "failed"
+      },
+      {
+        "id": "B03",
+        "mandatory": true,
+        "status": "failed"
+      },
+      {
+        "id": "C01",
+        "mandatory": true,
+        "status": "passed"
+      },
+      {
+        "id": "C02",
+        "mandatory": true,
+        "status": "failed"
+      },
+      {
+        "id": "C03",
+        "mandatory": true,
+        "status": "failed"
+      },
+      {
+        "id": "D01",
+        "mandatory": true,
+        "status": "passed"
+      },
+      {
+        "id": "D02",
+        "mandatory": true,
+        "status": "passed"
+      },
+      {
+        "id": "D03",
+        "mandatory": true,
+        "status": "passed"
+      },
+      {
+        "id": "H01",
+        "mandatory": false,
+        "status": "failed"
+      },
+      {
+        "id": "H02",
+        "mandatory": false,
+        "status": "passed"
+      }
+    ]
+  },
+  {
+    "control": "historical",
+    "raw_result_sha256": "3ac2b7234587da68a90dbf633babd08711734cc2fe7129d4f918adf8d8e8c3a2",
+    "infrastructure_status": "ok",
+    "overall_resolved": false,
+    "dimensions": {
+      "original_bug_resolution": {
+        "satisfied": true,
+        "checks": {
+          "A01": "passed",
+          "A02": "passed"
+        }
+      },
+      "cross_component_consistency": {
+        "satisfied": true,
+        "checks": {
+          "B01": "passed",
+          "B02": "passed",
+          "B03": "passed"
+        }
+      },
+      "edge_case_robustness": {
+        "satisfied": false,
+        "checks": {
+          "C01": "passed",
+          "C02": "passed",
+          "C03": "error"
+        }
+      },
+      "non_regression": {
+        "satisfied": false,
+        "checks": {
+          "D01": "passed",
+          "D02": "passed",
+          "D03": "error"
+        }
+      }
+    },
+    "checks": [
+      {
+        "id": "A01",
+        "mandatory": true,
+        "status": "passed"
+      },
+      {
+        "id": "A02",
+        "mandatory": true,
+        "status": "passed"
+      },
+      {
+        "id": "B01",
+        "mandatory": true,
+        "status": "passed"
+      },
+      {
+        "id": "B02",
+        "mandatory": true,
+        "status": "passed"
+      },
+      {
+        "id": "B03",
+        "mandatory": true,
+        "status": "passed"
+      },
+      {
+        "id": "C01",
+        "mandatory": true,
+        "status": "passed"
+      },
+      {
+        "id": "C02",
+        "mandatory": true,
+        "status": "passed"
+      },
+      {
+        "id": "C03",
+        "mandatory": true,
+        "status": "error"
+      },
+      {
+        "id": "D01",
+        "mandatory": true,
+        "status": "passed"
+      },
+      {
+        "id": "D02",
+        "mandatory": true,
+        "status": "passed"
+      },
+      {
+        "id": "D03",
+        "mandatory": true,
+        "status": "error"
+      },
+      {
+        "id": "H01",
+        "mandatory": false,
+        "status": "passed"
+      },
+      {
+        "id": "H02",
+        "mandatory": false,
+        "status": "passed"
+      }
+    ]
+  },
+  {
+    "control": "complete",
+    "raw_result_sha256": "e850b68ca3bf4394733e12a7471b02205c3d83f99177576f5a3313bfe471610a",
+    "infrastructure_status": "ok",
+    "overall_resolved": true,
+    "dimensions": {
+      "original_bug_resolution": {
+        "satisfied": true,
+        "checks": {
+          "A01": "passed",
+          "A02": "passed"
+        }
+      },
+      "cross_component_consistency": {
+        "satisfied": true,
+        "checks": {
+          "B01": "passed",
+          "B02": "passed",
+          "B03": "passed"
+        }
+      },
+      "edge_case_robustness": {
+        "satisfied": true,
+        "checks": {
+          "C01": "passed",
+          "C02": "passed",
+          "C03": "passed"
+        }
+      },
+      "non_regression": {
+        "satisfied": true,
+        "checks": {
+          "D01": "passed",
+          "D02": "passed",
+          "D03": "passed"
+        }
+      }
+    },
+    "checks": [
+      {
+        "id": "A01",
+        "mandatory": true,
+        "status": "passed"
+      },
+      {
+        "id": "A02",
+        "mandatory": true,
+        "status": "passed"
+      },
+      {
+        "id": "B01",
+        "mandatory": true,
+        "status": "passed"
+      },
+      {
+        "id": "B02",
+        "mandatory": true,
+        "status": "passed"
+      },
+      {
+        "id": "B03",
+        "mandatory": true,
+        "status": "passed"
+      },
+      {
+        "id": "C01",
+        "mandatory": true,
+        "status": "passed"
+      },
+      {
+        "id": "C02",
+        "mandatory": true,
+        "status": "passed"
+      },
+      {
+        "id": "C03",
+        "mandatory": true,
+        "status": "passed"
+      },
+      {
+        "id": "D01",
+        "mandatory": true,
+        "status": "passed"
+      },
+      {
+        "id": "D02",
+        "mandatory": true,
+        "status": "passed"
+      },
+      {
+        "id": "D03",
+        "mandatory": true,
+        "status": "passed"
+      },
+      {
+        "id": "H01",
+        "mandatory": false,
+        "status": "passed"
+      },
+      {
+        "id": "H02",
+        "mandatory": false,
+        "status": "passed"
+      }
+    ]
+  },
+  {
+    "control": "alternative",
+    "raw_result_sha256": "b95faa6214586cad5c190e83b5ad6ba37c28d036ab641b0e300759bbdddf4ede",
+    "infrastructure_status": "ok",
+    "overall_resolved": true,
+    "dimensions": {
+      "original_bug_resolution": {
+        "satisfied": true,
+        "checks": {
+          "A01": "passed",
+          "A02": "passed"
+        }
+      },
+      "cross_component_consistency": {
+        "satisfied": true,
+        "checks": {
+          "B01": "passed",
+          "B02": "passed",
+          "B03": "passed"
+        }
+      },
+      "edge_case_robustness": {
+        "satisfied": true,
+        "checks": {
+          "C01": "passed",
+          "C02": "passed",
+          "C03": "passed"
+        }
+      },
+      "non_regression": {
+        "satisfied": true,
+        "checks": {
+          "D01": "passed",
+          "D02": "passed",
+          "D03": "passed"
+        }
+      }
+    },
+    "checks": [
+      {
+        "id": "A01",
+        "mandatory": true,
+        "status": "passed"
+      },
+      {
+        "id": "A02",
+        "mandatory": true,
+        "status": "passed"
+      },
+      {
+        "id": "B01",
+        "mandatory": true,
+        "status": "passed"
+      },
+      {
+        "id": "B02",
+        "mandatory": true,
+        "status": "passed"
+      },
+      {
+        "id": "B03",
+        "mandatory": true,
+        "status": "passed"
+      },
+      {
+        "id": "C01",
+        "mandatory": true,
+        "status": "passed"
+      },
+      {
+        "id": "C02",
+        "mandatory": true,
+        "status": "passed"
+      },
+      {
+        "id": "C03",
+        "mandatory": true,
+        "status": "passed"
+      },
+      {
+        "id": "D01",
+        "mandatory": true,
+        "status": "passed"
+      },
+      {
+        "id": "D02",
+        "mandatory": true,
+        "status": "passed"
+      },
+      {
+        "id": "D03",
+        "mandatory": true,
+        "status": "passed"
+      },
+      {
+        "id": "H01",
+        "mandatory": false,
+        "status": "passed"
+      },
+      {
+        "id": "H02",
+        "mandatory": false,
+        "status": "failed"
+      }
+    ]
+  },
+  {
+    "control": "last_only",
+    "raw_result_sha256": "77bcd52411011467e27144a3c6c102df39211c81bb72acb8941f8d4949dd99c7",
+    "infrastructure_status": "ok",
+    "overall_resolved": false,
+    "dimensions": {
+      "original_bug_resolution": {
+        "satisfied": false,
+        "checks": {
+          "A01": "failed",
+          "A02": "failed"
+        }
+      },
+      "cross_component_consistency": {
+        "satisfied": false,
+        "checks": {
+          "B01": "failed",
+          "B02": "failed",
+          "B03": "failed"
+        }
+      },
+      "edge_case_robustness": {
+        "satisfied": false,
+        "checks": {
+          "C01": "passed",
+          "C02": "failed",
+          "C03": "failed"
+        }
+      },
+      "non_regression": {
+        "satisfied": true,
+        "checks": {
+          "D01": "passed",
+          "D02": "passed",
+          "D03": "passed"
+        }
+      }
+    },
+    "checks": [
+      {
+        "id": "A01",
+        "mandatory": true,
+        "status": "failed"
+      },
+      {
+        "id": "A02",
+        "mandatory": true,
+        "status": "failed"
+      },
+      {
+        "id": "B01",
+        "mandatory": true,
+        "status": "failed"
+      },
+      {
+        "id": "B02",
+        "mandatory": true,
+        "status": "failed"
+      },
+      {
+        "id": "B03",
+        "mandatory": true,
+        "status": "failed"
+      },
+      {
+        "id": "C01",
+        "mandatory": true,
+        "status": "passed"
+      },
+      {
+        "id": "C02",
+        "mandatory": true,
+        "status": "failed"
+      },
+      {
+        "id": "C03",
+        "mandatory": true,
+        "status": "failed"
+      },
+      {
+        "id": "D01",
+        "mandatory": true,
+        "status": "passed"
+      },
+      {
+        "id": "D02",
+        "mandatory": true,
+        "status": "passed"
+      },
+      {
+        "id": "D03",
+        "mandatory": true,
+        "status": "passed"
+      },
+      {
+        "id": "H01",
+        "mandatory": false,
+        "status": "failed"
+      },
+      {
+        "id": "H02",
+        "mandatory": false,
+        "status": "passed"
+      }
+    ]
+  },
+  {
+    "control": "testreport_only",
+    "raw_result_sha256": "51aaba411ca2e6eff6077ea1833ed9647b6112d18fe70df4048fd82eb72fc668",
+    "infrastructure_status": "ok",
+    "overall_resolved": false,
+    "dimensions": {
+      "original_bug_resolution": {
+        "satisfied": true,
+        "checks": {
+          "A01": "passed",
+          "A02": "passed"
+        }
+      },
+      "cross_component_consistency": {
+        "satisfied": false,
+        "checks": {
+          "B01": "failed",
+          "B02": "passed",
+          "B03": "failed"
+        }
+      },
+      "edge_case_robustness": {
+        "satisfied": false,
+        "checks": {
+          "C01": "passed",
+          "C02": "failed",
+          "C03": "failed"
+        }
+      },
+      "non_regression": {
+        "satisfied": true,
+        "checks": {
+          "D01": "passed",
+          "D02": "passed",
+          "D03": "passed"
+        }
+      }
+    },
+    "checks": [
+      {
+        "id": "A01",
+        "mandatory": true,
+        "status": "passed"
+      },
+      {
+        "id": "A02",
+        "mandatory": true,
+        "status": "passed"
+      },
+      {
+        "id": "B01",
+        "mandatory": true,
+        "status": "failed"
+      },
+      {
+        "id": "B02",
+        "mandatory": true,
+        "status": "passed"
+      },
+      {
+        "id": "B03",
+        "mandatory": true,
+        "status": "failed"
+      },
+      {
+        "id": "C01",
+        "mandatory": true,
+        "status": "passed"
+      },
+      {
+        "id": "C02",
+        "mandatory": true,
+        "status": "failed"
+      },
+      {
+        "id": "C03",
+        "mandatory": true,
+        "status": "failed"
+      },
+      {
+        "id": "D01",
+        "mandatory": true,
+        "status": "passed"
+      },
+      {
+        "id": "D02",
+        "mandatory": true,
+        "status": "passed"
+      },
+      {
+        "id": "D03",
+        "mandatory": true,
+        "status": "passed"
+      },
+      {
+        "id": "H01",
+        "mandatory": false,
+        "status": "failed"
+      },
+      {
+        "id": "H02",
+        "mandatory": false,
+        "status": "passed"
+      }
+    ]
+  },
+  {
+    "control": "text_only",
+    "raw_result_sha256": "994f510b697d1e96ada1df8993b322ce6e837ba792f6b1b6b6db5b8409d6c056",
+    "infrastructure_status": "ok",
+    "overall_resolved": false,
+    "dimensions": {
+      "original_bug_resolution": {
+        "satisfied": true,
+        "checks": {
+          "A01": "passed",
+          "A02": "passed"
+        }
+      },
+      "cross_component_consistency": {
+        "satisfied": false,
+        "checks": {
+          "B01": "passed",
+          "B02": "error",
+          "B03": "passed"
+        }
+      },
+      "edge_case_robustness": {
+        "satisfied": false,
+        "checks": {
+          "C01": "passed",
+          "C02": "passed",
+          "C03": "error"
+        }
+      },
+      "non_regression": {
+        "satisfied": false,
+        "checks": {
+          "D01": "error",
+          "D02": "failed",
+          "D03": "passed"
+        }
+      }
+    },
+    "checks": [
+      {
+        "id": "A01",
+        "mandatory": true,
+        "status": "passed"
+      },
+      {
+        "id": "A02",
+        "mandatory": true,
+        "status": "passed"
+      },
+      {
+        "id": "B01",
+        "mandatory": true,
+        "status": "passed"
+      },
+      {
+        "id": "B02",
+        "mandatory": true,
+        "status": "error"
+      },
+      {
+        "id": "B03",
+        "mandatory": true,
+        "status": "passed"
+      },
+      {
+        "id": "C01",
+        "mandatory": true,
+        "status": "passed"
+      },
+      {
+        "id": "C02",
+        "mandatory": true,
+        "status": "passed"
+      },
+      {
+        "id": "C03",
+        "mandatory": true,
+        "status": "error"
+      },
+      {
+        "id": "D01",
+        "mandatory": true,
+        "status": "error"
+      },
+      {
+        "id": "D02",
+        "mandatory": true,
+        "status": "failed"
+      },
+      {
+        "id": "D03",
+        "mandatory": true,
+        "status": "passed"
+      },
+      {
+        "id": "H01",
+        "mandatory": false,
+        "status": "failed"
+      },
+      {
+        "id": "H02",
+        "mandatory": false,
+        "status": "failed"
+      }
+    ]
+  }
+]

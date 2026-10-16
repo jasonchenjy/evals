@@ -1,0 +1,49 @@
+test_bounded_rejects_preplaced_capture_and_record_links (test_handoff.HandoffTests.test_bounded_rejects_preplaced_capture_and_record_links) ... ok
+test_capture_links_rejected_without_disclosure (test_handoff.HandoffTests.test_capture_links_rejected_without_disclosure) ... /Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/prepare.py:27: DeprecationWarning: Python 3.14 will, by default, filter extracted tar archives and reject files or modify their metadata. Use the filter argument to control this behavior.
+  archive.extractall(str(destination))
+/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/prepare.py:27: DeprecationWarning: Python 3.14 will, by default, filter extracted tar archives and reject files or modify their metadata. Use the filter argument to control this behavior.
+  archive.extractall(str(destination))
+ok
+test_capture_replacement_after_launch_is_rejected (test_handoff.HandoffTests.test_capture_replacement_after_launch_is_rejected) ... ok
+test_group_writable_capture_parent_rejected (test_handoff.HandoffTests.test_group_writable_capture_parent_rejected) ... ok
+test_invalid_observation_types_and_duplicates (test_handoff.HandoffTests.test_invalid_observation_types_and_duplicates) ... ok
+test_late_destination_link_is_replaced_without_following (test_handoff.HandoffTests.test_late_destination_link_is_replaced_without_following) ... ok
+test_merged_log_link_does_not_overwrite_controller (test_handoff.HandoffTests.test_merged_log_link_does_not_overwrite_controller) ... /Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/prepare.py:27: DeprecationWarning: Python 3.14 will, by default, filter extracted tar archives and reject files or modify their metadata. Use the filter argument to control this behavior.
+  archive.extractall(str(destination))
+ok
+test_native_launcher_rejects_capture_in_writable_ancestor (test_handoff.HandoffTests.test_native_launcher_rejects_capture_in_writable_ancestor) ... ok
+test_normal_logs_and_observation (test_handoff.HandoffTests.test_normal_logs_and_observation) ... /Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/prepare.py:27: DeprecationWarning: Python 3.14 will, by default, filter extracted tar archives and reject files or modify their metadata. Use the filter argument to control this behavior.
+  archive.extractall(str(destination))
+ok
+test_observation_rejects_unsafe_or_invalid_outputs (test_handoff.HandoffTests.test_observation_rejects_unsafe_or_invalid_outputs) ... /Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/prepare.py:27: DeprecationWarning: Python 3.14 will, by default, filter extracted tar archives and reject files or modify their metadata. Use the filter argument to control this behavior.
+  archive.extractall(str(destination))
+/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/prepare.py:27: DeprecationWarning: Python 3.14 will, by default, filter extracted tar archives and reject files or modify their metadata. Use the filter argument to control this behavior.
+  archive.extractall(str(destination))
+/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/prepare.py:27: DeprecationWarning: Python 3.14 will, by default, filter extracted tar archives and reject files or modify their metadata. Use the filter argument to control this behavior.
+  archive.extractall(str(destination))
+/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/prepare.py:27: DeprecationWarning: Python 3.14 will, by default, filter extracted tar archives and reject files or modify their metadata. Use the filter argument to control this behavior.
+  archive.extractall(str(destination))
+/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/prepare.py:27: DeprecationWarning: Python 3.14 will, by default, filter extracted tar archives and reject files or modify their metadata. Use the filter argument to control this behavior.
+  archive.extractall(str(destination))
+/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/prepare.py:27: DeprecationWarning: Python 3.14 will, by default, filter extracted tar archives and reject files or modify their metadata. Use the filter argument to control this behavior.
+  archive.extractall(str(destination))
+ok
+test_parent_links_and_hardlinks_are_rejected (test_handoff.HandoffTests.test_parent_links_and_hardlinks_are_rejected) ... ok
+test_replacement_between_open_and_read_is_rejected (test_handoff.HandoffTests.test_replacement_between_open_and_read_is_rejected) ... ok
+test_A_exact_restoration (test_runtime.ControllerTests.test_A_exact_restoration) ... ok
+test_C_noop (test_runtime.ControllerTests.test_C_noop) ... ok
+test_C_patch_bytes_untracked_delete_dirty_git_and_reset (test_runtime.ControllerTests.test_C_patch_bytes_untracked_delete_dirty_git_and_reset) ... ok
+test_C_reject_symlink_and_mode_and_shim (test_runtime.ControllerTests.test_C_reject_symlink_and_mode_and_shim) ... ok
+test_E_worker_startup_error_is_infrastructure_and_adapter_restores (test_runtime.ControllerTests.test_E_worker_startup_error_is_infrastructure_and_adapter_restores) ... /Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/prepare.py:27: DeprecationWarning: Python 3.14 will, by default, filter extracted tar archives and reject files or modify their metadata. Use the filter argument to control this behavior.
+  archive.extractall(str(destination))
+ok
+test_F_bounded_timeout_and_output_cap (test_runtime.ControllerTests.test_F_bounded_timeout_and_output_cap) ... ok
+test_F_capture_fake_cli_transport_is_not_model_evidence (test_runtime.ControllerTests.test_F_capture_fake_cli_transport_is_not_model_evidence) ... ok
+test_F_closed_pipes_do_not_mean_process_finished (test_runtime.ControllerTests.test_F_closed_pipes_do_not_mean_process_finished) ... ok
+test_F_credentials_home_cannot_be_inside_workspace (test_runtime.ControllerTests.test_F_credentials_home_cannot_be_inside_workspace) ... ok
+test_F_fresh_argv_model_and_public_prompt (test_runtime.ControllerTests.test_F_fresh_argv_model_and_public_prompt) ... ok
+
+----------------------------------------------------------------------
+Ran 22 tests in 20.943s
+
+OK

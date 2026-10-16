@@ -1,0 +1,1 @@
+{"victim_read_denied": true, "controller_observation_read_denied": true, "combined_replacement_denied": true, "stdout_replacement_denied": true, "stderr_replacement_denied": true, "execution_replacement_denied": true, "capture_parent_replacement_denied": true, "worker_decoy_links_created": true, "observation_link_created": true}

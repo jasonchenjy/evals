@@ -36,7 +36,7 @@ python3 -B runtime/qualify.py --eval pytest_5786 --repo ../pytest \
 - `sandbox.py`, `worker.py`, `canary.py`: generate the actual native permissions policy, clean environment, minimal runtime mappings, public environment checks and enforced canary checks. Startup failure/failed canary aborts. A tiny isolated Python bootstrap installs CPU-seconds/file-size limits before candidate Python can import its sitecustomize.
 - `agent.py`: fresh CLI argv, configurable model, isolated controller home, public task prompt, disabled web/apps/plugins/browser/memory/skills, prompt audit, JSONL/final-response paths. A missing tool/context/auth/containment gate prevents invocation.
 - `submission.py`: copy audited source into a pristine mirror, diff the controller's recorded baseline, invoke original validate_patch, and verify applied bytes. Never trust candidate HEAD/index/config/attributes/hooks. Empty diff is a valid no-op. Mode/symlink/path/encoding violations are invalid submissions.
-- `grading.py`: replace only existing grader.run plus path mapping and byte verification; call original grader.grade, catalog and aggregation. Worker startup failure remains infrastructure error. No Eval file or integrity lock is changed.
+- `grading.py`, `handoff.py`: keep controller artifacts outside worker scratch, safely capture/validate bounded observation files through pinned directory descriptors, then pass a controller-owned copy to the unchanged grader. Unsafe handoffs and worker startup failures are infrastructure errors. No Eval file or integrity lock is changed.
 - `run.py`: stage transitions and result/summary output. `probe.py` and `qualify.py` are deterministic acceptance commands.
 
 The original grader requires `trusted_local=True` to enter trusted orchestration. The adapter supplies that argument **only while every Python execution call is intercepted by the mandatory sandbox launcher**. It does not invoke `--trusted-local` as isolation or execute candidate Python directly on the controller. Original `result.json` retains its legacy security-mode label; adjacent `runtime_execution.json` records the actual worker boundary, file hashes and limitations. This avoids changing grading semantics or historical evidence.
@@ -60,3 +60,17 @@ Statuses: `resolved`, `unresolved`, `invalid_submission`, `agent_timeout`, `infr
 Raw `runs/` remain local/ignored because they include repository exports, per-run scratch and dedicated client homes that may later hold authentication. Small reviewed results/logs are copied to `runtime/evidence/`. Runtime source hashes and Eval lock identity accompany the selected evidence. Do not publish an authenticated client home or feed private results back to the participant.
 
 Read [implementation_report.md](implementation_report.md) for exact executed commands, final deterministic results, preserved failed attempts and next steps.
+
+
+## Controller/worker file handoff
+
+Worker scratch is separate from controller stdout/stderr, combined logs, execution records and the legacy grader observation path. The native policy denies controller capture directories explicitly; the launcher rejects writable-root overlap and unsafe directory ancestry. File transfer uses directory-relative no-follow opens, nonblocking regular-file checks, a 1 MiB observation limit and schema validation. Controller publication uses private temporary files and atomic replacement; no worker-controlled link is followed. Missing output retains the original execution-error/timeout behavior; present unsafe or malformed output aborts as infrastructure failure.
+
+The [handoff security report](handoff_security_report.md) records the pre-fix regression, final 22 runtime tests, 7 original grader contracts, all seven unchanged qualification outcomes, and a real native hostile-handoff probe. Reproduce that fake-data-only probe from a trusted outer controller:
+
+```sh
+python3 -B runtime/probe_handoff.py --eval pytest_5786 --repo ../pytest \
+  --python pytest_5786/.venv/bin/python --output runs/native_handoff_regression
+```
+
+This probe deliberately creates an unsafe observation. Success means the worker was actually isolated, the fake protected file remained unchanged, no fake content leaked, and grading rejected the handoff as an infrastructure error. It is separate from the seven normal qualification controls and consumes no model call.

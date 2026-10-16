@@ -1,0 +1,73 @@
+{
+  "recorded_at": "2026-10-16T23:07:17.787713+00:00",
+  "baseline_commit": "16fe50b3b14fade8c7b7735090331ec3e25da745",
+  "eval_lock_sha256": "067f222eccfbf8d40fe520a7f4196426e82a4e5d4861e506cb96e60d11732e03",
+  "locked_files_verified": 21,
+  "eval_mismatches": [],
+  "eval_package_diff": "",
+  "pytest_worktree_status": "",
+  "runtime_source_sha256": {
+    "agent.py": "a7605e34129213df3ee3574c99d5d6d1c02f5eb9928259d4bd51010adaf22612",
+    "canary.py": "55b9f3dcf9d14441cc89fb413602e02e32780f5bff591a169a67e6376e58b097",
+    "core.py": "0d26ea79976db709b25be2fddf726745b4ac28ac0410318b462c07f971f858a2",
+    "grading.py": "84f33055cdc1e82cf07f27dd72801abbaa8c958782ce35fcf6ec5d9743bb129c",
+    "handoff.py": "fa064faadfc3db4c25a6db18ce3349905e55a9865547d7fbfd4d3ecc4c1020d3",
+    "probe.py": "dc1b161f6ae67e277f23c1e2fbeedf3bda5231151c97e8134d19b35b310239e2",
+    "probe_handoff.py": "429b3d26c3480266fcb771623f987c982fb792e5ca4f075057d2b952a69365eb",
+    "qualify.py": "8da60f43e35fc310dc76c01af1dc26ee0df4d30ae13f945e1a9e71ba70d3b271",
+    "run.py": "95cbead267e077be6bd11c1c2cab7b047605c5af0e308bd3c2854fc790e81ba1",
+    "sandbox.py": "0c1025a06bef71e68ce4b41619314ad4a7b5b09983d0650eccc52832363eccca",
+    "submission.py": "51ce6c514c75a734298f0c23583f8a6ee427c6afa1740547535f659f45563203",
+    "tests/test_handoff.py": "93ee4c5ac5546df397f1abe5833ff656e752e5a2d4d22249f538c3be0b6c7d36",
+    "tests/test_runtime.py": "388225983cf3f60a14fead9ca25f740ffa48b088206790b16dff45adf5cad83b",
+    "worker.py": "7423fdc1b04ea16cee2ce2e3a017ef5bb7463d78521b040f307dd11dee6e6896"
+  },
+  "qualification_matches_previous": [
+    {
+      "control": "noop",
+      "check_statuses_identical": true,
+      "overall_identical": true,
+      "infrastructure_identical": true
+    },
+    {
+      "control": "historical",
+      "check_statuses_identical": true,
+      "overall_identical": true,
+      "infrastructure_identical": true
+    },
+    {
+      "control": "complete",
+      "check_statuses_identical": true,
+      "overall_identical": true,
+      "infrastructure_identical": true
+    },
+    {
+      "control": "alternative",
+      "check_statuses_identical": true,
+      "overall_identical": true,
+      "infrastructure_identical": true
+    },
+    {
+      "control": "last_only",
+      "check_statuses_identical": true,
+      "overall_identical": true,
+      "infrastructure_identical": true
+    },
+    {
+      "control": "testreport_only",
+      "check_statuses_identical": true,
+      "overall_identical": true,
+      "infrastructure_identical": true
+    },
+    {
+      "control": "text_only",
+      "check_statuses_identical": true,
+      "overall_identical": true,
+      "infrastructure_identical": true
+    }
+  ],
+  "before_fix_raw_log_sha256": "b2936589842fd0a5df657d03eb1d3b76bf3939ca68cabb08579455489642d300",
+  "before_fix_curated_log_note": "Only the fake fixture sentinel in the assertion has been redacted; raw log remains local.",
+  "model_calls": 0,
+  "readiness": "PARTIALLY_READY"
+}

@@ -1,0 +1,22 @@
+{
+  "command": [
+    "/opt/homebrew/opt/python@3.13/bin/python3.13",
+    "-B",
+    "-m",
+    "unittest",
+    "discover",
+    "-s",
+    "runtime/tests",
+    "-v"
+  ],
+  "cwd": "/Users/junyuc/Documents/interview/SWE-bench/evals",
+  "started_at": "2026-10-16T23:05:46.352285+00:00",
+  "timeout": false,
+  "output_limit_exceeded": false,
+  "returncode": 0,
+  "stdout": "/Users/junyuc/Documents/interview/SWE-bench/evals/runs/handoff_security_20261016/runtime_tests_verified.stdout",
+  "stderr": "/Users/junyuc/Documents/interview/SWE-bench/evals/runs/handoff_security_20261016/runtime_tests_verified.stderr",
+  "output_bytes_seen": 6129,
+  "elapsed_seconds": 21.051379540993366,
+  "finished_at": "2026-10-16T23:06:07.403593+00:00"
+}

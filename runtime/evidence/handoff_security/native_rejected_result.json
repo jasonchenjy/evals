@@ -1,0 +1,110 @@
+{
+  "schema_version": 1,
+  "eval_id": "pytest_5786",
+  "eval_version": "0.1.0",
+  "timestamp": "2026-10-16T23:05:45.566791+00:00",
+  "base_commit": "955e54221008aba577ecbaefa15679f6777d3bf8",
+  "overall_resolved": false,
+  "infrastructure_status": "error",
+  "submission_status": "accepted",
+  "dimensions": {
+    "original_bug_resolution": {
+      "satisfied": null,
+      "checks": {}
+    },
+    "cross_component_consistency": {
+      "satisfied": null,
+      "checks": {}
+    },
+    "edge_case_robustness": {
+      "satisfied": null,
+      "checks": {}
+    },
+    "non_regression": {
+      "satisfied": null,
+      "checks": {}
+    }
+  },
+  "tests": [],
+  "execution": [
+    {
+      "command": [
+        "/Users/junyuc/.codex/packages/standalone/releases/0.162.1-aarch64-apple-darwin/bin/codex",
+        "sandbox",
+        "-P",
+        "trial",
+        "-C",
+        "/Users/junyuc/Documents/interview/SWE-bench/evals/runs/handoff_security_20261016/native_verified/malicious-handoff/workspace",
+        "-c",
+        "permissions={ trial = { extends = \":workspace\", filesystem = { \":root\" = \"deny\", \":minimal\" = \"read\", \":tmpdir\" = \"deny\", \":slash_tmp\" = \"deny\", \"/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/.venv\" = \"read\", \"/Users/junyuc/Documents/interview/SWE-bench/research/benchmark_curation/.python/cpython-3.8.20-macos-aarch64-none\" = \"read\", \"/Library/Developer/CommandLineTools/usr/bin/git\" = \"read\", \"/Users/junyuc/Documents/interview/SWE-bench/evals/runtime/worker.py\" = \"read\", \"/Users/junyuc/Documents/interview/SWE-bench/evals/runs/handoff_security_20261016/native_verified/malicious-handoff-worker-inputs\" = \"read\", \"/Users/junyuc/Documents/interview/SWE-bench/evals/runs/handoff_security_20261016/native_verified/malicious-handoff-worker-scratch/1\" = \"write\", \"/Users/junyuc/Documents/interview/SWE-bench/evals/runs/handoff_security_20261016/native_verified/controller\" = \"deny\", \"/Users/junyuc/Documents/interview/SWE-bench/evals/runs/handoff_security_20261016/native_verified/malicious-handoff\" = \"deny\" }, network = { enabled = false } } }",
+        "--",
+        "/usr/bin/env",
+        "-i",
+        "COLUMNS=80",
+        "EVAL_SCRATCH=/Users/junyuc/Documents/interview/SWE-bench/evals/runs/handoff_security_20261016/native_verified/malicious-handoff-worker-scratch/1",
+        "EVAL_WORKSPACE=/Users/junyuc/Documents/interview/SWE-bench/evals/runs/handoff_security_20261016/native_verified/malicious-handoff/workspace",
+        "GIT_CONFIG_GLOBAL=/dev/null",
+        "GIT_CONFIG_NOSYSTEM=1",
+        "GIT_CONFIG_SYSTEM=/dev/null",
+        "GIT_OPTIONAL_LOCKS=0",
+        "HOME=/Users/junyuc/Documents/interview/SWE-bench/evals/runs/handoff_security_20261016/native_verified/malicious-handoff-worker-scratch/1/home",
+        "LC_ALL=C",
+        "PATH=/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/.venv/bin:/Library/Developer/CommandLineTools/usr/bin:/usr/bin:/bin",
+        "PYTEST_DISABLE_PLUGIN_AUTOLOAD=1",
+        "PYTHONDONTWRITEBYTECODE=1",
+        "PYTHONHASHSEED=0",
+        "PYTHONNOUSERSITE=1",
+        "PYTHONPATH=/Users/junyuc/Documents/interview/SWE-bench/evals/runs/handoff_security_20261016/native_verified/malicious-handoff/workspace/src",
+        "PY_COLORS=0",
+        "TERM=dumb",
+        "TMPDIR=/Users/junyuc/Documents/interview/SWE-bench/evals/runs/handoff_security_20261016/native_verified/malicious-handoff-worker-scratch/1/tmp",
+        "TZ=UTC",
+        "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/.venv/bin/python",
+        "-I",
+        "/Users/junyuc/Documents/interview/SWE-bench/evals/runtime/worker.py",
+        "{\"cpu_seconds\": 60, \"file_bytes\": 33554432}",
+        "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/.venv/bin/python",
+        "-c",
+        "import sys,json,pytest,pkg_resources; assert sys.version_info[:3] == (3,8,20), sys.version; reqs=[pkg_resources.Requirement.parse(x) for x in open(sys.argv[1]).read().splitlines()]; assert all(pkg_resources.get_distribution(r.project_name) in r for r in reqs); print(json.dumps({'python':sys.version,'pytest_file':pytest.__file__,'pytest_version':pytest.__version__,'packages':sorted(str(x) for x in pkg_resources.working_set)}))",
+        "/Users/junyuc/Documents/interview/SWE-bench/evals/runs/handoff_security_20261016/native_verified/malicious-handoff-worker-inputs/requirements.txt"
+      ],
+      "cwd": "/Users/junyuc/Documents/interview/SWE-bench/evals/runs/handoff_security_20261016/native_verified/malicious-handoff/workspace",
+      "started_at": "2026-10-16T23:05:46.021250+00:00",
+      "timeout": false,
+      "output_limit_exceeded": false,
+      "returncode": 0,
+      "stdout": "/Users/junyuc/Documents/interview/SWE-bench/evals/runs/handoff_security_20261016/native_verified/malicious-handoff/preflight.stdout",
+      "stderr": "/Users/junyuc/Documents/interview/SWE-bench/evals/runs/handoff_security_20261016/native_verified/malicious-handoff/preflight.stderr",
+      "output_bytes_seen": 722,
+      "elapsed_seconds": 0.25062262499704957,
+      "finished_at": "2026-10-16T23:05:46.271872+00:00",
+      "policy": "{ trial = { extends = \":workspace\", filesystem = { \":root\" = \"deny\", \":minimal\" = \"read\", \":tmpdir\" = \"deny\", \":slash_tmp\" = \"deny\", \"/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/.venv\" = \"read\", \"/Users/junyuc/Documents/interview/SWE-bench/research/benchmark_curation/.python/cpython-3.8.20-macos-aarch64-none\" = \"read\", \"/Library/Developer/CommandLineTools/usr/bin/git\" = \"read\", \"/Users/junyuc/Documents/interview/SWE-bench/evals/runtime/worker.py\" = \"read\", \"/Users/junyuc/Documents/interview/SWE-bench/evals/runs/handoff_security_20261016/native_verified/malicious-handoff-worker-inputs\" = \"read\", \"/Users/junyuc/Documents/interview/SWE-bench/evals/runs/handoff_security_20261016/native_verified/malicious-handoff-worker-scratch/1\" = \"write\", \"/Users/junyuc/Documents/interview/SWE-bench/evals/runs/handoff_security_20261016/native_verified/controller\" = \"deny\", \"/Users/junyuc/Documents/interview/SWE-bench/evals/runs/handoff_security_20261016/native_verified/malicious-handoff\" = \"deny\" }, network = { enabled = false } } }",
+      "policy_sha256": "9d0bce2a725edae01a9b0628991eb11a478593b132f5a9306351fd2f4554ea83",
+      "limits": {
+        "cpu_seconds": 60,
+        "file_bytes": 33554432
+      },
+      "worker_started": true,
+      "log": "/Users/junyuc/Documents/interview/SWE-bench/evals/runs/handoff_security_20261016/native_verified/malicious-handoff/preflight.log",
+      "handoff_status": "accepted"
+    },
+    {
+      "command": [
+        "git",
+        "apply",
+        "--whitespace=nowarn",
+        "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/oracle/historical_tests.patch"
+      ],
+      "cwd": "/Users/junyuc/Documents/interview/SWE-bench/evals/runs/handoff_security_20261016/native_verified/malicious-handoff/workspace",
+      "returncode": 0,
+      "stderr": ""
+    }
+  ],
+  "security_mode": "trusted-local-qualification-not-a-sandbox",
+  "package_lock_sha256": "067f222eccfbf8d40fe520a7f4196426e82a4e5d4861e506cb96e60d11732e03",
+  "patch_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "submitted_paths": [],
+  "applied_source_sha256": {},
+  "historical_test_patch_sha256": "33f35e4ba9dde34f1ecf09f7dd1873b1bbed43cf1fb0680a258e8853905e63eb",
+  "error": "InfrastructureError: Handoff output cannot be safely opened"
+}

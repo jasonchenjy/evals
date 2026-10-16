@@ -23,8 +23,8 @@ def sha(path):
 
 
 def save(path, value):
-    Path(path).parent.mkdir(parents=True, exist_ok=True)
-    Path(path).write_text(json.dumps(value, indent=2) + '\n')
+    from handoff import write_bytes
+    write_bytes(path, (json.dumps(value, indent=2) + '\n').encode())
 
 
 def clean_env(workspace, scratch, python):
@@ -58,8 +58,9 @@ def git(cwd, *args):
 
 def bounded(command, cwd, env, timeout, log_prefix, input_text=None, output_limit=8*1024*1024):
     """Own process group, deadline, combined byte cap; never log the environment."""
-    prefix = Path(log_prefix)
-    prefix.parent.mkdir(parents=True, exist_ok=True)
+    from handoff import Directory, canonical_path, write_bytes
+    prefix = canonical_path(log_prefix)
+    capture_dir = Directory(prefix.parent, create=True, trusted=True)
     start = time.monotonic()
     result = {'command': list(map(str, command)), 'cwd': str(cwd),
               'started_at': datetime.datetime.now(datetime.timezone.utc).isoformat(),
@@ -67,7 +68,7 @@ def bounded(command, cwd, env, timeout, log_prefix, input_text=None, output_limi
               'stdout': str(prefix.with_suffix('.stdout')), 'stderr': str(prefix.with_suffix('.stderr'))}
     input_file = prefix.with_suffix('.stdin')
     if input_text is not None:
-        input_file.write_text(input_text)
+        write_bytes(input_file, input_text.encode())
     process = None
     def stop():
         if process is not None:
@@ -87,7 +88,7 @@ def bounded(command, cwd, env, timeout, log_prefix, input_text=None, output_limi
                     result['post_exit_group_signal_error'] = str(exc)
     try:
         with open(input_file if input_text is not None else os.devnull, 'rb') as source, \
-             open(result['stdout'], 'wb') as stdout, open(result['stderr'], 'wb') as stderr:
+             capture_dir.capture(Path(result['stdout']).name) as stdout, capture_dir.capture(Path(result['stderr']).name) as stderr:
             process = subprocess.Popen(result['command'], cwd=str(cwd), env=env,
                                        stdin=source, stdout=subprocess.PIPE, stderr=subprocess.PIPE,
                                        start_new_session=True)
@@ -131,6 +132,12 @@ def bounded(command, cwd, env, timeout, log_prefix, input_text=None, output_limi
             except subprocess.TimeoutExpired:
                 result['cleanup_error'] = 'Owned child did not terminate after kill'
             result['output_bytes_seen'] = total
+            try:
+                capture_dir.verify_capture(Path(result['stdout']).name, stdout)
+                capture_dir.verify_capture(Path(result['stderr']).name, stderr)
+            except InfrastructureError:
+                result['capture_error'] = 'Controller capture path was replaced'
+                raise
     except OSError as exc:
         result['launch_error'] = str(exc)
     finally:
@@ -144,7 +151,10 @@ def bounded(command, cwd, env, timeout, log_prefix, input_text=None, output_limi
                 stream.close()
         result['elapsed_seconds'] = time.monotonic() - start
         result['finished_at'] = datetime.datetime.now(datetime.timezone.utc).isoformat()
-        save(prefix.with_suffix('.execution.json'), result)
+        try:
+            capture_dir.write(prefix.with_suffix('.execution.json').name, (json.dumps(result, indent=2)+'\n').encode())
+        finally:
+            capture_dir.close()
     return result
 
 
