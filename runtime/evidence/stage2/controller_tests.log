@@ -1,0 +1,17 @@
+test_A_exact_restoration (test_runtime.ControllerTests.test_A_exact_restoration) ... ok
+test_C_noop (test_runtime.ControllerTests.test_C_noop) ... ok
+test_C_patch_bytes_untracked_delete_dirty_git_and_reset (test_runtime.ControllerTests.test_C_patch_bytes_untracked_delete_dirty_git_and_reset) ... ok
+test_C_reject_symlink_and_mode_and_shim (test_runtime.ControllerTests.test_C_reject_symlink_and_mode_and_shim) ... ok
+test_E_worker_startup_error_is_infrastructure_and_adapter_restores (test_runtime.ControllerTests.test_E_worker_startup_error_is_infrastructure_and_adapter_restores) ... /Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/prepare.py:27: DeprecationWarning: Python 3.14 will, by default, filter extracted tar archives and reject files or modify their metadata. Use the filter argument to control this behavior.
+  archive.extractall(str(destination))
+ok
+test_F_bounded_timeout_and_output_cap (test_runtime.ControllerTests.test_F_bounded_timeout_and_output_cap) ... ok
+test_F_capture_fake_cli_transport_is_not_model_evidence (test_runtime.ControllerTests.test_F_capture_fake_cli_transport_is_not_model_evidence) ... ok
+test_F_closed_pipes_do_not_mean_process_finished (test_runtime.ControllerTests.test_F_closed_pipes_do_not_mean_process_finished) ... ok
+test_F_credentials_home_cannot_be_inside_workspace (test_runtime.ControllerTests.test_F_credentials_home_cannot_be_inside_workspace) ... ok
+test_F_fresh_argv_model_and_public_prompt (test_runtime.ControllerTests.test_F_fresh_argv_model_and_public_prompt) ... ok
+
+----------------------------------------------------------------------
+Ran 10 tests in 17.065s
+
+OK

@@ -1,0 +1,45 @@
+============================= test session starts ==============================
+platform darwin -- Python 3.8.20, pytest-5.1.0, py-1.8.1, pluggy-0.13.1 -- /Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/.venv/bin/python
+rootdir: /Users/junyuc/Documents/interview/SWE-bench/evals/runs/stage2_blocked_trial/agent/workspace, inifile: tox.ini
+gw0 I
+[gw0] darwin Python 3.8.20 cwd: /Users/junyuc/Documents/interview/SWE-bench/evals/runs/stage2_blocked_trial/agent/workspace
+[gw0] Python 3.8.20 (default, Oct  2 2024, 16:12:59)  -- [Clang 18.1.8 ]
+gw0 [2]
+
+scheduling tests via LoadScheduling
+
+eval_public/test_example.py::test_explicit_example 
+[gw0] [ 50%] FAILED eval_public/test_example.py::test_explicit_example 
+eval_public/test_example.py::test_implicit_example 
+[gw0] [100%] FAILED eval_public/test_example.py::test_implicit_example 
+
+=================================== FAILURES ===================================
+____________________________ test_explicit_example _____________________________
+[gw0] darwin -- Python 3.8.20 /Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/.venv/bin/python
+
+    def test_explicit_example():
+        try:
+            try:
+                raise ValueError(11)
+            except Exception as first:
+                raise ValueError(12) from first
+        except Exception as second:
+>           raise ValueError(13) from second
+E           ValueError: 13
+
+eval_public/test_example.py:11: ValueError
+____________________________ test_implicit_example _____________________________
+[gw0] darwin -- Python 3.8.20 /Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/.venv/bin/python
+
+    def test_implicit_example():
+        try:
+            try:
+                raise ValueError(21)
+            except Exception:
+                raise ValueError(22)
+        except Exception:
+>           raise ValueError(23)
+E           ValueError: 23
+
+eval_public/test_example.py:21: ValueError
+============================== 2 failed in 0.16s ===============================

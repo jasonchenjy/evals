@@ -3,3 +3,7 @@ __pycache__/
 *.py[cod]
 .venv/
 .pytest_cache/
+
+# Runtime raw trial workspaces, logs and dedicated Codex homes stay local.
+# Curated execution evidence is retained under runtime/evidence/.
+/runs/

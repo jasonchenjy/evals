@@ -1,0 +1,28 @@
+{
+  "python": "3.8.20 (default, Oct  2 2024, 16:12:59) \n[Clang 18.1.8 ]",
+  "pytest_file": "/Users/junyuc/Documents/interview/SWE-bench/evals/runs/stage2_blocked_trial/agent/workspace/src/pytest.py",
+  "dependencies": {
+    "setuptools": "44.1.1",
+    "setuptools-scm": "3.3.3",
+    "wheel": "0.34.2",
+    "py": "1.8.1",
+    "attrs": "19.3.0",
+    "more-itertools": "8.4.0",
+    "atomicwrites": "1.4.0",
+    "packaging": "20.0",
+    "pyparsing": "2.4.7",
+    "wcwidth": "0.1.9",
+    "six": "1.16.0",
+    "hypothesis": "4.57.1",
+    "sortedcontainers": "2.4.0",
+    "mock": "3.0.5",
+    "pluggy": "0.13.1",
+    "pytest-xdist": "1.29.0",
+    "execnet": "1.7.1",
+    "pytest-forked": "1.1.1",
+    "apipkg": "1.5",
+    "decorator": "4.4.2",
+    "Jinja2": "2.11.3",
+    "MarkupSafe": "2.0.1"
+  }
+}

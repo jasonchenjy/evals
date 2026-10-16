@@ -1,0 +1,23 @@
+# Documentation template only. sandbox.py generates exact per-run paths.
+# Never combine this permission system with --sandbox or sandbox_mode.
+default_permissions = "trial"
+approval_policy = "never"
+web_search = "disabled"
+project_doc_max_bytes = 0
+
+[permissions.trial]
+extends = ":workspace"
+[permissions.trial.filesystem]
+":root" = "deny"
+":minimal" = "read"
+":tmpdir" = "deny"
+":slash_tmp" = "deny"
+# Add only exact qualified venv/runtime/Git/worker inputs as read.
+# Add only this invocation's scratch as write; never its parent.
+[permissions.trial.network]
+enabled = false
+
+[shell_environment_policy]
+inherit = "none"
+ignore_default_excludes = false
+# Actual deterministic set values are generated in core.clean_env.

@@ -1,0 +1,24 @@
+{
+  "recorded_at": "2026-10-16T22:45:18.136741+00:00",
+  "eval_commit": "02427af2b7e30e2c45332606070a9d09b86eb9e1",
+  "eval_lock_sha256": "067f222eccfbf8d40fe520a7f4196426e82a4e5d4861e506cb96e60d11732e03",
+  "locked_files_verified": 21,
+  "mismatches": [],
+  "runtime_source_sha256": {
+    "agent.py": "a7605e34129213df3ee3574c99d5d6d1c02f5eb9928259d4bd51010adaf22612",
+    "canary.py": "55b9f3dcf9d14441cc89fb413602e02e32780f5bff591a169a67e6376e58b097",
+    "core.py": "1b36e4a8aa1b3a4ab96192145e014a50deb2a3b4bf505e41138ba8401f779716",
+    "grading.py": "efe97e6755fb2b8bdb4389d54e78ca09b850d6fd6a0457048cb7d205fc1a322f",
+    "probe.py": "dc1b161f6ae67e277f23c1e2fbeedf3bda5231151c97e8134d19b35b310239e2",
+    "qualify.py": "8da60f43e35fc310dc76c01af1dc26ee0df4d30ae13f945e1a9e71ba70d3b271",
+    "run.py": "95cbead267e077be6bd11c1c2cab7b047605c5af0e308bd3c2854fc790e81ba1",
+    "sandbox.py": "a26d8689683242d6a404b29b73ece2d7d22ced6585228c721d07a4d82c5de69a",
+    "submission.py": "51ce6c514c75a734298f0c23583f8a6ee427c6afa1740547535f659f45563203",
+    "tests/test_runtime.py": "388225983cf3f60a14fead9ca25f740ffa48b088206790b16dff45adf5cad83b",
+    "worker.py": "7423fdc1b04ea16cee2ce2e3a017ef5bb7463d78521b040f307dd11dee6e6896"
+  },
+  "pytest_worktree_status": "",
+  "eval_package_diff": "",
+  "model_calls": 0,
+  "readiness": "PARTIALLY_READY"
+}

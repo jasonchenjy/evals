@@ -1,0 +1,86 @@
+{
+  "workspace_write": {
+    "passed": true,
+    "operation": "allowed"
+  },
+  "workspace_read": {
+    "passed": true,
+    "operation": "allowed"
+  },
+  "source_edit": {
+    "passed": true,
+    "operation": "allowed"
+  },
+  "private": {
+    "passed": true,
+    "operation": "denied",
+    "errno": 1,
+    "error": "[Errno 1] Operation not permitted: '/Users/junyuc/Documents/interview/SWE-bench/evals/runs/stage2_blocked_trial/agent-boundary/private/private'"
+  },
+  "other_trial": {
+    "passed": true,
+    "operation": "denied",
+    "errno": 1,
+    "error": "[Errno 1] Operation not permitted: '/Users/junyuc/Documents/interview/SWE-bench/evals/runs/stage2_blocked_trial/agent-boundary/private/other_trial'"
+  },
+  "shared_tmp": {
+    "passed": true,
+    "operation": "denied",
+    "errno": 1,
+    "error": "[Errno 1] Operation not permitted: '/private/tmp/pytest5786-cross-trial-_sdiehs0'"
+  },
+  "credentials": {
+    "passed": true,
+    "operation": "denied",
+    "errno": 1,
+    "error": "[Errno 1] Operation not permitted: '/Users/junyuc/Documents/interview/SWE-bench/evals/runs/stage2_blocked_trial/agent-boundary/private/credentials'"
+  },
+  "relative_private": {
+    "passed": true,
+    "operation": "denied",
+    "errno": 1,
+    "error": "[Errno 1] Operation not permitted: '../../agent-boundary/private/private'"
+  },
+  "outside_write": {
+    "passed": true,
+    "operation": "denied",
+    "errno": 1,
+    "error": "[Errno 1] Operation not permitted: '/Users/junyuc/Documents/interview/SWE-bench/evals/runs/stage2_blocked_trial/agent-boundary/private/outside_write'"
+  },
+  "dependencies": {
+    "passed": true,
+    "operation": "allowed"
+  },
+  "historical_import": {
+    "passed": true,
+    "operation": "allowed"
+  },
+  "git_status": {
+    "passed": true,
+    "operation": "allowed"
+  },
+  "git_diff": {
+    "passed": true,
+    "operation": "allowed"
+  },
+  "git_write_protected": {
+    "passed": true,
+    "operation": "denied",
+    "errno": 1,
+    "error": "[Errno 1] Operation not permitted: '/Users/junyuc/Documents/interview/SWE-bench/evals/runs/stage2_blocked_trial/agent/workspace/.git/canary-write'"
+  },
+  "network": {
+    "passed": true,
+    "operation": "denied",
+    "errno": 1,
+    "error": "[Errno 1] Operation not permitted"
+  },
+  "local_ipc": {
+    "passed": true,
+    "operation": "allowed"
+  },
+  "per_process_limits": {
+    "passed": true,
+    "operation": "allowed"
+  }
+}
