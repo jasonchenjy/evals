@@ -16,7 +16,7 @@
     "private/oracle/noop.patch": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
     "private/oracle/testreport_only.patch": "e67fd439b43456132a8be01260d799093fb5212f0f1e934e28ca4ce0d8bb5a31",
     "private/oracle/text_only.patch": "5e7492018abe5c216bed29537f9fc0d5369f13de0a63cb2690175d87be45a75a",
-    "private/test_catalog.json": "56a9d5f8be3052a8553769c0b64506cf730f66286360279867b532111d956efa",
+    "private/test_catalog.json": "062349677940569caf00343863148876b54a237400e0431062a98c7e07308739",
     "private/tests/behavior.py": "0e22e19d4a632e2775c79a0e733f25368160e38d641b65ee69afd027cde18251",
     "private/tests/existing_inventory.json": "dd4bec08ec33301b8673f4eff8f3cd326ba394ea7e688911ca588a93e271c634",
     "requirements.txt": "7c38e090b7a45c19d6f2c939e51b0a04e1b7594f5051508bef45036fb20d884d",

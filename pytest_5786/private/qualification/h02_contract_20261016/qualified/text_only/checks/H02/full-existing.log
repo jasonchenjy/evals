@@ -1,0 +1,117 @@
+........................................................................ [ 57%]
+....................................FFFF.....F.......                    [100%]
+=================================== FAILURES ===================================
+_________ TestReportSerialization.test_xdist_longrepr_to_str_issue_241 _________
+../../../../../../workspace/testing/test_reports.py:27: in test_xdist_longrepr_to_str_issue_241
+    assert test_a_call._to_json()["longrepr"]["reprtraceback"]["style"] == "long"
+E   TypeError: string indices must be integers
+----------------------------- Captured stdout call -----------------------------
+============================= test session starts ==============================
+platform darwin -- Python 3.8.20, pytest-5.1.0, py-1.8.1, pluggy-0.13.1
+rootdir: /Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/qualification/h02_contract_20261016/qualified/text_only/checks/H02/tmp/pytest-of-junyuc/pytest-0/test_xdist_longrepr_to_str_issue_2410
+collected 2 items
+
+test_xdist_longrepr_to_str_issue_241.py F.                               [100%]
+
+=================================== FAILURES ===================================
+____________________________________ test_a ____________________________________
+
+>   def test_a(): assert False
+E   assert False
+
+test_xdist_longrepr_to_str_issue_241.py:1: AssertionError
+========================= 1 failed, 1 passed in 0.01s ==========================
+_______ TestReportSerialization.test_xdist_report_longrepr_reprcrash_130 _______
+../../../../../../workspace/testing/test_reports.py:56: in test_xdist_report_longrepr_reprcrash_130
+    assert rep.longrepr.reprcrash.lineno == a.longrepr.reprcrash.lineno
+E   AttributeError: 'str' object has no attribute 'reprcrash'
+----------------------------- Captured stdout call -----------------------------
+============================= test session starts ==============================
+platform darwin -- Python 3.8.20, pytest-5.1.0, py-1.8.1, pluggy-0.13.1
+rootdir: /Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/qualification/h02_contract_20261016/qualified/text_only/checks/H02/tmp/pytest-of-junyuc/pytest-0/test_xdist_report_longrepr_reprcrash_1300
+collected 1 item
+
+test_xdist_report_longrepr_reprcrash_130.py F                            [100%]
+
+=================================== FAILURES ===================================
+__________________________________ test_fail ___________________________________
+
+    def test_fail():
+>       assert False, 'Expected Message'
+E       AssertionError: Expected Message
+E       assert False
+
+test_xdist_report_longrepr_reprcrash_130.py:2: AssertionError
+============================== 1 failed in 0.00s ===============================
+__________ TestReportSerialization.test_reprentries_serialization_170 __________
+../../../../../../workspace/testing/test_reports.py:90: in test_reprentries_serialization_170
+    a_entries = a.longrepr.reprtraceback.reprentries
+E   AttributeError: 'str' object has no attribute 'reprtraceback'
+----------------------------- Captured stdout call -----------------------------
+============================= test session starts ==============================
+platform darwin -- Python 3.8.20, pytest-5.1.0, py-1.8.1, pluggy-0.13.1
+rootdir: /Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/qualification/h02_contract_20261016/qualified/text_only/checks/H02/tmp/pytest-of-junyuc/pytest-0/test_reprentries_serialization_1700
+collected 1 item
+
+test_reprentries_serialization_170.py F                                  [100%]
+
+=================================== FAILURES ===================================
+_______________________________ test_repr_entry ________________________________
+
+    def test_repr_entry():
+        x = 0
+>       assert x
+E       assert 0
+
+x          = 0
+
+test_reprentries_serialization_170.py:3: AssertionError
+============================== 1 failed in 0.00s ===============================
+__________ TestReportSerialization.test_reprentries_serialization_196 __________
+../../../../../../workspace/testing/test_reports.py:125: in test_reprentries_serialization_196
+    a_entries = a.longrepr.reprtraceback.reprentries
+E   AttributeError: 'str' object has no attribute 'reprtraceback'
+----------------------------- Captured stdout call -----------------------------
+============================= test session starts ==============================
+platform darwin -- Python 3.8.20, pytest-5.1.0, py-1.8.1, pluggy-0.13.1
+rootdir: /Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/qualification/h02_contract_20261016/qualified/text_only/checks/H02/tmp/pytest-of-junyuc/pytest-0/test_reprentries_serialization_1960
+collected 1 item
+
+test_reprentries_serialization_196.py F                                  [100%]
+
+=================================== FAILURES ===================================
+____________________________ test_repr_entry_native ____________________________
+Traceback (most recent call last):
+  File "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/qualification/h02_contract_20261016/qualified/text_only/checks/H02/tmp/pytest-of-junyuc/pytest-0/test_reprentries_serialization_1960/test_reprentries_serialization_196.py", line 3, in test_repr_entry_native
+    assert x
+AssertionError: assert 0
+============================== 1 failed in 0.00s ===============================
+_____________ TestReportSerialization.test_deserialization_failure _____________
+../../../../../../workspace/testing/test_reports.py:237: in test_deserialization_failure
+    entry = data["longrepr"]["reprtraceback"]["reprentries"][0]
+E   TypeError: string indices must be integers
+----------------------------- Captured stdout call -----------------------------
+============================= test session starts ==============================
+platform darwin -- Python 3.8.20, pytest-5.1.0, py-1.8.1, pluggy-0.13.1
+rootdir: /Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/qualification/h02_contract_20261016/qualified/text_only/checks/H02/tmp/pytest-of-junyuc/pytest-0/test_deserialization_failure0
+collected 1 item
+
+test_deserialization_failure.py F                                        [100%]
+
+=================================== FAILURES ===================================
+____________________________________ test_a ____________________________________
+
+    def test_a():
+>       assert False
+E       assert False
+
+test_deserialization_failure.py:2: AssertionError
+============================== 1 failed in 0.00s ===============================
+- generated xml file: /Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/qualification/h02_contract_20261016/qualified/text_only/checks/H02/full-existing.xml -
+=========================== short test summary info ============================
+FAILED testing/test_reports.py::TestReportSerialization::test_xdist_longrepr_to_str_issue_241
+FAILED testing/test_reports.py::TestReportSerialization::test_xdist_report_longrepr_reprcrash_130
+FAILED testing/test_reports.py::TestReportSerialization::test_reprentries_serialization_170
+FAILED testing/test_reports.py::TestReportSerialization::test_reprentries_serialization_196
+FAILED testing/test_reports.py::TestReportSerialization::test_deserialization_failure
+5 failed, 120 passed, 2 deselected in 1.05s

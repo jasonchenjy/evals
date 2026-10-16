@@ -1,0 +1,56 @@
+{
+  "base_commit": "955e54221008aba577ecbaefa15679f6777d3bf8",
+  "report_variants": "Exact base plus separately hashed source patch; see probes/summary.json",
+  "xdist_distribution": "pytest-xdist 1.29.0, pinned local installation",
+  "files": [
+    {
+      "file": "private/qualification/h02_contract_20261016/probes/sources/alternative_reports.py",
+      "sha256": "7f698b8d4ea5e1e4084cb0656676c2285a4bd27baf628d114b86cf4f016a5e3b"
+    },
+    {
+      "file": "private/qualification/h02_contract_20261016/probes/sources/base_backwards_compatibility.rst",
+      "sha256": "f4818516b5c96255bf556523d39b5314261a44d2d99a1d968a0c7a6c66ba18c3"
+    },
+    {
+      "file": "private/qualification/h02_contract_20261016/probes/sources/base_code.py",
+      "sha256": "2aa6f66a1fb5b4b2aa7143d023546a3455a2ccb1cdbf29c3ef3ad4ca7e195483"
+    },
+    {
+      "file": "private/qualification/h02_contract_20261016/probes/sources/base_hookspec.py",
+      "sha256": "2bdab7b8fca8ea25245695554ffbda29cfafef83aeace50d04d0486f9f825bd1"
+    },
+    {
+      "file": "private/qualification/h02_contract_20261016/probes/sources/base_junitxml.py",
+      "sha256": "f7948aecfd57090072135fc0569589149dc5bcef3bd00efefbb677b2d9d43745"
+    },
+    {
+      "file": "private/qualification/h02_contract_20261016/probes/sources/base_test_reports.py",
+      "sha256": "8ee24bc17031d3a277cc6bda816231f440de698f3d3fd34818ed084b244b0c38"
+    },
+    {
+      "file": "private/qualification/h02_contract_20261016/probes/sources/complete_reports.py",
+      "sha256": "2058adae12754efdfc07600c08437d8eb56127dcfa0d7f00203c480161e6431d"
+    },
+    {
+      "file": "private/qualification/h02_contract_20261016/probes/sources/historical_reports.py",
+      "sha256": "03527f8f1ee4288724070e41d80bdca8dbc350307b0b61f71a983f3eba25fd46"
+    },
+    {
+      "file": "private/qualification/h02_contract_20261016/probes/sources/historical_test_reports.py",
+      "sha256": "bb1a38e425d88b9dc37624f7deb66f550e4f2f2adbe18023360319d4a690e39f"
+    },
+    {
+      "file": "private/qualification/h02_contract_20261016/probes/sources/noop_reports.py",
+      "sha256": "117caad56cce03d98a83bc3b1226a439db83e92faab1f9b50313fef9971337e3"
+    },
+    {
+      "file": "private/qualification/h02_contract_20261016/probes/sources/xdist_1_29_0_remote.py",
+      "sha256": "7694265fcd4f1f28d3acc23da3007879a723a5f6db38342c79068b48535446ac"
+    },
+    {
+      "file": "private/qualification/h02_contract_20261016/probes/sources/xdist_1_29_0_workermanage.py",
+      "sha256": "c77ebec950defb67de45066977aa02f8a7a97cd0d7a3d58f162d5b99bb29f0e1"
+    }
+  ],
+  "historical_tests_commit": "01082fea12649384aab44306f49503de1374c4a1"
+}

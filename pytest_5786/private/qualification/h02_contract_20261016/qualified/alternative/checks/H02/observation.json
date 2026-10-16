@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "method": "test_H02_full_existing_suite",
+  "status": "failed",
+  "tests_run": 1,
+  "duration_seconds": 1.3567874580000001,
+  "failures": [
+    "Traceback (most recent call last):\n  File \"/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/tests/behavior.py\", line 263, in test_H02_full_existing_suite\n    self.assertEqual(result.returncode, 0, result.stdout[-4000:])\nAssertionError: 1 != 0 : ........................................................................ [ 57%]\n.............................................F.......                    [100%]\n=================================== FAILURES ===================================\n_____________ TestReportSerialization.test_deserialization_failure _____________\n../../../../../../workspace/testing/test_reports.py:244: in test_deserialization_failure\n    TestReport._from_json(data)\nE   Failed: DID NOT RAISE <class 'RuntimeError'>\n----------------------------- Captured stdout call -----------------------------\n============================= test session starts ==============================\nplatform darwin -- Python 3.8.20, pytest-5.1.0, py-1.8.1, pluggy-0.13.1\nrootdir: /Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/qualification/h02_contract_20261016/qualified/alternative/checks/H02/tmp/pytest-of-junyuc/pytest-0/test_deserialization_failure0\ncollected 1 item\n\ntest_deserialization_failure.py F                                        [100%]\n\n=================================== FAILURES ===================================\n____________________________________ test_a ____________________________________\n\n    def test_a():\n>       assert False\nE       assert False\n\ntest_deserialization_failure.py:2: AssertionError\n============================== 1 failed in 0.00s ===============================\n- generated xml file: /Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/qualification/h02_contract_20261016/qualified/alternative/checks/H02/full-existing.xml -\n=========================== short test summary info ============================\nFAILED testing/test_reports.py::TestReportSerialization::test_deserialization_failure\n1 failed, 124 passed, 2 deselected in 1.17s\n\n"
+  ],
+  "skips": [],
+  "details": [
+    {
+      "command": [
+        "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/.venv/bin/python",
+        "-m",
+        "pytest",
+        "--color=no",
+        "-q",
+        "--tb=short",
+        "--junitxml=/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/qualification/h02_contract_20261016/qualified/alternative/checks/H02/full-existing.xml",
+        "testing/test_reports.py",
+        "testing/code/test_code.py",
+        "testing/code/test_excinfo.py",
+        "-k",
+        "not test_chained_exceptions"
+      ],
+      "cwd": "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/qualification/h02_contract_20261016/qualified/alternative/workspace",
+      "returncode": 1,
+      "log": "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/qualification/h02_contract_20261016/qualified/alternative/checks/H02/full-existing.log"
+    },
+    {
+      "existing_tests": 125,
+      "passed": 124,
+      "skipped": 0
+    }
+  ]
+}

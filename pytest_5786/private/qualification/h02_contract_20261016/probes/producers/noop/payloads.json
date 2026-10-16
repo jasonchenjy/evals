@@ -1,0 +1,218 @@
+[
+  {
+    "id": "TestReport_single",
+    "payload": {
+      "nodeid": "probe_case.py::test_case",
+      "location": [
+        "probe_case.py",
+        0,
+        "test_case"
+      ],
+      "keywords": {},
+      "outcome": "failed",
+      "longrepr": {
+        "reprcrash": {
+          "path": "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/qualification/probe_h02_contract.py",
+          "lineno": 29,
+          "message": "AssertionError: h02-single-719"
+        },
+        "reprtraceback": {
+          "reprentries": [
+            {
+              "type": "ReprEntry",
+              "data": {
+                "lines": [
+                  "    assert False, \"h02-single-719\"",
+                  "E   AssertionError: h02-single-719"
+                ],
+                "reprfuncargs": null,
+                "reprlocals": null,
+                "reprfileloc": {
+                  "path": "../../../../probe_h02_contract.py",
+                  "lineno": 29,
+                  "message": "in build"
+                },
+                "style": "short"
+              }
+            }
+          ],
+          "extraline": null,
+          "style": "short"
+        },
+        "sections": []
+      },
+      "when": "call",
+      "user_properties": [],
+      "sections": [
+        [
+          "Captured stdout call",
+          "h02-captured-727"
+        ]
+      ],
+      "duration": 0.125,
+      "_report_type": "TestReport",
+      "item_index": 7,
+      "worker_id": "gw0"
+    },
+    "source_text": "../../../../probe_h02_contract.py:29: in build\n    assert False, \"h02-single-719\"\nE   AssertionError: h02-single-719",
+    "source_crash": "AssertionError: h02-single-719"
+  },
+  {
+    "id": "TestReport_chain",
+    "payload": {
+      "nodeid": "probe_case.py::test_case",
+      "location": [
+        "probe_case.py",
+        0,
+        "test_case"
+      ],
+      "keywords": {},
+      "outcome": "failed",
+      "longrepr": {
+        "reprcrash": {
+          "path": "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/qualification/probe_h02_contract.py",
+          "lineno": 28,
+          "message": "RuntimeError: h02-final-709"
+        },
+        "reprtraceback": {
+          "reprentries": [
+            {
+              "type": "ReprEntry",
+              "data": {
+                "lines": [
+                  "    raise RuntimeError(\"h02-final-709\") from cause",
+                  "E   RuntimeError: h02-final-709"
+                ],
+                "reprfuncargs": null,
+                "reprlocals": null,
+                "reprfileloc": {
+                  "path": "../../../../probe_h02_contract.py",
+                  "lineno": 28,
+                  "message": "in build"
+                },
+                "style": "short"
+              }
+            }
+          ],
+          "extraline": null,
+          "style": "short"
+        },
+        "sections": []
+      },
+      "when": "call",
+      "user_properties": [],
+      "sections": [
+        [
+          "Captured stdout call",
+          "h02-captured-727"
+        ]
+      ],
+      "duration": 0.125,
+      "_report_type": "TestReport",
+      "item_index": 7,
+      "worker_id": "gw0"
+    },
+    "source_text": "../../../../probe_h02_contract.py:26: in build\n    raise ValueError(\"h02-cause-701\")\nE   ValueError: h02-cause-701\n\nThe above exception was the direct cause of the following exception:\n../../../../probe_h02_contract.py:28: in build\n    raise RuntimeError(\"h02-final-709\") from cause\nE   RuntimeError: h02-final-709",
+    "source_crash": "RuntimeError: h02-final-709"
+  },
+  {
+    "id": "CollectReport_single",
+    "payload": {
+      "nodeid": "probe_case.py::test_case",
+      "outcome": "failed",
+      "longrepr": {
+        "reprcrash": {
+          "path": "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/qualification/probe_h02_contract.py",
+          "lineno": 29,
+          "message": "AssertionError: h02-single-719"
+        },
+        "reprtraceback": {
+          "reprentries": [
+            {
+              "type": "ReprEntry",
+              "data": {
+                "lines": [
+                  "    assert False, \"h02-single-719\"",
+                  "E   AssertionError: h02-single-719"
+                ],
+                "reprfuncargs": null,
+                "reprlocals": null,
+                "reprfileloc": {
+                  "path": "../../../../probe_h02_contract.py",
+                  "lineno": 29,
+                  "message": "in build"
+                },
+                "style": "short"
+              }
+            }
+          ],
+          "extraline": null,
+          "style": "short"
+        },
+        "sections": []
+      },
+      "result": null,
+      "sections": [
+        [
+          "Captured stdout call",
+          "h02-captured-727"
+        ]
+      ],
+      "_report_type": "CollectReport",
+      "item_index": 7,
+      "worker_id": "gw0"
+    },
+    "source_text": "../../../../probe_h02_contract.py:29: in build\n    assert False, \"h02-single-719\"\nE   AssertionError: h02-single-719",
+    "source_crash": "AssertionError: h02-single-719"
+  },
+  {
+    "id": "CollectReport_chain",
+    "payload": {
+      "nodeid": "probe_case.py::test_case",
+      "outcome": "failed",
+      "longrepr": {
+        "reprcrash": {
+          "path": "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/qualification/probe_h02_contract.py",
+          "lineno": 28,
+          "message": "RuntimeError: h02-final-709"
+        },
+        "reprtraceback": {
+          "reprentries": [
+            {
+              "type": "ReprEntry",
+              "data": {
+                "lines": [
+                  "    raise RuntimeError(\"h02-final-709\") from cause",
+                  "E   RuntimeError: h02-final-709"
+                ],
+                "reprfuncargs": null,
+                "reprlocals": null,
+                "reprfileloc": {
+                  "path": "../../../../probe_h02_contract.py",
+                  "lineno": 28,
+                  "message": "in build"
+                },
+                "style": "short"
+              }
+            }
+          ],
+          "extraline": null,
+          "style": "short"
+        },
+        "sections": []
+      },
+      "result": null,
+      "sections": [
+        [
+          "Captured stdout call",
+          "h02-captured-727"
+        ]
+      ],
+      "_report_type": "CollectReport",
+      "item_index": 7,
+      "worker_id": "gw0"
+    },
+    "source_text": "../../../../probe_h02_contract.py:26: in build\n    raise ValueError(\"h02-cause-701\")\nE   ValueError: h02-cause-701\n\nThe above exception was the direct cause of the following exception:\n../../../../probe_h02_contract.py:28: in build\n    raise RuntimeError(\"h02-final-709\") from cause\nE   RuntimeError: h02-final-709",
+    "source_crash": "RuntimeError: h02-final-709"
+  }
+]

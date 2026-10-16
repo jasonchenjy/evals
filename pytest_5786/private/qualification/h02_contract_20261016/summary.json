@@ -1,0 +1,536 @@
+{
+  "schema_version": 1,
+  "eval_version": "0.1.0",
+  "controls": [
+    {
+      "control": "noop",
+      "command": [
+        "/opt/homebrew/opt/python@3.13/bin/python3.13",
+        "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/grader.py",
+        "--repo",
+        "/Users/junyuc/Documents/interview/SWE-bench/pytest",
+        "--python",
+        "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/.venv/bin/python",
+        "--patch",
+        "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/oracle/noop.patch",
+        "--output",
+        "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/qualification/h02_contract_20261016/qualified/noop",
+        "--trusted-local"
+      ],
+      "returncode": 1,
+      "result_file": "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/qualification/h02_contract_20261016/qualified/noop/result.json",
+      "result_sha256": "0d928ed11bf03ea7cf9d8feffb086f68a58ff4278c78e973f72334f7782a81ed",
+      "infrastructure_status": "ok",
+      "overall_resolved": false,
+      "dimensions": {
+        "original_bug_resolution": {
+          "satisfied": false,
+          "checks": {
+            "A01": "failed",
+            "A02": "failed"
+          }
+        },
+        "cross_component_consistency": {
+          "satisfied": false,
+          "checks": {
+            "B01": "failed",
+            "B02": "failed",
+            "B03": "failed"
+          }
+        },
+        "edge_case_robustness": {
+          "satisfied": false,
+          "checks": {
+            "C01": "passed",
+            "C02": "failed",
+            "C03": "failed"
+          }
+        },
+        "non_regression": {
+          "satisfied": true,
+          "checks": {
+            "D01": "passed",
+            "D02": "passed",
+            "D03": "passed"
+          }
+        }
+      },
+      "checks": {
+        "A01": "failed",
+        "A02": "failed",
+        "B01": "failed",
+        "B02": "failed",
+        "B03": "failed",
+        "C01": "passed",
+        "C02": "failed",
+        "C03": "failed",
+        "D01": "passed",
+        "D02": "passed",
+        "D03": "passed",
+        "H01": "failed",
+        "H02": "passed"
+      },
+      "expected_overall": false,
+      "expectation_met": true,
+      "package_relative_result": "private/qualification/h02_contract_20261016/qualified/noop/result.json"
+    },
+    {
+      "control": "historical",
+      "command": [
+        "/opt/homebrew/opt/python@3.13/bin/python3.13",
+        "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/grader.py",
+        "--repo",
+        "/Users/junyuc/Documents/interview/SWE-bench/pytest",
+        "--python",
+        "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/.venv/bin/python",
+        "--patch",
+        "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/oracle/historical.patch",
+        "--output",
+        "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/qualification/h02_contract_20261016/qualified/historical",
+        "--trusted-local"
+      ],
+      "returncode": 1,
+      "result_file": "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/qualification/h02_contract_20261016/qualified/historical/result.json",
+      "result_sha256": "abd46de6f390641b55cda2cd1b4a6ab47e0bf1b2fb38f92b740d8b3ced746146",
+      "infrastructure_status": "ok",
+      "overall_resolved": false,
+      "dimensions": {
+        "original_bug_resolution": {
+          "satisfied": true,
+          "checks": {
+            "A01": "passed",
+            "A02": "passed"
+          }
+        },
+        "cross_component_consistency": {
+          "satisfied": true,
+          "checks": {
+            "B01": "passed",
+            "B02": "passed",
+            "B03": "passed"
+          }
+        },
+        "edge_case_robustness": {
+          "satisfied": false,
+          "checks": {
+            "C01": "passed",
+            "C02": "passed",
+            "C03": "error"
+          }
+        },
+        "non_regression": {
+          "satisfied": false,
+          "checks": {
+            "D01": "passed",
+            "D02": "passed",
+            "D03": "error"
+          }
+        }
+      },
+      "checks": {
+        "A01": "passed",
+        "A02": "passed",
+        "B01": "passed",
+        "B02": "passed",
+        "B03": "passed",
+        "C01": "passed",
+        "C02": "passed",
+        "C03": "error",
+        "D01": "passed",
+        "D02": "passed",
+        "D03": "error",
+        "H01": "passed",
+        "H02": "passed"
+      },
+      "expected_overall": false,
+      "expectation_met": true,
+      "package_relative_result": "private/qualification/h02_contract_20261016/qualified/historical/result.json"
+    },
+    {
+      "control": "complete",
+      "command": [
+        "/opt/homebrew/opt/python@3.13/bin/python3.13",
+        "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/grader.py",
+        "--repo",
+        "/Users/junyuc/Documents/interview/SWE-bench/pytest",
+        "--python",
+        "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/.venv/bin/python",
+        "--patch",
+        "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/oracle/complete.patch",
+        "--output",
+        "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/qualification/h02_contract_20261016/qualified/complete",
+        "--trusted-local"
+      ],
+      "returncode": 0,
+      "result_file": "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/qualification/h02_contract_20261016/qualified/complete/result.json",
+      "result_sha256": "4ac641a3190f72ad9b2c2b9b819711cd241d75d0e14dd08e1755b45ee5d8a2d6",
+      "infrastructure_status": "ok",
+      "overall_resolved": true,
+      "dimensions": {
+        "original_bug_resolution": {
+          "satisfied": true,
+          "checks": {
+            "A01": "passed",
+            "A02": "passed"
+          }
+        },
+        "cross_component_consistency": {
+          "satisfied": true,
+          "checks": {
+            "B01": "passed",
+            "B02": "passed",
+            "B03": "passed"
+          }
+        },
+        "edge_case_robustness": {
+          "satisfied": true,
+          "checks": {
+            "C01": "passed",
+            "C02": "passed",
+            "C03": "passed"
+          }
+        },
+        "non_regression": {
+          "satisfied": true,
+          "checks": {
+            "D01": "passed",
+            "D02": "passed",
+            "D03": "passed"
+          }
+        }
+      },
+      "checks": {
+        "A01": "passed",
+        "A02": "passed",
+        "B01": "passed",
+        "B02": "passed",
+        "B03": "passed",
+        "C01": "passed",
+        "C02": "passed",
+        "C03": "passed",
+        "D01": "passed",
+        "D02": "passed",
+        "D03": "passed",
+        "H01": "passed",
+        "H02": "passed"
+      },
+      "expected_overall": true,
+      "expectation_met": true,
+      "package_relative_result": "private/qualification/h02_contract_20261016/qualified/complete/result.json"
+    },
+    {
+      "control": "alternative",
+      "command": [
+        "/opt/homebrew/opt/python@3.13/bin/python3.13",
+        "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/grader.py",
+        "--repo",
+        "/Users/junyuc/Documents/interview/SWE-bench/pytest",
+        "--python",
+        "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/.venv/bin/python",
+        "--patch",
+        "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/oracle/alternative.patch",
+        "--output",
+        "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/qualification/h02_contract_20261016/qualified/alternative",
+        "--trusted-local"
+      ],
+      "returncode": 0,
+      "result_file": "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/qualification/h02_contract_20261016/qualified/alternative/result.json",
+      "result_sha256": "2d44c100446befa7486e49b39c2c84e773e195d6f7735bd4b506a9a96978e3b7",
+      "infrastructure_status": "ok",
+      "overall_resolved": true,
+      "dimensions": {
+        "original_bug_resolution": {
+          "satisfied": true,
+          "checks": {
+            "A01": "passed",
+            "A02": "passed"
+          }
+        },
+        "cross_component_consistency": {
+          "satisfied": true,
+          "checks": {
+            "B01": "passed",
+            "B02": "passed",
+            "B03": "passed"
+          }
+        },
+        "edge_case_robustness": {
+          "satisfied": true,
+          "checks": {
+            "C01": "passed",
+            "C02": "passed",
+            "C03": "passed"
+          }
+        },
+        "non_regression": {
+          "satisfied": true,
+          "checks": {
+            "D01": "passed",
+            "D02": "passed",
+            "D03": "passed"
+          }
+        }
+      },
+      "checks": {
+        "A01": "passed",
+        "A02": "passed",
+        "B01": "passed",
+        "B02": "passed",
+        "B03": "passed",
+        "C01": "passed",
+        "C02": "passed",
+        "C03": "passed",
+        "D01": "passed",
+        "D02": "passed",
+        "D03": "passed",
+        "H01": "passed",
+        "H02": "failed"
+      },
+      "expected_overall": true,
+      "expectation_met": true,
+      "package_relative_result": "private/qualification/h02_contract_20261016/qualified/alternative/result.json"
+    },
+    {
+      "control": "last_only",
+      "command": [
+        "/opt/homebrew/opt/python@3.13/bin/python3.13",
+        "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/grader.py",
+        "--repo",
+        "/Users/junyuc/Documents/interview/SWE-bench/pytest",
+        "--python",
+        "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/.venv/bin/python",
+        "--patch",
+        "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/oracle/last_only.patch",
+        "--output",
+        "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/qualification/h02_contract_20261016/qualified/last_only",
+        "--trusted-local"
+      ],
+      "returncode": 1,
+      "result_file": "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/qualification/h02_contract_20261016/qualified/last_only/result.json",
+      "result_sha256": "1ed5fff5e3878fcc05c3380db451bbfec557f5e40567973787c078aeb83958a8",
+      "infrastructure_status": "ok",
+      "overall_resolved": false,
+      "dimensions": {
+        "original_bug_resolution": {
+          "satisfied": false,
+          "checks": {
+            "A01": "failed",
+            "A02": "failed"
+          }
+        },
+        "cross_component_consistency": {
+          "satisfied": false,
+          "checks": {
+            "B01": "failed",
+            "B02": "failed",
+            "B03": "failed"
+          }
+        },
+        "edge_case_robustness": {
+          "satisfied": false,
+          "checks": {
+            "C01": "passed",
+            "C02": "failed",
+            "C03": "failed"
+          }
+        },
+        "non_regression": {
+          "satisfied": true,
+          "checks": {
+            "D01": "passed",
+            "D02": "passed",
+            "D03": "passed"
+          }
+        }
+      },
+      "checks": {
+        "A01": "failed",
+        "A02": "failed",
+        "B01": "failed",
+        "B02": "failed",
+        "B03": "failed",
+        "C01": "passed",
+        "C02": "failed",
+        "C03": "failed",
+        "D01": "passed",
+        "D02": "passed",
+        "D03": "passed",
+        "H01": "failed",
+        "H02": "passed"
+      },
+      "expected_overall": false,
+      "expectation_met": true,
+      "package_relative_result": "private/qualification/h02_contract_20261016/qualified/last_only/result.json"
+    },
+    {
+      "control": "testreport_only",
+      "command": [
+        "/opt/homebrew/opt/python@3.13/bin/python3.13",
+        "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/grader.py",
+        "--repo",
+        "/Users/junyuc/Documents/interview/SWE-bench/pytest",
+        "--python",
+        "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/.venv/bin/python",
+        "--patch",
+        "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/oracle/testreport_only.patch",
+        "--output",
+        "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/qualification/h02_contract_20261016/qualified/testreport_only",
+        "--trusted-local"
+      ],
+      "returncode": 1,
+      "result_file": "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/qualification/h02_contract_20261016/qualified/testreport_only/result.json",
+      "result_sha256": "63faccc2cac0b4b59c253cc4cf88ac4eee8d6be192c9fcc38a6f22d3e00ebe4f",
+      "infrastructure_status": "ok",
+      "overall_resolved": false,
+      "dimensions": {
+        "original_bug_resolution": {
+          "satisfied": true,
+          "checks": {
+            "A01": "passed",
+            "A02": "passed"
+          }
+        },
+        "cross_component_consistency": {
+          "satisfied": false,
+          "checks": {
+            "B01": "failed",
+            "B02": "passed",
+            "B03": "failed"
+          }
+        },
+        "edge_case_robustness": {
+          "satisfied": false,
+          "checks": {
+            "C01": "passed",
+            "C02": "failed",
+            "C03": "failed"
+          }
+        },
+        "non_regression": {
+          "satisfied": true,
+          "checks": {
+            "D01": "passed",
+            "D02": "passed",
+            "D03": "passed"
+          }
+        }
+      },
+      "checks": {
+        "A01": "passed",
+        "A02": "passed",
+        "B01": "failed",
+        "B02": "passed",
+        "B03": "failed",
+        "C01": "passed",
+        "C02": "failed",
+        "C03": "failed",
+        "D01": "passed",
+        "D02": "passed",
+        "D03": "passed",
+        "H01": "failed",
+        "H02": "passed"
+      },
+      "expected_overall": false,
+      "expectation_met": true,
+      "package_relative_result": "private/qualification/h02_contract_20261016/qualified/testreport_only/result.json"
+    },
+    {
+      "control": "text_only",
+      "command": [
+        "/opt/homebrew/opt/python@3.13/bin/python3.13",
+        "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/grader.py",
+        "--repo",
+        "/Users/junyuc/Documents/interview/SWE-bench/pytest",
+        "--python",
+        "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/.venv/bin/python",
+        "--patch",
+        "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/oracle/text_only.patch",
+        "--output",
+        "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/qualification/h02_contract_20261016/qualified/text_only",
+        "--trusted-local"
+      ],
+      "returncode": 1,
+      "result_file": "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/qualification/h02_contract_20261016/qualified/text_only/result.json",
+      "result_sha256": "66656d936da1925a59f15431622348cd4e2dd218e66aa4ab7334832ec56239fe",
+      "infrastructure_status": "ok",
+      "overall_resolved": false,
+      "dimensions": {
+        "original_bug_resolution": {
+          "satisfied": true,
+          "checks": {
+            "A01": "passed",
+            "A02": "passed"
+          }
+        },
+        "cross_component_consistency": {
+          "satisfied": false,
+          "checks": {
+            "B01": "passed",
+            "B02": "error",
+            "B03": "passed"
+          }
+        },
+        "edge_case_robustness": {
+          "satisfied": false,
+          "checks": {
+            "C01": "passed",
+            "C02": "passed",
+            "C03": "error"
+          }
+        },
+        "non_regression": {
+          "satisfied": false,
+          "checks": {
+            "D01": "error",
+            "D02": "failed",
+            "D03": "passed"
+          }
+        }
+      },
+      "checks": {
+        "A01": "passed",
+        "A02": "passed",
+        "B01": "passed",
+        "B02": "error",
+        "B03": "passed",
+        "C01": "passed",
+        "C02": "passed",
+        "C03": "error",
+        "D01": "error",
+        "D02": "failed",
+        "D03": "passed",
+        "H01": "failed",
+        "H02": "failed"
+      },
+      "expected_overall": false,
+      "expectation_met": true,
+      "package_relative_result": "private/qualification/h02_contract_20261016/qualified/text_only/result.json"
+    }
+  ],
+  "agent_trials_run": false,
+  "scope": "trusted local deterministic qualification",
+  "boundary_checks": {
+    "noop_original_fails": true,
+    "noop_unaffected_passes": true,
+    "historical_original_passes": true,
+    "historical_focused_passes": true,
+    "historical_missing_traceback_exposed": true,
+    "last_only_rejected": true,
+    "test_only_collect_rejected": true,
+    "text_only_structure_rejected": true
+  },
+  "qualification_passed": true,
+  "review_outcome": "B",
+  "review_report": "private/qualification/h02_contract_review.md",
+  "qualification_revision": "h02-contract-20261016",
+  "package_lock_sha256": "067f222eccfbf8d40fe520a7f4196426e82a4e5d4861e506cb96e60d11732e03",
+  "scoring_semantics_changed": false,
+  "oracle_patches_changed": false,
+  "grader_changed": false,
+  "mandatory_tests_changed": false,
+  "probe_processes_completed": 8,
+  "probe_input_observations": 56,
+  "cross_codec_observations": 64,
+  "probe_summary": "private/qualification/h02_contract_20261016/probes/summary.json",
+  "readiness": "Functional scope qualified; ready to implement isolated Agent Pilot Runtime, not to run untrusted trials on this host."
+}

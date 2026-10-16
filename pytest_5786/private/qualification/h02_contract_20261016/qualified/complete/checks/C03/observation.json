@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "method": "test_C03_missing_traceback",
+  "status": "passed",
+  "tests_run": 1,
+  "duration_seconds": 0.06257975,
+  "failures": [],
+  "skips": [],
+  "details": []
+}

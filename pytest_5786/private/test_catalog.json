@@ -162,6 +162,14 @@
     "source": "Historical reports/code/exception suites at fixed base plus PR helper relocation",
     "expected_behavior": "125 existing tests pass for reference implementations; no skips.",
     "coverage_rationale": "Diagnostic compatibility signal; wire encoding assertions cannot veto an otherwise behaviorally valid implementation.",
-    "timeout_seconds": 60
+    "timeout_seconds": 60,
+    "contract_review": {
+      "outcome": "B",
+      "report": "private/qualification/h02_contract_review.md",
+      "reviewed_failure": "TestReportSerialization.test_deserialization_failure",
+      "finding": "The historical mutation targets a redundant outer entry in alternative chain encoding; consumed unsupported entries still raise an informative RuntimeError.",
+      "compatibility_boundary": "Same-codec report behavior is required; a fixed nested wire schema, validation of every redundant copy, and cross-release payload compatibility are not established requirements. Historical hooks explicitly warn of changes even in bugfix releases.",
+      "scope_limit": "This finding addresses this specific H02 failure, not a blanket dismissal of other historical failures or arbitrary malformed-input behavior."
+    }
   }
 ]

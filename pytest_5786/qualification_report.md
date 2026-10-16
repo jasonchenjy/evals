@@ -1,5 +1,11 @@
 # Eval 0.1.0 资格报告
 
+## 2026-10-16 H02 合同专项审查
+
+选定 **Outcome B**：`test_deserialization_failure` 破坏的外层 entry 是 Alternative 的冗余副本；实际消费的未知表示仍被明确拒绝。历史 hooks 明确允许包括 bugfix 在内的版本间变化，固定嵌套 wire 布局和全部冗余副本校验不是已确立的本题合同。四个实现的定向探针还确认：Historical/Complete 无法读取 base 的部分旧 payload，Alternative 也不支持所有跨编码链互通；这些限制保留，不假称全面向后兼容。
+
+H02 保持 diagnostic-only，Alternative 的 124 passed / 1 failed 保留；未修改任何 Oracle、既有测试、grader 或评分语义，版本仍为 0.1.0。catalog 仅新增审查说明，核心锁随文档字段更新，并重新执行全部七个资格控制。Complete/Alternative 的 11 项必测通过，no-op、historical 和三个负对照仍被拒绝。详细代码依据、56 条输入观测、64 条互通观测和 A/B/C 合同分类见 [专项报告](private/qualification/h02_contract_review.md)；最新运行见 [资格结果](private/qualification/h02_contract_20261016/qualified/summary.json)。此结论只解释该项历史失败，不替代对其他诊断失败的逐项审查。
+
 ## 2026-10-16 Complete Oracle 专项复核
 
 **最新结论：Complete Oracle 已通过完整 Eval 和补充的真实 serial/xdist 验证。Oracle 源码补丁无需更改；本轮发现并修复的是 Git 仓库化后出现的资格执行缺陷。** 本节记录最新复核；下文初始资格结果和原始日志保留，不追改历史记录。

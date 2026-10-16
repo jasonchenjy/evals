@@ -1,0 +1,2 @@
+{"argv": ["/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/.venv/bin/python", "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/qualification/probe_h02_contract.py", "--produce", "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/qualification/h02_contract_20261016/probes/producers/complete"], "cwd": "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/qualification/h02_contract_20261016/probes/complete/workspace"}
+{"observations": 14, "unsupported_entry_rejection": "passed"}

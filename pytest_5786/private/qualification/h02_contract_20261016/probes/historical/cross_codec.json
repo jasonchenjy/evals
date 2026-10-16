@@ -1,0 +1,218 @@
+[
+  {
+    "producer": "alternative",
+    "id": "TestReport_single",
+    "expected": "Cross-codec observation only; not a mandatory interoperability requirement",
+    "actual": {
+      "status": "exception",
+      "exception_type": "KeyError",
+      "message": "'chain'"
+    },
+    "matches_producer_source_text": false
+  },
+  {
+    "producer": "alternative",
+    "id": "TestReport_chain",
+    "expected": "Cross-codec observation only; not a mandatory interoperability requirement",
+    "actual": {
+      "status": "exception",
+      "exception_type": "KeyError",
+      "message": "'chain'"
+    },
+    "matches_producer_source_text": false
+  },
+  {
+    "producer": "alternative",
+    "id": "CollectReport_single",
+    "expected": "Cross-codec observation only; not a mandatory interoperability requirement",
+    "actual": {
+      "status": "exception",
+      "exception_type": "KeyError",
+      "message": "'chain'"
+    },
+    "matches_producer_source_text": false
+  },
+  {
+    "producer": "alternative",
+    "id": "CollectReport_chain",
+    "expected": "Cross-codec observation only; not a mandatory interoperability requirement",
+    "actual": {
+      "status": "exception",
+      "exception_type": "KeyError",
+      "message": "'chain'"
+    },
+    "matches_producer_source_text": false
+  },
+  {
+    "producer": "complete",
+    "id": "TestReport_single",
+    "expected": "Cross-codec observation only; not a mandatory interoperability requirement",
+    "actual": {
+      "status": "restored",
+      "report_type": "TestReport",
+      "failed": true,
+      "text": "../../../../probe_h02_contract.py:29: in build\n    assert False, \"h02-single-719\"\nE   AssertionError: h02-single-719",
+      "crash_message": "AssertionError: h02-single-719",
+      "capstdout": "h02-captured-727",
+      "item_index": 7,
+      "worker_id": "gw0"
+    },
+    "matches_producer_source_text": true
+  },
+  {
+    "producer": "complete",
+    "id": "TestReport_chain",
+    "expected": "Cross-codec observation only; not a mandatory interoperability requirement",
+    "actual": {
+      "status": "restored",
+      "report_type": "TestReport",
+      "failed": true,
+      "text": "../../../../probe_h02_contract.py:26: in build\n    raise ValueError(\"h02-cause-701\")\nE   ValueError: h02-cause-701\n\nThe above exception was the direct cause of the following exception:\n../../../../probe_h02_contract.py:28: in build\n    raise RuntimeError(\"h02-final-709\") from cause\nE   RuntimeError: h02-final-709",
+      "crash_message": "RuntimeError: h02-final-709",
+      "capstdout": "h02-captured-727",
+      "item_index": 7,
+      "worker_id": "gw0"
+    },
+    "matches_producer_source_text": true
+  },
+  {
+    "producer": "complete",
+    "id": "CollectReport_single",
+    "expected": "Cross-codec observation only; not a mandatory interoperability requirement",
+    "actual": {
+      "status": "restored",
+      "report_type": "CollectReport",
+      "failed": true,
+      "text": "../../../../probe_h02_contract.py:29: in build\n    assert False, \"h02-single-719\"\nE   AssertionError: h02-single-719",
+      "crash_message": "AssertionError: h02-single-719",
+      "capstdout": "h02-captured-727",
+      "item_index": 7,
+      "worker_id": "gw0"
+    },
+    "matches_producer_source_text": true
+  },
+  {
+    "producer": "complete",
+    "id": "CollectReport_chain",
+    "expected": "Cross-codec observation only; not a mandatory interoperability requirement",
+    "actual": {
+      "status": "restored",
+      "report_type": "CollectReport",
+      "failed": true,
+      "text": "../../../../probe_h02_contract.py:26: in build\n    raise ValueError(\"h02-cause-701\")\nE   ValueError: h02-cause-701\n\nThe above exception was the direct cause of the following exception:\n../../../../probe_h02_contract.py:28: in build\n    raise RuntimeError(\"h02-final-709\") from cause\nE   RuntimeError: h02-final-709",
+      "crash_message": "RuntimeError: h02-final-709",
+      "capstdout": "h02-captured-727",
+      "item_index": 7,
+      "worker_id": "gw0"
+    },
+    "matches_producer_source_text": true
+  },
+  {
+    "producer": "historical",
+    "id": "TestReport_single",
+    "expected": "Cross-codec observation only; not a mandatory interoperability requirement",
+    "actual": {
+      "status": "restored",
+      "report_type": "TestReport",
+      "failed": true,
+      "text": "../../../../probe_h02_contract.py:29: in build\n    assert False, \"h02-single-719\"\nE   AssertionError: h02-single-719",
+      "crash_message": "AssertionError: h02-single-719",
+      "capstdout": "h02-captured-727",
+      "item_index": 7,
+      "worker_id": "gw0"
+    },
+    "matches_producer_source_text": true
+  },
+  {
+    "producer": "historical",
+    "id": "TestReport_chain",
+    "expected": "Cross-codec observation only; not a mandatory interoperability requirement",
+    "actual": {
+      "status": "restored",
+      "report_type": "TestReport",
+      "failed": true,
+      "text": "../../../../probe_h02_contract.py:26: in build\n    raise ValueError(\"h02-cause-701\")\nE   ValueError: h02-cause-701\n\nThe above exception was the direct cause of the following exception:\n../../../../probe_h02_contract.py:28: in build\n    raise RuntimeError(\"h02-final-709\") from cause\nE   RuntimeError: h02-final-709",
+      "crash_message": "RuntimeError: h02-final-709",
+      "capstdout": "h02-captured-727",
+      "item_index": 7,
+      "worker_id": "gw0"
+    },
+    "matches_producer_source_text": true
+  },
+  {
+    "producer": "historical",
+    "id": "CollectReport_single",
+    "expected": "Cross-codec observation only; not a mandatory interoperability requirement",
+    "actual": {
+      "status": "restored",
+      "report_type": "CollectReport",
+      "failed": true,
+      "text": "../../../../probe_h02_contract.py:29: in build\n    assert False, \"h02-single-719\"\nE   AssertionError: h02-single-719",
+      "crash_message": "AssertionError: h02-single-719",
+      "capstdout": "h02-captured-727",
+      "item_index": 7,
+      "worker_id": "gw0"
+    },
+    "matches_producer_source_text": true
+  },
+  {
+    "producer": "historical",
+    "id": "CollectReport_chain",
+    "expected": "Cross-codec observation only; not a mandatory interoperability requirement",
+    "actual": {
+      "status": "restored",
+      "report_type": "CollectReport",
+      "failed": true,
+      "text": "../../../../probe_h02_contract.py:26: in build\n    raise ValueError(\"h02-cause-701\")\nE   ValueError: h02-cause-701\n\nThe above exception was the direct cause of the following exception:\n../../../../probe_h02_contract.py:28: in build\n    raise RuntimeError(\"h02-final-709\") from cause\nE   RuntimeError: h02-final-709",
+      "crash_message": "RuntimeError: h02-final-709",
+      "capstdout": "h02-captured-727",
+      "item_index": 7,
+      "worker_id": "gw0"
+    },
+    "matches_producer_source_text": true
+  },
+  {
+    "producer": "noop",
+    "id": "TestReport_single",
+    "expected": "Cross-codec observation only; not a mandatory interoperability requirement",
+    "actual": {
+      "status": "exception",
+      "exception_type": "KeyError",
+      "message": "'chain'"
+    },
+    "matches_producer_source_text": false
+  },
+  {
+    "producer": "noop",
+    "id": "TestReport_chain",
+    "expected": "Cross-codec observation only; not a mandatory interoperability requirement",
+    "actual": {
+      "status": "exception",
+      "exception_type": "KeyError",
+      "message": "'chain'"
+    },
+    "matches_producer_source_text": false
+  },
+  {
+    "producer": "noop",
+    "id": "CollectReport_single",
+    "expected": "Cross-codec observation only; not a mandatory interoperability requirement",
+    "actual": {
+      "status": "exception",
+      "exception_type": "KeyError",
+      "message": "'chain'"
+    },
+    "matches_producer_source_text": false
+  },
+  {
+    "producer": "noop",
+    "id": "CollectReport_chain",
+    "expected": "Cross-codec observation only; not a mandatory interoperability requirement",
+    "actual": {
+      "status": "exception",
+      "exception_type": "KeyError",
+      "message": "'chain'"
+    },
+    "matches_producer_source_text": false
+  }
+]

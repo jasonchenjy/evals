@@ -1,0 +1,28 @@
+{
+  "passed": true,
+  "outcome": "B",
+  "review_start_commit": "0f7d61daa5bc9b66224db50462e156ac629c0973",
+  "prior_tracked_files_checked": 3030,
+  "changed_existing_files": [
+    "pytest_5786/CHANGELOG.md",
+    "pytest_5786/README.md",
+    "pytest_5786/checksums.json",
+    "pytest_5786/delivery_hashes.json",
+    "pytest_5786/private/test_catalog.json",
+    "pytest_5786/qualification_report.md"
+  ],
+  "all_prior_files_except_declared_documentation_and_hashes_unchanged": true,
+  "grader_and_all_oracle_patches_unchanged": true,
+  "scoring_fields_unchanged": true,
+  "historical_logs_unchanged": true,
+  "research_files_unchanged": 177,
+  "pytest_checkout_clean": true,
+  "new_qualification_controls": 7,
+  "mandatory_per_control": 11,
+  "diagnostic_per_control": 2,
+  "probe_observations": 56,
+  "cross_codec_observations": 64,
+  "all_probe_processes_completed": true,
+  "probe_completion_is_not_universal_payload_acceptance": true,
+  "core_lock_sha256": "067f222eccfbf8d40fe520a7f4196426e82a4e5d4861e506cb96e60d11732e03"
+}

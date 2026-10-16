@@ -1,0 +1,192 @@
+{
+  "base_commit": "955e54221008aba577ecbaefa15679f6777d3bf8",
+  "script_sha256": "d873dc0b135d741838cea17326eeb990b5c9c10a732d81e7ad8cc064218f2207",
+  "scope": "trusted diagnostic probes, not scoring",
+  "runs": [
+    {
+      "control": "noop",
+      "patch_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "source_sha256": "117caad56cce03d98a83bc3b1226a439db83e92faab1f9b50313fef9971337e3",
+      "preflight": {
+        "command": [
+          "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/.venv/bin/python",
+          "-c",
+          "import json,sys,pytest,pkg_resources; assert sys.version_info[:3]==(3,8,20); reqs=[pkg_resources.Requirement.parse(x) for x in open(sys.argv[1]).read().splitlines()]; assert all(pkg_resources.get_distribution(r.project_name) in r for r in reqs); print(json.dumps({'python':sys.version,'pytest_file':pytest.__file__,'packages':sorted(str(x) for x in pkg_resources.working_set)}))",
+          "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/requirements.txt"
+        ],
+        "cwd": "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/qualification/h02_contract_20261016/probes/noop/workspace",
+        "returncode": 0,
+        "timeout": false,
+        "elapsed_seconds": 0.24065449999761768,
+        "log": "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/qualification/h02_contract_20261016/probes/noop/preflight.log"
+      },
+      "produce": {
+        "command": [
+          "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/.venv/bin/python",
+          "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/qualification/probe_h02_contract.py",
+          "--produce",
+          "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/qualification/h02_contract_20261016/probes/producers/noop"
+        ],
+        "cwd": "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/qualification/h02_contract_20261016/probes/noop/workspace",
+        "returncode": 0,
+        "timeout": false,
+        "elapsed_seconds": 0.13017245900118724,
+        "log": "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/qualification/h02_contract_20261016/probes/noop/produce.log"
+      },
+      "consume": {
+        "command": [
+          "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/.venv/bin/python",
+          "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/qualification/probe_h02_contract.py",
+          "--consume",
+          "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/qualification/h02_contract_20261016/probes/producers",
+          "--output",
+          "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/qualification/h02_contract_20261016/probes/noop/cross_codec.json"
+        ],
+        "cwd": "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/qualification/h02_contract_20261016/probes/noop/workspace",
+        "returncode": 0,
+        "timeout": false,
+        "elapsed_seconds": 0.07652183398022316,
+        "log": "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/qualification/h02_contract_20261016/probes/noop/consume.log"
+      }
+    },
+    {
+      "control": "historical",
+      "patch_sha256": "8eb1ab549b67c4653403971b8e855005ab6c6b69b3534db77a3dd00a348f9f4b",
+      "source_sha256": "03527f8f1ee4288724070e41d80bdca8dbc350307b0b61f71a983f3eba25fd46",
+      "preflight": {
+        "command": [
+          "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/.venv/bin/python",
+          "-c",
+          "import json,sys,pytest,pkg_resources; assert sys.version_info[:3]==(3,8,20); reqs=[pkg_resources.Requirement.parse(x) for x in open(sys.argv[1]).read().splitlines()]; assert all(pkg_resources.get_distribution(r.project_name) in r for r in reqs); print(json.dumps({'python':sys.version,'pytest_file':pytest.__file__,'packages':sorted(str(x) for x in pkg_resources.working_set)}))",
+          "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/requirements.txt"
+        ],
+        "cwd": "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/qualification/h02_contract_20261016/probes/historical/workspace",
+        "returncode": 0,
+        "timeout": false,
+        "elapsed_seconds": 0.18101279099937528,
+        "log": "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/qualification/h02_contract_20261016/probes/historical/preflight.log"
+      },
+      "produce": {
+        "command": [
+          "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/.venv/bin/python",
+          "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/qualification/probe_h02_contract.py",
+          "--produce",
+          "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/qualification/h02_contract_20261016/probes/producers/historical"
+        ],
+        "cwd": "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/qualification/h02_contract_20261016/probes/historical/workspace",
+        "returncode": 0,
+        "timeout": false,
+        "elapsed_seconds": 0.12986083299620077,
+        "log": "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/qualification/h02_contract_20261016/probes/historical/produce.log"
+      },
+      "consume": {
+        "command": [
+          "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/.venv/bin/python",
+          "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/qualification/probe_h02_contract.py",
+          "--consume",
+          "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/qualification/h02_contract_20261016/probes/producers",
+          "--output",
+          "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/qualification/h02_contract_20261016/probes/historical/cross_codec.json"
+        ],
+        "cwd": "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/qualification/h02_contract_20261016/probes/historical/workspace",
+        "returncode": 0,
+        "timeout": false,
+        "elapsed_seconds": 0.0753397080115974,
+        "log": "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/qualification/h02_contract_20261016/probes/historical/consume.log"
+      }
+    },
+    {
+      "control": "complete",
+      "patch_sha256": "767fe3bc51d431784b7cb1af61b0f4be5253f7e6cb86c5919cef81599c150c5d",
+      "source_sha256": "2058adae12754efdfc07600c08437d8eb56127dcfa0d7f00203c480161e6431d",
+      "preflight": {
+        "command": [
+          "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/.venv/bin/python",
+          "-c",
+          "import json,sys,pytest,pkg_resources; assert sys.version_info[:3]==(3,8,20); reqs=[pkg_resources.Requirement.parse(x) for x in open(sys.argv[1]).read().splitlines()]; assert all(pkg_resources.get_distribution(r.project_name) in r for r in reqs); print(json.dumps({'python':sys.version,'pytest_file':pytest.__file__,'packages':sorted(str(x) for x in pkg_resources.working_set)}))",
+          "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/requirements.txt"
+        ],
+        "cwd": "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/qualification/h02_contract_20261016/probes/complete/workspace",
+        "returncode": 0,
+        "timeout": false,
+        "elapsed_seconds": 0.1785525829764083,
+        "log": "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/qualification/h02_contract_20261016/probes/complete/preflight.log"
+      },
+      "produce": {
+        "command": [
+          "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/.venv/bin/python",
+          "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/qualification/probe_h02_contract.py",
+          "--produce",
+          "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/qualification/h02_contract_20261016/probes/producers/complete"
+        ],
+        "cwd": "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/qualification/h02_contract_20261016/probes/complete/workspace",
+        "returncode": 0,
+        "timeout": false,
+        "elapsed_seconds": 0.12402887499774806,
+        "log": "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/qualification/h02_contract_20261016/probes/complete/produce.log"
+      },
+      "consume": {
+        "command": [
+          "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/.venv/bin/python",
+          "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/qualification/probe_h02_contract.py",
+          "--consume",
+          "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/qualification/h02_contract_20261016/probes/producers",
+          "--output",
+          "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/qualification/h02_contract_20261016/probes/complete/cross_codec.json"
+        ],
+        "cwd": "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/qualification/h02_contract_20261016/probes/complete/workspace",
+        "returncode": 0,
+        "timeout": false,
+        "elapsed_seconds": 0.07572362499195151,
+        "log": "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/qualification/h02_contract_20261016/probes/complete/consume.log"
+      }
+    },
+    {
+      "control": "alternative",
+      "patch_sha256": "679b454e17c046febc9c6dc4470cf590ed9edb1930f63278d9610a1d98cbda9a",
+      "source_sha256": "7f698b8d4ea5e1e4084cb0656676c2285a4bd27baf628d114b86cf4f016a5e3b",
+      "preflight": {
+        "command": [
+          "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/.venv/bin/python",
+          "-c",
+          "import json,sys,pytest,pkg_resources; assert sys.version_info[:3]==(3,8,20); reqs=[pkg_resources.Requirement.parse(x) for x in open(sys.argv[1]).read().splitlines()]; assert all(pkg_resources.get_distribution(r.project_name) in r for r in reqs); print(json.dumps({'python':sys.version,'pytest_file':pytest.__file__,'packages':sorted(str(x) for x in pkg_resources.working_set)}))",
+          "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/requirements.txt"
+        ],
+        "cwd": "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/qualification/h02_contract_20261016/probes/alternative/workspace",
+        "returncode": 0,
+        "timeout": false,
+        "elapsed_seconds": 0.18437933298991993,
+        "log": "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/qualification/h02_contract_20261016/probes/alternative/preflight.log"
+      },
+      "produce": {
+        "command": [
+          "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/.venv/bin/python",
+          "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/qualification/probe_h02_contract.py",
+          "--produce",
+          "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/qualification/h02_contract_20261016/probes/producers/alternative"
+        ],
+        "cwd": "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/qualification/h02_contract_20261016/probes/alternative/workspace",
+        "returncode": 0,
+        "timeout": false,
+        "elapsed_seconds": 0.13161241699708626,
+        "log": "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/qualification/h02_contract_20261016/probes/alternative/produce.log"
+      },
+      "consume": {
+        "command": [
+          "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/.venv/bin/python",
+          "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/qualification/probe_h02_contract.py",
+          "--consume",
+          "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/qualification/h02_contract_20261016/probes/producers",
+          "--output",
+          "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/qualification/h02_contract_20261016/probes/alternative/cross_codec.json"
+        ],
+        "cwd": "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/qualification/h02_contract_20261016/probes/alternative/workspace",
+        "returncode": 0,
+        "timeout": false,
+        "elapsed_seconds": 0.07295020800665952,
+        "log": "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/qualification/h02_contract_20261016/probes/alternative/consume.log"
+      }
+    }
+  ],
+  "passed": true
+}

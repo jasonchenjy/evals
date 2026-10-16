@@ -1,5 +1,14 @@
 # Changelog
 
+## 0.1.0 H02 合同审查 — 2026-10-16
+
+- Outcome B：确认 `test_deserialization_failure` 绑定外层 wire 副本和解码顺序；Alternative 对实际消费的未知 entry 仍给出 RuntimeError，原 H02 失败保持诊断可见。
+- 增加四实现的对象级/布局诊断探针与跨 codec 实验；明确 experimental plugin-facing hooks 与固定同环境合同的边界，不承诺全面旧 payload 互通。
+- H02 catalog 只增加文档字段；未改 mandatory、方法、阈值、grader 或任何 Oracle patch，无评分语义变化，因此保留 0.1.0。更新文件锁后实际重跑全部七个控制，结果符合预期。
+- 新证据保存到 `private/qualification/h02_contract_20261016/`，历史日志不覆盖。功能资格允许开始实现 Pilot Runtime；实际不可信 trials 仍等待隔离设施。
+
+完整依据：[H02 专项审查](private/qualification/h02_contract_review.md)。
+
 ## 0.1.0 资格执行修复与 Oracle 专项复核 — 2026-10-16
 
 - Complete Oracle 原已正确处理 crash 编码/解码的 None，源码补丁保持不变；没有发现需要修改 Oracle 的已验证合同缺陷。

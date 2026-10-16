@@ -1,0 +1,35 @@
+.F                                                                       [100%]
+=================================== FAILURES ===================================
+________ TestReportSerialization.test_chained_exceptions[CollectReport] ________
+../../../../../../workspace/testing/test_reports.py:308: in test_chained_exceptions
+    check_longrepr(loaded_report.longrepr)
+../../../../../../workspace/testing/test_reports.py:285: in check_longrepr
+    assert isinstance(longrepr, ExceptionChainRepr)
+E   AssertionError: assert False
+E    +  where False = isinstance(<<class '_pytest._code.code.ReprExceptionInfo'> instance at 106a3cdf0>, ExceptionChainRepr)
+----------------------------- Captured stdout call -----------------------------
+============================= test session starts ==============================
+platform darwin -- Python 3.8.20, pytest-5.1.0, py-1.8.1, pluggy-0.13.1
+rootdir: /Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/qualification/h02_contract_20261016/qualified/testreport_only/checks/H01/tmp/pytest-of-junyuc/pytest-0/test_chained_exceptions1
+collected 0 items / 1 errors
+
+==================================== ERRORS ====================================
+_________________ ERROR collecting test_chained_exceptions.py __________________
+test_chained_exceptions.py:5: in test_a
+    foo()
+test_chained_exceptions.py:2: in foo
+    raise ValueError('value error')
+E   ValueError: value error
+
+The above exception was the direct cause of the following exception:
+test_chained_exceptions.py:9: in <module>
+    test_a()
+test_chained_exceptions.py:7: in test_a
+    raise RuntimeError('runtime error') from e
+E   RuntimeError: runtime error
+!!!!!!!!!!!!!!!!!!! Interrupted: 1 errors during collection !!!!!!!!!!!!!!!!!!!!
+=============================== 1 error in 0.02s ===============================
+- generated xml file: /Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/qualification/h02_contract_20261016/qualified/testreport_only/checks/H01/historical.xml -
+=========================== short test summary info ============================
+FAILED testing/test_reports.py::TestReportSerialization::test_chained_exceptions[CollectReport]
+1 failed, 1 passed in 0.09s

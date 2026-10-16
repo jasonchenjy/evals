@@ -1,0 +1,26 @@
+{
+  "algorithm": "sha256",
+  "files": {
+    "base_files.json": "a047c22c8c39fac3f4849d18a053eb4a73d273bb94dd97b0e372730c1c7841c5",
+    "environment.yaml": "e71a5342178488d9174172ba1b9072f1ee12668eee5dc3294d39b80610d91bc9",
+    "instruction.md": "d38c4645b2ff375fd37c86f2ddc9ca2ea7687b9042871d23d3de5c87e2c23ec8",
+    "prepare.py": "a51c401c459b41c3655b83c6bf4c087b3cbaa5207d3505e85ee39b6a9938d10e",
+    "private/check.py": "7168e5c178d932450fd2c577dac2de8ab301e945336ab563d9b82d2be9681e5d",
+    "private/grader.py": "94e86c1dd4854ce06ce9b87f4564c86963855df52de737be0880cbee099d1869",
+    "private/oracle/alternative.patch": "679b454e17c046febc9c6dc4470cf590ed9edb1930f63278d9610a1d98cbda9a",
+    "private/oracle/build_controls.py": "e525454b8602f0148fd8febc64fe1fe91a85e8201ff7449b47af8fa73ce034a8",
+    "private/oracle/complete.patch": "767fe3bc51d431784b7cb1af61b0f4be5253f7e6cb86c5919cef81599c150c5d",
+    "private/oracle/historical.patch": "8eb1ab549b67c4653403971b8e855005ab6c6b69b3534db77a3dd00a348f9f4b",
+    "private/oracle/historical_tests.patch": "33f35e4ba9dde34f1ecf09f7dd1873b1bbed43cf1fb0680a258e8853905e63eb",
+    "private/oracle/last_only.patch": "9676841e5cfa241aa78013720de557db229695b726c11682e8144f9b24f3f7c9",
+    "private/oracle/noop.patch": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "private/oracle/testreport_only.patch": "e67fd439b43456132a8be01260d799093fb5212f0f1e934e28ca4ce0d8bb5a31",
+    "private/oracle/text_only.patch": "5e7492018abe5c216bed29537f9fc0d5369f13de0a63cb2690175d87be45a75a",
+    "private/test_catalog.json": "56a9d5f8be3052a8553769c0b64506cf730f66286360279867b532111d956efa",
+    "private/tests/behavior.py": "0e22e19d4a632e2775c79a0e733f25368160e38d641b65ee69afd027cde18251",
+    "private/tests/existing_inventory.json": "dd4bec08ec33301b8673f4eff8f3cd326ba394ea7e688911ca588a93e271c634",
+    "requirements.txt": "7c38e090b7a45c19d6f2c939e51b0a04e1b7594f5051508bef45036fb20d884d",
+    "task.yaml": "a7f22ec8bf0f75895f941e801301d42ddbed0734bbd3857047f189e12557aa4e",
+    "tests/public/test_example.py": "e80b2d2665f4a9dfb575077757f5767404513a8a5261ba85855380cbb8640d1d"
+  }
+}
