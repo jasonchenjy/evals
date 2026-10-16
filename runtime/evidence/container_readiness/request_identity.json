@@ -1,0 +1,9 @@
+{
+  "source": "runs/pilot_readiness_20261016/tool-inventory-03/request-0.json",
+  "sha256": "0fd6e7cb019a383c7a8b789a7360e47f48de6c1084d91714b09ee760f4808085",
+  "bytes": 59477,
+  "headers_saved": false,
+  "provider": "rejecting loopback fixture",
+  "requests_forwarded": 0,
+  "model_inferences": 0
+}

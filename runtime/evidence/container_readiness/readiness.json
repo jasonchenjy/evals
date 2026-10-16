@@ -1,0 +1,21 @@
+{
+  "readiness": "PARTIALLY_READY",
+  "formal_trial_status": "not_executed",
+  "requested_model": "gpt-6.1-sol",
+  "actual_service_model": null,
+  "participant_patch": null,
+  "ability_scores": null,
+  "real_model_calls": 0,
+  "functional_qualification": "PASSED",
+  "container_worker_resource_and_handoff": "PASSED",
+  "agent_tool_enforcement": "NOT_VERIFIED",
+  "dedicated_authentication": "NOT_LOGGED_IN",
+  "agent_container_export": "NOT_IMPLEMENTED",
+  "blockers": [
+    "Actual request retains collaboration/MCP resource entry points despite disable flags; final container route is unverified",
+    "Purpose-built client home login status returns Not logged in",
+    "Agent container lifecycle and frozen source export to controller mirror still need integration"
+  ],
+  "selected_backend": "Colima VZ + Docker Engine, Linux arm64",
+  "eval_scoring_changed": false
+}

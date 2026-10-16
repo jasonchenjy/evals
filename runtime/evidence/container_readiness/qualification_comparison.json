@@ -1,0 +1,15 @@
+{
+  "baseline": "ffc25b55c0b3389ad25cc54d0b8cf9e416260762",
+  "all_91_statuses_identical": true,
+  "controls": [
+    "noop",
+    "historical",
+    "complete",
+    "alternative",
+    "last_only",
+    "testreport_only",
+    "text_only"
+  ],
+  "check_count": 91,
+  "infrastructure_errors": 0
+}

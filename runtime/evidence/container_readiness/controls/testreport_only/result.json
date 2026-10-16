@@ -1,0 +1,776 @@
+{
+  "schema_version": 1,
+  "eval_id": "pytest_5786",
+  "eval_version": "0.1.0",
+  "timestamp": "2026-10-16T23:30:49.420843+00:00",
+  "base_commit": "955e54221008aba577ecbaefa15679f6777d3bf8",
+  "overall_resolved": false,
+  "infrastructure_status": "ok",
+  "submission_status": "accepted",
+  "dimensions": {
+    "original_bug_resolution": {
+      "satisfied": true,
+      "checks": {
+        "A01": "passed",
+        "A02": "passed"
+      }
+    },
+    "cross_component_consistency": {
+      "satisfied": false,
+      "checks": {
+        "B01": "failed",
+        "B02": "passed",
+        "B03": "failed"
+      }
+    },
+    "edge_case_robustness": {
+      "satisfied": false,
+      "checks": {
+        "C01": "passed",
+        "C02": "failed",
+        "C03": "failed"
+      }
+    },
+    "non_regression": {
+      "satisfied": true,
+      "checks": {
+        "D01": "passed",
+        "D02": "passed",
+        "D03": "passed"
+      }
+    }
+  },
+  "tests": [
+    {
+      "id": "A01",
+      "dimensions": [
+        "A"
+      ],
+      "mandatory": true,
+      "execution": {
+        "command": [
+          "/opt/pytest-python/bin/python",
+          "/inputs/eval/private/check.py",
+          "--method",
+          "test_A01_explicit",
+          "--output",
+          "/trial/scratch/observation.json"
+        ],
+        "cwd": "/trial/workspace",
+        "started_at": "2026-10-16T23:30:55.393155+00:00",
+        "timeout": false,
+        "output_limit_exceeded": false,
+        "returncode": 0,
+        "stdout": "/Users/junyuc/Documents/interview/SWE-bench/evals/runs/pilot_readiness_20261016/linux-qualification-01/testreport_only/checks/A01/worker.stdout",
+        "stderr": "/Users/junyuc/Documents/interview/SWE-bench/evals/runs/pilot_readiness_20261016/linux-qualification-01/testreport_only/checks/A01/worker.stderr",
+        "output_bytes_seen": 147,
+        "elapsed_seconds": 0.12948488000006364,
+        "finished_at": "2026-10-16T23:30:55.522641+00:00",
+        "container_receipt": "/Users/junyuc/Documents/interview/SWE-bench/evals/runs/pilot_readiness_20261016/linux-qualification-01/controller/worker-083/worker-receipt.json",
+        "boundary": "colima-linux-container",
+        "handoff_status": "accepted",
+        "log": "/Users/junyuc/Documents/interview/SWE-bench/evals/runs/pilot_readiness_20261016/linux-qualification-01/testreport_only/checks/A01/worker.log"
+      },
+      "observation": {
+        "schema_version": 1,
+        "method": "test_A01_explicit",
+        "status": "passed",
+        "tests_run": 1,
+        "duration_seconds": 0.08327480700006618,
+        "failures": [],
+        "skips": [],
+        "details": []
+      },
+      "status": "passed"
+    },
+    {
+      "id": "A02",
+      "dimensions": [
+        "A"
+      ],
+      "mandatory": true,
+      "execution": {
+        "command": [
+          "/opt/pytest-python/bin/python",
+          "/inputs/eval/private/check.py",
+          "--method",
+          "test_A02_implicit",
+          "--output",
+          "/trial/scratch/observation.json"
+        ],
+        "cwd": "/trial/workspace",
+        "started_at": "2026-10-16T23:30:56.604635+00:00",
+        "timeout": false,
+        "output_limit_exceeded": false,
+        "returncode": 0,
+        "stdout": "/Users/junyuc/Documents/interview/SWE-bench/evals/runs/pilot_readiness_20261016/linux-qualification-01/testreport_only/checks/A02/worker.stdout",
+        "stderr": "/Users/junyuc/Documents/interview/SWE-bench/evals/runs/pilot_readiness_20261016/linux-qualification-01/testreport_only/checks/A02/worker.stderr",
+        "output_bytes_seen": 147,
+        "elapsed_seconds": 0.12075761500000226,
+        "finished_at": "2026-10-16T23:30:56.725393+00:00",
+        "container_receipt": "/Users/junyuc/Documents/interview/SWE-bench/evals/runs/pilot_readiness_20261016/linux-qualification-01/controller/worker-084/worker-receipt.json",
+        "boundary": "colima-linux-container",
+        "handoff_status": "accepted",
+        "log": "/Users/junyuc/Documents/interview/SWE-bench/evals/runs/pilot_readiness_20261016/linux-qualification-01/testreport_only/checks/A02/worker.log"
+      },
+      "observation": {
+        "schema_version": 1,
+        "method": "test_A02_implicit",
+        "status": "passed",
+        "tests_run": 1,
+        "duration_seconds": 0.0773136569999906,
+        "failures": [],
+        "skips": [],
+        "details": []
+      },
+      "status": "passed"
+    },
+    {
+      "id": "B01",
+      "dimensions": [
+        "B"
+      ],
+      "mandatory": true,
+      "execution": {
+        "command": [
+          "/opt/pytest-python/bin/python",
+          "/inputs/eval/private/check.py",
+          "--method",
+          "test_B01_collect_report",
+          "--output",
+          "/trial/scratch/observation.json"
+        ],
+        "cwd": "/trial/workspace",
+        "started_at": "2026-10-16T23:30:57.805278+00:00",
+        "timeout": false,
+        "output_limit_exceeded": false,
+        "returncode": 1,
+        "stdout": "/Users/junyuc/Documents/interview/SWE-bench/evals/runs/pilot_readiness_20261016/linux-qualification-01/testreport_only/checks/B01/worker.stdout",
+        "stderr": "/Users/junyuc/Documents/interview/SWE-bench/evals/runs/pilot_readiness_20261016/linux-qualification-01/testreport_only/checks/B01/worker.stderr",
+        "output_bytes_seen": 1049,
+        "elapsed_seconds": 0.10996233299999858,
+        "finished_at": "2026-10-16T23:30:57.915241+00:00",
+        "container_receipt": "/Users/junyuc/Documents/interview/SWE-bench/evals/runs/pilot_readiness_20261016/linux-qualification-01/controller/worker-085/worker-receipt.json",
+        "boundary": "colima-linux-container",
+        "handoff_status": "accepted",
+        "log": "/Users/junyuc/Documents/interview/SWE-bench/evals/runs/pilot_readiness_20261016/linux-qualification-01/testreport_only/checks/B01/worker.log"
+      },
+      "observation": {
+        "schema_version": 1,
+        "method": "test_B01_collect_report",
+        "status": "failed",
+        "tests_run": 1,
+        "duration_seconds": 0.06968953500006592,
+        "failures": [
+          "Traceback (most recent call last):\n  File \"/inputs/eval/private/tests/behavior.py\", line 107, in test_B01_collect_report\n    self.assert_chain(restored, 2, \"direct cause of the following exception\")\n  File \"/inputs/eval/private/tests/behavior.py\", line 87, in assert_chain\n    self.assertIn(marker, text)\nAssertionError: 'ValueError: layer-0' not found in '/inputs/eval/private/tests/behavior.py:36: in exception_info\\n    raise_level(depth - 1)\\n/inputs/eval/private/tests/behavior.py:31: in raise_level\\n    raise ValueError(\"layer-%d\" % level) from cause\\nE   ValueError: layer-1\\n=============================== collector-detail ===============================\\npayload-443'\n"
+        ],
+        "skips": [],
+        "details": []
+      },
+      "status": "failed"
+    },
+    {
+      "id": "B02",
+      "dimensions": [
+        "B"
+      ],
+      "mandatory": true,
+      "execution": {
+        "command": [
+          "/opt/pytest-python/bin/python",
+          "/inputs/eval/private/check.py",
+          "--method",
+          "test_B02_structured_consumer",
+          "--output",
+          "/trial/scratch/observation.json"
+        ],
+        "cwd": "/trial/workspace",
+        "started_at": "2026-10-16T23:30:59.020339+00:00",
+        "timeout": false,
+        "output_limit_exceeded": false,
+        "returncode": 0,
+        "stdout": "/Users/junyuc/Documents/interview/SWE-bench/evals/runs/pilot_readiness_20261016/linux-qualification-01/testreport_only/checks/B02/worker.stdout",
+        "stderr": "/Users/junyuc/Documents/interview/SWE-bench/evals/runs/pilot_readiness_20261016/linux-qualification-01/testreport_only/checks/B02/worker.stderr",
+        "output_bytes_seen": 158,
+        "elapsed_seconds": 0.11427572399998098,
+        "finished_at": "2026-10-16T23:30:59.134616+00:00",
+        "container_receipt": "/Users/junyuc/Documents/interview/SWE-bench/evals/runs/pilot_readiness_20261016/linux-qualification-01/controller/worker-086/worker-receipt.json",
+        "boundary": "colima-linux-container",
+        "handoff_status": "accepted",
+        "log": "/Users/junyuc/Documents/interview/SWE-bench/evals/runs/pilot_readiness_20261016/linux-qualification-01/testreport_only/checks/B02/worker.log"
+      },
+      "observation": {
+        "schema_version": 1,
+        "method": "test_B02_structured_consumer",
+        "status": "passed",
+        "tests_run": 1,
+        "duration_seconds": 0.07175283100002616,
+        "failures": [],
+        "skips": [],
+        "details": []
+      },
+      "status": "passed"
+    },
+    {
+      "id": "B03",
+      "dimensions": [
+        "B"
+      ],
+      "mandatory": true,
+      "execution": {
+        "command": [
+          "/opt/pytest-python/bin/python",
+          "/inputs/eval/private/check.py",
+          "--method",
+          "test_B03_real_xdist",
+          "--output",
+          "/trial/scratch/observation.json"
+        ],
+        "cwd": "/trial/workspace",
+        "started_at": "2026-10-16T23:31:00.275143+00:00",
+        "timeout": false,
+        "output_limit_exceeded": false,
+        "returncode": 1,
+        "stdout": "/Users/junyuc/Documents/interview/SWE-bench/evals/runs/pilot_readiness_20261016/linux-qualification-01/testreport_only/checks/B03/worker.stdout",
+        "stderr": "/Users/junyuc/Documents/interview/SWE-bench/evals/runs/pilot_readiness_20261016/linux-qualification-01/testreport_only/checks/B03/worker.stderr",
+        "output_bytes_seen": 1082,
+        "elapsed_seconds": 0.6076516880000327,
+        "finished_at": "2026-10-16T23:31:00.882795+00:00",
+        "container_receipt": "/Users/junyuc/Documents/interview/SWE-bench/evals/runs/pilot_readiness_20261016/linux-qualification-01/controller/worker-087/worker-receipt.json",
+        "boundary": "colima-linux-container",
+        "handoff_status": "accepted",
+        "log": "/Users/junyuc/Documents/interview/SWE-bench/evals/runs/pilot_readiness_20261016/linux-qualification-01/testreport_only/checks/B03/worker.log"
+      },
+      "observation": {
+        "schema_version": 1,
+        "method": "test_B03_real_xdist",
+        "status": "failed",
+        "tests_run": 1,
+        "duration_seconds": 0.5661748500000385,
+        "failures": [
+          "Traceback (most recent call last):\n  File \"/inputs/eval/private/tests/behavior.py\", line 153, in test_B03_real_xdist\n    self.assertIn(\"ValueError: worker-inner-503\", result.stdout)\nAssertionError: 'ValueError: worker-inner-503' not found in 'bringing up nodes...\\nbringing up nodes...\\n\\n\\n==================================== ERRORS ====================================\\n______________________ ERROR collecting test_transport.py ______________________\\ntest_transport.py:9: in <module>\\n    fail()\\ntest_transport.py:7: in fail\\n    raise RuntimeError(\"worker-outer-509\") from e\\nE   RuntimeError: worker-outer-509\\n------------ generated xml file: /trial/scratch/collect/report.xml -------------\\n1 error in 0.14s\\n'\n"
+        ],
+        "skips": [],
+        "details": [
+          {
+            "command": [
+              "/opt/pytest-python/bin/python",
+              "-m",
+              "pytest",
+              "--color=no",
+              "-q",
+              "-p",
+              "xdist.plugin",
+              "-n",
+              "1",
+              "--tb=short",
+              "--junitxml=report.xml",
+              "test_transport.py"
+            ],
+            "cwd": "/trial/scratch/call",
+            "returncode": 1,
+            "log": "/trial/scratch/call.log"
+          },
+          {
+            "command": [
+              "/opt/pytest-python/bin/python",
+              "-m",
+              "pytest",
+              "--color=no",
+              "-q",
+              "-p",
+              "xdist.plugin",
+              "-n",
+              "1",
+              "--tb=short",
+              "--junitxml=report.xml",
+              "test_transport.py"
+            ],
+            "cwd": "/trial/scratch/collect",
+            "returncode": 1,
+            "log": "/trial/scratch/collect.log"
+          }
+        ]
+      },
+      "status": "failed"
+    },
+    {
+      "id": "C01",
+      "dimensions": [
+        "C"
+      ],
+      "mandatory": true,
+      "execution": {
+        "command": [
+          "/opt/pytest-python/bin/python",
+          "/inputs/eval/private/check.py",
+          "--method",
+          "test_C01_suppressed_context",
+          "--output",
+          "/trial/scratch/observation.json"
+        ],
+        "cwd": "/trial/workspace",
+        "started_at": "2026-10-16T23:31:02.012324+00:00",
+        "timeout": false,
+        "output_limit_exceeded": false,
+        "returncode": 0,
+        "stdout": "/Users/junyuc/Documents/interview/SWE-bench/evals/runs/pilot_readiness_20261016/linux-qualification-01/testreport_only/checks/C01/worker.stdout",
+        "stderr": "/Users/junyuc/Documents/interview/SWE-bench/evals/runs/pilot_readiness_20261016/linux-qualification-01/testreport_only/checks/C01/worker.stderr",
+        "output_bytes_seen": 157,
+        "elapsed_seconds": 0.11244058900001619,
+        "finished_at": "2026-10-16T23:31:02.124767+00:00",
+        "container_receipt": "/Users/junyuc/Documents/interview/SWE-bench/evals/runs/pilot_readiness_20261016/linux-qualification-01/controller/worker-088/worker-receipt.json",
+        "boundary": "colima-linux-container",
+        "handoff_status": "accepted",
+        "log": "/Users/junyuc/Documents/interview/SWE-bench/evals/runs/pilot_readiness_20261016/linux-qualification-01/testreport_only/checks/C01/worker.log"
+      },
+      "observation": {
+        "schema_version": 1,
+        "method": "test_C01_suppressed_context",
+        "status": "passed",
+        "tests_run": 1,
+        "duration_seconds": 0.06935495400000491,
+        "failures": [],
+        "skips": [],
+        "details": []
+      },
+      "status": "passed"
+    },
+    {
+      "id": "C02",
+      "dimensions": [
+        "C"
+      ],
+      "mandatory": true,
+      "execution": {
+        "command": [
+          "/opt/pytest-python/bin/python",
+          "/inputs/eval/private/check.py",
+          "--method",
+          "test_C02_long_chain_and_render_option",
+          "--output",
+          "/trial/scratch/observation.json"
+        ],
+        "cwd": "/trial/workspace",
+        "started_at": "2026-10-16T23:31:03.176709+00:00",
+        "timeout": false,
+        "output_limit_exceeded": false,
+        "returncode": 1,
+        "stdout": "/Users/junyuc/Documents/interview/SWE-bench/evals/runs/pilot_readiness_20261016/linux-qualification-01/testreport_only/checks/C02/worker.stdout",
+        "stderr": "/Users/junyuc/Documents/interview/SWE-bench/evals/runs/pilot_readiness_20261016/linux-qualification-01/testreport_only/checks/C02/worker.stderr",
+        "output_bytes_seen": 974,
+        "elapsed_seconds": 0.12576836200003072,
+        "finished_at": "2026-10-16T23:31:03.302477+00:00",
+        "container_receipt": "/Users/junyuc/Documents/interview/SWE-bench/evals/runs/pilot_readiness_20261016/linux-qualification-01/controller/worker-089/worker-receipt.json",
+        "boundary": "colima-linux-container",
+        "handoff_status": "accepted",
+        "log": "/Users/junyuc/Documents/interview/SWE-bench/evals/runs/pilot_readiness_20261016/linux-qualification-01/testreport_only/checks/C02/worker.log"
+      },
+      "observation": {
+        "schema_version": 1,
+        "method": "test_C02_long_chain_and_render_option",
+        "status": "failed",
+        "tests_run": 1,
+        "duration_seconds": 0.0848184169999513,
+        "failures": [
+          "Traceback (most recent call last):\n  File \"/inputs/eval/private/tests/behavior.py\", line 175, in test_C02_long_chain_and_render_option\n    self.assert_chain(transport(report(info, kind)), 4,\n  File \"/inputs/eval/private/tests/behavior.py\", line 87, in assert_chain\n    self.assertIn(marker, text)\nAssertionError: 'ValueError: layer-0' not found in '/inputs/eval/private/tests/behavior.py:36: in exception_info\\n    raise_level(depth - 1)\\n/inputs/eval/private/tests/behavior.py:31: in raise_level\\n    raise ValueError(\"layer-%d\" % level) from cause\\nE   ValueError: layer-3'\n"
+        ],
+        "skips": [],
+        "details": []
+      },
+      "status": "failed"
+    },
+    {
+      "id": "C03",
+      "dimensions": [
+        "C"
+      ],
+      "mandatory": true,
+      "execution": {
+        "command": [
+          "/opt/pytest-python/bin/python",
+          "/inputs/eval/private/check.py",
+          "--method",
+          "test_C03_missing_traceback",
+          "--output",
+          "/trial/scratch/observation.json"
+        ],
+        "cwd": "/trial/workspace",
+        "started_at": "2026-10-16T23:31:04.365103+00:00",
+        "timeout": false,
+        "output_limit_exceeded": false,
+        "returncode": 1,
+        "stdout": "/Users/junyuc/Documents/interview/SWE-bench/evals/runs/pilot_readiness_20261016/linux-qualification-01/testreport_only/checks/C03/worker.stdout",
+        "stderr": "/Users/junyuc/Documents/interview/SWE-bench/evals/runs/pilot_readiness_20261016/linux-qualification-01/testreport_only/checks/C03/worker.stderr",
+        "output_bytes_seen": 751,
+        "elapsed_seconds": 0.1175979870000674,
+        "finished_at": "2026-10-16T23:31:04.482700+00:00",
+        "container_receipt": "/Users/junyuc/Documents/interview/SWE-bench/evals/runs/pilot_readiness_20261016/linux-qualification-01/controller/worker-090/worker-receipt.json",
+        "boundary": "colima-linux-container",
+        "handoff_status": "accepted",
+        "log": "/Users/junyuc/Documents/interview/SWE-bench/evals/runs/pilot_readiness_20261016/linux-qualification-01/testreport_only/checks/C03/worker.log"
+      },
+      "observation": {
+        "schema_version": 1,
+        "method": "test_C03_missing_traceback",
+        "status": "failed",
+        "tests_run": 1,
+        "duration_seconds": 0.07277126100007081,
+        "failures": [
+          "Traceback (most recent call last):\n  File \"/inputs/eval/private/tests/behavior.py\", line 188, in test_C03_missing_traceback\n    self.assertIn(\"RemoteCause: remote-message-713\", restored.longreprtext)\nAssertionError: 'RemoteCause: remote-message-713' not found in '/inputs/eval/private/tests/behavior.py:48: in remote_info\\n    raise error\\nE   ValueError: outer-message-829'\n"
+        ],
+        "skips": [],
+        "details": []
+      },
+      "status": "failed"
+    },
+    {
+      "id": "D01",
+      "dimensions": [
+        "D"
+      ],
+      "mandatory": true,
+      "execution": {
+        "command": [
+          "/opt/pytest-python/bin/python",
+          "/inputs/eval/private/check.py",
+          "--method",
+          "test_D01_ordinary_reports",
+          "--output",
+          "/trial/scratch/observation.json"
+        ],
+        "cwd": "/trial/workspace",
+        "started_at": "2026-10-16T23:31:05.758273+00:00",
+        "timeout": false,
+        "output_limit_exceeded": false,
+        "returncode": 0,
+        "stdout": "/Users/junyuc/Documents/interview/SWE-bench/evals/runs/pilot_readiness_20261016/linux-qualification-01/testreport_only/checks/D01/worker.stdout",
+        "stderr": "/Users/junyuc/Documents/interview/SWE-bench/evals/runs/pilot_readiness_20261016/linux-qualification-01/testreport_only/checks/D01/worker.stderr",
+        "output_bytes_seen": 155,
+        "elapsed_seconds": 0.11120962799998324,
+        "finished_at": "2026-10-16T23:31:05.869484+00:00",
+        "container_receipt": "/Users/junyuc/Documents/interview/SWE-bench/evals/runs/pilot_readiness_20261016/linux-qualification-01/controller/worker-091/worker-receipt.json",
+        "boundary": "colima-linux-container",
+        "handoff_status": "accepted",
+        "log": "/Users/junyuc/Documents/interview/SWE-bench/evals/runs/pilot_readiness_20261016/linux-qualification-01/testreport_only/checks/D01/worker.log"
+      },
+      "observation": {
+        "schema_version": 1,
+        "method": "test_D01_ordinary_reports",
+        "status": "passed",
+        "tests_run": 1,
+        "duration_seconds": 0.06691874500006634,
+        "failures": [],
+        "skips": [],
+        "details": []
+      },
+      "status": "passed"
+    },
+    {
+      "id": "D02",
+      "dimensions": [
+        "D"
+      ],
+      "mandatory": true,
+      "execution": {
+        "command": [
+          "/opt/pytest-python/bin/python",
+          "/inputs/eval/private/check.py",
+          "--method",
+          "test_D02_existing_behavior",
+          "--output",
+          "/trial/scratch/observation.json"
+        ],
+        "cwd": "/trial/workspace",
+        "started_at": "2026-10-16T23:31:06.964739+00:00",
+        "timeout": false,
+        "output_limit_exceeded": false,
+        "returncode": 0,
+        "stdout": "/Users/junyuc/Documents/interview/SWE-bench/evals/runs/pilot_readiness_20261016/linux-qualification-01/testreport_only/checks/D02/worker.stdout",
+        "stderr": "/Users/junyuc/Documents/interview/SWE-bench/evals/runs/pilot_readiness_20261016/linux-qualification-01/testreport_only/checks/D02/worker.stderr",
+        "output_bytes_seen": 156,
+        "elapsed_seconds": 1.194219821000047,
+        "finished_at": "2026-10-16T23:31:08.158959+00:00",
+        "container_receipt": "/Users/junyuc/Documents/interview/SWE-bench/evals/runs/pilot_readiness_20261016/linux-qualification-01/controller/worker-092/worker-receipt.json",
+        "boundary": "colima-linux-container",
+        "handoff_status": "accepted",
+        "log": "/Users/junyuc/Documents/interview/SWE-bench/evals/runs/pilot_readiness_20261016/linux-qualification-01/testreport_only/checks/D02/worker.log"
+      },
+      "observation": {
+        "schema_version": 1,
+        "method": "test_D02_existing_behavior",
+        "status": "passed",
+        "tests_run": 1,
+        "duration_seconds": 1.1506252839999433,
+        "failures": [],
+        "skips": [],
+        "details": [
+          {
+            "command": [
+              "/opt/pytest-python/bin/python",
+              "-m",
+              "pytest",
+              "--color=no",
+              "-q",
+              "--tb=short",
+              "--junitxml=/trial/scratch/existing.xml",
+              "testing/test_reports.py",
+              "testing/code/test_code.py",
+              "testing/code/test_excinfo.py",
+              "-k",
+              "not test_chained_exceptions and not test_xdist_longrepr_to_str_issue_241 and not test_deserialization_failure and not test_paths_support and not TestHooks"
+            ],
+            "cwd": "/trial/workspace",
+            "returncode": 0,
+            "log": "/trial/scratch/existing.log"
+          },
+          {
+            "existing_tests": 118,
+            "passed": 118,
+            "skipped": 0
+          }
+        ]
+      },
+      "status": "passed"
+    },
+    {
+      "id": "D03",
+      "dimensions": [
+        "D"
+      ],
+      "mandatory": true,
+      "execution": {
+        "command": [
+          "/opt/pytest-python/bin/python",
+          "/inputs/eval/private/check.py",
+          "--method",
+          "test_D03_missing_traceback_no_new_crash",
+          "--output",
+          "/trial/scratch/observation.json"
+        ],
+        "cwd": "/trial/workspace",
+        "started_at": "2026-10-16T23:31:09.103902+00:00",
+        "timeout": false,
+        "output_limit_exceeded": false,
+        "returncode": 0,
+        "stdout": "/Users/junyuc/Documents/interview/SWE-bench/evals/runs/pilot_readiness_20261016/linux-qualification-01/testreport_only/checks/D03/worker.stdout",
+        "stderr": "/Users/junyuc/Documents/interview/SWE-bench/evals/runs/pilot_readiness_20261016/linux-qualification-01/testreport_only/checks/D03/worker.stderr",
+        "output_bytes_seen": 169,
+        "elapsed_seconds": 0.10945765299993582,
+        "finished_at": "2026-10-16T23:31:09.213361+00:00",
+        "container_receipt": "/Users/junyuc/Documents/interview/SWE-bench/evals/runs/pilot_readiness_20261016/linux-qualification-01/controller/worker-093/worker-receipt.json",
+        "boundary": "colima-linux-container",
+        "handoff_status": "accepted",
+        "log": "/Users/junyuc/Documents/interview/SWE-bench/evals/runs/pilot_readiness_20261016/linux-qualification-01/testreport_only/checks/D03/worker.log"
+      },
+      "observation": {
+        "schema_version": 1,
+        "method": "test_D03_missing_traceback_no_new_crash",
+        "status": "passed",
+        "tests_run": 1,
+        "duration_seconds": 0.06898894400001154,
+        "failures": [],
+        "skips": [],
+        "details": []
+      },
+      "status": "passed"
+    },
+    {
+      "id": "H01",
+      "dimensions": [],
+      "mandatory": false,
+      "execution": {
+        "command": [
+          "/opt/pytest-python/bin/python",
+          "/inputs/eval/private/check.py",
+          "--method",
+          "test_H01_historical_focused",
+          "--output",
+          "/trial/scratch/observation.json"
+        ],
+        "cwd": "/trial/workspace",
+        "started_at": "2026-10-16T23:31:10.244876+00:00",
+        "timeout": false,
+        "output_limit_exceeded": false,
+        "returncode": 1,
+        "stdout": "/Users/junyuc/Documents/interview/SWE-bench/evals/runs/pilot_readiness_20261016/linux-qualification-01/testreport_only/checks/H01/worker.stdout",
+        "stderr": "/Users/junyuc/Documents/interview/SWE-bench/evals/runs/pilot_readiness_20261016/linux-qualification-01/testreport_only/checks/H01/worker.stderr",
+        "output_bytes_seen": 2578,
+        "elapsed_seconds": 0.27038974500010227,
+        "finished_at": "2026-10-16T23:31:10.515265+00:00",
+        "container_receipt": "/Users/junyuc/Documents/interview/SWE-bench/evals/runs/pilot_readiness_20261016/linux-qualification-01/controller/worker-094/worker-receipt.json",
+        "boundary": "colima-linux-container",
+        "handoff_status": "accepted",
+        "log": "/Users/junyuc/Documents/interview/SWE-bench/evals/runs/pilot_readiness_20261016/linux-qualification-01/testreport_only/checks/H01/worker.log"
+      },
+      "observation": {
+        "schema_version": 1,
+        "method": "test_H01_historical_focused",
+        "status": "failed",
+        "tests_run": 1,
+        "duration_seconds": 0.22704830899999706,
+        "failures": [
+          "Traceback (most recent call last):\n  File \"/inputs/eval/private/tests/behavior.py\", line 249, in test_H01_historical_focused\n    self.assertEqual(result.returncode, 0, result.stdout[-4000:])\nAssertionError: 1 != 0 : .F                                                                       [100%]\n=================================== FAILURES ===================================\n________ TestReportSerialization.test_chained_exceptions[CollectReport] ________\n/trial/workspace/testing/test_reports.py:308: in test_chained_exceptions\n    check_longrepr(loaded_report.longrepr)\n/trial/workspace/testing/test_reports.py:285: in check_longrepr\n    assert isinstance(longrepr, ExceptionChainRepr)\nE   AssertionError: assert False\nE    +  where False = isinstance(<<class '_pytest._code.code.ReprExceptionInfo'> instance at f8994506f0a0>, ExceptionChainRepr)\n----------------------------- Captured stdout call -----------------------------\n============================= test session starts ==============================\nplatform linux -- Python 3.8.20, pytest-5.1.0, py-1.8.1, pluggy-0.13.1\nrootdir: /trial/scratch/tmp/pytest-of-unknown/pytest-0/test_chained_exceptions1\ncollected 0 items / 1 errors\n\n==================================== ERRORS ====================================\n_________________ ERROR collecting test_chained_exceptions.py __________________\ntest_chained_exceptions.py:5: in test_a\n    foo()\ntest_chained_exceptions.py:2: in foo\n    raise ValueError('value error')\nE   ValueError: value error\n\nThe above exception was the direct cause of the following exception:\ntest_chained_exceptions.py:9: in <module>\n    test_a()\ntest_chained_exceptions.py:7: in test_a\n    raise RuntimeError('runtime error') from e\nE   RuntimeError: runtime error\n!!!!!!!!!!!!!!!!!!! Interrupted: 1 errors during collection !!!!!!!!!!!!!!!!!!!!\n=============================== 1 error in 0.02s ===============================\n-------------- generated xml file: /trial/scratch/historical.xml ---------------\n=========================== short test summary info ============================\nFAILED testing/test_reports.py::TestReportSerialization::test_chained_exceptions[CollectReport]\n1 failed, 1 passed in 0.07s\n\n"
+        ],
+        "skips": [],
+        "details": [
+          {
+            "command": [
+              "/opt/pytest-python/bin/python",
+              "-m",
+              "pytest",
+              "--color=no",
+              "-q",
+              "--tb=short",
+              "--junitxml=/trial/scratch/historical.xml",
+              "testing/test_reports.py::TestReportSerialization::test_chained_exceptions"
+            ],
+            "cwd": "/trial/workspace",
+            "returncode": 1,
+            "log": "/trial/scratch/historical.log"
+          },
+          {
+            "historical_cases": 2,
+            "passed": 1,
+            "failures": 1,
+            "skips": 0
+          }
+        ]
+      },
+      "status": "failed"
+    },
+    {
+      "id": "H02",
+      "dimensions": [],
+      "mandatory": false,
+      "execution": {
+        "command": [
+          "/opt/pytest-python/bin/python",
+          "/inputs/eval/private/check.py",
+          "--method",
+          "test_H02_full_existing_suite",
+          "--output",
+          "/trial/scratch/observation.json"
+        ],
+        "cwd": "/trial/workspace",
+        "started_at": "2026-10-16T23:31:11.562027+00:00",
+        "timeout": false,
+        "output_limit_exceeded": false,
+        "returncode": 0,
+        "stdout": "/Users/junyuc/Documents/interview/SWE-bench/evals/runs/pilot_readiness_20261016/linux-qualification-01/testreport_only/checks/H02/worker.stdout",
+        "stderr": "/Users/junyuc/Documents/interview/SWE-bench/evals/runs/pilot_readiness_20261016/linux-qualification-01/testreport_only/checks/H02/worker.stderr",
+        "output_bytes_seen": 158,
+        "elapsed_seconds": 1.2941034670000136,
+        "finished_at": "2026-10-16T23:31:12.856131+00:00",
+        "container_receipt": "/Users/junyuc/Documents/interview/SWE-bench/evals/runs/pilot_readiness_20261016/linux-qualification-01/controller/worker-095/worker-receipt.json",
+        "boundary": "colima-linux-container",
+        "handoff_status": "accepted",
+        "log": "/Users/junyuc/Documents/interview/SWE-bench/evals/runs/pilot_readiness_20261016/linux-qualification-01/testreport_only/checks/H02/worker.log"
+      },
+      "observation": {
+        "schema_version": 1,
+        "method": "test_H02_full_existing_suite",
+        "status": "passed",
+        "tests_run": 1,
+        "duration_seconds": 1.2541296870000451,
+        "failures": [],
+        "skips": [],
+        "details": [
+          {
+            "command": [
+              "/opt/pytest-python/bin/python",
+              "-m",
+              "pytest",
+              "--color=no",
+              "-q",
+              "--tb=short",
+              "--junitxml=/trial/scratch/full-existing.xml",
+              "testing/test_reports.py",
+              "testing/code/test_code.py",
+              "testing/code/test_excinfo.py",
+              "-k",
+              "not test_chained_exceptions"
+            ],
+            "cwd": "/trial/workspace",
+            "returncode": 0,
+            "log": "/trial/scratch/full-existing.log"
+          },
+          {
+            "existing_tests": 125,
+            "passed": 125,
+            "skipped": 0
+          }
+        ]
+      },
+      "status": "passed"
+    }
+  ],
+  "execution": [
+    {
+      "command": [
+        "/opt/pytest-python/bin/python",
+        "-c",
+        "import sys,json,pytest,pkg_resources; assert sys.version_info[:3] == (3,8,20), sys.version; reqs=[pkg_resources.Requirement.parse(x) for x in open(sys.argv[1]).read().splitlines()]; assert all(pkg_resources.get_distribution(r.project_name) in r for r in reqs); print(json.dumps({'python':sys.version,'pytest_file':pytest.__file__,'pytest_version':pytest.__version__,'packages':sorted(str(x) for x in pkg_resources.working_set)}))",
+        "/inputs/eval/requirements.txt"
+      ],
+      "cwd": "/trial/workspace",
+      "started_at": "2026-10-16T23:30:51.560104+00:00",
+      "timeout": false,
+      "output_limit_exceeded": false,
+      "returncode": 0,
+      "stdout": "/Users/junyuc/Documents/interview/SWE-bench/evals/runs/pilot_readiness_20261016/linux-qualification-01/testreport_only/preflight.stdout",
+      "stderr": "/Users/junyuc/Documents/interview/SWE-bench/evals/runs/pilot_readiness_20261016/linux-qualification-01/testreport_only/preflight.stderr",
+      "output_bytes_seen": 587,
+      "elapsed_seconds": 0.11632634499994765,
+      "finished_at": "2026-10-16T23:30:51.676430+00:00",
+      "container_receipt": "/Users/junyuc/Documents/interview/SWE-bench/evals/runs/pilot_readiness_20261016/linux-qualification-01/controller/worker-082/worker-receipt.json",
+      "boundary": "colima-linux-container",
+      "handoff_status": "accepted",
+      "log": "/Users/junyuc/Documents/interview/SWE-bench/evals/runs/pilot_readiness_20261016/linux-qualification-01/testreport_only/preflight.log"
+    },
+    {
+      "command": [
+        "git",
+        "apply",
+        "--whitespace=nowarn",
+        "--check",
+        "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/oracle/testreport_only.patch"
+      ],
+      "cwd": "/Users/junyuc/Documents/interview/SWE-bench/evals/runs/pilot_readiness_20261016/linux-qualification-01/testreport_only/workspace",
+      "returncode": 0,
+      "stderr": ""
+    },
+    {
+      "command": [
+        "git",
+        "apply",
+        "--whitespace=nowarn",
+        "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/oracle/testreport_only.patch"
+      ],
+      "cwd": "/Users/junyuc/Documents/interview/SWE-bench/evals/runs/pilot_readiness_20261016/linux-qualification-01/testreport_only/workspace",
+      "returncode": 0,
+      "stderr": ""
+    },
+    {
+      "command": [
+        "git",
+        "apply",
+        "--whitespace=nowarn",
+        "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/oracle/historical_tests.patch"
+      ],
+      "cwd": "/Users/junyuc/Documents/interview/SWE-bench/evals/runs/pilot_readiness_20261016/linux-qualification-01/testreport_only/workspace",
+      "returncode": 0,
+      "stderr": ""
+    }
+  ],
+  "security_mode": "trusted-local-qualification-not-a-sandbox",
+  "package_lock_sha256": "067f222eccfbf8d40fe520a7f4196426e82a4e5d4861e506cb96e60d11732e03",
+  "patch_sha256": "e67fd439b43456132a8be01260d799093fb5212f0f1e934e28ca4ce0d8bb5a31",
+  "submitted_paths": [
+    "src/_pytest/reports.py"
+  ],
+  "applied_source_sha256": {
+    "src/_pytest/reports.py": "1f97c0d35650209d5f7cc8c4aa44613f9f99db9290b867bda82a4adf3f4c0671"
+  },
+  "historical_test_patch_sha256": "33f35e4ba9dde34f1ecf09f7dd1873b1bbed43cf1fb0680a258e8853905e63eb"
+}

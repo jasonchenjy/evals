@@ -1,0 +1,80 @@
+============================= test session starts ==============================
+platform linux -- Python 3.8.20, pytest-5.1.0, py-1.8.1, pluggy-0.13.1 -- /opt/pytest-python/bin/python
+rootdir: /trial/workspace, inifile: tox.ini
+collecting ... collected 2 items
+
+eval_public/test_example.py::test_explicit_example FAILED                [ 50%]
+eval_public/test_example.py::test_implicit_example FAILED                [100%]
+
+=================================== FAILURES ===================================
+____________________________ test_explicit_example _____________________________
+
+    def test_explicit_example():
+        try:
+            try:
+>               raise ValueError(11)
+E               ValueError: 11
+
+eval_public/test_example.py:7: ValueError
+
+The above exception was the direct cause of the following exception:
+
+    def test_explicit_example():
+        try:
+            try:
+                raise ValueError(11)
+            except Exception as first:
+>               raise ValueError(12) from first
+E               ValueError: 12
+
+eval_public/test_example.py:9: ValueError
+
+The above exception was the direct cause of the following exception:
+
+    def test_explicit_example():
+        try:
+            try:
+                raise ValueError(11)
+            except Exception as first:
+                raise ValueError(12) from first
+        except Exception as second:
+>           raise ValueError(13) from second
+E           ValueError: 13
+
+eval_public/test_example.py:11: ValueError
+____________________________ test_implicit_example _____________________________
+
+    def test_implicit_example():
+        try:
+            try:
+>               raise ValueError(21)
+E               ValueError: 21
+
+eval_public/test_example.py:17: ValueError
+
+During handling of the above exception, another exception occurred:
+
+    def test_implicit_example():
+        try:
+            try:
+                raise ValueError(21)
+            except Exception:
+>               raise ValueError(22)
+E               ValueError: 22
+
+eval_public/test_example.py:19: ValueError
+
+During handling of the above exception, another exception occurred:
+
+    def test_implicit_example():
+        try:
+            try:
+                raise ValueError(21)
+            except Exception:
+                raise ValueError(22)
+        except Exception:
+>           raise ValueError(23)
+E           ValueError: 23
+
+eval_public/test_example.py:21: ValueError
+============================== 2 failed in 0.01s ===============================

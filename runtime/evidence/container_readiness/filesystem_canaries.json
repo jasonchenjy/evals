@@ -1,0 +1,19 @@
+{
+  "/private/tmp/pytest5786-other-trial-8jszsr6u": true,
+  "relative:/private/tmp/pytest5786-other-trial-8jszsr6u": true,
+  "/Users/junyuc/Documents/interview/SWE-bench/evals/runs/pilot_readiness_20261016/handoff-02/filesystem/private": true,
+  "relative:/Users/junyuc/Documents/interview/SWE-bench/evals/runs/pilot_readiness_20261016/handoff-02/filesystem/private": true,
+  "/Users/junyuc/Documents/interview/SWE-bench/evals/runs/pilot_readiness_20261016/handoff-02/filesystem/oracle": true,
+  "relative:/Users/junyuc/Documents/interview/SWE-bench/evals/runs/pilot_readiness_20261016/handoff-02/filesystem/oracle": true,
+  "/Users/junyuc/Documents/interview/SWE-bench/evals/runs/pilot_readiness_20261016/handoff-02/filesystem/credentials": true,
+  "relative:/Users/junyuc/Documents/interview/SWE-bench/evals/runs/pilot_readiness_20261016/handoff-02/filesystem/credentials": true,
+  "/Users/junyuc/Documents/interview/SWE-bench/evals/runs/pilot_readiness_20261016/handoff-02/filesystem/other-trial": true,
+  "relative:/Users/junyuc/Documents/interview/SWE-bench/evals/runs/pilot_readiness_20261016/handoff-02/filesystem/other-trial": true,
+  "/Users/junyuc/Documents/interview/SWE-bench/evals/runs/pilot_readiness_20261016/handoff-02/filesystem/outside-write": true,
+  "relative:/Users/junyuc/Documents/interview/SWE-bench/evals/runs/pilot_readiness_20261016/handoff-02/filesystem/outside-write": true,
+  "outside_write": true,
+  "workspace_rw": true,
+  "socket_absent": true,
+  "immutable_input_readable": true,
+  "immutable_input_write_denied": true
+}

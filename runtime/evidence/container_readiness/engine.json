@@ -1,0 +1,30 @@
+{
+  "colima": "0.9.1",
+  "lima": "1.2.1",
+  "vm": "VZ aarch64",
+  "cpus": 2,
+  "memory_gib": 6,
+  "root_disk_gib": 8,
+  "data_disk_gib": 12,
+  "docker_client": "28.3.3",
+  "docker_engine": "28.4.0",
+  "kernel": "6.8.0-64-generic",
+  "cgroup": "2",
+  "security_options": [
+    "apparmor",
+    "seccomp,profile=builtin",
+    "cgroupns"
+  ],
+  "vm_host_mounts": [
+    {
+      "location": "/private/tmp/pytest5786-colima-share",
+      "writable": false
+    }
+  ],
+  "forwardAgent": false,
+  "autoActivate": false,
+  "sshConfig": false,
+  "docker_desktop_policy_modified": false,
+  "candidate_containers_remaining": 0,
+  "vm_stopped_after_verification": true
+}

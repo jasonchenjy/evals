@@ -1,6 +1,8 @@
-# pytest_5786 native runtime MVP
+# pytest_5786 single-task runtime
 
-**Status: PARTIALLY_READY.** Exact exports, historical tests, source collection and the existing private grader run through native macOS workers. Real Codex participant execution is deliberately blocked until the effective tool inventory, dedicated authentication and adequate resource/descendant containment are verified. No real agent pilot has run. This is one Eval, one CLI harness and sequential execution, not a provider framework.
+**Status: PARTIALLY_READY.** The selected next-stage boundary is Colima VZ + Docker Engine on Linux arm64. Linux grading, finite resource limits and hostile file handoffs have been verified; the real Codex pilot is still NOT_EXECUTED. See [container pilot readiness](container_readiness_report.md) and [reproduction commands](container/README.md). No live gate was removed.
+
+The sections below describe the retained native baseline. Exact exports, historical tests, source collection and the existing private grader run through native macOS workers. Real Codex participant execution is deliberately blocked until the effective tool inventory, dedicated authentication and adequate resource/descendant containment are verified. No real agent pilot has run. This is one Eval, one CLI harness and sequential execution, not a provider framework.
 
 Use Python3.8+ for the controller, the existing CPython3.8.20 venv for workers, macOS with CommandLineTools Git, and the tested Codex CLI0.162.1. Pin the executable rather than implicitly using the newer desktop-bundled CLI. No packages are installed by the runtime.
 
@@ -11,7 +13,7 @@ python3 -B runtime/run.py \
   --eval pytest_5786 --repo ../pytest \
   --python pytest_5786/.venv/bin/python \
   --codex /Users/junyuc/.codex/packages/standalone/releases/0.162.1-aarch64-apple-darwin/bin/codex \
-  --model MODEL_NAME --preflight-only --output runs/my_preflight
+  --model gpt-6.1-sol --preflight-only --output runs/my_preflight
 ```
 
 `--output` must be new. Preflight invokes no model. It records independent agent/grading canaries, source/environment checks, bounded termination/output probes, actual fresh prompt input and supported login status. Exit2 means prerequisites remain blocked; inspect `result.json` and its `blockers` even when status is `not_executed`. Removing `--preflight-only` requests a real trial, but current code rejects it before any model call because the safety gates remain unsatisfied. There is no unsafe/bypass flag.
@@ -37,6 +39,7 @@ python3 -B runtime/qualify.py --eval pytest_5786 --repo ../pytest \
 - `agent.py`: fresh CLI argv, configurable model, isolated controller home, public task prompt, disabled web/apps/plugins/browser/memory/skills, prompt audit, JSONL/final-response paths. A missing tool/context/auth/containment gate prevents invocation.
 - `submission.py`: copy audited source into a pristine mirror, diff the controller's recorded baseline, invoke original validate_patch, and verify applied bytes. Never trust candidate HEAD/index/config/attributes/hooks. Empty diff is a valid no-op. Mode/symlink/path/encoding violations are invalid submissions.
 - `grading.py`, `handoff.py`: keep controller artifacts outside worker scratch, safely capture/validate bounded observation files through pinned directory descriptors, then pass a controller-owned copy to the unchanged grader. Unsafe handoffs and worker startup failures are infrastructure errors. No Eval file or integrity lock is changed.
+- `container_boundary.py`, `container_sandbox.py`, `container_worker.py`: the selected container candidate executor, effective-policy validation, immutable input-image mapping, byte-only transport, and full container lifecycle cleanup. This is a grading/probe adapter, not a verified live Codex harness.
 - `run.py`: stage transitions and result/summary output. `probe.py` and `qualify.py` are deterministic acceptance commands.
 
 The original grader requires `trusted_local=True` to enter trusted orchestration. The adapter supplies that argument **only while every Python execution call is intercepted by the mandatory sandbox launcher**. It does not invoke `--trusted-local` as isolation or execute candidate Python directly on the controller. Original `result.json` retains its legacy security-mode label; adjacent `runtime_execution.json` records the actual worker boundary, file hashes and limitations. This avoids changing grading semantics or historical evidence.
@@ -47,7 +50,7 @@ The generated profile uses `:workspace`, denies root/shared tmp reads, permits `
 
 By default, agent controller HOME/CODEX_HOME is new, has no developer history, and is denied to candidate commands. Optional `--client-home /dedicated/runtime-client` allows a purpose-created controller home provisioned through supported Codex login to be reused for authentication across fresh ephemeral sessions; the developer HOME and any authentication home inside candidate-readable paths are rejected. Its rendered prompt must still pass the same audit. No auth files are copied. Supported `login status` confirms it is unauthenticated on this machine; use the supported login flow only after the remaining safety design is accepted. Do not put credentials into worker environment variables or source folders.
 
-Prompt introspection initially exposed four vendor system skills despite skip_host_skill_discovery. They are now disabled through exact **SKILL.md** paths; the fresh rendered prompt has no skill catalog or prior developer conversation. The inspected CLI debug surface returns prompt items, **not actual tool definitions**. Tool availability and file-tool enforcement therefore remain unverified. The live gate cannot be opened just by editing a JSON result.
+Native baseline: prompt introspection initially exposed four vendor system skills despite skip_host_skill_discovery. They are now disabled through exact **SKILL.md** paths; the fresh rendered prompt has no skill catalog or prior developer conversation. The inspected CLI debug surface returns prompt items, **not actual tool definitions**. The new rejecting local fixture captures actual request serialization, including `input[].additional_tools`: disabled-feature flags still leave collaboration and MCP resource entry points exposed. This is explicit failing readiness evidence, not approval to run a participant. Tool availability and file-tool enforcement therefore remain unverified. The live gate cannot be opened just by editing a JSON result.
 
 Implemented/enforced: wall deadline,8MiB combined stdout/stderr cap, ordinary owned process-group kill/reap, per-process CPU seconds and32MiB maximum individual file size in workers. CPU seconds do not mean2 cores; a file cap is not a2GiB filesystem quota. Aggregate RAM/PID/disk limits and detached descendants are not contained by the demonstrated native mechanism. Native agent-generated commands also do not automatically inherit the worker wrapper's rlimits. This is an explicit reason not to claim safe untrusted trials yet.
 

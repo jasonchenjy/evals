@@ -2,6 +2,9 @@
 
 这个仓库保存 Coding Agent evaluation packages 及后续 Runtime 执行结果。每个 Eval 使用独立目录；目前完成的是 Eval package creation 和确定性资格验证，尚未运行 Agent trials。
 
+- [仓库 Changelog](CHANGELOG.md)：runtime 更新、实验结果与剩余阻塞。
+- [最新 runtime 实验索引](runtime/evidence/container_readiness/README.md)：Colima/Linux 资格、资源与安全交接验证；状态仍为 **PARTIALLY_READY**。
+
 ## 当前 Eval
 
 - [pytest_5786](pytest_5786/README.md)：pytest 异常链跨组件修复，版本 **0.1.0**，experimental / qualification-only。

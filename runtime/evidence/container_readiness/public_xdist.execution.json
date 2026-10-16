@@ -1,0 +1,30 @@
+{
+  "command": [
+    "/opt/pytest-python/bin/python",
+    "-m",
+    "pytest",
+    "-o",
+    "addopts=",
+    "-p",
+    "no:cacheprovider",
+    "-vv",
+    "-p",
+    "xdist.plugin",
+    "-n",
+    "1",
+    "eval_public/test_example.py"
+  ],
+  "cwd": "/trial/workspace",
+  "started_at": "2026-10-16T23:28:39.990452+00:00",
+  "timeout": false,
+  "output_limit_exceeded": false,
+  "returncode": 1,
+  "stdout": "/Users/junyuc/Documents/interview/SWE-bench/evals/runs/pilot_readiness_20261016/linux-qualification-01/environment/xdist.stdout",
+  "stderr": "/Users/junyuc/Documents/interview/SWE-bench/evals/runs/pilot_readiness_20261016/linux-qualification-01/environment/xdist.stderr",
+  "output_bytes_seen": 1730,
+  "elapsed_seconds": 0.2935726469999622,
+  "finished_at": "2026-10-16T23:28:40.284025+00:00",
+  "container_receipt": "/Users/junyuc/Documents/interview/SWE-bench/evals/runs/pilot_readiness_20261016/linux-qualification-01/controller/worker-004/worker-receipt.json",
+  "boundary": "colima-linux-container",
+  "handoff_status": "accepted"
+}

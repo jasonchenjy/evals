@@ -1,0 +1,78 @@
+{
+  "status": "PASSED",
+  "cases": [
+    {
+      "case": "normal",
+      "expected_rejection": false,
+      "rejected": false,
+      "canary_unchanged": true,
+      "no_private_content": true
+    },
+    {
+      "case": "log-link",
+      "expected_rejection": false,
+      "rejected": false,
+      "canary_unchanged": true,
+      "no_private_content": true
+    },
+    {
+      "case": "stdout-link",
+      "expected_rejection": true,
+      "rejected": true,
+      "canary_unchanged": true,
+      "no_private_content": true
+    },
+    {
+      "case": "stderr-link",
+      "expected_rejection": true,
+      "rejected": true,
+      "canary_unchanged": true,
+      "no_private_content": true
+    },
+    {
+      "case": "record-link",
+      "expected_rejection": true,
+      "rejected": true,
+      "canary_unchanged": true,
+      "no_private_content": true
+    },
+    {
+      "case": "observation-link",
+      "expected_rejection": true,
+      "rejected": true,
+      "canary_unchanged": true,
+      "no_private_content": true
+    },
+    {
+      "case": "observation-fifo",
+      "expected_rejection": true,
+      "rejected": true,
+      "canary_unchanged": true,
+      "no_private_content": true
+    },
+    {
+      "case": "observation-large",
+      "expected_rejection": true,
+      "rejected": true,
+      "canary_unchanged": true,
+      "no_private_content": true
+    },
+    {
+      "case": "observation-json",
+      "expected_rejection": true,
+      "rejected": true,
+      "canary_unchanged": true,
+      "no_private_content": true
+    },
+    {
+      "case": "parent-link",
+      "expected_rejection": true,
+      "rejected": true,
+      "canary_unchanged": true,
+      "no_private_content": true
+    }
+  ],
+  "model_calls": 0,
+  "baseline": "41ffd0de9c7ece927733fadc2201491c5ae51be2",
+  "scope": "container boundary, no native policy bypass, no real credentials"
+}

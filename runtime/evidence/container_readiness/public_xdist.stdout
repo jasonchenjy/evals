@@ -1,0 +1,45 @@
+============================= test session starts ==============================
+platform linux -- Python 3.8.20, pytest-5.1.0, py-1.8.1, pluggy-0.13.1 -- /opt/pytest-python/bin/python
+rootdir: /trial/workspace, inifile: tox.ini
+gw0 I
+[gw0] linux Python 3.8.20 cwd: /trial/workspace
+[gw0] Python 3.8.20 (default, Sep 27 2024, 22:15:25)  -- [GCC 12.2.0]
+gw0 [2]
+
+scheduling tests via LoadScheduling
+
+eval_public/test_example.py::test_explicit_example 
+[gw0] [ 50%] FAILED eval_public/test_example.py::test_explicit_example 
+eval_public/test_example.py::test_implicit_example 
+[gw0] [100%] FAILED eval_public/test_example.py::test_implicit_example 
+
+=================================== FAILURES ===================================
+____________________________ test_explicit_example _____________________________
+[gw0] linux -- Python 3.8.20 /opt/pytest-python/bin/python
+
+    def test_explicit_example():
+        try:
+            try:
+                raise ValueError(11)
+            except Exception as first:
+                raise ValueError(12) from first
+        except Exception as second:
+>           raise ValueError(13) from second
+E           ValueError: 13
+
+eval_public/test_example.py:11: ValueError
+____________________________ test_implicit_example _____________________________
+[gw0] linux -- Python 3.8.20 /opt/pytest-python/bin/python
+
+    def test_implicit_example():
+        try:
+            try:
+                raise ValueError(21)
+            except Exception:
+                raise ValueError(22)
+        except Exception:
+>           raise ValueError(23)
+E           ValueError: 23
+
+eval_public/test_example.py:21: ValueError
+============================== 2 failed in 0.16s ===============================

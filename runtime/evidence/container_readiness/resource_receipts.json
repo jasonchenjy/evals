@@ -1,0 +1,134 @@
+{
+  "resources": {
+    "image": "sha256:6fc218ba73f376189c8a3e860c5d5571782113b297704ffb153321c255cc2d12",
+    "container_id": "96290320dd420e37d43149a62d9c80f9ce44e47af6444d48cc63e9bd7ee3d220",
+    "returncode": 0,
+    "timeout": false,
+    "output_limit_exceeded": false,
+    "duration_seconds": 2.2234832500107586,
+    "process_namespace_stopped": true,
+    "removed": true,
+    "memory": 134217728,
+    "memory_plus_swap": 134217728,
+    "pids": 16,
+    "cpu_nanos": 2000000000,
+    "tmpfs": {
+      "/trial": "rw,nosuid,nodev,size=7340032,mode=700,uid=1000,gid=1000"
+    },
+    "shm": 1048576,
+    "network": "none",
+    "readonly_root": true,
+    "mounts": [],
+    "raw_receipt": "runs/pilot_readiness_20261016/resources-02/resources-receipt.json"
+  },
+  "normal": {
+    "image": "sha256:6fc218ba73f376189c8a3e860c5d5571782113b297704ffb153321c255cc2d12",
+    "container_id": "83cffff2ec31010c7f6d66ebffc7134bce2ed082c1fa5fa62b22901f3e377e9a",
+    "returncode": 0,
+    "timeout": false,
+    "output_limit_exceeded": false,
+    "duration_seconds": 0.14149599999655038,
+    "process_namespace_stopped": true,
+    "removed": true,
+    "memory": 4294967296,
+    "memory_plus_swap": 4294967296,
+    "pids": 128,
+    "cpu_nanos": 2000000000,
+    "tmpfs": {
+      "/trial": "rw,nosuid,nodev,size=2146435072,mode=700,uid=1000,gid=1000"
+    },
+    "shm": 1048576,
+    "network": "none",
+    "readonly_root": true,
+    "mounts": [],
+    "raw_receipt": "runs/pilot_readiness_20261016/resources-02/normal-receipt.json"
+  },
+  "timeout": {
+    "image": "sha256:6fc218ba73f376189c8a3e860c5d5571782113b297704ffb153321c255cc2d12",
+    "container_id": "7da0509fd87c8694d3aa76c5676e25cdcc0e0dcd78153b418069f99391acc765",
+    "returncode": -9,
+    "timeout": true,
+    "output_limit_exceeded": false,
+    "duration_seconds": 1.0056563340476714,
+    "process_namespace_stopped": true,
+    "removed": true,
+    "memory": 4294967296,
+    "memory_plus_swap": 4294967296,
+    "pids": 128,
+    "cpu_nanos": 2000000000,
+    "tmpfs": {
+      "/trial": "rw,nosuid,nodev,size=2146435072,mode=700,uid=1000,gid=1000"
+    },
+    "shm": 1048576,
+    "network": "none",
+    "readonly_root": true,
+    "mounts": [],
+    "raw_receipt": "runs/pilot_readiness_20261016/resources-02/timeout-receipt.json"
+  },
+  "output-cap": {
+    "image": "sha256:6fc218ba73f376189c8a3e860c5d5571782113b297704ffb153321c255cc2d12",
+    "container_id": "a0f0584d9a0adace79cdf26cdefd8a229e0acd08a9137d200886dffecd84ea08",
+    "returncode": -9,
+    "timeout": false,
+    "output_limit_exceeded": true,
+    "duration_seconds": 0.11656004196265712,
+    "process_namespace_stopped": true,
+    "removed": true,
+    "memory": 4294967296,
+    "memory_plus_swap": 4294967296,
+    "pids": 128,
+    "cpu_nanos": 2000000000,
+    "tmpfs": {
+      "/trial": "rw,nosuid,nodev,size=2146435072,mode=700,uid=1000,gid=1000"
+    },
+    "shm": 1048576,
+    "network": "none",
+    "readonly_root": true,
+    "mounts": [],
+    "raw_receipt": "runs/pilot_readiness_20261016/resources-02/output-cap-receipt.json"
+  },
+  "fresh-trial": {
+    "image": "sha256:6fc218ba73f376189c8a3e860c5d5571782113b297704ffb153321c255cc2d12",
+    "container_id": "ccb219faad23d35c8654cf5f7fe65ab9ac7b653eee6e5c62423dd732fd7e547b",
+    "returncode": 0,
+    "timeout": false,
+    "output_limit_exceeded": false,
+    "duration_seconds": 0.13120045798132196,
+    "process_namespace_stopped": true,
+    "removed": true,
+    "memory": 4294967296,
+    "memory_plus_swap": 4294967296,
+    "pids": 128,
+    "cpu_nanos": 2000000000,
+    "tmpfs": {
+      "/trial": "rw,nosuid,nodev,size=2146435072,mode=700,uid=1000,gid=1000"
+    },
+    "shm": 1048576,
+    "network": "none",
+    "readonly_root": true,
+    "mounts": [],
+    "raw_receipt": "runs/pilot_readiness_20261016/resources-02/fresh-trial-receipt.json"
+  },
+  "fresh-trial-reset": {
+    "image": "sha256:6fc218ba73f376189c8a3e860c5d5571782113b297704ffb153321c255cc2d12",
+    "container_id": "8a74d64455e1e035da57759339886b9585da87a02d10fbf18f7a95754c03c6d9",
+    "returncode": 0,
+    "timeout": false,
+    "output_limit_exceeded": false,
+    "duration_seconds": 0.07564479199936613,
+    "process_namespace_stopped": true,
+    "removed": true,
+    "memory": 4294967296,
+    "memory_plus_swap": 4294967296,
+    "pids": 128,
+    "cpu_nanos": 2000000000,
+    "tmpfs": {
+      "/trial": "rw,nosuid,nodev,size=2146435072,mode=700,uid=1000,gid=1000"
+    },
+    "shm": 1048576,
+    "network": "none",
+    "readonly_root": true,
+    "mounts": [],
+    "raw_receipt": "runs/pilot_readiness_20261016/resources-02/fresh-trial-reset-receipt.json"
+  }
+}

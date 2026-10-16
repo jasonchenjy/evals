@@ -1,0 +1,4 @@
+{
+  "reason": "Worker observation has invalid JSON or required fields",
+  "category": "infrastructure_failure"
+}

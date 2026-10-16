@@ -95,7 +95,7 @@ def grade(package, sandbox, patch, output, expected_hashes=None):
         os.environ.update(inherited_git)
     write_bytes(output/'controller.stdout', captured.getvalue().encode())
     result = json.loads((output/'result.json').read_text())
-    save(output/'runtime_execution.json', {'boundary': 'codex-native-seatbelt',
+    save(output/'runtime_execution.json', {'boundary': getattr(sandbox, 'boundary_name', 'codex-native-seatbelt'),
           'original_security_mode_label': result['security_mode'], 'all_python_calls_intercepted': True,
           'worker_execution_count': len(worker_records), 'returncode': code,
           'input_files': {str(p.relative_to(staging)): sha(p) for p in staging.rglob('*') if p.is_file()},

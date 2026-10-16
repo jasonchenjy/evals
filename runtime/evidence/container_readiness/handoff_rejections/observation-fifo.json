@@ -1,0 +1,4 @@
+{
+  "reason": "Container output handoff rejected; no candidate contents included",
+  "category": "infrastructure_failure"
+}

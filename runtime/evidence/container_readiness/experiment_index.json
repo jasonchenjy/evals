@@ -1,0 +1,70 @@
+{
+  "real_model_calls": 0,
+  "formal_trial_status": "not_executed",
+  "runs": [
+    {
+      "run": "resources-01",
+      "purpose": "finite resource/lifecycle probe",
+      "raw_local_directory": "runs/pilot_readiness_20261016/resources-01",
+      "outcome": "completed",
+      "published_evidence": "resource_results.json",
+      "note": "Deterministic probe/control, not a participant trial"
+    },
+    {
+      "run": "resources-02",
+      "purpose": "resource probe plus fresh-state reset",
+      "raw_local_directory": "runs/pilot_readiness_20261016/resources-02",
+      "outcome": "completed",
+      "published_evidence": "resource_receipts.json",
+      "note": "Deterministic probe/control, not a participant trial"
+    },
+    {
+      "run": "linux-qualification-01",
+      "purpose": "historical environment and seven controls",
+      "raw_local_directory": "runs/pilot_readiness_20261016/linux-qualification-01",
+      "outcome": "completed",
+      "published_evidence": "qualification_summary.json",
+      "note": "Deterministic probe/control, not a participant trial"
+    },
+    {
+      "run": "handoff-01",
+      "purpose": "ten hostile handoff cases",
+      "raw_local_directory": "runs/pilot_readiness_20261016/handoff-01",
+      "outcome": "completed",
+      "published_evidence": "handoff_results.json",
+      "note": "Deterministic probe/control, not a participant trial"
+    },
+    {
+      "run": "handoff-02",
+      "purpose": "handoff plus parent/shared-tmp/immutable-input checks",
+      "raw_local_directory": "runs/pilot_readiness_20261016/handoff-02",
+      "outcome": "completed",
+      "published_evidence": "filesystem_canaries.json",
+      "note": "Deterministic probe/control, not a participant trial"
+    },
+    {
+      "run": "tool-inventory-01",
+      "purpose": "local fixture bind attempt",
+      "raw_local_directory": "runs/pilot_readiness_20261016/tool-inventory-01",
+      "outcome": "blocked_by_development_sandbox_loopback_bind",
+      "published_evidence": null,
+      "note": "Capturing a request does not satisfy the live tool-enforcement gate"
+    },
+    {
+      "run": "tool-inventory-02",
+      "purpose": "actual CLI request capture",
+      "raw_local_directory": "runs/pilot_readiness_20261016/tool-inventory-02",
+      "outcome": "completed",
+      "published_evidence": null,
+      "note": "Capturing a request does not satisfy the live tool-enforcement gate"
+    },
+    {
+      "run": "tool-inventory-03",
+      "purpose": "request capture with explicit system-skill disabling",
+      "raw_local_directory": "runs/pilot_readiness_20261016/tool-inventory-03",
+      "outcome": "completed",
+      "published_evidence": "tool_inventory.json",
+      "note": "Capturing a request does not satisfy the live tool-enforcement gate"
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "command": [
+    "/Users/junyuc/.codex/packages/standalone/releases/0.162.1-aarch64-apple-darwin/bin/codex",
+    "-c",
+    "cli_auth_credentials_store=\"file\"",
+    "login",
+    "status"
+  ],
+  "cwd": "/Users/junyuc/Documents/interview/SWE-bench/evals/runs/pilot_readiness_20261016",
+  "started_at": "2026-10-16T23:41:12.570577+00:00",
+  "timeout": false,
+  "output_limit_exceeded": false,
+  "returncode": 1,
+  "stdout": "/Users/junyuc/Documents/interview/SWE-bench/evals/runs/pilot_readiness_20261016/dedicated-auth-status.stdout",
+  "stderr": "/Users/junyuc/Documents/interview/SWE-bench/evals/runs/pilot_readiness_20261016/dedicated-auth-status.stderr",
+  "output_bytes_seen": 14,
+  "elapsed_seconds": 0.02434837498003617,
+  "finished_at": "2026-10-16T23:41:12.594925+00:00"
+}

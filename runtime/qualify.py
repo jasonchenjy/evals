@@ -1,4 +1,4 @@
-"""Seven existing trusted controls through the native grader adapter; no models."""
+"""Seven fixed controls through an explicitly selected worker boundary; no models."""
 import argparse
 import json
 from pathlib import Path
@@ -17,7 +17,11 @@ def main():
     parser=argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--eval',required=True,type=Path)
     parser.add_argument('--repo',required=True,type=Path)
-    parser.add_argument('--python',required=True,type=Path)
+    parser.add_argument('--python',type=Path)
+    parser.add_argument('--container-image')
+    parser.add_argument('--docker',default='/usr/local/bin/docker')
+    parser.add_argument('--docker-endpoint')
+    parser.add_argument('--docker-client-config',type=Path)
     parser.add_argument('--codex',default=shutil.which('codex'))
     parser.add_argument('--output',required=True,type=Path)
     args=parser.parse_args()
@@ -25,7 +29,14 @@ def main():
     summary={'model_calls':0,'scope':'trusted fixed controls through isolated candidate workers','controls':[],'qualification_passed':False}
     try:
         package=Package(args.eval,args.repo);summary.update(package.provenance)
-        sandbox=NativeSandbox(args.codex,args.python,out/'controller')
+        if args.container_image:
+            if not args.docker_endpoint or not args.docker_client_config:
+                raise ValueError('Container image requires an explicit endpoint and client config')
+            from container_sandbox import ContainerSandbox
+            sandbox=ContainerSandbox(args.docker,args.docker_endpoint,args.docker_client_config,args.container_image,out/'controller')
+        else:
+            if args.python is None: raise ValueError('--python is required for native qualification')
+            sandbox=NativeSandbox(args.codex,args.python,out/'controller')
         summary['harness_identity'] = sandbox.identity
         workspace=out/'agent-workspace';package.prepare(workspace)
         summary['agent_boundary']=sandbox.canaries(workspace,out/'agent-boundary')
