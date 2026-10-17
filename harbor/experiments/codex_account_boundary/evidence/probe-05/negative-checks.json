@@ -1,0 +1,8 @@
+{
+  "wrong_nonce": 401,
+  "credential_endpoint": 404,
+  "arbitrary_route": 404,
+  "wrong_model": 403,
+  "encoded_body": 400,
+  "oversized": 413
+}

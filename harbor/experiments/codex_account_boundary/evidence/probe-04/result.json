@@ -1,0 +1,29 @@
+{
+  "status": "OFFLINE_COMPATIBILITY_PASSED",
+  "real_model_calls": 0,
+  "real_credentials_read": false,
+  "api_key_used": false,
+  "image": "sha256:c8fdaf8d4e214181d34d3f5623b2e1ff19d354dc4129916043b86e9d27448901",
+  "native_version_expected": "0.162.1",
+  "native_login_status": "Logged in using ChatGPT",
+  "codex_exit_code": 0,
+  "local_response_requests": 9,
+  "account_mode": true,
+  "upstream_credential_not_in_candidate": true,
+  "native_tools_and_public_tests": true,
+  "live_readiness": false,
+  "cleanup": [
+    {
+      "container": "codex-auth-probe-72fb575cd4f5-candidate",
+      "removed": true
+    },
+    {
+      "container": "codex-auth-probe-72fb575cd4f5-broker",
+      "removed": true
+    },
+    {
+      "network": "codex-auth-probe-72fb575cd4f5-net",
+      "removed": true
+    }
+  ]
+}

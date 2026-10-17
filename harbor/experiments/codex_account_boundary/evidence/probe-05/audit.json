@@ -1,0 +1,173 @@
+[
+  {
+    "rejected_method": "GET",
+    "path": "/auth.json"
+  },
+  {
+    "rejected_method": "POST",
+    "path": "/other"
+  },
+  {
+    "rejected_method": "GET",
+    "path": "/backend-api/codex/models?client_version=0.162.1"
+  },
+  {
+    "rejected_method": "GET",
+    "path": "/backend-api/codex/models?client_version=0.162.1"
+  },
+  {
+    "rejected_method": "GET",
+    "path": "/api/codex/accounts/check"
+  },
+  {
+    "rejected_method": "GET",
+    "path": "/api/codex/accounts/check"
+  },
+  {
+    "rejected_method": "POST",
+    "path": "/codex/analytics-events/events"
+  },
+  {
+    "rejected_method": "GET",
+    "path": "/api/codex/settings/user"
+  },
+  {
+    "candidate_request": 0,
+    "route": "/backend-api/codex/responses",
+    "native_chatgpt_transport": true,
+    "body_sha256": "f68652cce1b6dba1313c6feaeac6a8e648d7ae5b96ce484b4872e842ef851f71"
+  },
+  {
+    "upstream_request": 0,
+    "account_header_valid": true,
+    "candidate_nonce_not_forwarded": true
+  },
+  {
+    "candidate_request": 1,
+    "route": "/backend-api/codex/responses",
+    "native_chatgpt_transport": true,
+    "body_sha256": "08e43d687d89d8d883537ad0e259d77d8b43b6ee31a88ba20dfe8bedeb1f3bc3"
+  },
+  {
+    "upstream_request": 1,
+    "account_header_valid": true,
+    "candidate_nonce_not_forwarded": true
+  },
+  {
+    "rejected_method": "POST",
+    "path": "/codex/analytics-events/events"
+  },
+  {
+    "candidate_request": 2,
+    "route": "/backend-api/codex/responses",
+    "native_chatgpt_transport": true,
+    "body_sha256": "c0a57f4e6d96f85177ed88b422825bc8366f8f6240756805bac368fed644c754"
+  },
+  {
+    "upstream_request": 2,
+    "account_header_valid": true,
+    "candidate_nonce_not_forwarded": true
+  },
+  {
+    "rejected_method": "POST",
+    "path": "/codex/analytics-events/events"
+  },
+  {
+    "candidate_request": 3,
+    "route": "/backend-api/codex/responses",
+    "native_chatgpt_transport": true,
+    "body_sha256": "4a43b36b2a04b38ea7c1898e93d69905b18695d5363502489d223a4418579946"
+  },
+  {
+    "upstream_request": 3,
+    "account_header_valid": true,
+    "candidate_nonce_not_forwarded": true
+  },
+  {
+    "rejected_method": "POST",
+    "path": "/codex/analytics-events/events"
+  },
+  {
+    "candidate_request": 4,
+    "route": "/backend-api/codex/responses",
+    "native_chatgpt_transport": true,
+    "body_sha256": "10c268fa28eff884269bc3fc95aaf0cd49d6f5630571915fc24e07756427dbc0"
+  },
+  {
+    "upstream_request": 4,
+    "account_header_valid": true,
+    "candidate_nonce_not_forwarded": true
+  },
+  {
+    "rejected_method": "POST",
+    "path": "/codex/analytics-events/events"
+  },
+  {
+    "candidate_request": 5,
+    "route": "/backend-api/codex/responses",
+    "native_chatgpt_transport": true,
+    "body_sha256": "9baa4e845abcd154085a74b493e39fd416848811d0edf6322b761301bdf21ff0"
+  },
+  {
+    "upstream_request": 5,
+    "account_header_valid": true,
+    "candidate_nonce_not_forwarded": true
+  },
+  {
+    "rejected_method": "POST",
+    "path": "/codex/analytics-events/events"
+  },
+  {
+    "candidate_request": 6,
+    "route": "/backend-api/codex/responses",
+    "native_chatgpt_transport": true,
+    "body_sha256": "46623d99d4f0873e051c52cfe6b404732b42ca926256a3af5fd8c0fbf7049fdf"
+  },
+  {
+    "upstream_request": 6,
+    "account_header_valid": true,
+    "candidate_nonce_not_forwarded": true
+  },
+  {
+    "rejected_method": "POST",
+    "path": "/codex/analytics-events/events"
+  },
+  {
+    "candidate_request": 7,
+    "route": "/backend-api/codex/responses",
+    "native_chatgpt_transport": true,
+    "body_sha256": "8bdf10b3bd9c34168f4c6494e02f83fce792692f1eb938266bc2f0382e374e15"
+  },
+  {
+    "upstream_request": 7,
+    "account_header_valid": true,
+    "candidate_nonce_not_forwarded": true
+  },
+  {
+    "rejected_method": "POST",
+    "path": "/codex/analytics-events/events"
+  },
+  {
+    "candidate_request": 8,
+    "route": "/backend-api/codex/responses",
+    "native_chatgpt_transport": true,
+    "body_sha256": "7d08a98c09473024b241547f144613bf897bd753ffba8a3a627037d0a573f121"
+  },
+  {
+    "upstream_request": 8,
+    "account_header_valid": true,
+    "candidate_nonce_not_forwarded": true
+  },
+  {
+    "rejected_method": "POST",
+    "path": "/codex/analytics-events/events"
+  },
+  {
+    "rejected_method": "POST",
+    "path": "/codex/analytics-events/events"
+  },
+  {
+    "rejected_method": "POST",
+    "path": "/codex/analytics-events/events"
+  }
+]

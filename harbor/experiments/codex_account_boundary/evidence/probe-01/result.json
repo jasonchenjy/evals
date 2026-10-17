@@ -1,0 +1,9 @@
+{
+  "status": "RUNNING",
+  "real_model_calls": 0,
+  "real_credentials_read": false,
+  "api_key_used": false,
+  "image": "sha256:e36a4f2171a3428d76a4481912dac0a35e8ba7e3fa3f0b04b302581825ed124e",
+  "native_version_expected": "0.162.1",
+  "cleanup": []
+}

@@ -1,0 +1,24 @@
+{
+  "status": "OFFLINE_PROBE_FAILED",
+  "real_model_calls": 0,
+  "real_credentials_read": false,
+  "api_key_used": false,
+  "image": "sha256:c8fdaf8d4e214181d34d3f5623b2e1ff19d354dc4129916043b86e9d27448901",
+  "native_version_expected": "0.162.1",
+  "error_type": "RuntimeError",
+  "error": "Docker operation failed: cp; Error response from daemon: container rootfs is marked read-only\n",
+  "cleanup": [
+    {
+      "container": "codex-auth-probe-0f3610e91a5e-candidate",
+      "removed": true
+    },
+    {
+      "container": "codex-auth-probe-0f3610e91a5e-broker",
+      "removed": true
+    },
+    {
+      "network": "codex-auth-probe-0f3610e91a5e-net",
+      "removed": true
+    }
+  ]
+}

@@ -1,0 +1,74 @@
+[
+  {
+    "rejected_method": "GET",
+    "path": "/api/codex/accounts/check"
+  },
+  {
+    "rejected_method": "GET",
+    "path": "/api/codex/accounts/check"
+  },
+  {
+    "rejected_method": "GET",
+    "path": "/api/codex/accounts/check"
+  },
+  {
+    "rejected_method": "POST",
+    "path": "/codex/analytics-events/events"
+  },
+  {
+    "rejected_method": "GET",
+    "path": "/api/codex/settings/user"
+  },
+  {
+    "rejected_method": "GET",
+    "path": "/api/codex/accounts/check"
+  },
+  {
+    "rejected_method": "GET",
+    "path": "/api/codex/accounts/check"
+  },
+  {
+    "rejected_method": "GET",
+    "path": "/api/codex/accounts/check"
+  },
+  {
+    "rejected_method": "GET",
+    "path": "/api/codex/accounts/check"
+  },
+  {
+    "rejected_method": "GET",
+    "path": "/api/codex/accounts/check"
+  },
+  {
+    "rejected_method": "GET",
+    "path": "/api/codex/accounts/check"
+  },
+  {
+    "rejected_method": "GET",
+    "path": "/api/codex/accounts/check"
+  },
+  {
+    "rejected_method": "GET",
+    "path": "/api/codex/accounts/check"
+  },
+  {
+    "rejected_method": "GET",
+    "path": "/api/codex/accounts/check"
+  },
+  {
+    "rejected_method": "GET",
+    "path": "/api/codex/accounts/check"
+  },
+  {
+    "rejected_method": "GET",
+    "path": "/api/codex/accounts/check"
+  },
+  {
+    "rejected_method": "GET",
+    "path": "/api/codex/accounts/check"
+  },
+  {
+    "rejected_method": "POST",
+    "path": "/codex/analytics-events/events"
+  }
+]

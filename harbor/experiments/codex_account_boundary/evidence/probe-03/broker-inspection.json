@@ -1,0 +1,225 @@
+{
+  "Id": "aa0b85b2d28493911fdec99bb7511120cee8f6c8b6b9a30ffde48bbcc5ef2f30",
+  "Created": "2026-10-17T16:32:17.278129115Z",
+  "Path": "sleep",
+  "Args": [
+    "360"
+  ],
+  "State": {
+    "Status": "running",
+    "Running": true,
+    "Paused": false,
+    "Restarting": false,
+    "OOMKilled": false,
+    "Dead": false,
+    "Pid": 178211,
+    "ExitCode": 0,
+    "Error": "",
+    "StartedAt": "2026-10-17T16:32:17.323269948Z",
+    "FinishedAt": "0001-01-01T00:00:00Z"
+  },
+  "Image": "sha256:c8fdaf8d4e214181d34d3f5623b2e1ff19d354dc4129916043b86e9d27448901",
+  "ResolvConfPath": "/var/lib/docker/containers/aa0b85b2d28493911fdec99bb7511120cee8f6c8b6b9a30ffde48bbcc5ef2f30/resolv.conf",
+  "HostnamePath": "/var/lib/docker/containers/aa0b85b2d28493911fdec99bb7511120cee8f6c8b6b9a30ffde48bbcc5ef2f30/hostname",
+  "HostsPath": "/var/lib/docker/containers/aa0b85b2d28493911fdec99bb7511120cee8f6c8b6b9a30ffde48bbcc5ef2f30/hosts",
+  "LogPath": "",
+  "Name": "/codex-auth-probe-8cc8793f7d24-broker",
+  "RestartCount": 0,
+  "Driver": "overlayfs",
+  "Platform": "linux",
+  "MountLabel": "",
+  "ProcessLabel": "",
+  "AppArmorProfile": "docker-default",
+  "ExecIDs": null,
+  "HostConfig": {
+    "Binds": null,
+    "ContainerIDFile": "",
+    "LogConfig": {
+      "Type": "none",
+      "Config": {}
+    },
+    "NetworkMode": "codex-auth-probe-8cc8793f7d24-net",
+    "PortBindings": {},
+    "RestartPolicy": {
+      "Name": "no",
+      "MaximumRetryCount": 0
+    },
+    "AutoRemove": false,
+    "VolumeDriver": "",
+    "VolumesFrom": null,
+    "ConsoleSize": [
+      0,
+      0
+    ],
+    "CapAdd": null,
+    "CapDrop": [
+      "ALL"
+    ],
+    "CgroupnsMode": "private",
+    "Dns": [],
+    "DnsOptions": [],
+    "DnsSearch": [],
+    "ExtraHosts": null,
+    "GroupAdd": null,
+    "IpcMode": "private",
+    "Cgroup": "",
+    "Links": null,
+    "OomScoreAdj": 0,
+    "PidMode": "",
+    "Privileged": false,
+    "PublishAllPorts": false,
+    "ReadonlyRootfs": true,
+    "SecurityOpt": [
+      "no-new-privileges"
+    ],
+    "Tmpfs": {
+      "/home/agent": "rw,exec,nosuid,nodev,size=64m,uid=1000,gid=1000",
+      "/logs": "rw,exec,nosuid,nodev,size=128m,uid=1000,gid=1000",
+      "/tmp": "rw,exec,nosuid,nodev,size=256m,uid=1000,gid=1000",
+      "/work": "rw,exec,nosuid,nodev,size=1536m,uid=1000,gid=1000"
+    },
+    "UTSMode": "",
+    "UsernsMode": "",
+    "ShmSize": 67108864,
+    "Runtime": "runc",
+    "Isolation": "",
+    "CpuShares": 0,
+    "Memory": 4294967296,
+    "NanoCpus": 2000000000,
+    "CgroupParent": "",
+    "BlkioWeight": 0,
+    "BlkioWeightDevice": [],
+    "BlkioDeviceReadBps": [],
+    "BlkioDeviceWriteBps": [],
+    "BlkioDeviceReadIOps": [],
+    "BlkioDeviceWriteIOps": [],
+    "CpuPeriod": 0,
+    "CpuQuota": 0,
+    "CpuRealtimePeriod": 0,
+    "CpuRealtimeRuntime": 0,
+    "CpusetCpus": "",
+    "CpusetMems": "",
+    "Devices": [],
+    "DeviceCgroupRules": null,
+    "DeviceRequests": null,
+    "MemoryReservation": 0,
+    "MemorySwap": 4294967296,
+    "MemorySwappiness": null,
+    "OomKillDisable": null,
+    "PidsLimit": 128,
+    "Ulimits": [],
+    "CpuCount": 0,
+    "CpuPercent": 0,
+    "IOMaximumIOps": 0,
+    "IOMaximumBandwidth": 0,
+    "MaskedPaths": [
+      "/proc/asound",
+      "/proc/acpi",
+      "/proc/interrupts",
+      "/proc/kcore",
+      "/proc/keys",
+      "/proc/latency_stats",
+      "/proc/timer_list",
+      "/proc/timer_stats",
+      "/proc/sched_debug",
+      "/proc/scsi",
+      "/sys/firmware",
+      "/sys/devices/virtual/powercap"
+    ],
+    "ReadonlyPaths": [
+      "/proc/bus",
+      "/proc/fs",
+      "/proc/irq",
+      "/proc/sys",
+      "/proc/sysrq-trigger"
+    ]
+  },
+  "GraphDriver": {
+    "Data": null,
+    "Name": "overlayfs"
+  },
+  "Mounts": [],
+  "Config": {
+    "Hostname": "aa0b85b2d284",
+    "Domainname": "",
+    "User": "1000:1000",
+    "AttachStdin": false,
+    "AttachStdout": true,
+    "AttachStderr": true,
+    "Tty": false,
+    "OpenStdin": false,
+    "StdinOnce": false,
+    "Env": [
+      "PATH=/opt/pytest-python/bin:/opt/codex/bin:/opt/codex/codex-path:/opt/pytest-python/bin:/usr/local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+      "LANG=C.UTF-8",
+      "GPG_KEY=E3FF2839C048B25C084DEBE9B26995E310250568",
+      "PYTHON_VERSION=3.8.20",
+      "PYTHONDONTWRITEBYTECODE=1",
+      "PYTHONNOUSERSITE=1",
+      "PYTEST_DISABLE_PLUGIN_AUTOLOAD=1",
+      "PYTHONPATH=/work/src",
+      "HOME=/home/agent",
+      "SHELL=/bin/bash"
+    ],
+    "Cmd": [
+      "sleep",
+      "360"
+    ],
+    "Image": "sha256:c8fdaf8d4e214181d34d3f5623b2e1ff19d354dc4129916043b86e9d27448901",
+    "Volumes": null,
+    "WorkingDir": "/work",
+    "Entrypoint": null,
+    "OnBuild": null,
+    "Labels": {}
+  },
+  "NetworkSettings": {
+    "Bridge": "",
+    "SandboxID": "7f5b5c5676a5b5dfd6b9783c68dc04271ef34603437713af4c43d2d3e69d08b0",
+    "SandboxKey": "/var/run/docker/netns/7f5b5c5676a5",
+    "Ports": {},
+    "HairpinMode": false,
+    "LinkLocalIPv6Address": "",
+    "LinkLocalIPv6PrefixLen": 0,
+    "SecondaryIPAddresses": null,
+    "SecondaryIPv6Addresses": null,
+    "EndpointID": "",
+    "Gateway": "",
+    "GlobalIPv6Address": "",
+    "GlobalIPv6PrefixLen": 0,
+    "IPAddress": "",
+    "IPPrefixLen": 0,
+    "IPv6Gateway": "",
+    "MacAddress": "",
+    "Networks": {
+      "codex-auth-probe-8cc8793f7d24-net": {
+        "IPAMConfig": null,
+        "Links": null,
+        "Aliases": null,
+        "MacAddress": "ce:28:bd:09:a2:ac",
+        "DriverOpts": null,
+        "GwPriority": 0,
+        "NetworkID": "17635a1f86cf1f3193627a60211e172f63b70f71c0c81985756fbd00770e3637",
+        "EndpointID": "9c75e177277db481a304a2328d5443a88ace6cc36cd96f6cb45f8e7e37bd638d",
+        "Gateway": "",
+        "IPAddress": "172.18.0.2",
+        "IPPrefixLen": 16,
+        "IPv6Gateway": "",
+        "GlobalIPv6Address": "",
+        "GlobalIPv6PrefixLen": 0,
+        "DNSNames": [
+          "codex-auth-probe-8cc8793f7d24-broker",
+          "aa0b85b2d284"
+        ]
+      }
+    }
+  },
+  "ImageManifestDescriptor": {
+    "mediaType": "application/vnd.oci.image.manifest.v1+json",
+    "digest": "sha256:ae9775d016aed1fb27ebfde4ccce25b9b5abcb02ce718a76025f96e515d19680",
+    "size": 2953,
+    "platform": {
+      "architecture": "arm64",
+      "os": "linux"
+    }
+  }
+}

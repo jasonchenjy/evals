@@ -1,0 +1,35 @@
+{
+  "status": "OFFLINE_COMPATIBILITY_PASSED",
+  "real_model_calls": 0,
+  "real_credentials_read": false,
+  "api_key_used": false,
+  "image": "sha256:c8fdaf8d4e214181d34d3f5623b2e1ff19d354dc4129916043b86e9d27448901",
+  "native_version_expected": "0.162.1",
+  "probe_code_sha256": {
+    "probe.py": "404e857b2bc91e277aa2d05ea2edc5a1c88eb78781b383372f399802f1bc96de",
+    "offline_broker.py": "7481b1bbe39d2c566c0c9ab26b169399b00be16fa5cb22869bf3130580efa91a"
+  },
+  "native_login_status": "Logged in using ChatGPT",
+  "codex_exit_code": 0,
+  "local_response_requests": 9,
+  "account_mode": true,
+  "upstream_credential_not_in_candidate": true,
+  "native_tools_and_public_tests": true,
+  "negative_checks_passed": 6,
+  "revoked_session_denied": true,
+  "live_readiness": false,
+  "cleanup": [
+    {
+      "container": "codex-auth-probe-6bc24971878e-candidate",
+      "removed": true
+    },
+    {
+      "container": "codex-auth-probe-6bc24971878e-broker",
+      "removed": true
+    },
+    {
+      "network": "codex-auth-probe-6bc24971878e-net",
+      "removed": true
+    }
+  ]
+}

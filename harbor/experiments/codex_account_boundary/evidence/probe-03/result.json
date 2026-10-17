@@ -1,0 +1,26 @@
+{
+  "status": "OFFLINE_PROBE_FAILED",
+  "real_model_calls": 0,
+  "real_credentials_read": false,
+  "api_key_used": false,
+  "image": "sha256:c8fdaf8d4e214181d34d3f5623b2e1ff19d354dc4129916043b86e9d27448901",
+  "native_version_expected": "0.162.1",
+  "native_login_status": "Logged in using ChatGPT",
+  "codex_exit_code": 1,
+  "error_type": "AssertionError",
+  "error": "Native Codex failed; inspect local evidence, no live retry",
+  "cleanup": [
+    {
+      "container": "codex-auth-probe-8cc8793f7d24-candidate",
+      "removed": true
+    },
+    {
+      "container": "codex-auth-probe-8cc8793f7d24-broker",
+      "removed": true
+    },
+    {
+      "network": "codex-auth-probe-8cc8793f7d24-net",
+      "removed": true
+    }
+  ]
+}
