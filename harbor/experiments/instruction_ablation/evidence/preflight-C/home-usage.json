@@ -1,0 +1,570 @@
+{
+  "available_bytes": 65978368,
+  "total_bytes": 67108864,
+  "files": [
+    {
+      "path": "thread_history_1.sqlite",
+      "bytes": 106496,
+      "blocks": 208,
+      "mode": 33188
+    },
+    {
+      "path": "shell_snapshots",
+      "bytes": 40,
+      "blocks": 0,
+      "mode": 16877
+    },
+    {
+      "path": "sessions",
+      "bytes": 60,
+      "blocks": 0,
+      "mode": 16877
+    },
+    {
+      "path": "thread-writer-locks",
+      "bytes": 60,
+      "blocks": 0,
+      "mode": 16877
+    },
+    {
+      "path": ".sandbox_migration",
+      "bytes": 3,
+      "blocks": 8,
+      "mode": 33152
+    },
+    {
+      "path": "config.toml",
+      "bytes": 473,
+      "blocks": 8,
+      "mode": 33152
+    },
+    {
+      "path": "skills",
+      "bytes": 60,
+      "blocks": 0,
+      "mode": 16877
+    },
+    {
+      "path": "installation_id",
+      "bytes": 36,
+      "blocks": 8,
+      "mode": 33188
+    },
+    {
+      "path": "queue_1.sqlite-shm",
+      "bytes": 32768,
+      "blocks": 64,
+      "mode": 33188
+    },
+    {
+      "path": "queue_1.sqlite-wal",
+      "bytes": 82432,
+      "blocks": 168,
+      "mode": 33188
+    },
+    {
+      "path": "queue_1.sqlite",
+      "bytes": 4096,
+      "blocks": 8,
+      "mode": 33188
+    },
+    {
+      "path": "memories_1.sqlite",
+      "bytes": 45056,
+      "blocks": 88,
+      "mode": 33188
+    },
+    {
+      "path": "goals_1.sqlite",
+      "bytes": 32768,
+      "blocks": 64,
+      "mode": 33188
+    },
+    {
+      "path": "logs_2.sqlite",
+      "bytes": 49152,
+      "blocks": 96,
+      "mode": 33188
+    },
+    {
+      "path": "state_5.sqlite",
+      "bytes": 262144,
+      "blocks": 512,
+      "mode": 33188
+    },
+    {
+      "path": "auth.json",
+      "bytes": 28,
+      "blocks": 0,
+      "mode": 41471
+    },
+    {
+      "path": "tmp",
+      "bytes": 60,
+      "blocks": 0,
+      "mode": 16877
+    },
+    {
+      "path": "sessions/2026",
+      "bytes": 60,
+      "blocks": 0,
+      "mode": 16877
+    },
+    {
+      "path": "sessions/2026/10",
+      "bytes": 60,
+      "blocks": 0,
+      "mode": 16877
+    },
+    {
+      "path": "sessions/2026/10/17",
+      "bytes": 60,
+      "blocks": 0,
+      "mode": 16877
+    },
+    {
+      "path": "sessions/2026/10/17/rollout-2026-10-17T14-17-28-01a14a39-8f1b-7b81-b015-84475cdcdd1e.jsonl",
+      "bytes": 77892,
+      "blocks": 160,
+      "mode": 33188
+    },
+    {
+      "path": "thread-writer-locks/.coordination.lock",
+      "bytes": 0,
+      "blocks": 0,
+      "mode": 33188
+    },
+    {
+      "path": "skills/.system",
+      "bytes": 160,
+      "blocks": 0,
+      "mode": 16877
+    },
+    {
+      "path": "skills/.system/.codex-system-skills.marker",
+      "bytes": 17,
+      "blocks": 8,
+      "mode": 33188
+    },
+    {
+      "path": "skills/.system/skill-installer",
+      "bytes": 140,
+      "blocks": 0,
+      "mode": 16877
+    },
+    {
+      "path": "skills/.system/skill-creator",
+      "bytes": 160,
+      "blocks": 0,
+      "mode": 16877
+    },
+    {
+      "path": "skills/.system/review-agent",
+      "bytes": 80,
+      "blocks": 0,
+      "mode": 16877
+    },
+    {
+      "path": "skills/.system/openai-docs",
+      "bytes": 160,
+      "blocks": 0,
+      "mode": 16877
+    },
+    {
+      "path": "skills/.system/imagegen",
+      "bytes": 160,
+      "blocks": 0,
+      "mode": 16877
+    },
+    {
+      "path": "skills/.system/skill-installer/scripts",
+      "bytes": 100,
+      "blocks": 0,
+      "mode": 16877
+    },
+    {
+      "path": "skills/.system/skill-installer/assets",
+      "bytes": 80,
+      "blocks": 0,
+      "mode": 16877
+    },
+    {
+      "path": "skills/.system/skill-installer/agents",
+      "bytes": 60,
+      "blocks": 0,
+      "mode": 16877
+    },
+    {
+      "path": "skills/.system/skill-installer/SKILL.md",
+      "bytes": 3367,
+      "blocks": 8,
+      "mode": 33188
+    },
+    {
+      "path": "skills/.system/skill-installer/LICENSE.txt",
+      "bytes": 11358,
+      "blocks": 24,
+      "mode": 33188
+    },
+    {
+      "path": "skills/.system/skill-installer/scripts/list-skills.py",
+      "bytes": 2948,
+      "blocks": 8,
+      "mode": 33188
+    },
+    {
+      "path": "skills/.system/skill-installer/scripts/install-skill-from-github.py",
+      "bytes": 11917,
+      "blocks": 24,
+      "mode": 33188
+    },
+    {
+      "path": "skills/.system/skill-installer/scripts/github_utils.py",
+      "bytes": 659,
+      "blocks": 8,
+      "mode": 33188
+    },
+    {
+      "path": "skills/.system/skill-installer/assets/skill-installer.png",
+      "bytes": 1086,
+      "blocks": 8,
+      "mode": 33188
+    },
+    {
+      "path": "skills/.system/skill-installer/assets/skill-installer-small.svg",
+      "bytes": 923,
+      "blocks": 8,
+      "mode": 33188
+    },
+    {
+      "path": "skills/.system/skill-installer/agents/openai.yaml",
+      "bytes": 221,
+      "blocks": 8,
+      "mode": 33188
+    },
+    {
+      "path": "skills/.system/skill-creator/scripts",
+      "bytes": 100,
+      "blocks": 0,
+      "mode": 16877
+    },
+    {
+      "path": "skills/.system/skill-creator/references",
+      "bytes": 60,
+      "blocks": 0,
+      "mode": 16877
+    },
+    {
+      "path": "skills/.system/skill-creator/license.txt",
+      "bytes": 11358,
+      "blocks": 24,
+      "mode": 33188
+    },
+    {
+      "path": "skills/.system/skill-creator/assets",
+      "bytes": 80,
+      "blocks": 0,
+      "mode": 16877
+    },
+    {
+      "path": "skills/.system/skill-creator/agents",
+      "bytes": 60,
+      "blocks": 0,
+      "mode": 16877
+    },
+    {
+      "path": "skills/.system/skill-creator/SKILL.md",
+      "bytes": 15311,
+      "blocks": 32,
+      "mode": 33188
+    },
+    {
+      "path": "skills/.system/skill-creator/scripts/quick_validate.py",
+      "bytes": 4249,
+      "blocks": 16,
+      "mode": 33188
+    },
+    {
+      "path": "skills/.system/skill-creator/scripts/init_skill.py",
+      "bytes": 10314,
+      "blocks": 24,
+      "mode": 33188
+    },
+    {
+      "path": "skills/.system/skill-creator/scripts/generate_openai_yaml.py",
+      "bytes": 6669,
+      "blocks": 16,
+      "mode": 33188
+    },
+    {
+      "path": "skills/.system/skill-creator/references/openai_yaml.md",
+      "bytes": 2356,
+      "blocks": 8,
+      "mode": 33188
+    },
+    {
+      "path": "skills/.system/skill-creator/assets/skill-creator.png",
+      "bytes": 1563,
+      "blocks": 8,
+      "mode": 33188
+    },
+    {
+      "path": "skills/.system/skill-creator/assets/skill-creator-small.svg",
+      "bytes": 1319,
+      "blocks": 8,
+      "mode": 33188
+    },
+    {
+      "path": "skills/.system/skill-creator/agents/openai.yaml",
+      "bytes": 183,
+      "blocks": 8,
+      "mode": 33188
+    },
+    {
+      "path": "skills/.system/review-agent/agents",
+      "bytes": 60,
+      "blocks": 0,
+      "mode": 16877
+    },
+    {
+      "path": "skills/.system/review-agent/SKILL.md",
+      "bytes": 2661,
+      "blocks": 8,
+      "mode": 33188
+    },
+    {
+      "path": "skills/.system/review-agent/agents/openai.yaml",
+      "bytes": 252,
+      "blocks": 8,
+      "mode": 33188
+    },
+    {
+      "path": "skills/.system/openai-docs/scripts",
+      "bytes": 100,
+      "blocks": 0,
+      "mode": 16877
+    },
+    {
+      "path": "skills/.system/openai-docs/references",
+      "bytes": 220,
+      "blocks": 0,
+      "mode": 16877
+    },
+    {
+      "path": "skills/.system/openai-docs/assets",
+      "bytes": 80,
+      "blocks": 0,
+      "mode": 16877
+    },
+    {
+      "path": "skills/.system/openai-docs/agents",
+      "bytes": 60,
+      "blocks": 0,
+      "mode": 16877
+    },
+    {
+      "path": "skills/.system/openai-docs/SKILL.md",
+      "bytes": 5437,
+      "blocks": 16,
+      "mode": 33188
+    },
+    {
+      "path": "skills/.system/openai-docs/LICENSE.txt",
+      "bytes": 10776,
+      "blocks": 24,
+      "mode": 33188
+    },
+    {
+      "path": "skills/.system/openai-docs/scripts/resolve-latest-model-info.cjs",
+      "bytes": 3937,
+      "blocks": 8,
+      "mode": 33188
+    },
+    {
+      "path": "skills/.system/openai-docs/scripts/resolve-latest-model-info",
+      "bytes": 1038,
+      "blocks": 8,
+      "mode": 33188
+    },
+    {
+      "path": "skills/.system/openai-docs/scripts/fetch-codex-manual.mjs",
+      "bytes": 16085,
+      "blocks": 32,
+      "mode": 33188
+    },
+    {
+      "path": "skills/.system/openai-docs/references/upgrading-to-gpt-6-astra.md",
+      "bytes": 18993,
+      "blocks": 40,
+      "mode": 33188
+    },
+    {
+      "path": "skills/.system/openai-docs/references/upgrade-guide.md",
+      "bytes": 1027,
+      "blocks": 8,
+      "mode": 33188
+    },
+    {
+      "path": "skills/.system/openai-docs/references/prompting-guide.md",
+      "bytes": 10166,
+      "blocks": 24,
+      "mode": 33188
+    },
+    {
+      "path": "skills/.system/openai-docs/references/official-docs.md",
+      "bytes": 3337,
+      "blocks": 8,
+      "mode": 33188
+    },
+    {
+      "path": "skills/.system/openai-docs/references/model-selection.md",
+      "bytes": 1344,
+      "blocks": 8,
+      "mode": 33188
+    },
+    {
+      "path": "skills/.system/openai-docs/references/model-migration.md",
+      "bytes": 5094,
+      "blocks": 16,
+      "mode": 33188
+    },
+    {
+      "path": "skills/.system/openai-docs/references/mcp-diagnostics.md",
+      "bytes": 2318,
+      "blocks": 8,
+      "mode": 33188
+    },
+    {
+      "path": "skills/.system/openai-docs/references/latest-model.md",
+      "bytes": 2147,
+      "blocks": 8,
+      "mode": 33188
+    },
+    {
+      "path": "skills/.system/openai-docs/references/codex-self-knowledge.md",
+      "bytes": 7417,
+      "blocks": 16,
+      "mode": 33188
+    },
+    {
+      "path": "skills/.system/openai-docs/assets/openai.png",
+      "bytes": 1429,
+      "blocks": 8,
+      "mode": 33188
+    },
+    {
+      "path": "skills/.system/openai-docs/assets/openai-small.svg",
+      "bytes": 1091,
+      "blocks": 8,
+      "mode": 33188
+    },
+    {
+      "path": "skills/.system/openai-docs/agents/openai.yaml",
+      "bytes": 370,
+      "blocks": 8,
+      "mode": 33188
+    },
+    {
+      "path": "skills/.system/imagegen/scripts",
+      "bytes": 80,
+      "blocks": 0,
+      "mode": 16877
+    },
+    {
+      "path": "skills/.system/imagegen/references",
+      "bytes": 140,
+      "blocks": 0,
+      "mode": 16877
+    },
+    {
+      "path": "skills/.system/imagegen/assets",
+      "bytes": 80,
+      "blocks": 0,
+      "mode": 16877
+    },
+    {
+      "path": "skills/.system/imagegen/agents",
+      "bytes": 60,
+      "blocks": 0,
+      "mode": 16877
+    },
+    {
+      "path": "skills/.system/imagegen/SKILL.md",
+      "bytes": 19201,
+      "blocks": 40,
+      "mode": 33188
+    },
+    {
+      "path": "skills/.system/imagegen/LICENSE.txt",
+      "bytes": 10776,
+      "blocks": 24,
+      "mode": 33188
+    },
+    {
+      "path": "skills/.system/imagegen/scripts/remove_chroma_key.py",
+      "bytes": 13905,
+      "blocks": 32,
+      "mode": 33188
+    },
+    {
+      "path": "skills/.system/imagegen/scripts/image_gen.py",
+      "bytes": 34667,
+      "blocks": 72,
+      "mode": 33188
+    },
+    {
+      "path": "skills/.system/imagegen/references/sample-prompts.md",
+      "bytes": 17617,
+      "blocks": 40,
+      "mode": 33188
+    },
+    {
+      "path": "skills/.system/imagegen/references/prompting.md",
+      "bytes": 8282,
+      "blocks": 24,
+      "mode": 33188
+    },
+    {
+      "path": "skills/.system/imagegen/references/image-api.md",
+      "bytes": 6072,
+      "blocks": 16,
+      "mode": 33188
+    },
+    {
+      "path": "skills/.system/imagegen/references/codex-network.md",
+      "bytes": 1779,
+      "blocks": 8,
+      "mode": 33188
+    },
+    {
+      "path": "skills/.system/imagegen/references/cli.md",
+      "bytes": 9655,
+      "blocks": 24,
+      "mode": 33188
+    },
+    {
+      "path": "skills/.system/imagegen/assets/imagegen.png",
+      "bytes": 1711,
+      "blocks": 8,
+      "mode": 33188
+    },
+    {
+      "path": "skills/.system/imagegen/assets/imagegen-small.svg",
+      "bytes": 2889,
+      "blocks": 8,
+      "mode": 33188
+    },
+    {
+      "path": "skills/.system/imagegen/agents/openai.yaml",
+      "bytes": 275,
+      "blocks": 8,
+      "mode": 33188
+    },
+    {
+      "path": "tmp/arg0",
+      "bytes": 40,
+      "blocks": 0,
+      "mode": 16832
+    }
+  ]
+}

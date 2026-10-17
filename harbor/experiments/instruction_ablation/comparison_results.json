@@ -1,0 +1,239 @@
+{
+  "status": "AUTHORIZATION_REQUIRED",
+  "real_B_C_trials": 0,
+  "authorization_received": false,
+  "automatic_retry": false,
+  "push_performed": false,
+  "A": {
+    "variant": "A",
+    "historical_reference_only": true,
+    "rerun": false,
+    "instruction_path": "variant_a.md",
+    "instruction_sha256": "d38c4645b2ff375fd37c86f2ddc9ca2ea7687b9042871d23d3de5c87e2c23ec8",
+    "files": {
+      "harbor/evidence/pytest5786-stage3-20261017T075426Z/codex/config.json": "a6bd2112cfc95e69ff2b3ba44a678b1eb4b4523ef6695bc9700fbf268416d73a",
+      "harbor/evidence/pytest5786-stage3-20261017T075426Z/codex/agent/trajectory.json": "6cabd8d8d8f1911657ed9caade9685b192f4a870a57a268c0fe0a4f987ccd5ab",
+      "harbor/evidence/pytest5786-stage3-20261017T075426Z/codex/agent/codex.txt": "d5610634dd496391ab81c8bac4f82527a9b6bd437263671a9a67695517482f77",
+      "harbor/evidence/pytest5786-stage3-20261017T075426Z/codex/result.json": "79bd411ba8927c2986d89d11a2af60e011268b0d80ec7a9b3803ad3f7fafa62c",
+      "harbor/evidence/pytest5786-stage3-20261017T075426Z/codex/submission/submission.patch": "d1be3e0bd193bdacd7b5480b3a935ca6961e72c0e6409c1c265d92580278cc6b",
+      "harbor/evidence/pytest5786-stage3-20261017T075426Z/codex/verifier/grader/result.json": "8e6cd5e0f1f4a17e89a07b71808f6bc0060c3b6a43faa0646766bf21f5081a99",
+      "harbor/evidence/pytest5786-stage3-20261017T075426Z/attempt-audit.json": "ee61fa354308b947351aca7db8d5d8dc91f35cc33ffacba0b0b753b3c897be1b",
+      "harbor/evidence/pytest5786-stage3-20261017T075426Z/evidence-manifest.json": "cdc75e309574dbdd84deb8289d458d163cea0f5e3faeff30c9a76791d303fb62"
+    },
+    "actual_agent_info": {
+      "name": "codex",
+      "version": "0.162.1",
+      "model_info": {
+        "name": "gpt-6.1-sol",
+        "provider": "openai"
+      }
+    },
+    "actual_config": {
+      "task": {
+        "path": "/Users/junyuc/Documents/interview/SWE-bench/evals/harbor/generated/pilot-live-fixed"
+      },
+      "trial_name": "codex",
+      "trials_dir": "/Users/junyuc/Documents/interview/SWE-bench/evals/harbor/raw/pytest5786-stage3-20261017T075426Z",
+      "agent": {
+        "import_path": "pilot_codex:PilotCodex",
+        "model_name": "openai/gpt-6.1-sol",
+        "kwargs": {
+          "version": "0.162.1",
+          "config": {
+            "web_search": "disabled",
+            "features": {
+              "plugins": false,
+              "apps": false,
+              "remote_plugin": false,
+              "skill_search": false,
+              "skill_mcp_dependency_install": false,
+              "multi_agent": false
+            }
+          }
+        },
+        "env": {
+          "CODEX_AUTH_JSON_PATH": "/Use****son"
+        }
+      },
+      "environment": {
+        "import_path": "pilot_environment:PilotEnvironment"
+      },
+      "verifier": {
+        "import_path": "pilot_verifier:IsolatedVerifier",
+        "kwargs": {
+          "repo": "/Users/junyuc/Documents/interview/SWE-bench/pytest",
+          "image": "sha256:6fc218ba73f376189c8a3e860c5d5571782113b297704ffb153321c255cc2d12"
+        }
+      }
+    },
+    "timing": {
+      "started_at": "2026-10-17T07:56:00.075017Z",
+      "finished_at": "2026-10-17T07:57:31.462348Z",
+      "agent_execution": {
+        "started_at": "2026-10-17T07:56:04.248439Z",
+        "finished_at": "2026-10-17T07:56:57.145798Z"
+      },
+      "verifier": {
+        "started_at": "2026-10-17T07:57:00.971393Z",
+        "finished_at": "2026-10-17T07:57:31.462327Z"
+      }
+    },
+    "source_files_inspected": [
+      "src/_pytest/reports.py",
+      "src/_pytest/_code/code.py"
+    ],
+    "public_test_files_inspected": [
+      "testing/test_reports.py",
+      "eval_public/test_example.py"
+    ],
+    "tool_calls": 8,
+    "shell_commands": 11,
+    "changed_files": [
+      "src/_pytest/reports.py"
+    ],
+    "patch_bytes": 6986,
+    "grading": {
+      "overall_resolved": true,
+      "infrastructure_status": "ok",
+      "submission_status": "accepted",
+      "dimensions": {
+        "original_bug_resolution": {
+          "satisfied": true,
+          "checks": {
+            "A01": "passed",
+            "A02": "passed"
+          }
+        },
+        "cross_component_consistency": {
+          "satisfied": true,
+          "checks": {
+            "B01": "passed",
+            "B02": "passed",
+            "B03": "passed"
+          }
+        },
+        "edge_case_robustness": {
+          "satisfied": true,
+          "checks": {
+            "C01": "passed",
+            "C02": "passed",
+            "C03": "passed"
+          }
+        },
+        "non_regression": {
+          "satisfied": true,
+          "checks": {
+            "D01": "passed",
+            "D02": "passed",
+            "D03": "passed"
+          }
+        }
+      }
+    },
+    "mandatory_checks": {
+      "A01": "passed",
+      "A02": "passed",
+      "B01": "passed",
+      "B02": "passed",
+      "B03": "passed",
+      "C01": "passed",
+      "C02": "passed",
+      "C03": "passed",
+      "D01": "passed",
+      "D02": "passed",
+      "D03": "passed"
+    },
+    "original_visible_instruction_duplicated_in_TASK_md": true,
+    "current_qualified_template_task_hashes_reference": "inputs.json:qualified_template_hashes",
+    "execution_head": "2319bd478a6ed6d1603cb76093387cda4ea64c7c",
+    "harbor_version": "0.24.0",
+    "agent_seconds": 52.897359,
+    "verifier_seconds": 30.490934,
+    "trial_seconds": 91.387331,
+    "trajectory_steps": 14,
+    "native_exec_calls": 8,
+    "observed_llm_calls": 9,
+    "public_neighbor_tests_passed": 125,
+    "agent_custom_roundtrips_reported_passed": 120,
+    "agent_custom_diagnostic_correction": "Normalized tuple/list comparison across JSON in a temporary diagnostic; final source patch unchanged after this correction.",
+    "source_base_commit": "955e54221008aba577ecbaefa15679f6777d3bf8",
+    "eval_lock_sha256": "067f222eccfbf8d40fe520a7f4196426e82a4e5d4861e506cb96e60d11732e03",
+    "public_test_commands": [
+      "PYTHONPATH=/work/src PYTEST_DISABLE_PLUGIN_AUTOLOAD=1 python -m pytest -q -p xdist.plugin -n 1 eval_public/test_example.py",
+      "PYTHONPATH=/work/src PYTEST_DISABLE_PLUGIN_AUTOLOAD=1 python -m pytest -q testing/test_reports.py testing/code/test_code.py testing/code/test_excinfo.py",
+      "PYTHONPATH=/work/src PYTEST_DISABLE_PLUGIN_AUTOLOAD=1 python -m pytest -q eval_public/test_example.py",
+      "PYTHONPATH=/work/src PYTEST_DISABLE_PLUGIN_AUTOLOAD=1 python /tmp/check_report_chains.py",
+      "PYTHONPATH=/work/src PYTEST_DISABLE_PLUGIN_AUTOLOAD=1 python -m pytest -q -p xdist.plugin -n 1 /tmp/test_collection_chain.py"
+    ],
+    "patch_insertions": 80,
+    "patch_deletions": 41
+  },
+  "B": {
+    "execution_status": "NOT_RUN",
+    "offline_preflight_passed": true,
+    "model_requested": "openai/gpt-6.1-sol",
+    "actual_model": null,
+    "agent_seconds": null,
+    "tool_calls": null,
+    "source_files_inspected": null,
+    "files_modified": null,
+    "public_tests_executed": null,
+    "patch_bytes": null,
+    "submission_status": "NOT_RUN",
+    "infrastructure_status": "NOT_RUN",
+    "overall_resolved": null,
+    "dimensions": {
+      "original_bug_resolution": null,
+      "cross_component_consistency": null,
+      "edge_case_robustness": null,
+      "non_regression": null
+    },
+    "mandatory_checks": {
+      "A01": "NOT_RUN",
+      "A02": "NOT_RUN",
+      "B01": "NOT_RUN",
+      "B02": "NOT_RUN",
+      "B03": "NOT_RUN",
+      "C01": "NOT_RUN",
+      "C02": "NOT_RUN",
+      "C03": "NOT_RUN",
+      "D01": "NOT_RUN",
+      "D02": "NOT_RUN",
+      "D03": "NOT_RUN"
+    }
+  },
+  "C": {
+    "execution_status": "NOT_RUN",
+    "offline_preflight_passed": true,
+    "model_requested": "openai/gpt-6.1-sol",
+    "actual_model": null,
+    "agent_seconds": null,
+    "tool_calls": null,
+    "source_files_inspected": null,
+    "files_modified": null,
+    "public_tests_executed": null,
+    "patch_bytes": null,
+    "submission_status": "NOT_RUN",
+    "infrastructure_status": "NOT_RUN",
+    "overall_resolved": null,
+    "dimensions": {
+      "original_bug_resolution": null,
+      "cross_component_consistency": null,
+      "edge_case_robustness": null,
+      "non_regression": null
+    },
+    "mandatory_checks": {
+      "A01": "NOT_RUN",
+      "A02": "NOT_RUN",
+      "B01": "NOT_RUN",
+      "B02": "NOT_RUN",
+      "B03": "NOT_RUN",
+      "C01": "NOT_RUN",
+      "C02": "NOT_RUN",
+      "C03": "NOT_RUN",
+      "D01": "NOT_RUN",
+      "D02": "NOT_RUN",
+      "D03": "NOT_RUN"
+    }
+  }
+}

@@ -1,0 +1,11 @@
+test_b_and_c_pass_full_frozen_validation (__main__.ProvenanceTests.test_b_and_c_pass_full_frozen_validation) ... ok
+test_experiment_code_change_is_rejected (__main__.ProvenanceTests.test_experiment_code_change_is_rejected) ... ok
+test_live_requires_explicit_flags_and_auth_selection (__main__.ProvenanceTests.test_live_requires_explicit_flags_and_auth_selection) ... ok
+test_original_eval_identity_is_still_checked (__main__.ProvenanceTests.test_original_eval_identity_is_still_checked) ... ok
+test_task_tampering_is_rejected (__main__.ProvenanceTests.test_task_tampering_is_rejected) ... ok
+test_unrecognized_task_is_rejected (__main__.ProvenanceTests.test_unrecognized_task_is_rejected) ... ok
+
+----------------------------------------------------------------------
+Ran 6 tests in 4.104s
+
+OK

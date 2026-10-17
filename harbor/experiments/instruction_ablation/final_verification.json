@@ -1,0 +1,29 @@
+{
+  "passed": true,
+  "original_eval_lock_sha256": "067f222eccfbf8d40fe520a7f4196426e82a4e5d4861e506cb96e60d11732e03",
+  "runtime_helpers_verified": 8,
+  "shared_adapter_files_verified": 14,
+  "curated_artifacts_verified": 38,
+  "historical_A_references_verified": true,
+  "original_eval_iteration_shared_pilot_historical_evidence_git_diff_empty": true,
+  "variant_manifests_valid": true,
+  "cleanup_receipts": [
+    {
+      "container_id": "15c1284e7e36fb4ea1b2d26833c41533e568d8b1895b0c3df677ce33d2b1206c",
+      "removed": true
+    },
+    {
+      "container_id": "118de6edb706ea6357ccd76063637c25dfd4c1ce2bd57fd8e29befb61773a275",
+      "removed": true
+    },
+    {
+      "container_id": "26444136b750f492723c326030c49103a0f08db4c5264e3f45d88ed12cff4d5a",
+      "removed": true
+    },
+    {
+      "container_id": "69600ed6940e1a4fc79cbab4ecec2b97c8f01c779e779810fa5cba91cd79db3d",
+      "removed": true
+    }
+  ],
+  "unrelated_preexisting_worktree_changes_excluded": true
+}

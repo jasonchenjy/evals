@@ -1,0 +1,7 @@
+diff --git a/src/harbor_tool_probe.py b/src/harbor_tool_probe.py
+new file mode 100644
+index 0000000..c8fcecd
+--- /dev/null
++++ b/src/harbor_tool_probe.py
+@@ -0,0 +1 @@
++VALUE = 2

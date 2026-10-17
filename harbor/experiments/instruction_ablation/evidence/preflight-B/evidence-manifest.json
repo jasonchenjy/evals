@@ -1,0 +1,97 @@
+[
+  {
+    "path": "agent-environment/cleanup.json",
+    "sha256": "52b7520e78e1693c704e988d581a85203c4ad9aa79ed76fdc56a1067ec9faf87",
+    "bytes": 108
+  },
+  {
+    "path": "agent-environment/docker-inspect.json",
+    "sha256": "c8ffd06b83ad139c0835d05c9fc6f1ffc987b5bbb927efa41491f35b59c4aa1e",
+    "bytes": 3036
+  },
+  {
+    "path": "agent-environment/effective-policy.json",
+    "sha256": "c8ffd06b83ad139c0835d05c9fc6f1ffc987b5bbb927efa41491f35b59c4aa1e",
+    "bytes": 3036
+  },
+  {
+    "path": "agent-environment/handoff.json",
+    "sha256": "9a49ce8029d19cd47d3ba21891118c0400300c2137f4d6611fb9fec87b2682bb",
+    "bytes": 9914
+  },
+  {
+    "path": "agent-environment/logs/agent/codex.txt",
+    "sha256": "637e55de13c2dbcacde9f19d055206114acf66e36830d77db57e95431cc3340a",
+    "bytes": 12834
+  },
+  {
+    "path": "agent-environment/logs/agent/offline-fixture.json",
+    "sha256": "cb13f8e6e027e71518adb4c9aa314b317d56bc811691cd75186b889ca61f2cac",
+    "bytes": 28315
+  },
+  {
+    "path": "agent-environment/logs/agent/sessions/2026/10/17/rollout-2026-10-17T14-16-37-01a14a38-c7fe-7772-8584-541aac695058.jsonl",
+    "sha256": "9b09863bd07c9d2fe1975895edb8c5a48455ea7d6c5b50c310d572af507ebe89",
+    "bytes": 77889
+  },
+  {
+    "path": "agent-gate.json",
+    "sha256": "bccd8ba9c812e63f09c25a0243972d16d728ecac28b2362ef9e6ec1db8a17671",
+    "bytes": 425
+  },
+  {
+    "path": "home-usage.json",
+    "sha256": "ab6e91b82a4775e0186798e4905af162ac3cd08fc9ba80f901d97191c7c8025d",
+    "bytes": 11958
+  },
+  {
+    "path": "roundtrip.json",
+    "sha256": "8c8b40a9f7766fd1b34d0d7731ee0d1ed963cf5d2f2536474a8e2c218c538b09",
+    "bytes": 170
+  },
+  {
+    "path": "submission/submission.json",
+    "sha256": "7f188030cc70aee1176a854481798ac62b7337cd8f4ee9d0a06063535eef1d9c",
+    "bytes": 17257
+  },
+  {
+    "path": "submission/submission.patch",
+    "sha256": "774ccc5c4aed0dbfdcb97c11ece53c569c49d25efce3956a8ab5e6b34eeb7dfb",
+    "bytes": 179
+  },
+  {
+    "path": "summary.json",
+    "sha256": "a600b50374e92b731535fa8a0fe40b5a5613eea50416e4215fa4b202c50d91e1",
+    "bytes": 259701
+  },
+  {
+    "path": "tool-preflight.json",
+    "sha256": "e8940040edccc5e2ea5176809775bf6c463438645efc6c67d9c9b309fd2cacdc",
+    "bytes": 263
+  },
+  {
+    "path": "verifier-environment/cleanup.json",
+    "sha256": "1e095c795380c1c98ccada6a41696fe2522ac40de1b327dd199a33fd2c937a1a",
+    "bytes": 108
+  },
+  {
+    "path": "verifier-environment/docker-inspect.json",
+    "sha256": "9c001b18794282373b79142913218e8465ab653a88679cb4ac523f442e4fa1f0",
+    "bytes": 3033
+  },
+  {
+    "path": "verifier-environment/effective-policy.json",
+    "sha256": "9c001b18794282373b79142913218e8465ab653a88679cb4ac523f442e4fa1f0",
+    "bytes": 3033
+  },
+  {
+    "path": "verifier-environment/handoff.json",
+    "sha256": "2470d7ab045987770537f95980271043cfc6fce81ccb65285bece9a1547a9e83",
+    "bytes": 9914
+  },
+  {
+    "path": "visible-inventory.json",
+    "sha256": "3ea40749d331b5ede7e6ab702fe65aba79c57ded0fe854fe88df3c4257944ac4",
+    "bytes": 2569315
+  }
+]
