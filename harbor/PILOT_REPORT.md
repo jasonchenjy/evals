@@ -1,116 +1,119 @@
-# pytest #5786 单次真实 Agent Pilot
+# pytest #5786 真实 Agent Pilot
 
-状态：**PARTIALLY_READY**。
+状态：**BLOCKED**。
 
-唯一获批的真实试跑在调用模型之前遇到适配错误，未完成求解或评分。
-真实认证已按本次授权临时注入；容器已删除。没有第二次真实尝试。
-已修复配置权限兼容问题，并通过假凭据的原生启动准备测试。
-确定性控制和安全边界可验证，但真实 Codex 到独立 grader 的全链路仍未验证。
+最新获批尝试 `pilot-real-02` 实际调用了 `openai/gpt-6.1-sol`，但两次工具调用
+均因镜像缺少 `codex-code-mode-host` 而在执行前失败。Agent 没有读取或修改仓库。
+独立 grader 正常评估了空补丁，四维为 **0 / 0 / 0 / 1**，Overall Fail。
+这些是未修改基线的有效评分，**不能当作模型解题能力的有效评价**。
 
-## 本轮实现
+本次授权只执行一次，未自动重试。前一次 `pilot-real-01` 使用独立的旧授权，
+在模型调用前因配置权限适配错误失败；那一问题已修复，旧证据全部保留。
 
-Harbor 0.24.0 继续负责 Trial、Codex adapter、独立 verifier 和生命周期。
-新增代码位于 `harbor/pilot/`：公开基线构建、固定网络与资源约束、停止候选
-进程后的源码采集，以及调用原 grader 的 `BaseVerifier` 适配。
-原 `pytest_5786` 的评分、隐藏检查、Oracle、指令、Python 3.8.20 与依赖均未修改。
-`runtime/` 没有修改或删除；复用的八个安全组件通过 SHA256 固定，变化即拒绝运行。
+## 本次真实执行与证据
 
-可信 controller 保留 Eval lock 与 Oracle。候选代码只进入独立的非 root、
-只读、无网络、无宿主挂载 worker；每个检查使用新容器。原 grader 的所有
-候选 Python 调用都被拦截，worker 不能访问或写入 controller 的最终评分文件。
-候选与检查仍共享 worker 解释器，因此不能把本次边界测试解释为完整抗作弊证明。
+- [最终审计](evidence/pilot-real-02/attempt-audit.json)：区分 Agent 工具基础设施故障与 grader 正常执行。
+- [原生 Codex 输出](evidence/pilot-real-02/codex/agent/codex.txt)及
+  [结构化轨迹](evidence/pilot-real-02/codex/agent/trajectory.json)：3 次模型调用、2 次工具调用尝试，
+  两次均返回缺少 `/usr/local/bin/codex-code-mode-host`，实际 shell 命令执行数为 0。
+- [原始 grader 结果](evidence/pilot-real-02/codex/verifier/grader/result.json)：
+  infrastructure_status=ok，submission_status=accepted，overall_resolved=false。
+- [最终源码补丁](evidence/pilot-real-02/codex/submission/submission.patch)为 0 字节；
+  [提交清单](evidence/pilot-real-02/codex/submission/submission.json)的 changed_files 为 `[]`。
+  补丁 SHA256 为 `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`。
+- [证据清单](evidence/pilot-real-02/evidence-manifest.json)包含选取文件的 SHA256；
+  认证文件、原始工作空间和传输归档没有纳入 Git。
 
-## 实测隔离与资格验证
+运行版本为提交 `dcd5f18c4a5d1aae09433ce87b6abb7fef2d888d`，Harbor 0.24.0、
+Codex CLI 0.162.1。原生 session/trajectory 记录模型为 `gpt-6.1-sol`，
+模型用量归属为 `openai/gpt-6.1-sol`；没有替换模型。
+新 session ID 为 `01a148a8-129c-7371-9694-985c3e498997`，公开任务指令保持原样。
 
-- [源码与配置权限测试](evidence/pilot-setup/postfix-unit-tests.json)共 20 项通过，覆盖不安全归档、候选 Git hooks/config、
-  新基线补丁应用，以及原生配置准备只能以 uid 1000 执行规定的权限操作。
-- [Agent 容器与资源探针](evidence/pilot-security/summary.json)：9 项 Agent 探针通过；
-  worker 的内存、PID、磁盘、网络、超时、输出及脱离进程清理探针通过。
-- [原 worker 的文件交接攻击测试](evidence/pilot-worker-handoff/results.json)：10 项符合预期。
-- [扩展后的假凭据预检](evidence/pilot-live-preflight-02/summary.json)：CLI 0.162.1；
-  原公开材料一致；非 root、capabilities=0、禁止提权；Docker socket 不存在，
-  网关 2375/2376 不可达；假宿主私密文件不可见。它进入原生 `Codex.run`，验证
-  config.toml 为 uid 1000 / 0600、认证链接和新会话，拦截模型命令并验证清理。
-  此预检没有读取真实凭据或调用模型，不能证明后端登录或模型可用性。
-- 源码采集拒绝符号链接、外部硬链接、FIFO、设备、目录逃逸、重复路径、异常
-  可执行位及超限输入；终止候选进程后采集，候选 Git metadata 不参与可信 diff；
-  应用后的整个允许源码树逐字节核对。nondumpable 后台写入进程也已实测清理。
-- 有效 Docker 配置与 cgroup 均记录：2 CPU、4 GiB、零 swap、128 PID、
-  只读根目录、有界 tmpfs、无宿主挂载／设备／发布端口。控制和 grader worker 无网络；
-  真实配置的候选 shell 能连公网，这一点没有伪装成模型专用网络。
+Trial 从 `2026-10-16 23:58:51.138 PDT` 到 `23:59:43.223 PDT`，共 **52.085 秒**；
+Agent 阶段为 **13.440 秒**，未触及 1800 秒预算。轨迹记录 input tokens 37,197
+（其中 cached 34,304）、output tokens 307。这些是原生轨迹计数；不从轨迹推断隐藏推理。
 
-[真实尝试之前的七组控制](evidence/pilot-qualification/summary.json)已完成：
-**91/91 检查状态和全部四维评分一致**，七组基础设施正常，Harbor exception 均为空。
-其 adapter 与复用 Runtime 源码 SHA256 在运行前后完全一致。
-七个 Agent、七个独立 verifier 和 105 个 worker 均已清理。
-H02 保持 diagnostic-only，Alternative 的 H02 失败不影响其 Overall Pass。
+Eval 为 `pytest_5786` 0.1.0，pytest 基线为
+`955e54221008aba577ecbaefa15679f6777d3bf8`，Python 3.8.20 与原依赖保持不变。
+Eval lock SHA256 为 `067f222eccfbf8d40fe520a7f4196426e82a4e5d4861e506cb96e60d11732e03`。
+基础镜像为 `sha256:6fc218ba73f376189c8a3e860c5d5571782113b297704ffb153321c255cc2d12`；
+实际 Agent 镜像 ID 保存在审计与 docker-inspect.json 中。
 
-控制预期：No-op Fail；Historical 原 Bug 通过、已知回归失败；Complete 与
-Alternative Pass；last_only、testreport_only、text_only 均 Fail。
-[修复后的最终资格验证](evidence/pilot-qualification-postfix/summary.json)再次达到
-7/7 控制、91/91 状态及四维评分全部一致；14 个 Harbor 容器和 105 个 worker
-全部清理。当前代码与资格验证、扩展预检的 SHA256 一致，21 个原 Eval 锁定文件
-校验通过。详见[最终审计](evidence/pilot-setup/postfix-audit.json)。这些结果另行保存，
-没有覆盖真实尝试所依据的旧证据。
+## 四维结果与解释
 
-## 唯一真实尝试的结果
+- **原问题解决：Fail，0。** A01、A02 均失败；没有源码修改，原缺陷仍在。
+- **跨组件一致性：Fail，0。** B01、B02、B03 均失败；未实施报告序列化修复。
+- **边界稳健性：Fail，0。** C01 通过，C02、C03 失败；仍是原基线行为。
+- **无回归：Pass，1。** D01、D02、D03 均通过；空补丁未引入回归。
 
-[失败审计](evidence/pilot-real-01/attempt-audit.json)与
-[Harbor 原始结果](evidence/pilot-real-01/codex/result.json)记录：
+11 个 mandatory checks 均由原 grader 执行。H01 失败、H02 通过，H02 继续只作诊断。
+上述 Fail 都不能归因为模型的编码错误：模型没有可工作的工具执行通路。
+它明确报告无法访问仓库并结束，没有声称已经完成修复。
 
-- Eval `pytest_5786` 0.1.0，基线 `955e54221008aba577ecbaefa15679f6777d3bf8`。
-- Eval lock SHA256 `067f222eccfbf8d40fe520a7f4196426e82a4e5d4861e506cb96e60d11732e03`。
-- 基础镜像 `sha256:6fc218ba73f376189c8a3e860c5d5571782113b297704ffb153321c255cc2d12`；
-  运行容器的实际镜像 ID 另见其 docker-inspect.json。
-- Codex CLI 0.162.1；请求模型 `openai/gpt-6.1-sol`。后端实际模型身份为未知，
-  因为 `codex exec` 未启动；没有模型 token、会话轨迹或候选工具调用。
-- Trial 于 `2026-10-17T06:48:19.716132Z` 开始，`06:48:26.553839Z` 结束，
-  总耗时 6.838 秒，预算 1800 秒。只有一次尝试，重试次数 0。
-- 原生启动准备上传认证后，写入配置时请求 `chown ... && chmod 600 ...`。
-  初版适配层只允许认证文件的 chown，因此主动拒绝并报 RuntimeError。
-- AGENT_END 仍完成源码恢复，得到[空补丁](evidence/pilot-real-01/codex/submission/submission.patch)，
-  changed_files 为 `[]`。这是异常退出后的未修改基线，**不是模型提交**。
-- 独立 verifier 未启动，原 grader 未运行；没有评分结果文件，也没有 mandatory check 结果。
-  不能把控制组 No-op 的结果当作本次成绩。
+## 已实现并实际验证的隔离
 
-四个维度均为 **未评估**：原问题解决（A01–A02）、跨组件一致性（B01–B03）、
-边界稳健性（C01–C03）、无回归（D01–D03）。没有相关模型源码改动。
-这是基础设施准备失败，不能判定模型在任何维度编码失败。
+新增实现仍只位于 `harbor/`。Harbor 管理 Trial、原生 Codex adapter、独立 verifier
+和容器生命周期；可信 controller 保留 Eval lock、Oracle 与评分结果，候选 Python
+调用通过现有 Runtime 的受限 worker 执行。本次 14 个 grader 候选调用均被拦截；
+另有依赖预检 worker，共 15 个 worker，均已停止并删除。
+
+Agent 的有效配置和 cgroup 已检查：非 root uid 1000、effective capabilities=0、
+no-new-privileges、只读根目录、无宿主挂载／Docker socket／发布端口，
+2 CPU、4 GiB、零 swap、128 PID、有界 tmpfs 与输出。Agent 公开材料与可信基线一致，
+隐藏测试、Oracle 和假宿主私密文件不可见。候选公网访问依本次授权开放。
+
+源码交接先终止候选 uid 的全部进程，再用不可修改的系统解释器有界采集并核对
+inode/字节。拒绝链接、特殊文件、逃逸路径和超限输入；忽略候选 Git metadata；
+补丁应用到新的可信基线，整个允许源码树与采集字节一致。
+独立评分 worker 为非 root、只读、无网络、无宿主挂载，不能接触 controller 的
+Oracle、认证和最终评分文件。
+
+保留的[安全探针](evidence/pilot-security/summary.json)、
+[worker 交接攻击测试](evidence/pilot-worker-handoff/results.json)及
+[20 项单元测试](evidence/pilot-setup/postfix-unit-tests.json)均通过。
+[最终七组控制](evidence/pilot-qualification-postfix/summary.json)为 **7/7、91/91**，
+全部四维评分与原资格结果一致。本次运行前后 adapter/Runtime SHA256 与该资格证据一致，
+21 个原 Eval 锁定文件均校验通过；没有改动原评分、隐藏检查、Oracle 或 H02 规则。
+
+本次 Agent 和 verifier 的[清理收据](evidence/pilot-real-02/codex/agent-environment/cleanup.json)
+确认容器删除，15 个 worker 收据也全部确认清理。
+候选和行为检查仍共用 worker 解释器，因此不能宣称完整的生产级抗作弊安全。
 
 ## 认证实际情况
 
-用户在本次对话明确批准使用 `/Users/junyuc/.codex/auth.json`，并批准一次容器内
-认证暴露和公共网络访问。该文件已临时上传到 Agent 容器；这**不是凭据隔离**。
-候选 uid 可以读取认证，且公共网络允许外传；假凭据探针已验证这种可读性。
-未发现额外的未授权凭据注入，但本轮测试不能证明通用的凭据防泄漏能力。
+用户明确批准了本次使用 `/Users/junyuc/.codex/auth.json`、容器内认证暴露和公共网络。
+认证已临时注入候选容器，**没有实现凭据隔离**。同 uid 命令可读取凭据，且可公网外传；
+此前假凭据探针已验证这种暴露。没有用旧授权自动重试，也没有切换到其他凭据。
 
-本次异常发生在原生认证 finally 清理之前；最终由 Harbor 删除整个容器及其 tmpfs。
-[容器清理收据](evidence/pilot-real-01/codex/agent-environment/cleanup.json)确认 removed=true。
-未启动模型或候选命令。归档只选取允许的证据文件，凭据模式扫描通过；
-没有把 auth.json、认证内容、原始工作空间或传输归档提交到 Git。
-扫描是归档检查，不构成所有形式秘密检测的证明。
+原生 run 走到清理阶段，Harbor 最终删除容器及临时文件系统。归档凭据模式扫描通过，
+未提交 auth.json 或认证内容。清理不能撤回可能已被复制的凭据，模式扫描也不能证明
+检测到了所有形式的秘密；本次可观察轨迹中两条候选命令均未能执行。
 
-## 观察到的失败模式与修复
+## 三个观察到的基础设施问题
 
-1. **配置权限适配遗漏**：Harbor 原生配置写入需要一条组合权限命令。
-   已只允许固定 config 路径的精确 chown/chmod 600，并以现有 uid 1000 执行；
-   仍拒绝系统安装、其他路径、权限放宽、追加 shell 命令及 root 默认用户。
-2. **预检范围不足**：原预检只覆盖 CLI setup 与假认证上传，没有进入原生 run 的
-   配置阶段。已扩展到真正的模型命令边界，检查配置权限、新会话与认证清理。
-   Live 入口现在要求该预检证据与当前 adapter SHA256 完全匹配。
+1. **镜像打包遗漏，仍未修复。** `pilot/build.py` 只复制主程序 `codex`。
+   本机预置 0.162.1 Linux 包实际还包含 `bin/codex-code-mode-host`，但它没有进入镜像。
+   原生输出直接报告缺少该可执行文件；这是本轮工具失效的具体原因。
+2. **预检没有覆盖实际工具派发。** 扩展预检验证了原生配置、认证链接、新会话及清理，
+   但在 `codex exec` 前截断，因此未检出工具宿主缺失。版本号和启动准备成功不足以证明
+   Agent 能读取、修改文件或运行 pytest。此前配置权限问题的修复有效，但预检仍不完整。
+3. **完成标记过于宽松。** 原始 Harbor 没有抛异常，runner 的 `live_completed=true`、
+   `expectation_met=true` 只说明生命周期与 grader 结束，不能证明 Agent 工具正常。
+   原始记录保持不变；新增审计明确将 `coding_evaluation_valid` 设为 false，标记阻塞。
 
-两项都是基础设施缺陷；没有模型编码结果可分析，也不推断隐藏推理。
-修复后仅做假凭据预检和确定性资格验证，没有消耗第二次真实试跑授权。
+官方 CLI 文档区分 Code Mode host 与客户端连接；本次具体诊断以安装包布局和原生
+错误输出为准。[官方 CLI 参考](https://learn.chatgpt.com/docs/cli/reference)
 
 ## 迁移判断与最小下一步
 
-Harbor 已承接本轮通用编排与 Agent 接口，仍依赖现有 Runtime 的可信补丁、
-受限 worker、输出交接和评分隔离组件。实际删除 Runtime：0 行；不能宣称完全替代。
+Harbor 的编排、受控交接和原 grader 对接已验证，但真实 Agent 工具通路仍有阻塞。
+仍复用 Runtime 的安全组件，未删除或修改 Runtime，不能宣称完全替代。
 
-最小下一步是基于修复并重新验证后的版本，另行明确授权一次真实尝试，保存实际
-Agent 轨迹、源码补丁与独立 grader 结果。此前的一次授权不会被自动复用来重试。
-本轮不自动改变 Eval，也不把未完成的真实试跑标记为就绪。
+下一步应先修正 Codex 运行包布局，在同样隔离条件下用假凭据、零模型调用验证
+工具宿主能实际读写公开文件并执行 Python/pytest，再让入口拒绝这种工具基础设施错误，
+并对修改后的版本重新资格验证。完成这些工作后，真实尝试仍需另一次明确授权。
+本轮没有继续修改运行代码或启动第三次尝试；仅保存真实结果、审计与报告。
 
-复现命令、边界和授权参数见 [pilot/README.md](pilot/README.md)。
-`pilot-setup/final-audit.json` 和 `provenance.json` 是真实尝试之前的历史快照，
-其中“未读取认证／未真实运行”只描述该快照时点；本次结果以失败审计和本报告为准。
+历史证据 `pilot-real-01`、`pilot-live-preflight-02`、`pilot-setup/*` 均保留。
+其中“未调用模型／未读取认证”等历史字段只描述各自生成时点；本次结果以
+`pilot-real-02/attempt-audit.json` 和本报告为准。

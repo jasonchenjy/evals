@@ -5,6 +5,13 @@ All changes and outputs stay under `harbor/`. It uses installed Harbor **0.24.0*
 Codex **0.162.1**, the original Eval package and Python **3.8.20**.
 No original grader, hidden test, Oracle, or H02 rule is changed.
 
+**Current live blocker:** the generated live image omits `codex-code-mode-host`.
+The newly authorized `pilot-real-02` reached the model but both tool calls failed
+before execution. Its empty patch was graded, but it is not a valid coding-agent
+evaluation. Do not treat the runner's completion flags as readiness. Repair the
+runtime bundle and verify real tool dispatch without inference before another
+authorized live attempt. Full evidence is in `../PILOT_REPORT.md`.
+
 ## Execution boundary
 
 The supported Harbor Environment adapter retains Docker/Compose lifecycle and
@@ -121,12 +128,18 @@ Concurrent changes fail closed. Review and requalify before updating that lock;
 do not copy or rewrite the Runtime package. Harbor now owns trial orchestration,
 while the existing security components remain necessary.
 
-## Recorded live attempt
+## Recorded live attempts
 
 The one approved attempt `pilot-real-01` stopped before `codex exec`: the original
 ownership allowlist rejected Harbor's combined config `chown`/`chmod` command.
 The selected credential had already been injected; the container was removed.
 Its empty recovery patch is not a model submission, and no grader scores exist.
 The compatibility fix and expanded fake-auth preflight are verified separately.
-There has been no second real attempt. See `../PILOT_REPORT.md` for evidence and
-the remaining end-to-end limitation.
+The user then explicitly authorized one additional attempt, `pilot-real-02`.
+It made three observed model calls and attempted two tools, both rejected because
+the Code Mode host executable was missing. The original grader completed on the
+empty patch with dimension scores 0/0/0/1. Agent infrastructure remained broken,
+despite the raw runner reporting completion. Both Harbor containers and all 15
+grading workers were removed. No third attempt or automatic live retry was made.
+See `../PILOT_REPORT.md` and `../evidence/pilot-real-02/attempt-audit.json` for the
+distinction between valid grader output and invalid coding-evaluation evidence.

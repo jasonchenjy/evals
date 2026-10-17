@@ -1,0 +1,11 @@
+{
+  "model": "openai/gpt-6.1-sol",
+  "trials": 1,
+  "container_injected_credentials_approved": true,
+  "public_candidate_network_approved": true,
+  "credential_file_path_recorded": false,
+  "budget_seconds": 1800,
+  "automatic_retries": 0,
+  "source": "Explicit new human authorization after dcd5f18 compatibility fix",
+  "this_attempt": "pilot-real-02"
+}
