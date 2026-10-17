@@ -1,0 +1,13 @@
+{
+  "model": "openai/gpt-6.1-sol",
+  "trials": 1,
+  "container_injected_credentials_approved": true,
+  "public_candidate_network_approved": true,
+  "credential_file_path_recorded": false,
+  "authorization_source": "explicit user message for this Stage 3 real pytest trial",
+  "credential_kind": "main account Codex auth.json",
+  "agent_budget_seconds": 1800,
+  "separate_verifier_budget_seconds": 1800,
+  "automatic_retry": false,
+  "push_authorized": false
+}

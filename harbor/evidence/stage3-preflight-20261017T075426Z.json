@@ -1,0 +1,99 @@
+{
+  "status": "AUTHORIZATION_REQUIRED",
+  "preflight_passed": true,
+  "checked_at_utc": "20261017T075426Z",
+  "head": "2319bd478a6ed6d1603cb76093387cda4ea64c7c",
+  "planned_run_id": "pytest5786-stage3-20261017T075426Z",
+  "model_invoked": false,
+  "auth_contents_read": false,
+  "harbor_version": "0.24.0",
+  "codex_version": "0.162.1",
+  "docker_version": "28.4.0",
+  "docker_architecture": "aarch64",
+  "docker_cgroup_version": "2",
+  "adapter_hashes": {
+    "colima.py": "cfcff75fc8fb2393b56e3018dcddc4e3428db783a049e780f6f14608390b42c3",
+    "controls.py": "fabb5181f88823c5c93a5cc7dd5d5b56c3485bfa2410ce42a8ace9e6b1f5b3f1",
+    "pilot/build.py": "f34c7d30267a81fd56ba0c5c5913581df43e4f5cbe5429d2f4a469b4482b88ae",
+    "pilot/codex_agent.py": "38b5dc0f69ff44dd0bca540da47f7a16bfac3117d99c003190ad2dee7c53c85f",
+    "pilot/common.py": "d5bc10e5d18db6c9d9cc045d0dcf08696ce1219c7c8afd61c0586f83352dcc2e",
+    "pilot/environment.py": "f701024ece9d44dcb656c552577a0906b23d42013750d95a5d3643e1eaeee843",
+    "pilot/live_preflight.py": "445d5c3ee8485c6dc5b1ac12a0b18fb77291ba4a86ee826968d0eb3102254d00",
+    "pilot/probe.py": "23b579bc51f3725aafee88b3df553c879aa945d423b7f58a70f0c8f8644f81b4",
+    "pilot/quiesce.py": "a0a5e256635e3e4e987353f95d4d4bbba66d44bfcdb07788bb2ed0c2897899bd",
+    "pilot/run.py": "ba312ffcef5c912ec3e226ad896eab77904917f5d67264ce882f69de7821baf2",
+    "pilot/snapshot.py": "73d6ce62651fe0a5c1939d3a96f51b17a17f2b959fc9ff7671d421fbcc919f8e",
+    "pilot/tool_fixture.py": "12ed00570ce9b0cd41a1078a8a35f4491a6fd4b883c63aa750d0ce2da5f393d8",
+    "pilot/verifier.py": "64ed0b4b676fa44d9ad15c9c0ea111c54a3b71d8f4556b719961910b80c8aa55",
+    "pilot/worker_checks.py": "531a6f8e5202914c2ca49a53e82cfa2f5837e8257d1ce122a9fbee58c1c0d272"
+  },
+  "runtime_hashes": {
+    "core.py": "0d26ea79976db709b25be2fddf726745b4ac28ac0410318b462c07f971f858a2",
+    "handoff.py": "fa064faadfc3db4c25a6db18ce3349905e55a9865547d7fbfd4d3ecc4c1020d3",
+    "sandbox.py": "0c1025a06bef71e68ce4b41619314ad4a7b5b09983d0650eccc52832363eccca",
+    "container_boundary.py": "e45e6aefe81a94a6c1b36a81480aede417b65efaa7e5bb9308aa4ee435f91512",
+    "container_sandbox.py": "3dfeae00cd175b5c06c317b7437c112bfcbf81815e0fe81e5eb3c70b8dd35e5c",
+    "container_worker.py": "c976d0a342fd2027880dba6b223b20c9d05691d762420ea040ddc01740e019ed",
+    "grading.py": "8d7a073284f3f47fce4677e6d52ec6e24da040879b3509f0cc0ba3ee539e1480",
+    "submission.py": "51ce6c514c75a734298f0c23583f8a6ee427c6afa1740547535f659f45563203"
+  },
+  "task_files_verified": 1920,
+  "controls_matched": 7,
+  "check_statuses_matched": 91,
+  "evidence": {
+    "qualification": {
+      "path": "harbor/raw/pilot-readiness-qualification-final/summary.json",
+      "sha256": "9dbb876693e2f370db3f1f46bf21ba675f05b4e9e56fb3444bb2664caad4a863"
+    },
+    "environment": {
+      "path": "harbor/raw/pilot-readiness-environment-final/summary.json",
+      "sha256": "0006d674eaa84b3e54822aa1da28c770bae6211e21e588421bc8d4c0806a0b19"
+    },
+    "security": {
+      "path": "harbor/raw/pilot-security-final/summary.json",
+      "sha256": "853200c8a2c0fb61a9786dcf4a63fbf59526af0c570e41007260dde6de4f649e"
+    },
+    "worker": {
+      "path": "harbor/raw/pilot-worker-handoff/results.json",
+      "sha256": "ada663bbbdbc641ab56d94a998ab8a0feec73a12b873079865c7caad7428e782"
+    },
+    "synthetic": {
+      "path": "harbor/evidence/agent-readiness-real/summary.json",
+      "sha256": "a0d55cf2d8a875b2c5c4582a6733a64aac33bf5d168dc764849370745ffd6362"
+    }
+  },
+  "agent_timeout_seconds": 1800,
+  "verifier_timeout_seconds": 1800,
+  "automatic_retry": false,
+  "planned_command_requires_fresh_authorization": [
+    "harbor/.venv/bin/python",
+    "-B",
+    "harbor/pilot/run.py",
+    "--task",
+    "harbor/generated/pilot-live-fixed",
+    "--output",
+    "harbor/raw/pytest5786-stage3-20261017T075426Z",
+    "--image",
+    "sha256:6fc218ba73f376189c8a3e860c5d5571782113b297704ffb153321c255cc2d12",
+    "--live",
+    "--model",
+    "openai/gpt-6.1-sol",
+    "--auth-file",
+    "/Users/junyuc/.codex/auth.json",
+    "--qualification",
+    "harbor/raw/pilot-readiness-qualification-final",
+    "--security",
+    "harbor/raw/pilot-security-final",
+    "--worker-checks",
+    "harbor/raw/pilot-worker-handoff",
+    "--preflight",
+    "harbor/raw/pilot-readiness-environment-final",
+    "--approve-container-credentials",
+    "--approve-public-network"
+  ],
+  "notes": [
+    "Existing safety probes cover unchanged container policy and pinned worker helpers; later source-owner handoff is covered by the final qualification and synthetic evidence.",
+    "Backend authentication and current model availability are not verified without a model invocation.",
+    "Historical generated provenance retains its build-time commit; current execution HEAD is recorded separately."
+  ]
+}

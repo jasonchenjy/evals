@@ -1,0 +1,58 @@
+{
+    "schema_version": 2,
+    "task": {
+        "name": "pilot-live-fixed",
+        "type": "local",
+        "digest": "sha256:77e5f5a57450292137cb0945f49614e13f6b85fa123e26aa556c15df607c3754",
+        "path": "/Users/junyuc/Documents/interview/SWE-bench/evals/harbor/generated/pilot-live-fixed"
+    },
+    "install_only": false,
+    "timeout_multiplier": 1.0,
+    "agent": {
+        "import_path": "pilot_codex:PilotCodex",
+        "model_name": "openai/gpt-6.1-sol",
+        "skills": [],
+        "resume_trajectory": false,
+        "extra_allowed_hosts": [],
+        "kwargs": {
+            "version": "0.162.1",
+            "config": {
+                "web_search": "disabled",
+                "features": {
+                    "plugins": false,
+                    "apps": false,
+                    "remote_plugin": false,
+                    "skill_search": false,
+                    "skill_mcp_dependency_install": false,
+                    "multi_agent": false
+                }
+            }
+        },
+        "env": {
+            "CODEX_AUTH_JSON_PATH": "/Use****son"
+        },
+        "mcp_servers": []
+    },
+    "bridge_inputs": {},
+    "skills": [],
+    "environment": {
+        "import_path": "pilot_environment:PilotEnvironment",
+        "force_build": false,
+        "delete": true,
+        "stream": false,
+        "cpu_enforcement_policy": "auto",
+        "memory_enforcement_policy": "auto",
+        "extra_docker_compose": [],
+        "kwargs": {},
+        "extra_allowed_hosts": []
+    },
+    "verifier": {
+        "import_path": "pilot_verifier:IsolatedVerifier",
+        "kwargs": {
+            "repo": "/Users/junyuc/Documents/interview/SWE-bench/pytest",
+            "image": "sha256:6fc218ba73f376189c8a3e860c5d5571782113b297704ffb153321c255cc2d12"
+        },
+        "disable": false,
+        "environment_mode": "separate"
+    }
+}

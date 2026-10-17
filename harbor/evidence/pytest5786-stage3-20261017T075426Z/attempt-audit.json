@@ -1,0 +1,134 @@
+{
+  "status": "VALID_EVAL_RESULT",
+  "run_id": "pytest5786-stage3-20261017T075426Z",
+  "execution_head": "2319bd478a6ed6d1603cb76093387cda4ea64c7c",
+  "eval_id": "pytest_5786",
+  "eval_version": "0.1.0",
+  "eval_lock_sha256": "067f222eccfbf8d40fe520a7f4196426e82a4e5d4861e506cb96e60d11732e03",
+  "source_base_commit": "955e54221008aba577ecbaefa15679f6777d3bf8",
+  "synthetic_export_base": "41ffd0de9c7ece927733fadc2201491c5ae51be2",
+  "harbor_version": "0.24.0",
+  "agent_info": {
+    "name": "codex",
+    "version": "0.162.1",
+    "model_info": {
+      "name": "gpt-6.1-sol",
+      "provider": "openai"
+    }
+  },
+  "model": "openai/gpt-6.1-sol",
+  "trial_started_at": "2026-10-17T07:56:00.075017Z",
+  "trial_finished_at": "2026-10-17T07:57:31.462348Z",
+  "trial_seconds": 91.387331,
+  "agent_seconds": 52.897359,
+  "verifier_seconds": 30.490934,
+  "trajectory_steps": 14,
+  "native_exec_calls": 8,
+  "shell_commands": 11,
+  "observed_llm_calls": 9,
+  "healthy_turn_completed": true,
+  "changed_files": [
+    "src/_pytest/reports.py"
+  ],
+  "patch_sha256": "d1be3e0bd193bdacd7b5480b3a935ca6961e72c0e6409c1c265d92580278cc6b",
+  "patch_bytes": 6986,
+  "submission_status": "accepted",
+  "infrastructure_status": "ok",
+  "overall_resolved": true,
+  "dimensions": {
+    "original_bug_resolution": {
+      "satisfied": true,
+      "checks": {
+        "A01": "passed",
+        "A02": "passed"
+      }
+    },
+    "cross_component_consistency": {
+      "satisfied": true,
+      "checks": {
+        "B01": "passed",
+        "B02": "passed",
+        "B03": "passed"
+      }
+    },
+    "edge_case_robustness": {
+      "satisfied": true,
+      "checks": {
+        "C01": "passed",
+        "C02": "passed",
+        "C03": "passed"
+      }
+    },
+    "non_regression": {
+      "satisfied": true,
+      "checks": {
+        "D01": "passed",
+        "D02": "passed",
+        "D03": "passed"
+      }
+    }
+  },
+  "mandatory_checks": 11,
+  "checks": {
+    "A01": "passed",
+    "A02": "passed",
+    "B01": "passed",
+    "B02": "passed",
+    "B03": "passed",
+    "C01": "passed",
+    "C02": "passed",
+    "C03": "passed",
+    "D01": "passed",
+    "D02": "passed",
+    "D03": "passed",
+    "H01": "passed",
+    "H02": "passed"
+  },
+  "public_neighbor_tests_passed": 125,
+  "agent_custom_roundtrips_reported_passed": 120,
+  "agent_custom_diagnostic_correction": "Normalized tuple/list comparison across JSON in a temporary diagnostic; final source patch unchanged after this correction.",
+  "base_image": "sha256:6fc218ba73f376189c8a3e860c5d5571782113b297704ffb153321c255cc2d12",
+  "environment_images": {
+    "agent-environment": "sha256:e36a4f2171a3428d76a4481912dac0a35e8ba7e3fa3f0b04b302581825ed124e",
+    "verifier-environment": "sha256:62f6bcbd6f4f138029d7582781663350230d27ac31ffe1dfc8c344a507137982"
+  },
+  "harbor_containers_removed": [
+    {
+      "container_id": "548e39d3469bbf2640a30af8d93d7da07347d73885c2440d9a01679182cf1a87",
+      "removed": true
+    },
+    {
+      "container_id": "895da22d87b7bf2c1e2d1c37dbfdd6e40a9caea4af07446f2403abd75c173f6a",
+      "removed": true
+    }
+  ],
+  "worker_count": 15,
+  "all_workers_stopped_and_removed": true,
+  "worker_container_ids": [
+    "d20265f721eb25f0202c144db8e78930f5652bec6bd6279384eba3ff935e3158",
+    "1b9bf5ed18c7f93e3a80f080644863777adb9ad344b2b8e2b37eefa7202f3e8f",
+    "dcf8725d47d5a2a13e51faf3371841c055a5444493fa8c332d156fe521770ad6",
+    "548c592a79d520f87dfe1c90008d31dc28a3b2fd958ef6ac480eab54beccc577",
+    "ac90c4fd6503e4a2a9c7a8d7597d108aec449531bdfa3a5df7242766c40826a6",
+    "d6f71b70882c183bebf0f3741bbbfca6a41de4253db0e37ccdc531b0d413c7ff",
+    "1d94be571082a627bda10be385006e17f84eb8b275000aca8c9180f80eb3c571",
+    "a699813c6aa81eb44c014d7947ab74516217a909c46afe5d8ed5b42dec286df9",
+    "a265d6302b01571df7dbd0a0fc4429ff04ba06dddc831de6a04af40366b7c717",
+    "53d77e8feffc8ed6ae78782cabe668ebe0892e54a985c77d085b0c34587aa1da",
+    "f1be7dbf89a9080ffbb72b341ed7ee88f9a24eb70d2a37fbb8d6bc88245ce5e7",
+    "0648fbdeae764f625e8e77acef18cccbcd79d99d985241f1ed66036000d1b910",
+    "407ef90d7849d7c06e1a8103ebb2719727800b438cfd38ea7b1240fbf2588758",
+    "704b7d19e8502c5315450f7d5352c3c9ec3ff10966ad59479a4a3114bb47ad65",
+    "0ca8043c838883d813895538214f97ceb6ff6e848eca5a91123b81dd7fd232e6"
+  ],
+  "only_source_transferred": true,
+  "entire_source_bytes_match": true,
+  "original_eval_locked_files_verified": 21,
+  "adapter_hashes_unchanged": true,
+  "runtime_helpers_verified": true,
+  "task_bundle_unchanged": true,
+  "real_trials_this_authorization": 1,
+  "automatic_retry": false,
+  "auth_contents_saved": false,
+  "push_performed": false
+}

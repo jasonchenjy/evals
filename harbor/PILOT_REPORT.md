@@ -1,8 +1,11 @@
 # pytest #5786 真实 Agent Pilot
 
-当前进展：底层工具和交接问题已经修复，新的多文件合成 Trial 通过，
-Agent readiness 为 **AGENT_READY**。详见 [最新 readiness 报告](agent_readiness_report.md)。
-按最新任务要求，本轮没有再次运行真实 pytest Agent Eval，因此仍没有有效的 pytest 模型能力分数。
+当前进展：Stage 3 的一次新授权真实 Trial 已完成，状态 **VALID_EVAL_RESULT**。
+`openai/gpt-6.1-sol` 修改 `src/_pytest/reports.py`，可信补丁被接受；原 grader 四维均为 1，
+Overall Resolved=true，11 个 mandatory checks 与 H01/H02 均通过。总耗时 91.39 秒，
+Agent 52.90 秒，无自动重试。详见 [首个有效 Pilot 分析](evidence/first-real-pilot-analysis.md)
+和 [原始结果](evidence/pytest5786-stage3-20261017T075426Z/codex/verifier/grader/result.json)。
+此前的 [readiness 报告](agent_readiness_report.md)描述合成资格验证阶段，保留为历史证据。
 
 以下保留 `pilot-real-02` 当时 **BLOCKED** 的历史事实和证据。
 

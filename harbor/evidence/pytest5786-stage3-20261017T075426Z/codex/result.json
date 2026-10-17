@@ -1,0 +1,151 @@
+{
+    "id": "998007ee-1e8f-4397-8ab5-b40ce7caa3a1",
+    "task_name": "pilot-live-fixed",
+    "trial_name": "codex",
+    "trial_uri": "file:///Users/junyuc/Documents/interview/SWE-bench/evals/harbor/raw/pytest5786-stage3-20261017T075426Z/codex",
+    "task_id": {
+        "path": "/Users/junyuc/Documents/interview/SWE-bench/evals/harbor/generated/pilot-live-fixed"
+    },
+    "source": null,
+    "task_checksum": "3fb04988c76f125c364dd14871714811ed04f1e1176047054bbf5ba9a1c7d876",
+    "config": {
+        "task": {
+            "path": "/Users/junyuc/Documents/interview/SWE-bench/evals/harbor/generated/pilot-live-fixed",
+            "git_url": null,
+            "git_commit_id": null,
+            "name": null,
+            "ref": null,
+            "overwrite": false,
+            "download_dir": null,
+            "source": null
+        },
+        "trial_name": "codex",
+        "trials_dir": "/Users/junyuc/Documents/interview/SWE-bench/evals/harbor/raw/pytest5786-stage3-20261017T075426Z",
+        "install_only": false,
+        "timeout_multiplier": 1.0,
+        "agent_timeout_multiplier": null,
+        "verifier_timeout_multiplier": null,
+        "agent_setup_timeout_multiplier": null,
+        "environment_build_timeout_multiplier": null,
+        "agent": {
+            "name": null,
+            "import_path": "pilot_codex:PilotCodex",
+            "model_name": "openai/gpt-6.1-sol",
+            "n_concurrent": null,
+            "concurrency_group": null,
+            "skills": [],
+            "override_timeout_sec": null,
+            "override_setup_timeout_sec": null,
+            "max_timeout_sec": null,
+            "resume_trajectory": false,
+            "load_trajectory": null,
+            "extra_allowed_hosts": [],
+            "kwargs": {
+                "version": "0.162.1",
+                "config": {
+                    "web_search": "disabled",
+                    "features": {
+                        "plugins": false,
+                        "apps": false,
+                        "remote_plugin": false,
+                        "skill_search": false,
+                        "skill_mcp_dependency_install": false,
+                        "multi_agent": false
+                    }
+                }
+            },
+            "env": {
+                "CODEX_AUTH_JSON_PATH": "/Use****son"
+            },
+            "mcp_servers": []
+        },
+        "user_agent": null,
+        "environment": {
+            "type": null,
+            "import_path": "pilot_environment:PilotEnvironment",
+            "force_build": false,
+            "delete": true,
+            "stream": false,
+            "cpu_enforcement_policy": "auto",
+            "memory_enforcement_policy": "auto",
+            "override_cpus": null,
+            "override_memory_mb": null,
+            "override_storage_mb": null,
+            "override_gpus": null,
+            "override_tpu": null,
+            "mounts": null,
+            "extra_docker_compose": [],
+            "kwargs": {},
+            "extra_allowed_hosts": []
+        },
+        "verifier": {
+            "override_timeout_sec": null,
+            "max_timeout_sec": null,
+            "import_path": "pilot_verifier:IsolatedVerifier",
+            "kwargs": {
+                "repo": "/Users/junyuc/Documents/interview/SWE-bench/pytest",
+                "image": "sha256:6fc218ba73f376189c8a3e860c5d5571782113b297704ffb153321c255cc2d12"
+            },
+            "disable": false
+        },
+        "artifacts": [],
+        "extra_instruction_paths": [],
+        "extra_instructions": [],
+        "job_id": null,
+        "source_trial": null
+    },
+    "agent_info": {
+        "name": "codex",
+        "version": "0.162.1",
+        "model_info": {
+            "name": "gpt-6.1-sol",
+            "provider": "openai"
+        }
+    },
+    "agent_result": {
+        "n_input_tokens": 182305,
+        "n_cache_tokens": 164736,
+        "n_output_tokens": 2741,
+        "cost_usd": 0.0790216,
+        "model_usage": {
+            "openai/gpt-6.1-sol": {
+                "n_input_tokens": 182305,
+                "n_cache_tokens": 164736,
+                "n_output_tokens": 2741,
+                "cost_usd": 0.0790216
+            }
+        },
+        "rollout_details": null,
+        "metadata": null
+    },
+    "verifier_result": {
+        "rewards": {
+            "reward": 1.0,
+            "original_bug_resolution": 1.0,
+            "cross_component_consistency": 1.0,
+            "edge_case_robustness": 1.0,
+            "non_regression": 1.0
+        }
+    },
+    "verifier_environment_mode": "separate",
+    "exception_info": null,
+    "started_at": "2026-10-17T07:56:00.075017Z",
+    "finished_at": "2026-10-17T07:57:31.462348Z",
+    "environment_setup": {
+        "started_at": "2026-10-17T07:56:00.401703Z",
+        "finished_at": "2026-10-17T07:56:03.792031Z"
+    },
+    "agent_setup": {
+        "started_at": "2026-10-17T07:56:03.792117Z",
+        "finished_at": "2026-10-17T07:56:03.986956Z"
+    },
+    "agent_execution": {
+        "started_at": "2026-10-17T07:56:04.248439Z",
+        "finished_at": "2026-10-17T07:56:57.145798Z"
+    },
+    "verifier": {
+        "started_at": "2026-10-17T07:57:00.971393Z",
+        "finished_at": "2026-10-17T07:57:31.462327Z"
+    },
+    "step_results": null
+}

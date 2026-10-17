@@ -1,0 +1,38 @@
+{
+    "task": {
+        "path": "/Users/junyuc/Documents/interview/SWE-bench/evals/harbor/generated/pilot-live-fixed"
+    },
+    "trial_name": "codex",
+    "trials_dir": "/Users/junyuc/Documents/interview/SWE-bench/evals/harbor/raw/pytest5786-stage3-20261017T075426Z",
+    "agent": {
+        "import_path": "pilot_codex:PilotCodex",
+        "model_name": "openai/gpt-6.1-sol",
+        "kwargs": {
+            "version": "0.162.1",
+            "config": {
+                "web_search": "disabled",
+                "features": {
+                    "plugins": false,
+                    "apps": false,
+                    "remote_plugin": false,
+                    "skill_search": false,
+                    "skill_mcp_dependency_install": false,
+                    "multi_agent": false
+                }
+            }
+        },
+        "env": {
+            "CODEX_AUTH_JSON_PATH": "/Use****son"
+        }
+    },
+    "environment": {
+        "import_path": "pilot_environment:PilotEnvironment"
+    },
+    "verifier": {
+        "import_path": "pilot_verifier:IsolatedVerifier",
+        "kwargs": {
+            "repo": "/Users/junyuc/Documents/interview/SWE-bench/pytest",
+            "image": "sha256:6fc218ba73f376189c8a3e860c5d5571782113b297704ffb153321c255cc2d12"
+        }
+    }
+}
