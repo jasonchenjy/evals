@@ -1,5 +1,13 @@
 # Frozen instruction ablation for pytest #5786
 
+> Execution update: **BLOCKED**. The user authorized the two-Trial scope, but
+> automatic approval review rejected main-account credential injection before
+> process creation. No real Trial or model call occurred. The user selected a
+> dedicated-credential alternative; its path and scope are still pending. See
+> `execution_block.json`. The AUTHORIZATION_REQUIRED text below records the
+> earlier offline checkpoint, not the current authorization state.
+
+
 Current status: **AUTHORIZATION_REQUIRED**. B/C offline preflights passed. No real
 B/C model Trial has run and prior approvals do not apply. No push is authorized.
 

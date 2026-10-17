@@ -1,0 +1,26 @@
+{
+  "status": "BLOCKED",
+  "real_trials_created": 0,
+  "real_model_calls": 0,
+  "real_auth_injected": false,
+  "trial_output_B_exists": false,
+  "trial_output_C_exists": false,
+  "events": [
+    {
+      "action": "Initial B launch",
+      "result": "Sandbox denied Docker socket before Trial creation and authentication access"
+    },
+    {
+      "action": "Escalated B launch using main-account authentication",
+      "result": "Automatic approval review rejected before process creation",
+      "reason": "Main-account credentials would be exposed to candidate commands with public network access; unacceptable credential exfiltration risk despite user authorization."
+    },
+    {
+      "action": "Safer alternative requested",
+      "result": "User selected dedicated credentials; absolute path and scope details are still required."
+    }
+  ],
+  "automatic_model_retry": false,
+  "workaround_attempted": false,
+  "push_performed": false
+}

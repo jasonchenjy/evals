@@ -1,5 +1,13 @@
 # A/B/C instruction ablation — offline report
 
+> Execution update: **BLOCKED**. The user authorized the two-Trial scope, but
+> automatic approval review rejected main-account credential injection before
+> process creation. No real Trial or model call occurred. The user selected a
+> dedicated-credential alternative; its path and scope are still pending. See
+> `execution_block.json`. The AUTHORIZATION_REQUIRED text below records the
+> earlier offline checkpoint, not the current authorization state.
+
+
 Status: **AUTHORIZATION_REQUIRED**. This report records the historical A outcome
 and the frozen B/C design. No B/C solving Agent has run; no B/C grades, timings,
 patches or behavioral differences are available. Offline fixture actions must not

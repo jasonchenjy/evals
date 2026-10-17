@@ -1,7 +1,7 @@
 {
-  "status": "AUTHORIZATION_REQUIRED",
+  "status": "BLOCKED",
   "real_B_C_trials": 0,
-  "authorization_received": false,
+  "authorization_received": true,
   "automatic_retry": false,
   "push_performed": false,
   "A": {
@@ -235,5 +235,6 @@
       "D02": "NOT_RUN",
       "D03": "NOT_RUN"
     }
-  }
+  },
+  "execution_gate": "Automatic approval review rejected main-account credential exposure; dedicated credential path pending"
 }

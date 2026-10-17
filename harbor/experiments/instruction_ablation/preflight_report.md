@@ -1,5 +1,13 @@
 # Stage 4.1 preflight
 
+> Execution update: **BLOCKED**. The user authorized the two-Trial scope, but
+> automatic approval review rejected main-account credential injection before
+> process creation. No real Trial or model call occurred. The user selected a
+> dedicated-credential alternative; its path and scope are still pending. See
+> `execution_block.json`. The AUTHORIZATION_REQUIRED text below records the
+> earlier offline checkpoint, not the current authorization state.
+
+
 Status: **AUTHORIZATION_REQUIRED**. Offline packaging and qualification passed;
 zero real B/C model calls and no real authentication used. Approval for the
 historical A pilot does not authorize these experiments. Exactly one fresh B

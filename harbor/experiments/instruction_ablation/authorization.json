@@ -1,0 +1,26 @@
+{
+  "authorized": true,
+  "user_reply": "开始进行",
+  "context": "Proceed with the immediately preceding explicit two-Trial scope and existing selected authentication file.",
+  "variants": [
+    "B",
+    "C"
+  ],
+  "trials_per_variant": 1,
+  "model": "openai/gpt-6.1-sol",
+  "codex_version": "0.162.1",
+  "agent_timeout_seconds": 1800,
+  "separate_verifier_timeout_seconds": 1800,
+  "container_credential_exposure": true,
+  "public_network": true,
+  "credential_file": "/Users/junyuc/.codex/auth.json",
+  "credential_contents_recorded": false,
+  "automatic_retry": false,
+  "push_authorized": false,
+  "execution_head": "973aac987495bbc2006eeaf72932918dd12ee2f3",
+  "recorded_at": "2026-10-17T14:51:54.792944+00:00",
+  "execution_permitted": false,
+  "approval_review": "REJECTED",
+  "dedicated_credential_requested": true,
+  "dedicated_credential_path_received": false
+}
