@@ -1,0 +1,77 @@
+[
+  {
+    "path": "attempt-audit.json",
+    "sha256": "96a1b0c2013fcc5e9fa51085c2b654b23c38ce5111e7fff7eaf6c676517bfff4",
+    "bytes": 1910
+  },
+  {
+    "path": "authorization-scope.json",
+    "sha256": "b4b5b885e613c40cfffc165986bf333edb9c8c31d7aa16980a602fb4107023f9",
+    "bytes": 295
+  },
+  {
+    "path": "codex/agent-environment/cleanup.json",
+    "sha256": "200c8fa74461fc991b89b1df9591caa8476519a7adbb3628dfdb283a7632f979",
+    "bytes": 108
+  },
+  {
+    "path": "codex/agent-environment/docker-inspect.json",
+    "sha256": "41bf5fcbe0b42afff4bb241f33b061c41beee0a88dc2646e00db92a6864dec84",
+    "bytes": 3035
+  },
+  {
+    "path": "codex/agent-environment/effective-policy.json",
+    "sha256": "41bf5fcbe0b42afff4bb241f33b061c41beee0a88dc2646e00db92a6864dec84",
+    "bytes": 3035
+  },
+  {
+    "path": "codex/agent-environment/handoff.json",
+    "sha256": "827239cd7696ccfb3823d850e03388c226fb3bae46cb5aa28072bea1ec1f661d",
+    "bytes": 9754
+  },
+  {
+    "path": "codex/agent-gate.json",
+    "sha256": "37eed84b1ef411e07bf35ec7abdfbb032812cd217e3f02e941746f43168e7943",
+    "bytes": 425
+  },
+  {
+    "path": "codex/config.json",
+    "sha256": "375c4d859f13e11d9eaa9f3873e9648a5270d4f2e4937ebdee0e18d089d069b6",
+    "bytes": 948
+  },
+  {
+    "path": "codex/exception.txt",
+    "sha256": "e555602e042e13c8ca60395ca41944db31480b792d72166b08551c157f73b2fa",
+    "bytes": 2188
+  },
+  {
+    "path": "codex/lock.json",
+    "sha256": "9f389b0a4e58b69711ab69bb9b59a43645df7120c9c68157200d9f9ae84345f4",
+    "bytes": 1544
+  },
+  {
+    "path": "codex/result.json",
+    "sha256": "ac2dbd8b72b819751202bd957d452928f5bd757f48e6916048818edf7a8703d8",
+    "bytes": 6754
+  },
+  {
+    "path": "codex/submission/submission.json",
+    "sha256": "d8799a62789fdcf2661999587dca81c7890acc284d65f6f537dbb37f2ce21d6b",
+    "bytes": 17096
+  },
+  {
+    "path": "codex/submission/submission.patch",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "bytes": 0
+  },
+  {
+    "path": "codex/trial.log",
+    "sha256": "01bd383dc07414c236943b472348ad312c4779c5a62b988cfaae0785e32cea15",
+    "bytes": 576
+  },
+  {
+    "path": "summary.json",
+    "sha256": "ba95be48576b19749782d03f7ea9de3378f983b1bfccb5b701152bc66b1ce26b",
+    "bytes": 4767
+  }
+]

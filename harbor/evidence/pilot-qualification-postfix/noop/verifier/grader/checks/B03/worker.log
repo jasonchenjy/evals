@@ -1,0 +1,14 @@
+test_B03_real_xdist (eval_behavior.Behavior) ... FAIL
+
+======================================================================
+FAIL: test_B03_real_xdist (eval_behavior.Behavior)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/inputs/eval/private/tests/behavior.py", line 153, in test_B03_real_xdist
+    self.assertIn("ValueError: worker-inner-503", result.stdout)
+AssertionError: 'ValueError: worker-inner-503' not found in 'bringing up nodes...\nbringing up nodes...\n\nF                                                                        [100%]\n=================================== FAILURES ===================================\n_________________________________ test_remote __________________________________\n[gw0] linux -- Python 3.8.20 /opt/pytest-python/bin/python\ntest_transport.py:10: in test_remote\n    fail()\ntest_transport.py:7: in fail\n    raise RuntimeError("worker-outer-509") from e\nE   RuntimeError: worker-outer-509\n-------------- generated xml file: /trial/scratch/call/report.xml --------------\n1 failed in 0.16s\n'
+
+----------------------------------------------------------------------
+Ran 1 test in 0.299s
+
+FAILED (failures=1)

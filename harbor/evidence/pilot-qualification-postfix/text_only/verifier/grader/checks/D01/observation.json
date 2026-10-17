@@ -1,0 +1,12 @@
+{
+  "schema_version": 1,
+  "method": "test_D01_ordinary_reports",
+  "status": "error",
+  "tests_run": 1,
+  "duration_seconds": 0.06580567699984385,
+  "failures": [
+    "Traceback (most recent call last):\n  File \"/inputs/eval/private/tests/behavior.py\", line 213, in test_D01_ordinary_reports\n    self.assertEqual(restored.longrepr.reprcrash.message, \"ValueError: layer-0\")\nAttributeError: 'str' object has no attribute 'reprcrash'\n"
+  ],
+  "skips": [],
+  "details": []
+}

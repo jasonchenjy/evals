@@ -1,0 +1,12 @@
+{
+  "passed": true,
+  "model_calls": 0,
+  "real_auth_used": false,
+  "codex_version": "codex-cli 0.162.1",
+  "fake_auth_readable_by_candidate": true,
+  "network": "public; arbitrary candidate shells share Codex connectivity",
+  "management_tcp": {
+    "2375": "unreachable",
+    "2376": "unreachable"
+  }
+}

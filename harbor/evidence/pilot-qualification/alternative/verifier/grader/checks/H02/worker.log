@@ -1,0 +1,42 @@
+test_H02_full_existing_suite (eval_behavior.Behavior) ... FAIL
+
+======================================================================
+FAIL: test_H02_full_existing_suite (eval_behavior.Behavior)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/inputs/eval/private/tests/behavior.py", line 263, in test_H02_full_existing_suite
+    self.assertEqual(result.returncode, 0, result.stdout[-4000:])
+AssertionError: 1 != 0 : ........................................................................ [ 57%]
+.............................................F.......                    [100%]
+=================================== FAILURES ===================================
+_____________ TestReportSerialization.test_deserialization_failure _____________
+/trial/workspace/testing/test_reports.py:244: in test_deserialization_failure
+    TestReport._from_json(data)
+E   Failed: DID NOT RAISE <class 'RuntimeError'>
+----------------------------- Captured stdout call -----------------------------
+============================= test session starts ==============================
+platform linux -- Python 3.8.20, pytest-5.1.0, py-1.8.1, pluggy-0.13.1
+rootdir: /trial/scratch/tmp/pytest-of-unknown/pytest-0/test_deserialization_failure0
+collected 1 item
+
+test_deserialization_failure.py F                                        [100%]
+
+=================================== FAILURES ===================================
+____________________________________ test_a ____________________________________
+
+    def test_a():
+>       assert False
+E       assert False
+
+test_deserialization_failure.py:2: AssertionError
+============================== 1 failed in 0.00s ===============================
+------------- generated xml file: /trial/scratch/full-existing.xml -------------
+=========================== short test summary info ============================
+FAILED testing/test_reports.py::TestReportSerialization::test_deserialization_failure
+1 failed, 124 passed, 2 deselected in 1.11s
+
+
+----------------------------------------------------------------------
+Ran 1 test in 1.273s
+
+FAILED (failures=1)

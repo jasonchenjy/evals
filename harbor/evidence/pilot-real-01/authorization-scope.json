@@ -1,0 +1,10 @@
+{
+  "model": "openai/gpt-6.1-sol",
+  "trials": 1,
+  "budget_seconds": 1800,
+  "retries": 0,
+  "container_injected_credentials_approved": true,
+  "public_candidate_network_approved": true,
+  "credential_file_path_recorded": false,
+  "source": "Explicit human reply in this chat before attempt"
+}

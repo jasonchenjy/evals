@@ -1,0 +1,11 @@
+Skipping image OS validation for hb__a787eb53615481aa89bc7f7bb5d1ab8f: docker inspect returned 1
+Codex is already available at the requested version
+Running command: mkdir -p "$CODEX_HOME" /tmp/codex-secrets /logs/agent
+Command outputs captured
+Codex auth: using auth.json from [REDACTED]
+Running command: chown 1000:1000 /tmp/codex-secrets/auth.json
+Command outputs captured
+Failed to convert Codex session to trajectory
+Trial codex failed: Pilot Codex does not permit runtime root installation
+Failed to convert Codex session to trajectory
+Collecting main service artifacts

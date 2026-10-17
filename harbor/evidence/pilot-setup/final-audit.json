@@ -1,0 +1,12 @@
+{
+  "controls": 7,
+  "matching_check_statuses": 91,
+  "original_dimensions_identical": true,
+  "worker_containers_stopped_and_removed": 105,
+  "harbor_environments_removed": 14,
+  "original_eval_lock_unchanged": true,
+  "adapter_hashes_match": true,
+  "runtime_hashes_match": true,
+  "real_agent_trials": 0,
+  "authentication_material_read_or_copied": false
+}

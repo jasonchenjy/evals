@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "method": "test_B03_real_xdist",
+  "status": "passed",
+  "tests_run": 1,
+  "duration_seconds": 0.6156030400002237,
+  "failures": [],
+  "skips": [],
+  "details": [
+    {
+      "command": [
+        "/opt/pytest-python/bin/python",
+        "-m",
+        "pytest",
+        "--color=no",
+        "-q",
+        "-p",
+        "xdist.plugin",
+        "-n",
+        "1",
+        "--tb=short",
+        "--junitxml=report.xml",
+        "test_transport.py"
+      ],
+      "cwd": "/trial/scratch/call",
+      "returncode": 1,
+      "log": "/trial/scratch/call.log"
+    },
+    {
+      "command": [
+        "/opt/pytest-python/bin/python",
+        "-m",
+        "pytest",
+        "--color=no",
+        "-q",
+        "-p",
+        "xdist.plugin",
+        "-n",
+        "1",
+        "--tb=short",
+        "--junitxml=report.xml",
+        "test_transport.py"
+      ],
+      "cwd": "/trial/scratch/collect",
+      "returncode": 1,
+      "log": "/trial/scratch/collect.log"
+    }
+  ]
+}

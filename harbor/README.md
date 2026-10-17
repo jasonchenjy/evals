@@ -1,5 +1,10 @@
 # Harbor replacement spike
 
+The supervised real-Eval pilot implementation and security gates are documented
+in [pilot/README.md](pilot/README.md), with actual outcomes and the incomplete
+real trial documented in [PILOT_REPORT.md](PILOT_REPORT.md). The earlier commands below retain their
+original trusted-control scope and machine-specific configuration.
+
 All integration code, generated contexts, isolated dependencies and evidence live here. Do not edit `../runtime` or `../pytest_5786`. No push is authorized.
 
 ## Setup

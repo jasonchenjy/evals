@@ -1,0 +1,232 @@
+{
+  "harbor_version": "0.24.0",
+  "image": "sha256:6fc218ba73f376189c8a3e860c5d5571782113b297704ffb153321c255cc2d12",
+  "adapter_hashes": {
+    "colima.py": "cfcff75fc8fb2393b56e3018dcddc4e3428db783a049e780f6f14608390b42c3",
+    "controls.py": "fabb5181f88823c5c93a5cc7dd5d5b56c3485bfa2410ce42a8ace9e6b1f5b3f1",
+    "pilot/build.py": "6baa79d4ac5227549d346a43480cfe07c4382d5eae50bb8d32fd5eebc6677831",
+    "pilot/codex_agent.py": "485b444a59d3f3b7242728e8322834b39bfcfc156f79c7e69cab76bafb962276",
+    "pilot/common.py": "75143d9f9c38962a4d3885d1bca70b77366eb1b98e829ac2a605cf83b650b2f8",
+    "pilot/environment.py": "deff3535c2a05fbcab0963e2b44cbc1c46839ccb3e73e0f722a1a5ee9c5b9020",
+    "pilot/live_preflight.py": "c3527a73d48ae4b644c79baeac51094e743b1f6557a992361d68a54258f4c0c7",
+    "pilot/probe.py": "23b579bc51f3725aafee88b3df553c879aa945d423b7f58a70f0c8f8644f81b4",
+    "pilot/quiesce.py": "c25d224a3efc068a1b0de8b8a76fe1b8822035c43f770e6fb12b1ed33189c2a4",
+    "pilot/run.py": "14f47a54eb4db654f24ec94c70db7021d20ff65ec4a795195020af87a2931216",
+    "pilot/snapshot.py": "73d6ce62651fe0a5c1939d3a96f51b17a17f2b959fc9ff7671d421fbcc919f8e",
+    "pilot/verifier.py": "64ed0b4b676fa44d9ad15c9c0ea111c54a3b71d8f4556b719961910b80c8aa55",
+    "pilot/worker_checks.py": "531a6f8e5202914c2ca49a53e82cfa2f5837e8257d1ce122a9fbee58c1c0d272"
+  },
+  "runtime_hashes": {
+    "core.py": "0d26ea79976db709b25be2fddf726745b4ac28ac0410318b462c07f971f858a2",
+    "handoff.py": "fa064faadfc3db4c25a6db18ce3349905e55a9865547d7fbfd4d3ecc4c1020d3",
+    "sandbox.py": "0c1025a06bef71e68ce4b41619314ad4a7b5b09983d0650eccc52832363eccca",
+    "container_boundary.py": "e45e6aefe81a94a6c1b36a81480aede417b65efaa7e5bb9308aa4ee435f91512",
+    "container_sandbox.py": "3dfeae00cd175b5c06c317b7437c112bfcbf81815e0fe81e5eb3c70b8dd35e5c",
+    "container_worker.py": "c976d0a342fd2027880dba6b223b20c9d05691d762420ea040ddc01740e019ed",
+    "grading.py": "8d7a073284f3f47fce4677e6d52ec6e24da040879b3509f0cc0ba3ee539e1480",
+    "submission.py": "51ce6c514c75a734298f0c23583f8a6ee427c6afa1740547535f659f45563203"
+  },
+  "model": null,
+  "live": false,
+  "controls": [
+    {
+      "control": "noop",
+      "exception": null,
+      "infrastructure_status": "ok",
+      "overall": false,
+      "checks": {
+        "A01": "failed",
+        "A02": "failed",
+        "B01": "failed",
+        "B02": "failed",
+        "B03": "failed",
+        "C01": "passed",
+        "C02": "failed",
+        "C03": "failed",
+        "D01": "passed",
+        "D02": "passed",
+        "D03": "passed",
+        "H01": "failed",
+        "H02": "passed"
+      },
+      "dimensions": {
+        "original_bug_resolution": false,
+        "cross_component_consistency": false,
+        "edge_case_robustness": false,
+        "non_regression": true
+      },
+      "expectation_met": true
+    },
+    {
+      "control": "historical",
+      "exception": null,
+      "infrastructure_status": "ok",
+      "overall": false,
+      "checks": {
+        "A01": "passed",
+        "A02": "passed",
+        "B01": "passed",
+        "B02": "passed",
+        "B03": "passed",
+        "C01": "passed",
+        "C02": "passed",
+        "C03": "error",
+        "D01": "passed",
+        "D02": "passed",
+        "D03": "error",
+        "H01": "passed",
+        "H02": "passed"
+      },
+      "dimensions": {
+        "original_bug_resolution": true,
+        "cross_component_consistency": true,
+        "edge_case_robustness": false,
+        "non_regression": false
+      },
+      "expectation_met": true
+    },
+    {
+      "control": "complete",
+      "exception": null,
+      "infrastructure_status": "ok",
+      "overall": true,
+      "checks": {
+        "A01": "passed",
+        "A02": "passed",
+        "B01": "passed",
+        "B02": "passed",
+        "B03": "passed",
+        "C01": "passed",
+        "C02": "passed",
+        "C03": "passed",
+        "D01": "passed",
+        "D02": "passed",
+        "D03": "passed",
+        "H01": "passed",
+        "H02": "passed"
+      },
+      "dimensions": {
+        "original_bug_resolution": true,
+        "cross_component_consistency": true,
+        "edge_case_robustness": true,
+        "non_regression": true
+      },
+      "expectation_met": true
+    },
+    {
+      "control": "alternative",
+      "exception": null,
+      "infrastructure_status": "ok",
+      "overall": true,
+      "checks": {
+        "A01": "passed",
+        "A02": "passed",
+        "B01": "passed",
+        "B02": "passed",
+        "B03": "passed",
+        "C01": "passed",
+        "C02": "passed",
+        "C03": "passed",
+        "D01": "passed",
+        "D02": "passed",
+        "D03": "passed",
+        "H01": "passed",
+        "H02": "failed"
+      },
+      "dimensions": {
+        "original_bug_resolution": true,
+        "cross_component_consistency": true,
+        "edge_case_robustness": true,
+        "non_regression": true
+      },
+      "expectation_met": true
+    },
+    {
+      "control": "last_only",
+      "exception": null,
+      "infrastructure_status": "ok",
+      "overall": false,
+      "checks": {
+        "A01": "failed",
+        "A02": "failed",
+        "B01": "failed",
+        "B02": "failed",
+        "B03": "failed",
+        "C01": "passed",
+        "C02": "failed",
+        "C03": "failed",
+        "D01": "passed",
+        "D02": "passed",
+        "D03": "passed",
+        "H01": "failed",
+        "H02": "passed"
+      },
+      "dimensions": {
+        "original_bug_resolution": false,
+        "cross_component_consistency": false,
+        "edge_case_robustness": false,
+        "non_regression": true
+      },
+      "expectation_met": true
+    },
+    {
+      "control": "testreport_only",
+      "exception": null,
+      "infrastructure_status": "ok",
+      "overall": false,
+      "checks": {
+        "A01": "passed",
+        "A02": "passed",
+        "B01": "failed",
+        "B02": "passed",
+        "B03": "failed",
+        "C01": "passed",
+        "C02": "failed",
+        "C03": "failed",
+        "D01": "passed",
+        "D02": "passed",
+        "D03": "passed",
+        "H01": "failed",
+        "H02": "passed"
+      },
+      "dimensions": {
+        "original_bug_resolution": true,
+        "cross_component_consistency": false,
+        "edge_case_robustness": false,
+        "non_regression": true
+      },
+      "expectation_met": true
+    },
+    {
+      "control": "text_only",
+      "exception": null,
+      "infrastructure_status": "ok",
+      "overall": false,
+      "checks": {
+        "A01": "passed",
+        "A02": "passed",
+        "B01": "passed",
+        "B02": "error",
+        "B03": "passed",
+        "C01": "passed",
+        "C02": "passed",
+        "C03": "error",
+        "D01": "error",
+        "D02": "failed",
+        "D03": "passed",
+        "H01": "failed",
+        "H02": "failed"
+      },
+      "dimensions": {
+        "original_bug_resolution": true,
+        "cross_component_consistency": false,
+        "edge_case_robustness": false,
+        "non_regression": false
+      },
+      "expectation_met": true
+    }
+  ],
+  "check_count": 91,
+  "qualification_passed": true,
+  "live_completed": false
+}

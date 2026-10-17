@@ -1,0 +1,6 @@
+test_D03_missing_traceback_no_new_crash (eval_behavior.Behavior) ... ok
+
+----------------------------------------------------------------------
+Ran 1 test in 0.049s
+
+OK

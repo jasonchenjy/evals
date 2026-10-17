@@ -1,0 +1,12 @@
+{
+  "schema_version": 1,
+  "method": "test_D03_missing_traceback_no_new_crash",
+  "status": "error",
+  "tests_run": 1,
+  "duration_seconds": 0.06785921800019423,
+  "failures": [
+    "Traceback (most recent call last):\n  File \"/inputs/eval/private/tests/behavior.py\", line 236, in test_D03_missing_traceback_no_new_crash\n    restored = transport(report(remote_info(), kind))\n  File \"/inputs/eval/private/tests/behavior.py\", line 66, in transport\n    data = json.loads(json.dumps(pytest_report_to_serializable(rep)))\n  File \"/trial/workspace/src/_pytest/reports.py\", line 328, in pytest_report_to_serializable\n    data = report._to_json()\n  File \"/trial/workspace/src/_pytest/reports.py\", line 164, in _to_json\n    return _report_to_json(self)\n  File \"/trial/workspace/src/_pytest/reports.py\", line 394, in _report_to_json\n    d[\"longrepr\"] = serialize_longrepr(report)\n  File \"/trial/workspace/src/_pytest/reports.py\", line 381, in serialize_longrepr\n    serialize_repr_crash(repr_crash),\n  File \"/trial/workspace/src/_pytest/reports.py\", line 367, in serialize_repr_crash\n    return reprcrash.__dict__.copy()\nAttributeError: 'NoneType' object has no attribute '__dict__'\n"
+  ],
+  "skips": [],
+  "details": []
+}

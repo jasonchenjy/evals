@@ -1,0 +1,9 @@
+{
+  "trusted_scoring": "host; original grade() with every candidate Python call intercepted",
+  "candidate_execution": "fresh nonroot read-only network-none worker per check",
+  "oracle_in_worker": false,
+  "credentials_in_worker": false,
+  "entire_source_bytes_match": true,
+  "host_scoring_result_unmounted": true,
+  "limitation": "Candidate and behavioral check share an interpreter; not a production anti-cheating proof"
+}

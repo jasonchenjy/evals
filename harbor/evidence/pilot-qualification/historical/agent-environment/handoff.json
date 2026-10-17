@@ -1,0 +1,293 @@
+{
+  "candidate_processes_stopped": true,
+  "collection": "immutable system Python as controller-only root, after uid 1000 termination",
+  "container_id": "efb16c0375f8d0b8e1cfcacdb61e518e165bdd91b416749c2199720811349860",
+  "source": {
+    "src/_pytest/__init__.py": {
+      "sha256": "e857f9bfff4264aa72d65f3b013e5c20739f300f64753b73865d86dd08d80bd4",
+      "bytes": 239,
+      "mode": 436
+    },
+    "src/_pytest/_argcomplete.py": {
+      "sha256": "c48a7d4b90c14eab39c62a82ea8821bf20275dbffba8a0301d3e1f9ad5bdf4f7",
+      "bytes": 3672,
+      "mode": 436
+    },
+    "src/_pytest/_code/__init__.py": {
+      "sha256": "38d2a76c71696199e8a5f938cd2526a6e17c656ce82d35fe2d3b9c05e6e55a83",
+      "bytes": 388,
+      "mode": 436
+    },
+    "src/_pytest/_code/code.py": {
+      "sha256": "2aa6f66a1fb5b4b2aa7143d023546a3455a2ccb1cdbf29c3ef3ad4ca7e195483",
+      "bytes": 36328,
+      "mode": 436
+    },
+    "src/_pytest/_code/source.py": {
+      "sha256": "8220e54f2429be4c776e8efefc53abf58266d85253c2762e72944f014c829e9f",
+      "bytes": 10369,
+      "mode": 436
+    },
+    "src/_pytest/_io/__init__.py": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "mode": 436
+    },
+    "src/_pytest/_io/saferepr.py": {
+      "sha256": "7eb5b015cb5cf947be10393a2dc64dd4e7e64ada21829726fda3a1f9c094c210",
+      "bytes": 1945,
+      "mode": 436
+    },
+    "src/_pytest/_version.py": {
+      "sha256": "9e10677d960b42afb47d15be0e281128b513de66591c5362a334feb2e0742357",
+      "bytes": 88,
+      "mode": 420
+    },
+    "src/_pytest/assertion/__init__.py": {
+      "sha256": "d7d5e8d35bb34d318e30b7fbbff29d2882cd3a7b6b2f0cba61f2a4cedc484c8c",
+      "bytes": 5437,
+      "mode": 436
+    },
+    "src/_pytest/assertion/rewrite.py": {
+      "sha256": "fc952fd6d2b7ba052771ec6ef3b711a92edcdc6508dca47890a7b61c61c243f1",
+      "bytes": 39690,
+      "mode": 436
+    },
+    "src/_pytest/assertion/truncate.py": {
+      "sha256": "36a1f01c9241a34f4cced0c7a7d5d7f4201604acb2f608ef24bc2c1cdc459257",
+      "bytes": 3228,
+      "mode": 436
+    },
+    "src/_pytest/assertion/util.py": {
+      "sha256": "a3defd173fd20685e0e57fe273280209713d8331a0fe3d30e5042807f42c117f",
+      "bytes": 13804,
+      "mode": 436
+    },
+    "src/_pytest/cacheprovider.py": {
+      "sha256": "2fbcbe758eedc2d0bb4cbdaebf6a228f9067b1c72053eaa9c5a16938906d16af",
+      "bytes": 15271,
+      "mode": 509
+    },
+    "src/_pytest/capture.py": {
+      "sha256": "b9268d22a20a1e695e10f05823bf6bcdc9dbec6fce834851d45e7550d58f90d0",
+      "bytes": 26548,
+      "mode": 436
+    },
+    "src/_pytest/compat.py": {
+      "sha256": "6854b8869bdf966c93932c4e771b2fe3986de80f7c2c5203e5f34cff2578296b",
+      "bytes": 10525,
+      "mode": 436
+    },
+    "src/_pytest/config/__init__.py": {
+      "sha256": "3596ad36a1667bf7a589d042d9789309bb84f28e7b4e02724720f19fe5a279a8",
+      "bytes": 39605,
+      "mode": 436
+    },
+    "src/_pytest/config/argparsing.py": {
+      "sha256": "2da163a6484bc615bd91721c7c3e62ef0631e994c911105fc9ef4d2a893150b5",
+      "bytes": 17619,
+      "mode": 436
+    },
+    "src/_pytest/config/exceptions.py": {
+      "sha256": "155f5cf60a2438f1fdae03c965541b4ebb4c9eeba844c2d1cdcc7da7bce9bbb7",
+      "bytes": 229,
+      "mode": 436
+    },
+    "src/_pytest/config/findpaths.py": {
+      "sha256": "8a528fccfb2cbda7825f6efc0f51519e83c2b0f0c1c905b6c947fdf018157e17",
+      "bytes": 5318,
+      "mode": 436
+    },
+    "src/_pytest/debugging.py": {
+      "sha256": "7e5aa33e36a774733b8a4664657a662d711c5a4c61c8f9f64e9356386504099e",
+      "bytes": 10868,
+      "mode": 436
+    },
+    "src/_pytest/deprecated.py": {
+      "sha256": "1b386d73b7b66bd0a55263971be40054e42664ffac3ffca93c4d7b28451242b9",
+      "bytes": 1131,
+      "mode": 436
+    },
+    "src/_pytest/doctest.py": {
+      "sha256": "ab3b5e7b06f88196e49936321287fb53f5f438d26fb3687c0e652acf020b52ff",
+      "bytes": 20451,
+      "mode": 436
+    },
+    "src/_pytest/faulthandler.py": {
+      "sha256": "ab63acca16a56908ff7707bf8df2162bb2c11b9d8e582107529be2fe699cb734",
+      "bytes": 2511,
+      "mode": 436
+    },
+    "src/_pytest/fixtures.py": {
+      "sha256": "20540c84e9e1528da768ad6ac28df9472f3e6bac2ac2aa279d81cf5942c90219",
+      "bytes": 51811,
+      "mode": 436
+    },
+    "src/_pytest/freeze_support.py": {
+      "sha256": "c4783be5b0a71a70f0f6bc4239001cc27c86322756589b6c15c1c2b81df9bf6e",
+      "bytes": 1130,
+      "mode": 436
+    },
+    "src/_pytest/helpconfig.py": {
+      "sha256": "2c0e7b5ed7e9b1eda0eb052d33a56cb4ff278dc47be7f9299beed432b7c6c436",
+      "bytes": 7674,
+      "mode": 436
+    },
+    "src/_pytest/hookspec.py": {
+      "sha256": "2bdab7b8fca8ea25245695554ffbda29cfafef83aeace50d04d0486f9f825bd1",
+      "bytes": 21705,
+      "mode": 436
+    },
+    "src/_pytest/junitxml.py": {
+      "sha256": "f7948aecfd57090072135fc0569589149dc5bcef3bd00efefbb677b2d9d43745",
+      "bytes": 23509,
+      "mode": 436
+    },
+    "src/_pytest/logging.py": {
+      "sha256": "f6e14d498e60d2406a07f50bc6e8af47748fe788967afc0c67740bca5a2bdc3c",
+      "bytes": 23922,
+      "mode": 436
+    },
+    "src/_pytest/main.py": {
+      "sha256": "7d109841d09a7ffbe12b5d090781e834a9e818f827ef606335ed48ab778d56dc",
+      "bytes": 24479,
+      "mode": 436
+    },
+    "src/_pytest/mark/__init__.py": {
+      "sha256": "eaaa07160fe919b4f84eb12c336d4c919f76aa812e6cbcc5257d2caf441b12e9",
+      "bytes": 5248,
+      "mode": 436
+    },
+    "src/_pytest/mark/evaluate.py": {
+      "sha256": "2ae7154176fd50ac4cac75b69f8802efe445817c99bfc3d262aa5bd12e01f980",
+      "bytes": 3856,
+      "mode": 436
+    },
+    "src/_pytest/mark/legacy.py": {
+      "sha256": "ee8ab306a2e99b464f1be263e86f70e18bfb946c9bd4693a3b62c2a7f7414951",
+      "bytes": 3247,
+      "mode": 436
+    },
+    "src/_pytest/mark/structures.py": {
+      "sha256": "41889558c2e076d51241d037c4ea6cb8e990a007bcf659ab3f69da5a983b65aa",
+      "bytes": 13120,
+      "mode": 436
+    },
+    "src/_pytest/monkeypatch.py": {
+      "sha256": "095ae19e44b6a359942f7439d62ece6e01f0dac52a1ecc723e019dc86f2c902b",
+      "bytes": 11332,
+      "mode": 436
+    },
+    "src/_pytest/nodes.py": {
+      "sha256": "9e9e6aefae0e3091d81df9bb42b267bf16a7bd15dfa296bec8097f5023d1974d",
+      "bytes": 13988,
+      "mode": 436
+    },
+    "src/_pytest/nose.py": {
+      "sha256": "89f6af8f787ae89b32fd727fff9d31a10bddbe6c6c9b35d423b280739ea5110c",
+      "bytes": 1313,
+      "mode": 436
+    },
+    "src/_pytest/outcomes.py": {
+      "sha256": "4cd2a02017d8fad2e63585295e155ee14d815c595dafa7342fd03f35ccfec80e",
+      "bytes": 6570,
+      "mode": 436
+    },
+    "src/_pytest/pastebin.py": {
+      "sha256": "f256a0cc49a85630232d9e781e34c752145be0891f1c3305caef4e29b07b2d7f",
+      "bytes": 3386,
+      "mode": 436
+    },
+    "src/_pytest/pathlib.py": {
+      "sha256": "9290a9d4477d3c0d0aeb9b81a321a91e3b8ab60319cd896e5706faef38f0aa14",
+      "bytes": 10583,
+      "mode": 436
+    },
+    "src/_pytest/pytester.py": {
+      "sha256": "cea0e72fe562865dc0ba18e20b63e7d5e926c5a91e67d3dd5421fe7f2f40edcc",
+      "bytes": 46583,
+      "mode": 436
+    },
+    "src/_pytest/python.py": {
+      "sha256": "ea5d41c51e43d730ac37b5321be7aae52c17d03559e3a897077697ba91498517",
+      "bytes": 53460,
+      "mode": 436
+    },
+    "src/_pytest/python_api.py": {
+      "sha256": "5f5f9d5c561a9ff59dec78fe8a852107b261fab9a1ad119991a81a14d5a8a700",
+      "bytes": 28343,
+      "mode": 436
+    },
+    "src/_pytest/recwarn.py": {
+      "sha256": "0021781e46694cf6b1ca24726e59ad45ab57ce7f4bb4403be875b7c706b996f9",
+      "bytes": 9255,
+      "mode": 436
+    },
+    "src/_pytest/reports.py": {
+      "sha256": "03527f8f1ee4288724070e41d80bdca8dbc350307b0b61f71a983f3eba25fd46",
+      "bytes": 15302,
+      "mode": 420
+    },
+    "src/_pytest/resultlog.py": {
+      "sha256": "65d833505adaf15111a4db0c5d181abf355d04dfb9d91d243c66cffc2f6a451a",
+      "bytes": 3202,
+      "mode": 436
+    },
+    "src/_pytest/runner.py": {
+      "sha256": "22a0a2f796a7b34efa1bb846a63c740c9250f5f7a6aa1276da1701b6b760ae62",
+      "bytes": 11765,
+      "mode": 436
+    },
+    "src/_pytest/setuponly.py": {
+      "sha256": "a59e1a5c7b8412e51c44eb6463353f667b70fff38336c951f622a1911fd191aa",
+      "bytes": 2595,
+      "mode": 436
+    },
+    "src/_pytest/setupplan.py": {
+      "sha256": "c5070dea05464a6b4ea58bda3fd070df7ac3221b02b695521af02dbcdc4eaf2b",
+      "bytes": 757,
+      "mode": 436
+    },
+    "src/_pytest/skipping.py": {
+      "sha256": "6a5a98f2b624943322210153bae304d8a7b527ee21017ea9cd764a4b3fee82ae",
+      "bytes": 6246,
+      "mode": 436
+    },
+    "src/_pytest/stepwise.py": {
+      "sha256": "ab3eaeaf2174186ae8cf3bb5d81966d93bd4b212e651e95ef11a192f3e8ff7e6",
+      "bytes": 3580,
+      "mode": 436
+    },
+    "src/_pytest/terminal.py": {
+      "sha256": "156a11b6de89e1b96f96672d2e41664658382a5af803e37fab5eee0a2649e835",
+      "bytes": 37894,
+      "mode": 436
+    },
+    "src/_pytest/tmpdir.py": {
+      "sha256": "ea390ee06e608df6d4f08a83576b749c651f6087eca5d5c90791c2451d8eadf6",
+      "bytes": 5678,
+      "mode": 436
+    },
+    "src/_pytest/unittest.py": {
+      "sha256": "22e13bbeac2e02cea4838cc09e38bbfde162d81d81f6c9b8c6ffc2b4a82ef3b9",
+      "bytes": 9412,
+      "mode": 436
+    },
+    "src/_pytest/warning_types.py": {
+      "sha256": "2f603ca40f08ba86fae4e59fb818ba4aa6ae5e2447594be3ed87a116c4bbb997",
+      "bytes": 2859,
+      "mode": 436
+    },
+    "src/_pytest/warnings.py": {
+      "sha256": "0a092c3f2c168bff20118b8b51ed3ba3c98c10549e74c54f4b159c0234104a9a",
+      "bytes": 4933,
+      "mode": 436
+    },
+    "src/pytest.py": {
+      "sha256": "8d944e9f607fe391d56b472d61a3f2767e6865ca0e27cfb9e1a33096f5255aba",
+      "bytes": 3010,
+      "mode": 436
+    }
+  },
+  "source_archive_sha256": "c3f43e352e3436c728567b4e806831817cf3070f2c6325ec7c72a254d498c965"
+}

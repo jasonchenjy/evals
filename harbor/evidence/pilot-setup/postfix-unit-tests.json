@@ -1,0 +1,17 @@
+{
+  "command": "harbor/.venv/bin/python -B -m unittest discover -s harbor/tests -v",
+  "result": "OK",
+  "tests_run": 20,
+  "duration_seconds": 3.063,
+  "test_sources": {
+    "harbor/tests/test_codex_preparation.py": "ae1fd484dfcd3511eaa4d95125d04e60ac3ba028c84e5825521cb4e593d5801f",
+    "harbor/tests/test_pilot_handoff.py": "1308fddcd7ec384e841af142591f698152ac83b08ba2c513426be32263cec646"
+  },
+  "new_cases": [
+    "native config upload uses nonroot",
+    "auth ownership uses nonroot",
+    "other root commands rejected",
+    "root default user rejected"
+  ],
+  "scope": "Tests after configuration compatibility fix; no real credentials or model calls"
+}

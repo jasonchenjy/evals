@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "method": "test_B01_collect_report",
+  "status": "passed",
+  "tests_run": 1,
+  "duration_seconds": 0.07792813000014576,
+  "failures": [],
+  "skips": [],
+  "details": []
+}

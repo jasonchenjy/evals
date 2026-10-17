@@ -1,0 +1,23 @@
+{
+  "boundary": "colima-linux-container",
+  "original_security_mode_label": "trusted-local-qualification-not-a-sandbox",
+  "all_python_calls_intercepted": true,
+  "worker_execution_count": 14,
+  "returncode": 1,
+  "input_files": {
+    "requirements.txt": "7c38e090b7a45c19d6f2c939e51b0a04e1b7594f5051508bef45036fb20d884d",
+    "boundary_canary.txt": "5fea1ffc7b19eb301c1896e9e91ee0f9eed1b0b2eb72f5a2aecd246ad07c3d63",
+    "private/check.py": "7168e5c178d932450fd2c577dac2de8ab301e945336ab563d9b82d2be9681e5d",
+    "private/tests/existing_inventory.json": "dd4bec08ec33301b8673f4eff8f3cd326ba394ea7e688911ca588a93e271c634",
+    "private/tests/behavior.py": "0e22e19d4a632e2775c79a0e733f25368160e38d641b65ee69afd027cde18251"
+  },
+  "limits": {
+    "wall_deadline": true,
+    "output_byte_cap": true,
+    "aggregate_memory": true,
+    "per_trial_process_count": true,
+    "aggregate_disk_quota": true,
+    "cpu_core_allocation": true,
+    "detached_descendant_containment": true
+  }
+}

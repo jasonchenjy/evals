@@ -1,0 +1,34 @@
+{
+  "python": "3.13.7 (main, Aug 14 2025, 11:12:11) [Clang 17.0.0 (clang-1700.0.13.3)]",
+  "platform": "macOS-26.7.1-arm64-arm-64bit-Mach-O",
+  "adapter_sha256": {
+    "colima.py": "cfcff75fc8fb2393b56e3018dcddc4e3428db783a049e780f6f14608390b42c3",
+    "controls.py": "fabb5181f88823c5c93a5cc7dd5d5b56c3485bfa2410ce42a8ace9e6b1f5b3f1",
+    "pilot/build.py": "6baa79d4ac5227549d346a43480cfe07c4382d5eae50bb8d32fd5eebc6677831",
+    "pilot/codex_agent.py": "5b637adfeda84da8f9bdad672a87ca9e4da5c6955817e7ea7a378fa42f1fca56",
+    "pilot/common.py": "75143d9f9c38962a4d3885d1bca70b77366eb1b98e829ac2a605cf83b650b2f8",
+    "pilot/environment.py": "deff3535c2a05fbcab0963e2b44cbc1c46839ccb3e73e0f722a1a5ee9c5b9020",
+    "pilot/live_preflight.py": "1b0a162f126a3d0749c028637a2d94dbee3acc55dd288eab5e3fb3be0cb1f8d1",
+    "pilot/probe.py": "23b579bc51f3725aafee88b3df553c879aa945d423b7f58a70f0c8f8644f81b4",
+    "pilot/quiesce.py": "c25d224a3efc068a1b0de8b8a76fe1b8822035c43f770e6fb12b1ed33189c2a4",
+    "pilot/run.py": "a647d8e975cdb8cd1c7920ad4fb7f2b9b0a65d11c6fe32ea16038a670ee95201",
+    "pilot/snapshot.py": "73d6ce62651fe0a5c1939d3a96f51b17a17f2b959fc9ff7671d421fbcc919f8e",
+    "pilot/verifier.py": "64ed0b4b676fa44d9ad15c9c0ea111c54a3b71d8f4556b719961910b80c8aa55",
+    "pilot/worker_checks.py": "531a6f8e5202914c2ca49a53e82cfa2f5837e8257d1ce122a9fbee58c1c0d272"
+  },
+  "runtime_sha256": {
+    "core.py": "0d26ea79976db709b25be2fddf726745b4ac28ac0410318b462c07f971f858a2",
+    "handoff.py": "fa064faadfc3db4c25a6db18ce3349905e55a9865547d7fbfd4d3ecc4c1020d3",
+    "sandbox.py": "0c1025a06bef71e68ce4b41619314ad4a7b5b09983d0650eccc52832363eccca",
+    "container_boundary.py": "e45e6aefe81a94a6c1b36a81480aede417b65efaa7e5bb9308aa4ee435f91512",
+    "container_sandbox.py": "3dfeae00cd175b5c06c317b7437c112bfcbf81815e0fe81e5eb3c70b8dd35e5c",
+    "container_worker.py": "c976d0a342fd2027880dba6b223b20c9d05691d762420ea040ddc01740e019ed",
+    "grading.py": "8d7a073284f3f47fce4677e6d52ec6e24da040879b3509f0cc0ba3ee539e1480",
+    "submission.py": "51ce6c514c75a734298f0c23583f8a6ee427c6afa1740547535f659f45563203"
+  },
+  "eval_lock_sha256": "067f222eccfbf8d40fe520a7f4196426e82a4e5d4861e506cb96e60d11732e03",
+  "base_commit": "955e54221008aba577ecbaefa15679f6777d3bf8",
+  "image": "sha256:6fc218ba73f376189c8a3e860c5d5571782113b297704ffb153321c255cc2d12",
+  "real_model_calls_so_far": 0,
+  "auth_file_contents_read": false
+}

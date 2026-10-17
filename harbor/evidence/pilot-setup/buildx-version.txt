@@ -1,0 +1,1 @@
+github.com/docker/buildx v0.27.0-desktop.1 0ea7d3a2239bb57d1c598c691c5d00101ca936b7

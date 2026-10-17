@@ -1,0 +1,1 @@
+stdout='3.8.20 (default, Sep 27 2024, 22:15:25) \n[GCC 12.2.0] /work/src/pytest.py\n' stderr='' return_code=0

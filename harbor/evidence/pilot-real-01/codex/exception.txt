@@ -1,0 +1,34 @@
+Traceback (most recent call last):
+  File "/Users/junyuc/Documents/interview/SWE-bench/evals/harbor/.venv/lib/python3.13/site-packages/harbor/trial/trial.py", line 500, in run
+    await self._run()
+  File "/Users/junyuc/Documents/interview/SWE-bench/evals/harbor/.venv/lib/python3.13/site-packages/harbor/trial/single_step.py", line 40, in _run
+    await self._run_agent()
+  File "/Users/junyuc/Documents/interview/SWE-bench/evals/harbor/.venv/lib/python3.13/site-packages/harbor/trial/single_step.py", line 76, in _run_agent
+    await self._run_agent_phase(
+    ...<5 lines>...
+    )
+  File "/Users/junyuc/Documents/interview/SWE-bench/evals/harbor/.venv/lib/python3.13/site-packages/harbor/trial/trial.py", line 651, in _run_agent_phase
+    await asyncio.wait_for(
+    ...<6 lines>...
+    )
+  File "/opt/homebrew/Cellar/python@3.13/3.13.7/Frameworks/Python.framework/Versions/3.13/lib/python3.13/asyncio/tasks.py", line 507, in wait_for
+    return await fut
+           ^^^^^^^^^
+  File "/Users/junyuc/Documents/interview/SWE-bench/evals/harbor/.venv/lib/python3.13/site-packages/harbor/agents/installed/base.py", line 186, in wrapper
+    return await fn(self, instruction, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/junyuc/Documents/interview/SWE-bench/evals/harbor/.venv/lib/python3.13/site-packages/harbor/agents/installed/codex.py", line 1734, in run
+    await self._upload_effective_config(
+    ...<3 lines>...
+    )
+  File "/Users/junyuc/Documents/interview/SWE-bench/evals/harbor/.venv/lib/python3.13/site-packages/harbor/agents/installed/codex.py", line 1621, in _upload_effective_config
+    await self._upload_config_text(
+    ...<4 lines>...
+    )
+  File "/Users/junyuc/Documents/interview/SWE-bench/evals/harbor/.venv/lib/python3.13/site-packages/harbor/agents/installed/base.py", line 1053, in _upload_config_text
+    await self.exec_as_root(
+    ...<5 lines>...
+    )
+  File "/Users/junyuc/Documents/interview/SWE-bench/evals/harbor/pilot/codex_agent.py", line 14, in exec_as_root
+    raise RuntimeError('Pilot Codex does not permit runtime root installation')
+RuntimeError: Pilot Codex does not permit runtime root installation

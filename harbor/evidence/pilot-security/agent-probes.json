@@ -1,0 +1,47 @@
+[
+  {
+    "case": "background",
+    "passed": true,
+    "rejected": false
+  },
+  {
+    "case": "nondumpable-background",
+    "passed": true,
+    "rejected": false
+  },
+  {
+    "case": "outside-hardlink",
+    "passed": true,
+    "rejected": true
+  },
+  {
+    "case": "symlink",
+    "passed": true,
+    "rejected": true
+  },
+  {
+    "case": "fifo",
+    "passed": true,
+    "rejected": true
+  },
+  {
+    "case": "oversize",
+    "passed": true,
+    "rejected": true
+  },
+  {
+    "case": "output-cap",
+    "passed": true,
+    "rejected": true
+  },
+  {
+    "case": "timeout",
+    "passed": true,
+    "rejected": true
+  },
+  {
+    "case": "pid-limit",
+    "passed": true,
+    "rejected": false
+  }
+]

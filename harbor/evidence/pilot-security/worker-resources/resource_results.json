@@ -1,0 +1,21 @@
+{
+  "status": "PASSED",
+  "observations": {
+    "memory.max": "134217728",
+    "memory.swap.max": "0",
+    "pids.max": "16",
+    "cpu.max": "200000 100000",
+    "root_read_only": true,
+    "network_unreachable": true,
+    "pid_limit_enforced": true,
+    "spawned_children": 14,
+    "disk_limit_enforced": true,
+    "memory_children_exit": [
+      0,
+      -9
+    ],
+    "memory_events": "low 0\nhigh 0\nmax 169\noom 9\noom_kill 1\noom_group_kill 0\n",
+    "aggregate_memory_enforced": true
+  },
+  "model_calls": 0
+}

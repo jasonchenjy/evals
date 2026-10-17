@@ -1,0 +1,35 @@
+{
+  "passed": true,
+  "model_calls": 0,
+  "real_auth_used": false,
+  "adapter_hashes": {
+    "colima.py": "cfcff75fc8fb2393b56e3018dcddc4e3428db783a049e780f6f14608390b42c3",
+    "controls.py": "fabb5181f88823c5c93a5cc7dd5d5b56c3485bfa2410ce42a8ace9e6b1f5b3f1",
+    "pilot/build.py": "6baa79d4ac5227549d346a43480cfe07c4382d5eae50bb8d32fd5eebc6677831",
+    "pilot/codex_agent.py": "485b444a59d3f3b7242728e8322834b39bfcfc156f79c7e69cab76bafb962276",
+    "pilot/common.py": "75143d9f9c38962a4d3885d1bca70b77366eb1b98e829ac2a605cf83b650b2f8",
+    "pilot/environment.py": "deff3535c2a05fbcab0963e2b44cbc1c46839ccb3e73e0f722a1a5ee9c5b9020",
+    "pilot/live_preflight.py": "c3527a73d48ae4b644c79baeac51094e743b1f6557a992361d68a54258f4c0c7",
+    "pilot/probe.py": "23b579bc51f3725aafee88b3df553c879aa945d423b7f58a70f0c8f8644f81b4",
+    "pilot/quiesce.py": "c25d224a3efc068a1b0de8b8a76fe1b8822035c43f770e6fb12b1ed33189c2a4",
+    "pilot/run.py": "14f47a54eb4db654f24ec94c70db7021d20ff65ec4a795195020af87a2931216",
+    "pilot/snapshot.py": "73d6ce62651fe0a5c1939d3a96f51b17a17f2b959fc9ff7671d421fbcc919f8e",
+    "pilot/verifier.py": "64ed0b4b676fa44d9ad15c9c0ea111c54a3b71d8f4556b719961910b80c8aa55",
+    "pilot/worker_checks.py": "531a6f8e5202914c2ca49a53e82cfa2f5837e8257d1ce122a9fbee58c1c0d272"
+  },
+  "native_launch_preparation": {
+    "native_config_mode": "0600",
+    "native_config_owner": 1000,
+    "fresh_session": true,
+    "fake_auth_link_readable": true
+  },
+  "native_model_command_blocked": true,
+  "native_fake_auth_cleanup": true,
+  "codex_version": "codex-cli 0.162.1",
+  "fake_auth_readable_by_candidate": true,
+  "network": "public; arbitrary candidate shells share Codex connectivity",
+  "management_tcp": {
+    "2375": "unreachable",
+    "2376": "unreachable"
+  }
+}

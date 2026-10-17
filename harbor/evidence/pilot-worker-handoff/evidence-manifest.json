@@ -1,0 +1,62 @@
+[
+  {
+    "path": "controller/worker-001/worker-receipt.json",
+    "sha256": "9bfeb985d789927a530a3867f381661bf94fdfe53c2a2357488711e3e9586f5c",
+    "bytes": 3979
+  },
+  {
+    "path": "controller/worker-002/worker-receipt.json",
+    "sha256": "cc1fe8fb646e87ff23a0e5c2b137ba2b6993df317a1df993e80d66c54e085785",
+    "bytes": 3979
+  },
+  {
+    "path": "controller/worker-003/worker-receipt.json",
+    "sha256": "ef1dc0ece2fb6a45ba8245d401c4e97b50678d6cd3e3cda8fc36b39478696d45",
+    "bytes": 3979
+  },
+  {
+    "path": "controller/worker-004/worker-receipt.json",
+    "sha256": "42394b3e5f7eb8d6b6233f252dce031c70c8c385138af297abd3c839d5b5cd6b",
+    "bytes": 3978
+  },
+  {
+    "path": "controller/worker-005/worker-receipt.json",
+    "sha256": "7a169ad25785eb8d7fed861d7e17cbd4c339adc8118dbc471eab1cf26f0d83eb",
+    "bytes": 3977
+  },
+  {
+    "path": "controller/worker-006/worker-receipt.json",
+    "sha256": "4d994edd4236eff05ad7699a51605c7d137ecd2ba202430344831e872d15269a",
+    "bytes": 3978
+  },
+  {
+    "path": "controller/worker-007/worker-receipt.json",
+    "sha256": "25dff2891aebc746e1e67fda232c54f0722df41ac6d7ae0b46f76bf7f5eee109",
+    "bytes": 3977
+  },
+  {
+    "path": "controller/worker-008/worker-receipt.json",
+    "sha256": "74539f17f5f65fe17476b909160f8ab234fc190920f8f45e1404beb9fbf99f46",
+    "bytes": 3976
+  },
+  {
+    "path": "controller/worker-009/worker-receipt.json",
+    "sha256": "c1a0cdb2815123bfba8af350dedafe2d510129bbaa98a9c0d40b055c67af860b",
+    "bytes": 3977
+  },
+  {
+    "path": "controller/worker-010/worker-receipt.json",
+    "sha256": "b5a47b538d47a8c87966674f1fe1a91fbb407001516398a7311de4d7ba4ee9d9",
+    "bytes": 3979
+  },
+  {
+    "path": "controller/worker-011/worker-receipt.json",
+    "sha256": "be4f7da6be16cbb43b4dd92b6c11886015f94842da4ff77722cb06272b007e9f",
+    "bytes": 3977
+  },
+  {
+    "path": "results.json",
+    "sha256": "ada663bbbdbc641ab56d94a998ab8a0feec73a12b873079865c7caad7428e782",
+    "bytes": 1866
+  }
+]

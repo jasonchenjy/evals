@@ -1,0 +1,32 @@
+[
+  {
+    "path": "agent-environment/cleanup.json",
+    "sha256": "8095d7a2d17a76f74fe8cc05a76413028da4c4fec6212664f724de8d27dd4836",
+    "bytes": 108
+  },
+  {
+    "path": "agent-environment/docker-inspect.json",
+    "sha256": "c2836b14a0257b7df0a3e32b5b2b80d24139635425ece60818bbe83716bb8aa8",
+    "bytes": 3035
+  },
+  {
+    "path": "agent-environment/effective-policy.json",
+    "sha256": "c2836b14a0257b7df0a3e32b5b2b80d24139635425ece60818bbe83716bb8aa8",
+    "bytes": 3035
+  },
+  {
+    "path": "agent-environment/handoff.json",
+    "sha256": "25c14b28fa7ef8f06094802237d8b21788540b00080e976d1d02a5c72c7c23c7",
+    "bytes": 9754
+  },
+  {
+    "path": "agent-gate.json",
+    "sha256": "37eed84b1ef411e07bf35ec7abdfbb032812cd217e3f02e941746f43168e7943",
+    "bytes": 425
+  },
+  {
+    "path": "summary.json",
+    "sha256": "f52fa5bc98e93a8879b9246eb9ba5fd553d22b63f78bde375465af4287002c8c",
+    "bytes": 1775
+  }
+]

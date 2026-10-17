@@ -1,0 +1,130 @@
+{
+  "Id": "6c1a44ed5ee88eec10183919e294b3d6f60098370b5c6b9e0f0cf2c85e9a570d",
+  "Image": "sha256:3e421ccf9c4e93c85a14870f1cddc61d3adf90d32bb9e85e43c171d2460ed756",
+  "HostConfig": {
+    "Binds": null,
+    "ContainerIDFile": "",
+    "LogConfig": {
+      "Type": "none",
+      "Config": {}
+    },
+    "NetworkMode": "none",
+    "PortBindings": {},
+    "RestartPolicy": {
+      "Name": "no",
+      "MaximumRetryCount": 0
+    },
+    "AutoRemove": false,
+    "VolumeDriver": "",
+    "VolumesFrom": null,
+    "ConsoleSize": [
+      0,
+      0
+    ],
+    "CapAdd": [
+      "CAP_KILL"
+    ],
+    "CapDrop": [
+      "ALL"
+    ],
+    "CgroupnsMode": "private",
+    "Dns": null,
+    "DnsOptions": null,
+    "DnsSearch": null,
+    "ExtraHosts": [],
+    "GroupAdd": null,
+    "IpcMode": "private",
+    "Cgroup": "",
+    "Links": null,
+    "OomScoreAdj": 0,
+    "PidMode": "",
+    "Privileged": false,
+    "PublishAllPorts": false,
+    "ReadonlyRootfs": true,
+    "SecurityOpt": [
+      "no-new-privileges"
+    ],
+    "Tmpfs": {
+      "/home/agent": "rw,nosuid,nodev,size=64m,mode=755,uid=1000,gid=1000",
+      "/logs": "rw,nosuid,nodev,size=128m,mode=777",
+      "/tmp": "rw,nosuid,nodev,size=256m,mode=1777",
+      "/work": "rw,nosuid,nodev,size=1536m,mode=755,uid=1000,gid=1000"
+    },
+    "UTSMode": "",
+    "UsernsMode": "",
+    "ShmSize": 16777216,
+    "Runtime": "runc",
+    "Isolation": "",
+    "CpuShares": 0,
+    "Memory": 4294967296,
+    "NanoCpus": 2000000000,
+    "CgroupParent": "",
+    "BlkioWeight": 0,
+    "BlkioWeightDevice": null,
+    "BlkioDeviceReadBps": null,
+    "BlkioDeviceWriteBps": null,
+    "BlkioDeviceReadIOps": null,
+    "BlkioDeviceWriteIOps": null,
+    "CpuPeriod": 0,
+    "CpuQuota": 0,
+    "CpuRealtimePeriod": 0,
+    "CpuRealtimeRuntime": 0,
+    "CpusetCpus": "",
+    "CpusetMems": "",
+    "Devices": null,
+    "DeviceCgroupRules": null,
+    "DeviceRequests": null,
+    "MemoryReservation": 0,
+    "MemorySwap": 4294967296,
+    "MemorySwappiness": null,
+    "OomKillDisable": null,
+    "PidsLimit": 128,
+    "Ulimits": [
+      {
+        "Name": "fsize",
+        "Hard": 33554432,
+        "Soft": 33554432
+      }
+    ],
+    "CpuCount": 0,
+    "CpuPercent": 0,
+    "IOMaximumIOps": 0,
+    "IOMaximumBandwidth": 0,
+    "MaskedPaths": [
+      "/proc/asound",
+      "/proc/acpi",
+      "/proc/interrupts",
+      "/proc/kcore",
+      "/proc/keys",
+      "/proc/latency_stats",
+      "/proc/timer_list",
+      "/proc/timer_stats",
+      "/proc/sched_debug",
+      "/proc/scsi",
+      "/sys/firmware",
+      "/sys/devices/virtual/powercap"
+    ],
+    "ReadonlyPaths": [
+      "/proc/bus",
+      "/proc/fs",
+      "/proc/irq",
+      "/proc/sys",
+      "/proc/sysrq-trigger"
+    ],
+    "Init": true
+  },
+  "Mounts": [],
+  "State": {
+    "Status": "running",
+    "Running": true,
+    "Paused": false,
+    "Restarting": false,
+    "OOMKilled": false,
+    "Dead": false,
+    "Pid": 70801,
+    "ExitCode": 0,
+    "Error": "",
+    "StartedAt": "2026-10-17T06:54:01.526141519Z",
+    "FinishedAt": "0001-01-01T00:00:00Z"
+  }
+}
