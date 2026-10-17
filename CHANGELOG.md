@@ -2,6 +2,18 @@
 
 仓库级 runtime 与实验记录；Eval 本身的版本变化见 [pytest_5786/CHANGELOG.md](pytest_5786/CHANGELOG.md)。
 
+## 2026-10-17 — Codex 账户凭据隔离与真实编码链路验证
+
+- 完成原生 Codex CLI 0.162.1、`gpt-6.1-sol` 的真实账户合成验证，状态为 **LIVE_ACCOUNT_BOUNDARY_PASS**；保留 ChatGPT 登录，不使用 API Key。
+- 真实访问令牌仅由可信主机与独立代理持有，通过匿名 stdin 管道传递；候选容器只接收短期 nonce，无真实认证挂载和公网出口。
+- 最终 Agent 在 14.353 秒内完成读文件、修改加法源码和运行标准库 unittest；控制器独立源码检查与测试均通过，11 个代理边界单元测试通过。
+- 记录实际容器配置及 12,291 个文件条目；候选可写目录、进程环境和 CLI 输出的前后扫描未发现真实令牌。原始登录文件未变；销毁代理后的撤销检查通过，临时容器与网络全部清理。
+- 保留离线验证及全部调试证据：修复目录请求竞争、缺少 Content-Type 的完整 SSE 响应兼容性和合成测试依赖问题。共五次 CLI 启动、四个会话发生推理、八次 Responses 请求；每会话未启用自动重试。
+- 未运行 B/C，未改变原 Eval、Oracle、Grader、B/C 输入锁或共享 Runtime。该链路尚未接入 Harbor；长期无人值守仍需可信侧认证刷新、服务监督和崩溃恢复验证。
+- 实现与证据提交：`7bab83b`（离线可行性）、`a096d5a`（真实账户验证）。
+
+详见 [真实验证报告](harbor/experiments/codex_account_boundary/LIVE_VALIDATION.md) 与 [证据汇总](harbor/experiments/codex_account_boundary/evidence/live-20261017/summary.json)。
+
 ## 2026-10-16 — Colima/Linux runtime 与首次 pilot 前置验证
 
 基于已审查提交 `ffc25b55c0b3389ad25cc54d0b8cf9e416260762`。状态仍为 **PARTIALLY_READY**，正式 Agent Trial 为 **not_executed**，真实模型调用为 0。指定模型保持 `gpt-6.1-sol`。
