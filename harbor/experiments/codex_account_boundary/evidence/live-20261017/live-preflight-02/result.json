@@ -1,0 +1,33 @@
+{
+  "status": "OFFLINE_PREFLIGHT_PASS",
+  "benchmark_trials": 0,
+  "api_key_used": false,
+  "real_credentials_read": false,
+  "model": "gpt-6.1-sol",
+  "agent_budget_seconds": 240,
+  "broker_lifetime_seconds": 300,
+  "response_quota": 12,
+  "automatic_retries": false,
+  "candidate_image": "sha256:a8b866624c9d7a959dce44081024889c81a3803b66b91d8cd4bbfaf6f4af19c9",
+  "isolation_preflight": "PASS",
+  "native_version": "codex-cli 0.162.1",
+  "initial_filesystem_entries": 12291,
+  "cleanup": [
+    {
+      "container": "codex-boundary-662f4b6eca-candidate",
+      "removed": true
+    },
+    {
+      "container": "codex-boundary-662f4b6eca-broker",
+      "removed": true
+    },
+    {
+      "network": "codex-boundary-662f4b6eca-egress",
+      "removed": true
+    },
+    {
+      "network": "codex-boundary-662f4b6eca-internal",
+      "removed": true
+    }
+  ]
+}

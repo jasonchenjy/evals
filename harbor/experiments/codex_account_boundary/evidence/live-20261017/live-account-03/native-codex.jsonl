@@ -1,0 +1,4 @@
+{"type":"thread.started","thread_id":"01a14ac6-5762-71e0-a5aa-48f033930234"}
+{"type":"turn.started"}
+{"type":"error","message":"unexpected status 502 Bad Gateway: Unknown error, url: http://172.18.0.2:8765/backend-api/codex/responses"}
+{"type":"turn.failed","error":{"message":"unexpected status 502 Bad Gateway: Unknown error, url: http://172.18.0.2:8765/backend-api/codex/responses"}}

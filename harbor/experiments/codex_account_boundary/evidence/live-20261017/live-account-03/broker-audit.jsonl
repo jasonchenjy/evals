@@ -1,0 +1,8 @@
+{"kind": "ready", "real_credential_in_memory_only": true, "lifetime_seconds": 300, "response_quota": 12}
+{"kind": "upstream_started", "route": "catalog", "attempt": 0}
+{"kind": "response_gate", "media_type": "application/json", "secret_absent": true, "within_size": true, "session_valid": true, "account_metadata_present": false}
+{"kind": "upstream", "route": "catalog", "status": 200, "attempt": 0, "response_bytes": 569147, "response_sha256": "c4c3f2d634b5b8e3e2c439a8845ebb05f7b9054694c5ec6678ed813d7b89ca43"}
+{"kind": "catalog_verified", "selected_model_present": true}
+{"kind": "upstream_started", "route": "responses", "attempt": 1}
+{"kind": "response_gate", "media_type": "other", "secret_absent": true, "within_size": true, "session_valid": true, "account_metadata_present": false}
+{"kind": "upstream", "route": "responses", "status": 200, "attempt": 1, "response_bytes": 108565, "response_sha256": "2bafa7faec7d48d34da7436a07fc3ec2e233b20f3442d5099f4bf784b47c2a8a"}

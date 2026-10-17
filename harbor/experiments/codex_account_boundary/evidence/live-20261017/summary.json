@@ -1,0 +1,36 @@
+{
+  "status": "LIVE_ACCOUNT_BOUNDARY_PASS",
+  "completed_synthetic_task": true,
+  "actual_model": "gpt-6.1-sol",
+  "actual_cli": "0.162.1",
+  "successful_agent_seconds": 14.353,
+  "successful_responses_requests": 3,
+  "all_diagnostic_responses_requests": 8,
+  "native_session_starts": 5,
+  "sessions_with_upstream_inference": 4,
+  "automatic_retry_per_session": false,
+  "task": "synthetic add function, Python unittest",
+  "native_completed_tool_actions": [
+    "command_execution",
+    "file_change",
+    "command_execution"
+  ],
+  "usage": {
+    "input_tokens": 34505,
+    "cached_input_tokens": 28800,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 202,
+    "reasoning_output_tokens": 0
+  },
+  "broker_unit_tests": 11,
+  "real_credentials_in_candidate": false,
+  "api_key_used": false,
+  "bc_trials": 0,
+  "historical_eval_or_runtime_changed_by_this_work": false,
+  "remaining": [
+    "Not integrated into Harbor adapter",
+    "No actual token refresh/expired account test",
+    "No full crash-injection or production security qualification",
+    "Bounded request/time budget, not monetary cap"
+  ]
+}

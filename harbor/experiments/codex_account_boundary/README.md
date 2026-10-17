@@ -1,4 +1,17 @@
-# Codex account credential boundary: offline feasibility
+# Codex account credential boundary
+
+Latest result: **LIVE_ACCOUNT_BOUNDARY_PASS** — real Codex account, native CLI
+0.162.1, `gpt-6.1-sol`, synthetic source edit and tests passed in 14.353 seconds.
+Real credentials stayed outside the candidate. No API Key, B/C run or push.
+See [live validation and limitations](LIVE_VALIDATION.md) and
+[evidence](evidence/live-20261017/summary.json).
+
+`account_broker.py`, `live_probe.py` and `test_account_broker.py` implement this
+bounded validation. They are not yet wired into Harbor or qualified for unattended
+long-term service. The fake-only prototype and its original evidence below remain
+unchanged.
+
+## Historical offline feasibility
 
 Result: **OFFLINE_COMPATIBILITY_PASSED; LIVE_NOT_VALIDATED**.
 

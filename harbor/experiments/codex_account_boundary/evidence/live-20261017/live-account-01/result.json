@@ -1,0 +1,48 @@
+{
+  "status": "VALIDATION_FAILED",
+  "benchmark_trials": 0,
+  "api_key_used": false,
+  "real_credentials_read": true,
+  "model": "gpt-6.1-sol",
+  "agent_budget_seconds": 240,
+  "broker_lifetime_seconds": 300,
+  "response_quota": 12,
+  "automatic_retries": false,
+  "candidate_image": "sha256:b0207a2ff2abe3d89af692c870c77631dd9b79bca18dbf41d50fd88256eccd59",
+  "isolation_preflight": "PASS",
+  "native_version": "codex-cli 0.162.1",
+  "initial_filesystem_entries": 12291,
+  "account_token_valid_for_probe": true,
+  "login_status": "Logged in using ChatGPT",
+  "agent_seconds": 0.149,
+  "codex_exit_code": 1,
+  "credential_scan": "PASS: writable files and process environments, before/after; logs",
+  "auth_file_unchanged": true,
+  "upstream_response_requests": 0,
+  "upstream_statuses": [],
+  "failure_type": "AssertionError",
+  "failure_lines": [
+    {
+      "file": "live_probe.py",
+      "line": 234
+    }
+  ],
+  "cleanup": [
+    {
+      "container": "codex-boundary-5759fd5f47-candidate",
+      "removed": true
+    },
+    {
+      "container": "codex-boundary-5759fd5f47-broker",
+      "removed": true
+    },
+    {
+      "network": "codex-boundary-5759fd5f47-egress",
+      "removed": true
+    },
+    {
+      "network": "codex-boundary-5759fd5f47-internal",
+      "removed": true
+    }
+  ]
+}

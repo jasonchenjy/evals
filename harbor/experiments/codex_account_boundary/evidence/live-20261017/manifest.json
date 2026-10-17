@@ -1,0 +1,287 @@
+[
+  {
+    "path": "account_broker.py",
+    "sha256": "9ed461488e960982d3cd7c5eb28f08fc172f1b87c48d4efc4713d45ea5812a4e",
+    "bytes": 10299
+  },
+  {
+    "path": "broker-tests.log",
+    "sha256": "19e2c0335f446f2ba20daafd957c96fcca143f0682910083c68661bc7ee1c610",
+    "bytes": 5998
+  },
+  {
+    "path": "catalog-01/broker-audit.jsonl",
+    "sha256": "9e8c99c999226132b9ff9ec37f2c86b60bf63c45770ec42fe858efced77a7444",
+    "bytes": 349
+  },
+  {
+    "path": "catalog-01/live-negative-checks.json",
+    "sha256": "0fa0bddde6318ff23089866e3f97902a0d91f3c6944d43d553cde72b1703c657",
+    "bytes": 70
+  },
+  {
+    "path": "catalog-01/result.json",
+    "sha256": "98459f06e2347b4deeb5dc0bc1819af6ac857b5234b2584c831bdc1eac6e0ec1",
+    "bytes": 1017
+  },
+  {
+    "path": "contract-check.json",
+    "sha256": "f2a6c7e3b9f8763635636c6c56e29f78e9fa0e9b8b66095feb54e4159cb126b8",
+    "bytes": 217
+  },
+  {
+    "path": "live-account-01/broker-audit.jsonl",
+    "sha256": "efc93fa33249ab3921ef269142a569cb9cacf51834e53b262b153c3e6392bfcd",
+    "bytes": 105
+  },
+  {
+    "path": "live-account-01/live-negative-checks.json",
+    "sha256": "0fa0bddde6318ff23089866e3f97902a0d91f3c6944d43d553cde72b1703c657",
+    "bytes": 70
+  },
+  {
+    "path": "live-account-01/native-codex.jsonl",
+    "sha256": "39d9de6e057b300d3e774f1b5ae625603aa18281a14b68bf4be53fbff71d1db2",
+    "bytes": 383
+  },
+  {
+    "path": "live-account-01/native-codex.stderr",
+    "sha256": "a7eac35d384576c0a4a4cf0e71e5345245d06214d34f1ecd4b4511b653b076d4",
+    "bytes": 197
+  },
+  {
+    "path": "live-account-01/result.json",
+    "sha256": "676eca64f8c88cf929615c62337f9c8a8eb2d377995261ed9c23ee712dee741e",
+    "bytes": 1295
+  },
+  {
+    "path": "live-account-02/account_broker.py",
+    "sha256": "9995a62f36cf0669fef4c78be4505037f6cd23689276b446931f07c48b066321",
+    "bytes": 8501
+  },
+  {
+    "path": "live-account-02/broker-audit.jsonl",
+    "sha256": "e0ca83f8b690c8fbcd84181a17ed79491bea644c002600fe281ec5acba125a9c",
+    "bytes": 662
+  },
+  {
+    "path": "live-account-02/live-negative-checks.json",
+    "sha256": "0fa0bddde6318ff23089866e3f97902a0d91f3c6944d43d553cde72b1703c657",
+    "bytes": 70
+  },
+  {
+    "path": "live-account-02/live_probe.py",
+    "sha256": "8c1be2bbc33a82c7870dc6744680c99a56216340dd376e0e26522709b276a553",
+    "bytes": 17372
+  },
+  {
+    "path": "live-account-02/native-codex.jsonl",
+    "sha256": "10fbe20ab17df4b63103b779c290a12609fa359be18141696c27b00c0ee66aa1",
+    "bytes": 387
+  },
+  {
+    "path": "live-account-02/native-codex.stderr",
+    "sha256": "1aa26269eb1cc57f86b235a03cda53c004edb5b1e9fc99d4da4f00843293d721",
+    "bytes": 39
+  },
+  {
+    "path": "live-account-02/result.json",
+    "sha256": "c7852c214ac3a1f4c1e0966c7d576de25526afa6f4123bf9db52d3a52152cf1a",
+    "bytes": 1369
+  },
+  {
+    "path": "live-account-03/account_broker.py",
+    "sha256": "ee541aa3f14a2c1f7dec783e664cb939fe5561892d8e5cf5073c7c3036d6dae0",
+    "bytes": 9112
+  },
+  {
+    "path": "live-account-03/broker-audit.jsonl",
+    "sha256": "c8e3d9cacb4bfbef507e940ad4c1fd3b67477cd131cf7a7a1f7cc07c0c1e8fa0",
+    "bytes": 975
+  },
+  {
+    "path": "live-account-03/live-negative-checks.json",
+    "sha256": "0fa0bddde6318ff23089866e3f97902a0d91f3c6944d43d553cde72b1703c657",
+    "bytes": 70
+  },
+  {
+    "path": "live-account-03/live_probe.py",
+    "sha256": "8c1be2bbc33a82c7870dc6744680c99a56216340dd376e0e26522709b276a553",
+    "bytes": 17372
+  },
+  {
+    "path": "live-account-03/native-codex.jsonl",
+    "sha256": "9224a456ad284d988d17713d267858fe54a567ebe02823942d4348d0e7b11868",
+    "bytes": 387
+  },
+  {
+    "path": "live-account-03/native-codex.stderr",
+    "sha256": "1aa26269eb1cc57f86b235a03cda53c004edb5b1e9fc99d4da4f00843293d721",
+    "bytes": 39
+  },
+  {
+    "path": "live-account-03/result.json",
+    "sha256": "5ad3a4ba95b2e9e1ea307a46e61ba14c29ca44d7dd190344b1d6c507abfeaf08",
+    "bytes": 1369
+  },
+  {
+    "path": "live-account-04/account_broker.py",
+    "sha256": "639f5a60326b2112bad12f4708c89988c261b50a3de338392ccec76a9faf92ff",
+    "bytes": 10282
+  },
+  {
+    "path": "live-account-04/broker-audit.jsonl",
+    "sha256": "3ce4557ee6702234506968abc874eaf82ef784930f487aa2a926ccf4aa0ebf76",
+    "bytes": 2284
+  },
+  {
+    "path": "live-account-04/live-negative-checks.json",
+    "sha256": "0fa0bddde6318ff23089866e3f97902a0d91f3c6944d43d553cde72b1703c657",
+    "bytes": 70
+  },
+  {
+    "path": "live-account-04/live_probe.py",
+    "sha256": "8c1be2bbc33a82c7870dc6744680c99a56216340dd376e0e26522709b276a553",
+    "bytes": 17372
+  },
+  {
+    "path": "live-account-04/native-codex.jsonl",
+    "sha256": "aed3bcf235c2dabe50bff450906c4809065c809dee443f33357c57d55b9c5aa8",
+    "bytes": 2011
+  },
+  {
+    "path": "live-account-04/native-codex.stderr",
+    "sha256": "1aa26269eb1cc57f86b235a03cda53c004edb5b1e9fc99d4da4f00843293d721",
+    "bytes": 39
+  },
+  {
+    "path": "live-account-04/result.json",
+    "sha256": "3805af9d4a25fd36c5a40dd4f4e1e5421722784e6a6dab3912a8c7ead07a9dd9",
+    "bytes": 1493
+  },
+  {
+    "path": "live-account-05/account_broker.py",
+    "sha256": "9ed461488e960982d3cd7c5eb28f08fc172f1b87c48d4efc4713d45ea5812a4e",
+    "bytes": 10299
+  },
+  {
+    "path": "live-account-05/arithmetic.py",
+    "sha256": "ba1a531f581d2e6094e978ed6f7aca7a8d92eeb62c6e7ad73ee692f7f18bc772",
+    "bytes": 32
+  },
+  {
+    "path": "live-account-05/baseline-test.txt",
+    "sha256": "4a8b8e8e104a02a59d591bc3f2386024c8ac0cd0446e908b74ee341f7f45f51e",
+    "bytes": 507
+  },
+  {
+    "path": "live-account-05/before-candidate-hashes.json",
+    "sha256": "9d8e4c79d6af22f2ba9974a0370106d8cb0f2729c9d2c4df5e3f1d291573cfc2",
+    "bytes": 494
+  },
+  {
+    "path": "live-account-05/broker-audit.jsonl",
+    "sha256": "eb8c3b3101d80263ba2439cf349c62ce384b27a36bcb60a8dbe7f7a9f1496502",
+    "bytes": 2284
+  },
+  {
+    "path": "live-account-05/broker-inspection.json",
+    "sha256": "8724e6cb25c3926381d09ef528e4b35f8c6e83424e21dd6605512f97b40eacb0",
+    "bytes": 6817
+  },
+  {
+    "path": "live-account-05/candidate-inspection.json",
+    "sha256": "2638512727ea244e55c2607c87676ba0ee9fb65ebe87fa4ace41859195a49177",
+    "bytes": 6237
+  },
+  {
+    "path": "live-account-05/initial-filesystem-inventory.json",
+    "sha256": "f2ea78f88c5163715904a36411924e540ec5cd7deebdcfd312fd0156e0720fed",
+    "bytes": 1726722
+  },
+  {
+    "path": "live-account-05/live-negative-checks.json",
+    "sha256": "0fa0bddde6318ff23089866e3f97902a0d91f3c6944d43d553cde72b1703c657",
+    "bytes": 70
+  },
+  {
+    "path": "live-account-05/live_probe.py",
+    "sha256": "b95ecf8886e18a7f2354b9ac259953fc38f0a844d250e537c61afffc5e3ad1b7",
+    "bytes": 17903
+  },
+  {
+    "path": "live-account-05/native-codex.jsonl",
+    "sha256": "2e212d09a65c629864a5710a4a97151bf84913578c18f3de98ada6101a0ba116",
+    "bytes": 2161
+  },
+  {
+    "path": "live-account-05/native-codex.stderr",
+    "sha256": "1aa26269eb1cc57f86b235a03cda53c004edb5b1e9fc99d4da4f00843293d721",
+    "bytes": 39
+  },
+  {
+    "path": "live-account-05/post-model-candidate-hashes.json",
+    "sha256": "ae0479fef424b2404daa981a6f012c270936e0f7692e4a4fd53e68b461f5f357",
+    "bytes": 8810
+  },
+  {
+    "path": "live-account-05/pre-model-candidate-hashes.json",
+    "sha256": "217953adab3fee3415b3b50bd79d8cfdd087800d400b3a1c1066add16ae0a745",
+    "bytes": 698
+  },
+  {
+    "path": "live-account-05/result.json",
+    "sha256": "8dacf6b7aa031d46770741dc7a273ff9e9887041f8b7c77ba42861e74e9f95db",
+    "bytes": 1388
+  },
+  {
+    "path": "live-account-05/verification.txt",
+    "sha256": "d328fa48f1957eabb758652820f31a2c28894fc75057dd89eaf5d721c2e5ace3",
+    "bytes": 147
+  },
+  {
+    "path": "live-preflight-01/result.json",
+    "sha256": "abec61b129b93db911b27f240fe835896f212e0daab081b5762ac3c4133aa660",
+    "bytes": 775
+  },
+  {
+    "path": "live-preflight-02/result.json",
+    "sha256": "0650a9f413f9a4f1f498d52a7caccee786442459ab9aed1a321343569fdcc75e",
+    "bytes": 859
+  },
+  {
+    "path": "live-preflight-03/account_broker.py",
+    "sha256": "639f5a60326b2112bad12f4708c89988c261b50a3de338392ccec76a9faf92ff",
+    "bytes": 10282
+  },
+  {
+    "path": "live-preflight-03/baseline-test.txt",
+    "sha256": "4a8b8e8e104a02a59d591bc3f2386024c8ac0cd0446e908b74ee341f7f45f51e",
+    "bytes": 507
+  },
+  {
+    "path": "live-preflight-03/live_probe.py",
+    "sha256": "93429a1375ba1e228fcaeca8d775c20c74104d0865b9060df26b664f138f8335",
+    "bytes": 17890
+  },
+  {
+    "path": "live-preflight-03/result.json",
+    "sha256": "5e0f55cfe2fd7761fd9b33f5a40ba672f884493b7228194f876b12fd6edbeee0",
+    "bytes": 859
+  },
+  {
+    "path": "live_probe.py",
+    "sha256": "b95ecf8886e18a7f2354b9ac259953fc38f0a844d250e537c61afffc5e3ad1b7",
+    "bytes": 17903
+  },
+  {
+    "path": "summary.json",
+    "sha256": "909a1e2d839a365752b11ed19aacf9b64aa37a63bb3668b6d5c19da57c529b4f",
+    "bytes": 1114
+  },
+  {
+    "path": "test_account_broker.py",
+    "sha256": "ec5240271c22b5d426aa0fdfb1dcda69431fb62ade0e8ef205e90938d9819a1a",
+    "bytes": 6065
+  }
+]

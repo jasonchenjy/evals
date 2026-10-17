@@ -1,0 +1,4 @@
+{"type":"thread.started","thread_id":"01a14ac2-eded-7d91-8b0c-0bf9b2f09c2f"}
+{"type":"turn.started"}
+{"type":"error","message":"unexpected status 403 Forbidden: Unknown error, url: http://172.18.0.2:8765/backend-api/codex/responses"}
+{"type":"turn.failed","error":{"message":"unexpected status 403 Forbidden: Unknown error, url: http://172.18.0.2:8765/backend-api/codex/responses"}}

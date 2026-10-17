@@ -1,0 +1,50 @@
+{"kind": "upstream_started", "route": "responses", "attempt": 1}
+{"kind": "response_format", "media_type": "text/event-stream", "completed_event": false, "models": [], "event_count": 0}
+{"kind": "response_gate", "media_type": "text/event-stream", "secret_absent": true, "within_size": true, "session_valid": true, "account_metadata_present": true}
+{"kind": "upstream", "route": "responses", "status": 200, "attempt": 1, "response_bytes": 28, "response_sha256": "58c672c596ca16b05eb1ef04f5e0e8f661882cb5fcd0fe17446cb24e6808a15a"}
+..{"kind": "upstream_started", "route": "catalog", "attempt": 0}
+{"kind": "response_format", "media_type": "application/json", "completed_event": false, "models": [], "event_count": 0}
+{"kind": "response_gate", "media_type": "application/json", "secret_absent": true, "within_size": true, "session_valid": true, "account_metadata_present": false}
+{"kind": "upstream", "route": "catalog", "status": 200, "attempt": 0, "response_bytes": 35, "response_sha256": "4d3783d020204872d159c0b9f4477e597ec29af98dc0dc840f2368771931dd4b"}
+{"kind": "catalog_verified", "selected_model_present": true}
+..{"kind": "upstream_started", "route": "responses", "attempt": 1}
+{"kind": "response_format", "media_type": "", "completed_event": true, "models": ["gpt-6.1-sol"], "event_count": 1}
+{"kind": "response_gate", "media_type": "text/event-stream", "secret_absent": true, "within_size": true, "session_valid": true, "account_metadata_present": false}
+{"kind": "upstream", "route": "responses", "status": 200, "attempt": 1, "response_bytes": 72, "response_sha256": "7ed576b921996ace605908e63fed46dcb6271b039e8e47d457a3d71fbc142f06"}
+{"kind": "upstream_started", "route": "responses", "attempt": 2}
+{"kind": "response_format", "media_type": "application/octet-stream", "completed_event": true, "models": ["gpt-6.1-sol"], "event_count": 1}
+{"kind": "response_gate", "media_type": "text/event-stream", "secret_absent": true, "within_size": true, "session_valid": true, "account_metadata_present": false}
+{"kind": "upstream", "route": "responses", "status": 200, "attempt": 2, "response_bytes": 72, "response_sha256": "7ed576b921996ace605908e63fed46dcb6271b039e8e47d457a3d71fbc142f06"}
+.{"kind": "upstream_started", "route": "responses", "attempt": 1}
+{"kind": "response_format", "media_type": "text/event-stream", "completed_event": false, "models": [], "event_count": 0}
+{"kind": "response_gate", "media_type": "text/event-stream", "secret_absent": true, "within_size": true, "session_valid": true, "account_metadata_present": false}
+{"kind": "upstream", "route": "responses", "status": 200, "attempt": 1, "response_bytes": 12, "response_sha256": "2c6f2d4d09c9e55ef51012a71565ec7bb2cd8ce297daedbf4152bcbce053c413"}
+..{"kind": "upstream_started", "route": "responses", "attempt": 1}
+{"kind": "response_format", "media_type": "text/event-stream", "completed_event": false, "models": [], "event_count": 0}
+{"kind": "response_gate", "media_type": "text/event-stream", "secret_absent": true, "within_size": true, "session_valid": true, "account_metadata_present": false}
+{"kind": "upstream", "route": "responses", "status": 302, "attempt": 1, "response_bytes": 8, "response_sha256": "093452239d0e2e43b06b9d5cd8ac735c26449e340e001f87904765bb30e2293e"}
+{"kind": "upstream_started", "route": "responses", "attempt": 2}
+{"kind": "response_format", "media_type": "text/event-stream", "completed_event": false, "models": [], "event_count": 0}
+{"kind": "response_gate", "media_type": "text/event-stream", "secret_absent": true, "within_size": true, "session_valid": true, "account_metadata_present": false}
+{"kind": "upstream", "route": "responses", "status": 401, "attempt": 2, "response_bytes": 12, "response_sha256": "6531af7dee70ebf2006f7c23eb1232477a81985a682e71fd4822189d824a0967"}
+{"kind": "upstream_started", "route": "responses", "attempt": 3}
+{"kind": "response_format", "media_type": "text/event-stream", "completed_event": false, "models": [], "event_count": 0}
+{"kind": "response_gate", "media_type": "text/event-stream", "secret_absent": false, "within_size": true, "session_valid": true, "account_metadata_present": false}
+{"kind": "upstream", "route": "responses", "status": 200, "attempt": 3, "response_bytes": 29, "response_sha256": "dc358bb9a511fbdd302cefc260bc75d6d64d40c6200124a0022ba67a9c6ef530"}
+{"kind": "upstream_started", "route": "responses", "attempt": 4}
+{"kind": "response_format", "media_type": "text/event-stream", "completed_event": false, "models": [], "event_count": 0}
+{"kind": "response_gate", "media_type": "text/event-stream", "secret_absent": true, "within_size": false, "session_valid": true, "account_metadata_present": false}
+{"kind": "upstream", "route": "responses", "status": 200, "attempt": 4, "response_bytes": 16777217, "response_sha256": "991bc82a1f5bdf203ad43efb5c253856b49b5c09580d8ed24bcdd2f431f7707c"}
+{"kind": "upstream_started", "route": "responses", "attempt": 5}
+{"kind": "response_format", "media_type": "text/html", "completed_event": false, "models": [], "event_count": 0}
+{"kind": "response_gate", "media_type": "text/html", "secret_absent": true, "within_size": true, "session_valid": true, "account_metadata_present": false}
+{"kind": "upstream", "route": "responses", "status": 200, "attempt": 5, "response_bytes": 4, "response_sha256": "e5e239560bc125a20ff2ac1fea50915bc198dd4f5b5256ec447a8a71e00132b3"}
+..{"kind": "upstream_started", "route": "responses", "attempt": 1}
+{"kind": "response_format", "media_type": "text/event-stream", "completed_event": false, "models": [], "event_count": 0}
+{"kind": "response_gate", "media_type": "text/event-stream", "secret_absent": true, "within_size": true, "session_valid": true, "account_metadata_present": false}
+{"kind": "upstream", "route": "responses", "status": 200, "attempt": 1, "response_bytes": 12, "response_sha256": "2c6f2d4d09c9e55ef51012a71565ec7bb2cd8ce297daedbf4152bcbce053c413"}
+..
+----------------------------------------------------------------------
+Ran 11 tests in 5.615s
+
+OK

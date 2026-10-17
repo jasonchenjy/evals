@@ -1,0 +1,6 @@
+{"kind": "ready", "real_credential_in_memory_only": true, "lifetime_seconds": 300, "response_quota": 12}
+{"kind": "upstream_started", "route": "catalog", "attempt": 0}
+{"kind": "upstream", "route": "catalog", "status": 200, "attempt": 0, "response_bytes": 569147, "response_sha256": "c4c3f2d634b5b8e3e2c439a8845ebb05f7b9054694c5ec6678ed813d7b89ca43"}
+{"kind": "catalog_verified", "selected_model_present": true}
+{"kind": "upstream_started", "route": "responses", "attempt": 1}
+{"kind": "upstream", "route": "responses", "status": 200, "attempt": 1, "response_bytes": 108567, "response_sha256": "dc560c575ce20e2e7f4c60bc6b40e499917995fad6abf1e890f59c2daa6d96dc"}

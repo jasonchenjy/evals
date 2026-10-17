@@ -1,0 +1,3 @@
+{"kind": "ready", "real_credential_in_memory_only": true, "lifetime_seconds": 300, "response_quota": 12}
+{"kind": "upstream", "route": "catalog", "status": 200, "attempt": 0, "response_bytes": 569147, "response_sha256": "c4c3f2d634b5b8e3e2c439a8845ebb05f7b9054694c5ec6678ed813d7b89ca43"}
+{"kind": "catalog_verified", "selected_model_present": true}

@@ -1,0 +1,18 @@
+{"kind": "ready", "real_credential_in_memory_only": true, "lifetime_seconds": 300, "response_quota": 12}
+{"kind": "upstream_started", "route": "catalog", "attempt": 0}
+{"kind": "response_format", "media_type": "application/json", "completed_event": false, "models": [], "event_count": 0}
+{"kind": "response_gate", "media_type": "application/json", "secret_absent": true, "within_size": true, "session_valid": true, "account_metadata_present": false}
+{"kind": "upstream", "route": "catalog", "status": 200, "attempt": 0, "response_bytes": 569147, "response_sha256": "c4c3f2d634b5b8e3e2c439a8845ebb05f7b9054694c5ec6678ed813d7b89ca43"}
+{"kind": "catalog_verified", "selected_model_present": true}
+{"kind": "upstream_started", "route": "responses", "attempt": 1}
+{"kind": "response_format", "media_type": "", "completed_event": true, "models": ["gpt-6.1-sol"], "event_count": 65}
+{"kind": "response_gate", "media_type": "text/event-stream", "secret_absent": true, "within_size": true, "session_valid": true, "account_metadata_present": false}
+{"kind": "upstream", "route": "responses", "status": 200, "attempt": 1, "response_bytes": 108252, "response_sha256": "41158fd3f5405cfdd12a36999370c5b9bc82c72e369d200431db64a9da3e5430"}
+{"kind": "upstream_started", "route": "responses", "attempt": 2}
+{"kind": "response_format", "media_type": "", "completed_event": true, "models": ["gpt-6.1-sol"], "event_count": 78}
+{"kind": "response_gate", "media_type": "text/event-stream", "secret_absent": true, "within_size": true, "session_valid": true, "account_metadata_present": false}
+{"kind": "upstream", "route": "responses", "status": 200, "attempt": 2, "response_bytes": 110330, "response_sha256": "e52bb8bde04cb6a2d09a888475ef83207e494441045313e1eb377716669f5ee1"}
+{"kind": "upstream_started", "route": "responses", "attempt": 3}
+{"kind": "response_format", "media_type": "", "completed_event": true, "models": ["gpt-6.1-sol"], "event_count": 56}
+{"kind": "response_gate", "media_type": "text/event-stream", "secret_absent": true, "within_size": true, "session_valid": true, "account_metadata_present": false}
+{"kind": "upstream", "route": "responses", "status": 200, "attempt": 3, "response_bytes": 106922, "response_sha256": "e186e713c2fa27e1ee2d47afe8dfd5e9905090486acde73de3145ae4414386b3"}

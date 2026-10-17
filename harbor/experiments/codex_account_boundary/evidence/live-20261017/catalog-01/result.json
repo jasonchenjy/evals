@@ -1,0 +1,38 @@
+{
+  "status": "CATALOG_PASS",
+  "benchmark_trials": 0,
+  "api_key_used": false,
+  "real_credentials_read": true,
+  "model": "gpt-6.1-sol",
+  "agent_budget_seconds": 240,
+  "broker_lifetime_seconds": 300,
+  "response_quota": 12,
+  "automatic_retries": false,
+  "candidate_image": "sha256:e2a46e4bba62a5b731db90d50c8ec2efef6a7a7b8cbee3b2a6fabda80c077c76",
+  "isolation_preflight": "PASS",
+  "native_version": "codex-cli 0.162.1",
+  "initial_filesystem_entries": 12291,
+  "account_token_valid_for_probe": true,
+  "login_status": "Logged in using ChatGPT",
+  "catalog_check_exit": 0,
+  "catalog_status": "200",
+  "credential_scan": "PASS",
+  "cleanup": [
+    {
+      "container": "codex-boundary-fa2a39ea7b-candidate",
+      "removed": true
+    },
+    {
+      "container": "codex-boundary-fa2a39ea7b-broker",
+      "removed": true
+    },
+    {
+      "network": "codex-boundary-fa2a39ea7b-egress",
+      "removed": true
+    },
+    {
+      "network": "codex-boundary-fa2a39ea7b-internal",
+      "removed": true
+    }
+  ]
+}

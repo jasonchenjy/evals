@@ -1,0 +1,5 @@
+{
+  "wrong_nonce": 401,
+  "auth_file": 404,
+  "arbitrary_host": 404
+}

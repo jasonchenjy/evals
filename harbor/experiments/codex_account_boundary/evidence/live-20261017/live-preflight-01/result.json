@@ -1,0 +1,31 @@
+{
+  "status": "VALIDATION_FAILED",
+  "benchmark_trials": 0,
+  "api_key_used": false,
+  "real_credentials_read": false,
+  "model": "gpt-6.1-sol",
+  "agent_budget_seconds": 240,
+  "broker_lifetime_seconds": 300,
+  "response_quota": 12,
+  "automatic_retries": false,
+  "candidate_image": "sha256:665a369f9a053f942a22382245ed9069b631622ea5cb0faa2e3c9ce5993c5f02",
+  "failure_type": "RuntimeError",
+  "cleanup": [
+    {
+      "container": "codex-boundary-a4f977ae07-candidate",
+      "removed": true
+    },
+    {
+      "container": "codex-boundary-a4f977ae07-broker",
+      "removed": true
+    },
+    {
+      "network": "codex-boundary-a4f977ae07-egress",
+      "removed": true
+    },
+    {
+      "network": "codex-boundary-a4f977ae07-internal",
+      "removed": true
+    }
+  ]
+}
