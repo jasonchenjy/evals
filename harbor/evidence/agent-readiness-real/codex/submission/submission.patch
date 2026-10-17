@@ -1,0 +1,52 @@
+diff --git a/src/normalization.py b/src/normalization.py
+new file mode 100644
+index 0000000..fe282a5
+--- /dev/null
++++ b/src/normalization.py
+@@ -0,0 +1,8 @@
++"""Normalize the text fields of a parsed order."""
++
++
++def normalize_order(order):
++    return {
++        'item': order['item'].strip(),
++        'quantity': int(order['quantity'].strip()),
++    }
+diff --git a/src/parser.py b/src/parser.py
+index c58e439..5823842 100644
+--- a/src/parser.py
++++ b/src/parser.py
+@@ -1,4 +1,6 @@
+ """Parse an order line; normalization belongs to the service boundary."""
+ def parse_order(line):
++    if not isinstance(line, str):
++        raise ValueError('order must be text')
+     item, quantity = line.split('|')
+     return {'item': item, 'quantity': quantity}
+diff --git a/src/service.py b/src/service.py
+index 2bc384a..4a87196 100644
+--- a/src/service.py
++++ b/src/service.py
+@@ -1,9 +1,10 @@
+ from parser import parse_order
++from normalization import normalize_order
+ from validator import validate_order
+ 
+ 
+ def build_order(line):
+     parsed = parse_order(line)
+-    order = {'item': parsed['item']}
++    order = normalize_order(parsed)
+     validate_order(order)
+     return dict(order, total=order['quantity'] * 3)
+diff --git a/src/validator.py b/src/validator.py
+index 65fa85c..eb6dc59 100644
+--- a/src/validator.py
++++ b/src/validator.py
+@@ -1,5 +1,5 @@
+ def validate_order(order):
+-    if not order['item']:
++    if not isinstance(order['item'], str) or not order['item']:
+         raise ValueError('item is required')
+     if type(order['quantity']) is not int or not 1 <= order['quantity'] <= 100:
+         raise ValueError('quantity must be an integer from 1 to 100')

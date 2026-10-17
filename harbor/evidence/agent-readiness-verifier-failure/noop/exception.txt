@@ -1,0 +1,28 @@
+Traceback (most recent call last):
+  File "/Users/junyuc/Documents/interview/SWE-bench/evals/harbor/.venv/lib/python3.13/site-packages/harbor/trial/trial.py", line 500, in run
+    await self._run()
+  File "/Users/junyuc/Documents/interview/SWE-bench/evals/harbor/.venv/lib/python3.13/site-packages/harbor/trial/single_step.py", line 51, in _run
+    await self._run_verifier()
+  File "/Users/junyuc/Documents/interview/SWE-bench/evals/harbor/.venv/lib/python3.13/site-packages/harbor/trial/single_step.py", line 98, in _run_verifier
+    self.result.verifier_result = await self._run_separate_verifier(
+                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+    )
+    ^
+  File "/Users/junyuc/Documents/interview/SWE-bench/evals/harbor/.venv/lib/python3.13/site-packages/harbor/trial/trial.py", line 966, in _run_separate_verifier
+    return await self._verify_with_timeout(verifier, timeout_sec)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/junyuc/Documents/interview/SWE-bench/evals/harbor/.venv/lib/python3.13/site-packages/harbor/trial/trial.py", line 859, in _verify_with_timeout
+    return await asyncio.wait_for(verifier.verify(), timeout=timeout_sec)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.13/3.13.7/Frameworks/Python.framework/Versions/3.13/lib/python3.13/asyncio/tasks.py", line 507, in wait_for
+    return await fut
+           ^^^^^^^^^
+  File "/Users/junyuc/Documents/interview/SWE-bench/evals/harbor/preflight/run.py", line 105, in verify
+    assert before.return_code==0 and before.stdout.strip()==provenance['baseline'],before.stdout
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: fatal: detected dubious ownership in repository at '/work'
+To add an exception for this directory, call:
+
+	git config --global --add safe.directory /work
+

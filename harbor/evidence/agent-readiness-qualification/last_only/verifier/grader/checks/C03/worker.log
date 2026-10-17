@@ -1,0 +1,14 @@
+test_C03_missing_traceback (eval_behavior.Behavior) ... FAIL
+
+======================================================================
+FAIL: test_C03_missing_traceback (eval_behavior.Behavior)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/inputs/eval/private/tests/behavior.py", line 188, in test_C03_missing_traceback
+    self.assertIn("RemoteCause: remote-message-713", restored.longreprtext)
+AssertionError: 'RemoteCause: remote-message-713' not found in '/inputs/eval/private/tests/behavior.py:48: in remote_info\n    raise error\nE   ValueError: outer-message-829'
+
+----------------------------------------------------------------------
+Ran 1 test in 0.045s
+
+FAILED (failures=1)

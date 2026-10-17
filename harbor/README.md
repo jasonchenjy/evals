@@ -1,4 +1,11 @@
-# Harbor replacement spike
+# Harbor integration
+
+The current coding-workflow readiness result is **AGENT_READY** for this local
+supervised MVP: see [agent_readiness_report.md](agent_readiness_report.md),
+[preflight/README.md](preflight/README.md), and the complete
+[runtime factors audit](RUNTIME_FACTORS.md). One newly authorized multi-file
+synthetic Codex trial passed independent verification. No real pytest coding
+trial was run in the readiness task.
 
 The supervised real-Eval pilot implementation and security gates are documented
 in [pilot/README.md](pilot/README.md), with actual outcomes and the incomplete

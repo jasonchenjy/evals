@@ -1,0 +1,312 @@
+[
+  {
+    "path": "complete/agent/diagnostic.json",
+    "sha256": "f0790826b104266f717f370a279fb47df8a4743af7f35bb02f878ffe3a4d692a",
+    "bytes": 2386
+  },
+  {
+    "path": "complete/agent/public-preflight.txt",
+    "sha256": "653a2e8346bf78ba08040c3654649785829d952e1b11e3a406e195df0f084952",
+    "bytes": 84
+  },
+  {
+    "path": "complete/agent-environment/cleanup.json",
+    "sha256": "5a0ea0379b743b73b6e90c69416139bc3d05578f6ef4b906850cdd423a171769",
+    "bytes": 108
+  },
+  {
+    "path": "complete/agent-environment/docker-inspect.json",
+    "sha256": "1101ec5910e89e24a66e32c3d4d853aa6f2f554a27f93e0276acc47d778ba39d",
+    "bytes": 3034
+  },
+  {
+    "path": "complete/agent-environment/effective-policy.json",
+    "sha256": "1101ec5910e89e24a66e32c3d4d853aa6f2f554a27f93e0276acc47d778ba39d",
+    "bytes": 3034
+  },
+  {
+    "path": "complete/agent-environment/handoff.json",
+    "sha256": "3b44e25d4ef62c62fe5c3badcdf8bd890589d32ff7e48998e1734d15c9659388",
+    "bytes": 953
+  },
+  {
+    "path": "complete/agent-gate.json",
+    "sha256": "f96f902844ca103168fbfd5993e29dedf679b2c89652b095e5d73e995ce2502d",
+    "bytes": 447
+  },
+  {
+    "path": "complete/config.json",
+    "sha256": "c20d0cd804e2e637dab4f9e0ac2e270f0ee96928aad5132ec61d637f665c1a73",
+    "bytes": 588
+  },
+  {
+    "path": "complete/lock.json",
+    "sha256": "9cac5e4600c940376731020a88155aa82212a8d5251a86d8c789f26b4b4338d0",
+    "bytes": 1184
+  },
+  {
+    "path": "complete/process-check.json",
+    "sha256": "8094cdc2ed28509d8f320889619e9b91dfeb02fc7f0fedf7a88034965c68db9b",
+    "bytes": 119
+  },
+  {
+    "path": "complete/result.json",
+    "sha256": "639700cd6d99edcda70a2f4fe075d7d32460b831e17689f9355de828e6882d74",
+    "bytes": 4068
+  },
+  {
+    "path": "complete/submission/submission.json",
+    "sha256": "c8e2297f2f65433a98a18660f3ec1112b8030861e53139b7e0c23a6e6ed97264",
+    "bytes": 626
+  },
+  {
+    "path": "complete/submission/submission.patch",
+    "sha256": "b3d9fd98f807951803aa1a535104370b3586fbc7190f5edc5a82f133ba5656a0",
+    "bytes": 739
+  },
+  {
+    "path": "complete/trial.log",
+    "sha256": "d865e0f33db722460b2279e721e93bc8e88b37938e95e1dd9316d66304841ba7",
+    "bytes": 1051
+  },
+  {
+    "path": "complete/verifier/hidden-tests.txt",
+    "sha256": "99938b702cdf7699f688ad3cd45c30fea9e74b634768a8f581fcbdfdca3c4f99",
+    "bytes": 240
+  },
+  {
+    "path": "complete/verifier/initial-verifier.json",
+    "sha256": "fbef2a92d084a18705248f9256a91b2f420e895d6cb0f32a5b06f1053aed0dfd",
+    "bytes": 81
+  },
+  {
+    "path": "complete/verifier/result.json",
+    "sha256": "3982e9cd490c4db42a68d9847a0e4de97e7339ef2a37100ff64c3807d2b8daf7",
+    "bytes": 820
+  },
+  {
+    "path": "complete/verifier/reward.json",
+    "sha256": "34e636bdde02ca7e3fa38214565a1ce6774f656e0773eaa2a4776e6cfe9c0137",
+    "bytes": 20
+  },
+  {
+    "path": "complete/verifier-environment/cleanup.json",
+    "sha256": "fa11b1d9f1e2f9b48e6e868763eb60cc1cbd0f79e9a9e4e26c7811917d0a95ed",
+    "bytes": 108
+  },
+  {
+    "path": "complete/verifier-environment/docker-inspect.json",
+    "sha256": "d682a87543ce504ce2d4665022203482f50679da03e0725a9b4c8c10e42645c6",
+    "bytes": 3034
+  },
+  {
+    "path": "complete/verifier-environment/effective-policy.json",
+    "sha256": "d682a87543ce504ce2d4665022203482f50679da03e0725a9b4c8c10e42645c6",
+    "bytes": 3034
+  },
+  {
+    "path": "incomplete/agent/diagnostic.json",
+    "sha256": "baf64cf6541991d101fde2673eba3be6393ecfed67a7257796b415cf21cc1f11",
+    "bytes": 1373
+  },
+  {
+    "path": "incomplete/agent/public-preflight.txt",
+    "sha256": "653a2e8346bf78ba08040c3654649785829d952e1b11e3a406e195df0f084952",
+    "bytes": 84
+  },
+  {
+    "path": "incomplete/agent-environment/cleanup.json",
+    "sha256": "0e228a430a27a9e580cb885cb27e5389df15b98fcf177a85765196bb5a0afc25",
+    "bytes": 108
+  },
+  {
+    "path": "incomplete/agent-environment/docker-inspect.json",
+    "sha256": "75eefe95f682b04a65c275dcbd2b77117980f2b073cd5c5cc8de7c51320adf5b",
+    "bytes": 3033
+  },
+  {
+    "path": "incomplete/agent-environment/effective-policy.json",
+    "sha256": "75eefe95f682b04a65c275dcbd2b77117980f2b073cd5c5cc8de7c51320adf5b",
+    "bytes": 3033
+  },
+  {
+    "path": "incomplete/agent-environment/handoff.json",
+    "sha256": "c5a1629c2043b1f553c906d78fe850f74edda7029c9c3887bdf09d6a2148ea9a",
+    "bytes": 952
+  },
+  {
+    "path": "incomplete/agent-gate.json",
+    "sha256": "f96f902844ca103168fbfd5993e29dedf679b2c89652b095e5d73e995ce2502d",
+    "bytes": 447
+  },
+  {
+    "path": "incomplete/config.json",
+    "sha256": "882bfbf08a9e004fa186fb8389ce8e02da745c98a182f6d191406cae48a42a56",
+    "bytes": 592
+  },
+  {
+    "path": "incomplete/lock.json",
+    "sha256": "c08e5fd038d1872895f1cacdcb5c73b61bc18fd8006dc996c1876c54963a0426",
+    "bytes": 1186
+  },
+  {
+    "path": "incomplete/result.json",
+    "sha256": "9fb355c1a1bd43422168309b61331dcbc4d5983127b2c2f514745ef7c79a2ea3",
+    "bytes": 4076
+  },
+  {
+    "path": "incomplete/submission/submission.json",
+    "sha256": "29a3cbfeea86f53f8ac6b55c6005ac2c11ea09b6e6d8fdad02898f76eea51914",
+    "bytes": 626
+  },
+  {
+    "path": "incomplete/submission/submission.patch",
+    "sha256": "d6759785adcee247db4b2dbabb81473c13984ce08780a4cc3485ae4e978b2549",
+    "bytes": 718
+  },
+  {
+    "path": "incomplete/trial.log",
+    "sha256": "4ccfe883c97fef03cee5e834dbec15e33cd1b5e47ff9421c713fb4274a4416c3",
+    "bytes": 1063
+  },
+  {
+    "path": "incomplete/verifier/hidden-tests.txt",
+    "sha256": "9176a244377008e87dfd208c2fc95c171d8bc74f110a79ce6c8d7329a18c9fd5",
+    "bytes": 4974
+  },
+  {
+    "path": "incomplete/verifier/initial-verifier.json",
+    "sha256": "fbef2a92d084a18705248f9256a91b2f420e895d6cb0f32a5b06f1053aed0dfd",
+    "bytes": 81
+  },
+  {
+    "path": "incomplete/verifier/result.json",
+    "sha256": "cbe69b765a7e4a0c0dc3beeed2bb600553c68753053d2eb18a6f1f23d1b17ad0",
+    "bytes": 821
+  },
+  {
+    "path": "incomplete/verifier/reward.json",
+    "sha256": "5c73d718100b1b99b632b6c9956dae409fe1fe6b58474aca8d2ea5823bf0c6e4",
+    "bytes": 20
+  },
+  {
+    "path": "incomplete/verifier-environment/cleanup.json",
+    "sha256": "e8d2f847ce8e1f536a3ec912ed91ae47de94b68b85ec419c152390238240e95f",
+    "bytes": 108
+  },
+  {
+    "path": "incomplete/verifier-environment/docker-inspect.json",
+    "sha256": "cd83a2e0c248de78f8b3ef7c9db38bb1df371e88791aca950d5f671226fdc095",
+    "bytes": 3034
+  },
+  {
+    "path": "incomplete/verifier-environment/effective-policy.json",
+    "sha256": "cd83a2e0c248de78f8b3ef7c9db38bb1df371e88791aca950d5f671226fdc095",
+    "bytes": 3034
+  },
+  {
+    "path": "noop/agent/diagnostic.json",
+    "sha256": "b9bc246d4e8de60a40f23cf5bd817c90013658a9e9c615db1585e3c98c619cc6",
+    "bytes": 917
+  },
+  {
+    "path": "noop/agent/public-preflight.txt",
+    "sha256": "653a2e8346bf78ba08040c3654649785829d952e1b11e3a406e195df0f084952",
+    "bytes": 84
+  },
+  {
+    "path": "noop/agent-environment/cleanup.json",
+    "sha256": "3b7c719a9713a1c112a2ab5c97bd878eec5a8baa15024fe7ceeed5968151c246",
+    "bytes": 108
+  },
+  {
+    "path": "noop/agent-environment/docker-inspect.json",
+    "sha256": "9313af2f712954a6a9c2cb4ec5fbabae6b423588fdd87c98f94e4c74402deefa",
+    "bytes": 3032
+  },
+  {
+    "path": "noop/agent-environment/effective-policy.json",
+    "sha256": "9313af2f712954a6a9c2cb4ec5fbabae6b423588fdd87c98f94e4c74402deefa",
+    "bytes": 3032
+  },
+  {
+    "path": "noop/agent-environment/handoff.json",
+    "sha256": "e58e2653520fd29c53d195e0091bf9e16ac0bf2eddca464efd37bbc6fb7281ee",
+    "bytes": 794
+  },
+  {
+    "path": "noop/agent-gate.json",
+    "sha256": "f96f902844ca103168fbfd5993e29dedf679b2c89652b095e5d73e995ce2502d",
+    "bytes": 447
+  },
+  {
+    "path": "noop/config.json",
+    "sha256": "8410c2df7ede8e264b45368c79fa7eae52e0aca46665f1d491a27f1bb8bab3dc",
+    "bytes": 580
+  },
+  {
+    "path": "noop/lock.json",
+    "sha256": "69170634405d5ad231c96b0b6c5a9c1995147851234d700e049ac3a4bcbb95cf",
+    "bytes": 1180
+  },
+  {
+    "path": "noop/result.json",
+    "sha256": "31dbbdc7ec5497b01d5513da3751ed7f0960c38dae3c0fe31103574dd3b0cbff",
+    "bytes": 4052
+  },
+  {
+    "path": "noop/submission/submission.json",
+    "sha256": "771f4a0d1e37c3389202bec0348388c90ee8a847729009712cb80c618c047a79",
+    "bytes": 530
+  },
+  {
+    "path": "noop/submission/submission.patch",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "bytes": 0
+  },
+  {
+    "path": "noop/trial.log",
+    "sha256": "491ad91151d895d58deda524a6f2abbd14146cfca062e087149370bf1d31c4af",
+    "bytes": 1027
+  },
+  {
+    "path": "noop/verifier/hidden-tests.txt",
+    "sha256": "61cda85eba91f87dac16a90ac2910549d7342097957996b2a0a071dcb7b18b6a",
+    "bytes": 6516
+  },
+  {
+    "path": "noop/verifier/initial-verifier.json",
+    "sha256": "fbef2a92d084a18705248f9256a91b2f420e895d6cb0f32a5b06f1053aed0dfd",
+    "bytes": 81
+  },
+  {
+    "path": "noop/verifier/result.json",
+    "sha256": "8bf03a42824da6309a0072b8c4078fbc33d63e92f4205c61c206434e53c4ad9f",
+    "bytes": 725
+  },
+  {
+    "path": "noop/verifier/reward.json",
+    "sha256": "5c73d718100b1b99b632b6c9956dae409fe1fe6b58474aca8d2ea5823bf0c6e4",
+    "bytes": 20
+  },
+  {
+    "path": "noop/verifier-environment/cleanup.json",
+    "sha256": "ddcb71748d340dd79feabc862e1e88f58d212d78692677ffd810c5988f20bc11",
+    "bytes": 108
+  },
+  {
+    "path": "noop/verifier-environment/docker-inspect.json",
+    "sha256": "5ba5d916b0d1f5637e960f6e04f1cf2a4c326de3f21b1e2e09e20debce33d335",
+    "bytes": 3034
+  },
+  {
+    "path": "noop/verifier-environment/effective-policy.json",
+    "sha256": "5ba5d916b0d1f5637e960f6e04f1cf2a4c326de3f21b1e2e09e20debce33d335",
+    "bytes": 3034
+  },
+  {
+    "path": "summary.json",
+    "sha256": "7c494b46b2976d19a3a9eb2238394c7c3e80bf78dad6c8629180c7b9c9791212",
+    "bytes": 15778
+  }
+]

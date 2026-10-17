@@ -1,0 +1,92 @@
+[
+  {
+    "path": "agent-environment/cleanup.json",
+    "sha256": "eb273fb6b072acb4e664bd05dbef6d9702a4281f9feabdd44f66d4e6e2658a81",
+    "bytes": 108
+  },
+  {
+    "path": "agent-environment/docker-inspect.json",
+    "sha256": "904faee206c16ca0f54742e4f3613688ea5df6c81472e65e24b59a62ccb4261a",
+    "bytes": 3035
+  },
+  {
+    "path": "agent-environment/effective-policy.json",
+    "sha256": "904faee206c16ca0f54742e4f3613688ea5df6c81472e65e24b59a62ccb4261a",
+    "bytes": 3035
+  },
+  {
+    "path": "agent-environment/handoff.json",
+    "sha256": "5cc03789b21e76f2efcd6bc4d7cc38370b035e0b8764885b408b1d862c6afc6f",
+    "bytes": 9916
+  },
+  {
+    "path": "agent-environment/logs/agent/codex.txt",
+    "sha256": "d4a3d98f8f5ba8b26522507480f4d1e04305197ac589707ceb0d9e0ca95a7728",
+    "bytes": 12834
+  },
+  {
+    "path": "agent-environment/logs/agent/offline-fixture.json",
+    "sha256": "bffe56bba4e01083444ef3e8af03664f0993354ca11210199db2ee86654e1bd5",
+    "bytes": 28320
+  },
+  {
+    "path": "agent-environment/logs/agent/sessions/2026/10/17/rollout-2026-10-17T07-23-11-01a148be-450b-7f01-a57a-509c47378010.jsonl",
+    "sha256": "0a30ff18a879250d2d18ae982aa5d18cd2b7740a6ed6c1d694b34fbf45493719",
+    "bytes": 77895
+  },
+  {
+    "path": "agent-gate.json",
+    "sha256": "37eed84b1ef411e07bf35ec7abdfbb032812cd217e3f02e941746f43168e7943",
+    "bytes": 425
+  },
+  {
+    "path": "home-usage.json",
+    "sha256": "bf375189b167c7f8a8bd0a04daed15bcce5dd34cf8bb16bcfa2beb0ef3945b8b",
+    "bytes": 826750
+  },
+  {
+    "path": "roundtrip.json",
+    "sha256": "8c8b40a9f7766fd1b34d0d7731ee0d1ed963cf5d2f2536474a8e2c218c538b09",
+    "bytes": 170
+  },
+  {
+    "path": "submission/submission.json",
+    "sha256": "18c38946e78c8fcaf9ae0c321596e0071166b62251e0ae5293232bfaf119a492",
+    "bytes": 17234
+  },
+  {
+    "path": "submission/submission.patch",
+    "sha256": "774ccc5c4aed0dbfdcb97c11ece53c569c49d25efce3956a8ab5e6b34eeb7dfb",
+    "bytes": 179
+  },
+  {
+    "path": "summary.json",
+    "sha256": "cfe1599eb1ac2a3007dd703bc0378cb0e1a903672489a6de59b906cc0a8b5b06",
+    "bytes": 259126
+  },
+  {
+    "path": "tool-preflight.json",
+    "sha256": "e8940040edccc5e2ea5176809775bf6c463438645efc6c67d9c9b309fd2cacdc",
+    "bytes": 263
+  },
+  {
+    "path": "verifier-environment/cleanup.json",
+    "sha256": "2440343e401cfb803e69e1f98c47196d4fa321c73cc62577f33808a518e929d3",
+    "bytes": 108
+  },
+  {
+    "path": "verifier-environment/docker-inspect.json",
+    "sha256": "a53f013759221ad3030f9bac71a44dbe0018a902a7a34aa6ecfc7e4c58daee47",
+    "bytes": 3033
+  },
+  {
+    "path": "verifier-environment/effective-policy.json",
+    "sha256": "a53f013759221ad3030f9bac71a44dbe0018a902a7a34aa6ecfc7e4c58daee47",
+    "bytes": 3033
+  },
+  {
+    "path": "verifier-environment/handoff.json",
+    "sha256": "a9a380e3781ebb1f9aeefc1fc64bd8ebcdd081a41448b7a6fecbc8917e6eec59",
+    "bytes": 9916
+  }
+]

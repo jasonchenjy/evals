@@ -18,6 +18,8 @@ def curate(source, target):
              'lock.json','trial.log','exception.txt','trajectory.json','codex.txt',
              'public-preflight.txt','initial-environment.txt','control.txt',
              'authorization-scope.json','attempt-audit.json','expected-rejection.json','probe-execution.json'}
+    names.update({'tool-preflight.json','roundtrip.json','offline-fixture.json','focused-tests.txt',
+                  'home-usage.json','initial-verifier.json','diagnostic.json','process-check.json','hidden-tests.txt'})
     for p in sorted(source.rglob('*')):
         if not p.is_file() or p.is_symlink(): continue
         rel = p.relative_to(source)

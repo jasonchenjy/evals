@@ -1,0 +1,24 @@
+diff --git a/src/normalization.py b/src/normalization.py
+new file mode 100644
+index 0000000..9805818
+--- /dev/null
++++ b/src/normalization.py
+@@ -0,0 +1,2 @@
++def normalize_order(order):
++    return {'item': order['item'].strip(), 'quantity': 2}
+diff --git a/src/service.py b/src/service.py
+index 2bc384a..258a475 100644
+--- a/src/service.py
++++ b/src/service.py
+@@ -1,9 +1,8 @@
+ from parser import parse_order
+ from validator import validate_order
+-
++from normalization import normalize_order
+ 
+ def build_order(line):
+-    parsed = parse_order(line)
+-    order = {'item': parsed['item']}
++    order = normalize_order(parse_order(line))
+     validate_order(order)
+     return dict(order, total=order['quantity'] * 3)

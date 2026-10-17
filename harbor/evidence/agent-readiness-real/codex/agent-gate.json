@@ -1,0 +1,17 @@
+{
+  "public_payload_exact": true,
+  "uid_nonroot": true,
+  "effective_caps_zero": true,
+  "no_new_privileges": true,
+  "setuid_denied": true,
+  "private_paths_absent": true,
+  "host_canaries_absent": true,
+  "cgroup": {
+    "cpu.max": "200000 100000",
+    "memory.max": "4294967296",
+    "memory.swap.max": "0",
+    "pids.max": "128"
+  },
+  "base": "adb1b8fe6fd81e25b880f3bdee2adb74e1ca306d",
+  "external_tcp": "connected"
+}

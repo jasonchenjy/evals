@@ -1,0 +1,28 @@
+{
+  "candidate_processes_stopped": true,
+  "collection": "root CAP_KILL quiescence, then immutable -I Python as file owner uid 1000",
+  "container_id": "43a31da2aa63a0df672d3df0e42d2c45e0401f853addefd8dafee884285e865c",
+  "source": {
+    "src/normalization.py": {
+      "sha256": "668f09b925b03ba211bd9fbd3ed3132a09409457ebf6572f15650f6628c87d36",
+      "bytes": 191,
+      "mode": 420
+    },
+    "src/parser.py": {
+      "sha256": "0269d79375160f272992bf3de6d81581bb926737745c8e653aab61b9e28dc47e",
+      "bytes": 263,
+      "mode": 420
+    },
+    "src/service.py": {
+      "sha256": "e9502b59baebf97893ca081a5bc1c56d80fe50725fd8080dfef617ddcdc6f9f9",
+      "bytes": 280,
+      "mode": 420
+    },
+    "src/validator.py": {
+      "sha256": "c1ef87ff8129e35f3e47c02fab9f382a549cb8a05089512a86dbb658aa26fcd7",
+      "bytes": 286,
+      "mode": 420
+    }
+  },
+  "source_archive_sha256": "be65b48db203f4c90b6797a0eb7936514fa04ce0916235d24f459bea4b545306"
+}

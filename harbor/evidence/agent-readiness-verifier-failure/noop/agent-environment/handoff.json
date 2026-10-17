@@ -1,0 +1,23 @@
+{
+  "candidate_processes_stopped": true,
+  "collection": "immutable system Python as controller-only root, after uid 1000 termination",
+  "container_id": "57c97796530295c090aa56260fb70f4a6a0d97a09697dc3ef879fea8c9103122",
+  "source": {
+    "src/parser.py": {
+      "sha256": "50c8e6d1efb1cfe762c82de6d176b3dfabad11b91a3460182f0fd2954c77b9dd",
+      "bytes": 182,
+      "mode": 420
+    },
+    "src/service.py": {
+      "sha256": "2c8d55c6e2dbeb839a8182814b45ba6d3014e1a8e00525343870e64f7e7e216b",
+      "bytes": 239,
+      "mode": 420
+    },
+    "src/validator.py": {
+      "sha256": "be1990f89fdec7eb94018169c450b663f5e8915be53ed327f2f9be77b2f12dee",
+      "bytes": 248,
+      "mode": 420
+    }
+  },
+  "source_archive_sha256": "4508afc500c862fdabf21f88ae1242391e255509b0e1a321c61f1aeec2553b1e"
+}

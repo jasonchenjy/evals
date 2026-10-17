@@ -1,0 +1,28 @@
+test_auth_ownership_uses_nonroot (test_codex_preparation.PreparationTests.test_auth_ownership_uses_nonroot) ... ok
+test_harness_failure_is_not_a_valid_empty_submission (test_codex_preparation.PreparationTests.test_harness_failure_is_not_a_valid_empty_submission) ... ok
+test_incomplete_or_nonzero_launch_rejected (test_codex_preparation.PreparationTests.test_incomplete_or_nonzero_launch_rejected) ... ok
+test_native_config_upload_uses_nonroot (test_codex_preparation.PreparationTests.test_native_config_upload_uses_nonroot) ... ok
+test_other_root_commands_rejected (test_codex_preparation.PreparationTests.test_other_root_commands_rejected) ... ok
+test_root_default_user_rejected (test_codex_preparation.PreparationTests.test_root_default_user_rejected) ... ok
+test_shell_failure_and_healthy_noop_are_valid (test_codex_preparation.PreparationTests.test_shell_failure_and_healthy_noop_are_valid) ... ok
+test_absolute (test_pilot_handoff.ArchiveTests.test_absolute) ... ok
+test_device (test_pilot_handoff.ArchiveTests.test_device) ... ok
+test_duplicate (test_pilot_handoff.ArchiveTests.test_duplicate) ... ok
+test_execute_bit_rejected (test_pilot_handoff.ArchiveTests.test_execute_bit_rejected) ... ok
+test_fifo (test_pilot_handoff.ArchiveTests.test_fifo) ... ok
+test_hardlink (test_pilot_handoff.ArchiveTests.test_hardlink) ... ok
+test_hidden_python (test_pilot_handoff.ArchiveTests.test_hidden_python) ... ok
+test_invalid_utf8 (test_pilot_handoff.ArchiveTests.test_invalid_utf8) ... ok
+test_large_file (test_pilot_handoff.ArchiveTests.test_large_file) ... ok
+test_parent_file (test_pilot_handoff.ArchiveTests.test_parent_file) ... ok
+test_regular_source (test_pilot_handoff.ArchiveTests.test_regular_source) ... ok
+test_root_symlink (test_pilot_handoff.ArchiveTests.test_root_symlink) ... ok
+test_symlink (test_pilot_handoff.ArchiveTests.test_symlink) ... ok
+test_total_limit (test_pilot_handoff.ArchiveTests.test_total_limit) ... ok
+test_traversal (test_pilot_handoff.ArchiveTests.test_traversal) ... ok
+test_candidate_git_ignored_and_fresh_apply (test_pilot_handoff.TrustedBaselineTests.test_candidate_git_ignored_and_fresh_apply) ... ok
+
+----------------------------------------------------------------------
+Ran 23 tests in 2.938s
+
+OK

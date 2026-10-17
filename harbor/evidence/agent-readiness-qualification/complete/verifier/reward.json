@@ -1,0 +1,7 @@
+{
+  "reward": 1.0,
+  "original_bug_resolution": 1.0,
+  "cross_component_consistency": 1.0,
+  "edge_case_robustness": 1.0,
+  "non_regression": 1.0
+}

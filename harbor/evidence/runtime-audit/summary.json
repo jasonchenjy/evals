@@ -1,0 +1,32 @@
+{
+  "scope": "Codex 0.162.1 / Harbor 0.24.0 / Linux aarch64 current pytest runtime; offline audit only",
+  "production_implementation_changed": false,
+  "real_credentials_read_or_injected": false,
+  "real_model_calls": 0,
+  "benchmark_solved": false,
+  "successful_probe_containers": 6,
+  "all_probe_containers_removed": true,
+  "original_live_image_was_removed_by_harbor": true,
+  "audit_rebuilt_image": "sha256:ae35a3c210731b2624cfe04a6d4941ccb282f83f11b051b3e14c8dcde1751df2",
+  "complete_bundle_image": "sha256:aa37042119c8e1337a9d82855c3949421b562346d9b98f7442db220a0f2abf1e",
+  "bundle_files": 6,
+  "files_copied_by_current_live_builder": 1,
+  "confirmed_findings": [
+    "Current image lacks codex-code-mode-host; every fixture tool dispatch fails despite CLI return code 0",
+    "Current image lacks rg; bundle rg runs when available on PATH",
+    "Default login tool shell selects /usr/local/bin/python and pytest import fails on atomicwrites; explicit venv Python passes toy test",
+    "CODEX_HOME under /tmp prevents apply_patch/applypatch shell aliases; native tools.apply_patch still succeeds with complete bundle",
+    "Bundled zsh cannot run on current glibc; Bash works",
+    "Full bundle + non-temp home: native exec, apply_patch, Git diff, toy pytest, PTY/write_stdin, exit-code 7 all observed",
+    "Node/npm absent yet core Code Mode tool chain works; npm installation dependencies are not native runtime requirements",
+    "Preflight only intercepts before codex exec; qualification checks deterministic controls rather than model tool dispatch",
+    "Raw live_completed does not reject tool-router failures",
+    "Generated context, instruction, complete CLI bundle and effective feature/tool inventory are not all bound by current gates",
+    "Agent and verifier have separate 1800-second budgets; no single 1800-second end-to-end deadline"
+  ],
+  "limitations": [
+    "Offline custom provider is not proof of future real-provider authentication or model availability",
+    "Full-bundle fixture uses separate existing image and controlled environment; current Harbor live image remains unfixed",
+    "Optional tools, plugin account integrations and all future tool combinations are not proven"
+  ]
+}

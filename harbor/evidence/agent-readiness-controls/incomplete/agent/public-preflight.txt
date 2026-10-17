@@ -1,0 +1,2 @@
+/opt/pytest-python/bin/python 3.8.20 (default, Sep 27 2024, 22:15:25) 
+[GCC 12.2.0]

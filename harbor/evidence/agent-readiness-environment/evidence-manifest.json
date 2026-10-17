@@ -1,0 +1,97 @@
+[
+  {
+    "path": "agent-environment/cleanup.json",
+    "sha256": "db51b1c4cf421f5691fa9ad15509178a72c768d3fcd1adb84bb8e6f1e5200c46",
+    "bytes": 108
+  },
+  {
+    "path": "agent-environment/docker-inspect.json",
+    "sha256": "29eb65f05ae6667519a5a92d77daaa1c5c4f1d36f3a00b814f82be1b7fe5422d",
+    "bytes": 3036
+  },
+  {
+    "path": "agent-environment/effective-policy.json",
+    "sha256": "29eb65f05ae6667519a5a92d77daaa1c5c4f1d36f3a00b814f82be1b7fe5422d",
+    "bytes": 3036
+  },
+  {
+    "path": "agent-environment/handoff.json",
+    "sha256": "876cb8d8724e18c68c2b6f0f928de20dde841f86aa7516336b824c1fdefcf6ef",
+    "bytes": 9914
+  },
+  {
+    "path": "agent-environment/logs/agent/codex.txt",
+    "sha256": "dfa4c1fa97c65d4c6a4e71c7878dfbfe1530e217b40797e0d1885c226e3c0269",
+    "bytes": 12834
+  },
+  {
+    "path": "agent-environment/logs/agent/offline-fixture.json",
+    "sha256": "fafe67f130be749066f886aeb4d77acd2451e24f9891b415c9bd036aa7fa5ad2",
+    "bytes": 28320
+  },
+  {
+    "path": "agent-environment/logs/agent/sessions/2026/10/17/rollout-2026-10-17T07-38-40-01a148cc-72d1-7312-b3be-cb24a1ea538b.jsonl",
+    "sha256": "982084ebb8ad99881230d0c9bf4b774f45bf004c26cba129ca7b4ddf1decfc3e",
+    "bytes": 77895
+  },
+  {
+    "path": "agent-gate.json",
+    "sha256": "37eed84b1ef411e07bf35ec7abdfbb032812cd217e3f02e941746f43168e7943",
+    "bytes": 425
+  },
+  {
+    "path": "focused-tests.txt",
+    "sha256": "c73eb13295bc0a120c65a80325a051dedb7ab898b12975646d997acd2da28c5e",
+    "bytes": 2240
+  },
+  {
+    "path": "home-usage.json",
+    "sha256": "8b8854d2b09936d8c8ceab007d7aba2f482e0b34dd64899df2f91c72c1c46d8f",
+    "bytes": 11958
+  },
+  {
+    "path": "roundtrip.json",
+    "sha256": "8c8b40a9f7766fd1b34d0d7731ee0d1ed963cf5d2f2536474a8e2c218c538b09",
+    "bytes": 170
+  },
+  {
+    "path": "submission/submission.json",
+    "sha256": "d75123bed360e3d3f912038fa249d5be5d36f2fcd1e082a922f43889572d2a56",
+    "bytes": 17246
+  },
+  {
+    "path": "submission/submission.patch",
+    "sha256": "774ccc5c4aed0dbfdcb97c11ece53c569c49d25efce3956a8ab5e6b34eeb7dfb",
+    "bytes": 179
+  },
+  {
+    "path": "summary.json",
+    "sha256": "0006d674eaa84b3e54822aa1da28c770bae6211e21e588421bc8d4c0806a0b19",
+    "bytes": 259126
+  },
+  {
+    "path": "tool-preflight.json",
+    "sha256": "e8940040edccc5e2ea5176809775bf6c463438645efc6c67d9c9b309fd2cacdc",
+    "bytes": 263
+  },
+  {
+    "path": "verifier-environment/cleanup.json",
+    "sha256": "425fb3e5fb150f770645e51544b81264989bd67e4adc36e8c3176d51f2ef8fcd",
+    "bytes": 108
+  },
+  {
+    "path": "verifier-environment/docker-inspect.json",
+    "sha256": "a502c9e7d1ad689616e00bf276244627454ae3f13d0f828b2820165c8b2ccc73",
+    "bytes": 3034
+  },
+  {
+    "path": "verifier-environment/effective-policy.json",
+    "sha256": "a502c9e7d1ad689616e00bf276244627454ae3f13d0f828b2820165c8b2ccc73",
+    "bytes": 3034
+  },
+  {
+    "path": "verifier-environment/handoff.json",
+    "sha256": "141c0b7eacf3acb741ee7dcd7bfc843467cc971e7227e2ed8cca7c3fb334f7ec",
+    "bytes": 9914
+  }
+]

@@ -1,0 +1,4 @@
+{
+  "return_code": 128,
+  "stdout": "fatal: detected dubious ownership in repository at '/work'\nTo add an exception for this directory, call:\n\n\tgit config --global --add safe.directory /work\n"
+}

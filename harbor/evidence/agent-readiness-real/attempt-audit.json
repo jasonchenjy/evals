@@ -1,0 +1,31 @@
+{
+  "status": "PASSED",
+  "task": "synthetic coding readiness",
+  "real_model_trial": true,
+  "pytest_5786_agent_eval": false,
+  "trial_seconds": 36.890041,
+  "agent_seconds": 21.247832,
+  "trajectory_steps": 11,
+  "native_exec_calls": 5,
+  "shell_commands": 5,
+  "file_change_operations": 1,
+  "new_source_files": [
+    "src/normalization.py"
+  ],
+  "modified_source_files": [
+    "src/parser.py",
+    "src/service.py",
+    "src/validator.py"
+  ],
+  "initial_public_exit_code": 1,
+  "final_public_exit_code": 0,
+  "hidden_test_methods": 3,
+  "hidden_test_exit_code": 0,
+  "fixed_on_first_edit": true,
+  "forced_failed_edit": false,
+  "followup_wrong_edit_loop": "separate scripted complete control",
+  "agent_container_removed": true,
+  "verifier_container_removed": true,
+  "automatic_retry": false,
+  "auth_contents_saved": false
+}

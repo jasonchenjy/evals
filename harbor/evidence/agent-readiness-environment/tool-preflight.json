@@ -1,0 +1,11 @@
+{
+  "passed": true,
+  "real_model_calls": 0,
+  "local_fixture_requests": 8,
+  "default_and_nonlogin_python": true,
+  "public_tests_expected_failures": 2,
+  "xdist_workers": 2,
+  "native_apply_patch": true,
+  "pty_resume": true,
+  "nonzero_exit_preserved": true
+}

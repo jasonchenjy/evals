@@ -1,0 +1,12 @@
+Skipping image OS validation for hb__05388aea9d63e26e79290809e0ebd4c6: docker inspect returned 1
+Trial complete failed: Candidate quiescence/source metadata check failed: Traceback (most recent call last):
+  File "<string>", line 72, in <module>
+  File "/usr/local/lib/python3.8/pathlib.py", line 1229, in read_bytes
+    with self.open(mode='rb') as f:
+  File "/usr/local/lib/python3.8/pathlib.py", line 1222, in open
+    return io.open(self, mode, buffering, encoding, errors, newline,
+  File "/usr/local/lib/python3.8/pathlib.py", line 1078, in _opener
+    return self._accessor.open(self, flags, mode)
+PermissionError: [Errno 13] Permission denied: '/work/src/normalization.py'
+
+Collecting main service artifacts

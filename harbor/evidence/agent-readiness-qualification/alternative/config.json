@@ -1,0 +1,23 @@
+{
+    "task": {
+        "path": "/Users/junyuc/Documents/interview/SWE-bench/evals/harbor/generated/pilot-controls-fixed"
+    },
+    "trial_name": "alternative",
+    "trials_dir": "/Users/junyuc/Documents/interview/SWE-bench/evals/harbor/raw/pilot-readiness-qualification-final",
+    "agent": {
+        "import_path": "pilot_controls:ControlAgent",
+        "kwargs": {
+            "patch": "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/oracle/alternative.patch"
+        }
+    },
+    "environment": {
+        "import_path": "pilot_environment:PilotEnvironment"
+    },
+    "verifier": {
+        "import_path": "pilot_verifier:IsolatedVerifier",
+        "kwargs": {
+            "repo": "/Users/junyuc/Documents/interview/SWE-bench/pytest",
+            "image": "sha256:6fc218ba73f376189c8a3e860c5d5571782113b297704ffb153321c255cc2d12"
+        }
+    }
+}

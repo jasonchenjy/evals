@@ -1,0 +1,36 @@
+{
+  "returncode": 0,
+  "stdout": "{\"type\":\"thread.started\",\"thread_id\":\"01a148b2-7311-7562-8c1f-c4847175966f\"}\n{\"type\":\"item.completed\",\"item\":{\"id\":\"item_0\",\"type\":\"error\",\"message\":\"Code Mode is unavailable because failed to spawn code-mode host /usr/local/bin/codex-code-mode-host: host executable was not found. Code mode will fail closed; enable `features.code_mode_host` and install `codex-code-mode-host`.\"}}\n{\"type\":\"turn.started\"}\n{\"type\":\"item.completed\",\"item\":{\"id\":\"item_1\",\"type\":\"agent_message\",\"text\":\"Deterministic offline fixture finished; this is not a model response.\"}}\n{\"type\":\"turn.completed\",\"usage\":{\"input_tokens\":0,\"cached_input_tokens\":0,\"cache_write_input_tokens\":0,\"output_tokens\":0,\"reasoning_output_tokens\":0}}\n",
+  "stderr": "WARNING: proceeding, even though we could not create PATH aliases: Refusing to create helper binaries under temporary dir \"/tmp\" (codex_home: AbsolutePathBuf(\"/tmp/codex-home\"))\nReading additional input from stdin...\n2026-10-17T07:10:16.889581Z ERROR codex_core::tools::router: error=failed to spawn code-mode host /usr/local/bin/codex-code-mode-host: No such file or directory (os error 2)\n2026-10-17T07:10:16.898239Z ERROR codex_core::tools::router: error=failed to spawn code-mode host /usr/local/bin/codex-code-mode-host: No such file or directory (os error 2)\n2026-10-17T07:10:16.906399Z ERROR codex_core::tools::router: error=failed to spawn code-mode host /usr/local/bin/codex-code-mode-host: No such file or directory (os error 2)\n2026-10-17T07:10:16.913923Z ERROR codex_core::tools::router: error=failed to spawn code-mode host /usr/local/bin/codex-code-mode-host: No such file or directory (os error 2)\n",
+  "real_model_calls": 0,
+  "local_fixture_requests": 5,
+  "tools": [],
+  "tool_outputs": [
+    {
+      "type": "custom_tool_call_output",
+      "id": "ctco_01a148b2-7339-72c0-b599-24ea8e5a4262",
+      "call_id": "call_audit_0",
+      "output": "failed to spawn code-mode host /usr/local/bin/codex-code-mode-host: No such file or directory (os error 2)"
+    },
+    {
+      "type": "custom_tool_call_output",
+      "id": "ctco_01a148b2-7342-7ef1-a197-f190823edc41",
+      "call_id": "call_audit_1",
+      "output": "failed to spawn code-mode host /usr/local/bin/codex-code-mode-host: No such file or directory (os error 2)"
+    },
+    {
+      "type": "custom_tool_call_output",
+      "id": "ctco_01a148b2-734a-7953-a523-b78d9bb45aad",
+      "call_id": "call_audit_2",
+      "output": "failed to spawn code-mode host /usr/local/bin/codex-code-mode-host: No such file or directory (os error 2)"
+    },
+    {
+      "type": "custom_tool_call_output",
+      "id": "ctco_01a148b2-7352-7a32-beb1-7bfb3b1a91a9",
+      "call_id": "call_audit_3",
+      "output": "failed to spawn code-mode host /usr/local/bin/codex-code-mode-host: No such file or directory (os error 2)"
+    }
+  ],
+  "code_home": "/tmp/codex-home",
+  "toy_files": {}
+}

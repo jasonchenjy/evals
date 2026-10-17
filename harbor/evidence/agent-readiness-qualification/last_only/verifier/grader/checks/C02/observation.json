@@ -1,0 +1,12 @@
+{
+  "schema_version": 1,
+  "method": "test_C02_long_chain_and_render_option",
+  "status": "failed",
+  "tests_run": 1,
+  "duration_seconds": 0.0761132040006487,
+  "failures": [
+    "Traceback (most recent call last):\n  File \"/inputs/eval/private/tests/behavior.py\", line 175, in test_C02_long_chain_and_render_option\n    self.assert_chain(transport(report(info, kind)), 4,\n  File \"/inputs/eval/private/tests/behavior.py\", line 87, in assert_chain\n    self.assertIn(marker, text)\nAssertionError: 'ValueError: layer-0' not found in '/inputs/eval/private/tests/behavior.py:36: in exception_info\\n    raise_level(depth - 1)\\n/inputs/eval/private/tests/behavior.py:31: in raise_level\\n    raise ValueError(\"layer-%d\" % level) from cause\\nE   ValueError: layer-3'\n"
+  ],
+  "skips": [],
+  "details": []
+}

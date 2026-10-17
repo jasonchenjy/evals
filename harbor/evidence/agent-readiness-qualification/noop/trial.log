@@ -1,0 +1,11 @@
+Skipping image OS validation for hb__d4f212cfbe6f66df532f969e0283ea98: docker inspect returned 1
+Docker cp failed:  pilot-6a89e9e3d384-noop__env-main-1 copy /Users/junyuc/Documents/interview/SWE-bench/evals/harbor/raw/pilot-readiness-qualification-final/noop/agent/. to pilot-6a89e9e3d384-noop__env-main-1:/logs/agent Copying
+Error response from daemon: container rootfs is marked read-only
+
+docker compose cp failed; retrying upload with tar stream: Docker cp failed with code 1
+Collecting main service artifacts
+Skipping image OS validation for hb__5e1a5158cad8e457c2b58643fb8943fd: docker inspect returned 1
+Docker cp failed:  pilot-6a89e9e3d384-noop__verifier__trial-main-1 copy /Users/junyuc/Documents/interview/SWE-bench/evals/harbor/raw/pilot-readiness-qualification-final/noop/artifacts/logs/artifacts/. to pilot-6a89e9e3d384-noop__verifier__trial-main-1:/logs/artifacts Copying
+Error response from daemon: container rootfs is marked read-only
+
+docker compose cp failed; retrying upload with tar stream: Docker cp failed with code 1

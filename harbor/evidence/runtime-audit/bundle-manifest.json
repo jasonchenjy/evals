@@ -1,0 +1,32 @@
+[
+  {
+    "path": "bin/codex",
+    "bytes": 254866040,
+    "sha256": "071cbe8d821cf1b02b6d8ba6c8b7991b228fcb8519dcb68a37d31222bb8cabe5"
+  },
+  {
+    "path": "bin/codex-code-mode-host",
+    "bytes": 66855936,
+    "sha256": "f6477b0357a8cc2291d628962876ecb1a2beb872f71a1e2734363c81ff21700d"
+  },
+  {
+    "path": "codex-package.json",
+    "bytes": 206,
+    "sha256": "556ac63fe118801d1006e776a766ee4d11e64919fc8ce127e5b73ede846c3e15"
+  },
+  {
+    "path": "codex-path/rg",
+    "bytes": 4506992,
+    "sha256": "e36d0eb52e70696bdf1781392722e05a21bb91d3b7b762ef5ec20e5df2ec687b"
+  },
+  {
+    "path": "codex-resources/bwrap",
+    "bytes": 529168,
+    "sha256": "c547cbdc762a70ed216789ffaa4c6c0e7d2beabe32245a498f8e365a9fc8dab4"
+  },
+  {
+    "path": "codex-resources/zsh/bin/zsh",
+    "bytes": 878056,
+    "sha256": "7feeacd883e1dc749847936948c378653c80a69ec4a9542f0f126b411882c179"
+  }
+]

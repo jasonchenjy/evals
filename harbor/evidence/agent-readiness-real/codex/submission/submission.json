@@ -1,0 +1,13 @@
+{
+  "status": "accepted",
+  "baseline": "adb1b8fe6fd81e25b880f3bdee2adb74e1ca306d",
+  "source_sha256": {
+    "src/normalization.py": "668f09b925b03ba211bd9fbd3ed3132a09409457ebf6572f15650f6628c87d36",
+    "src/parser.py": "0269d79375160f272992bf3de6d81581bb926737745c8e653aab61b9e28dc47e",
+    "src/service.py": "e9502b59baebf97893ca081a5bc1c56d80fe50725fd8080dfef617ddcdc6f9f9",
+    "src/validator.py": "c1ef87ff8129e35f3e47c02fab9f382a549cb8a05089512a86dbb658aa26fcd7"
+  },
+  "patch_sha256": "c1a2a231de3242e285536271f877ed65eeb2575424e54a0bb417e325af92c6a2",
+  "candidate_git_used": false,
+  "debug_files_excluded": true
+}

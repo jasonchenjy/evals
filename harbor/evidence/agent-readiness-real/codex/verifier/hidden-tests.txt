@@ -1,0 +1,8 @@
+test_distinct_requests (__main__.HiddenTests) ... ok
+test_invalid (__main__.HiddenTests) ... ok
+test_quantities (__main__.HiddenTests) ... ok
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.000s
+
+OK

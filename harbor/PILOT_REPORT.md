@@ -1,6 +1,10 @@
 # pytest #5786 真实 Agent Pilot
 
-状态：**BLOCKED**。
+当前进展：底层工具和交接问题已经修复，新的多文件合成 Trial 通过，
+Agent readiness 为 **AGENT_READY**。详见 [最新 readiness 报告](agent_readiness_report.md)。
+按最新任务要求，本轮没有再次运行真实 pytest Agent Eval，因此仍没有有效的 pytest 模型能力分数。
+
+以下保留 `pilot-real-02` 当时 **BLOCKED** 的历史事实和证据。
 
 最新获批尝试 `pilot-real-02` 实际调用了 `openai/gpt-6.1-sol`，但两次工具调用
 均因镜像缺少 `codex-code-mode-host` 而在执行前失败。Agent 没有读取或修改仓库。

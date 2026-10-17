@@ -1,0 +1,75 @@
+{
+  "returncode": 0,
+  "stdout": "{\"type\":\"thread.started\",\"thread_id\":\"01a148b2-1b5b-78c2-a80c-3a28fa7fb0ce\"}\n{\"type\":\"turn.started\"}\n{\"type\":\"item.started\",\"item\":{\"id\":\"item_0\",\"type\":\"command_execution\",\"command\":\"/usr/bin/bash -c \\\"printf 'VALUE = 1\\\\\\\\n' > probe.py; printf 'from probe import VALUE\\\\\\\\ndef test_value():\\\\\\\\n    assert VALUE == 2\\\\\\\\n' > test_probe.py; git init -q; git add probe.py test_probe.py; git -c user.name=Audit -c user.email=audit@invalid commit -qm baseline; command -v python; command -v rg\\\"\",\"aggregated_output\":\"\",\"exit_code\":null,\"status\":\"in_progress\"}}\n{\"type\":\"item.completed\",\"item\":{\"id\":\"item_0\",\"type\":\"command_execution\",\"command\":\"/usr/bin/bash -c \\\"printf 'VALUE = 1\\\\\\\\n' > probe.py; printf 'from probe import VALUE\\\\\\\\ndef test_value():\\\\\\\\n    assert VALUE == 2\\\\\\\\n' > test_probe.py; git init -q; git add probe.py test_probe.py; git -c user.name=Audit -c user.email=audit@invalid commit -qm baseline; command -v python; command -v rg\\\"\",\"aggregated_output\":\"/opt/pytest-python/bin/python\\n/opt/codex/codex-path/rg\\n\",\"exit_code\":0,\"status\":\"completed\"}}\n{\"type\":\"item.started\",\"item\":{\"id\":\"item_1\",\"type\":\"file_change\",\"changes\":[{\"path\":\"/work/probe.py\",\"kind\":\"update\"}],\"status\":\"in_progress\"}}\n{\"type\":\"item.completed\",\"item\":{\"id\":\"item_1\",\"type\":\"file_change\",\"changes\":[{\"path\":\"/work/probe.py\",\"kind\":\"update\"}],\"status\":\"completed\"}}\n{\"type\":\"item.started\",\"item\":{\"id\":\"item_2\",\"type\":\"command_execution\",\"command\":\"/usr/bin/bash -lc 'command -v python; command -v rg; python -m pytest -q test_probe.py; git diff -- probe.py'\",\"aggregated_output\":\"\",\"exit_code\":null,\"status\":\"in_progress\"}}\n{\"type\":\"item.completed\",\"item\":{\"id\":\"item_2\",\"type\":\"command_execution\",\"command\":\"/usr/bin/bash -lc 'command -v python; command -v rg; python -m pytest -q test_probe.py; git diff -- probe.py'\",\"aggregated_output\":\"/usr/local/bin/python\\n/opt/codex/codex-path/rg\\nTraceback (most recent call last):\\n  File \\\"/usr/local/lib/python3.8/runpy.py\\\", line 194, in _run_module_as_main\\n    return _run_code(code, main_globals, None,\\n  File \\\"/usr/local/lib/python3.8/runpy.py\\\", line 87, in _run_code\\n    exec(code, run_globals)\\n  File \\\"/seed/workspace/src/pytest.py\\\", line 6, in <module>\\n    from _pytest.assertion import register_assert_rewrite\\n  File \\\"/seed/workspace/src/_pytest/assertion/__init__.py\\\", line 6, in <module>\\n    from _pytest.assertion import rewrite\\n  File \\\"/seed/workspace/src/_pytest/assertion/rewrite.py\\\", line 20, in <module>\\n    import atomicwrites\\nModuleNotFoundError: No module named 'atomicwrites'\\ndiff --git a/probe.py b/probe.py\\nindex b15b1b0..c8fcecd 100644\\n--- a/probe.py\\n+++ b/probe.py\\n@@ -1 +1 @@\\n-VALUE = 1\\n+VALUE = 2\\n\",\"exit_code\":0,\"status\":\"completed\"}}\n{\"type\":\"item.started\",\"item\":{\"id\":\"item_3\",\"type\":\"command_execution\",\"command\":\"/usr/bin/bash -c 'command -v python; command -v rg; /opt/pytest-python/bin/python -m pytest -q test_probe.py; git diff -- probe.py'\",\"aggregated_output\":\"\",\"exit_code\":null,\"status\":\"in_progress\"}}\n{\"type\":\"item.completed\",\"item\":{\"id\":\"item_3\",\"type\":\"command_execution\",\"command\":\"/usr/bin/bash -c 'command -v python; command -v rg; /opt/pytest-python/bin/python -m pytest -q test_probe.py; git diff -- probe.py'\",\"aggregated_output\":\"/opt/pytest-python/bin/python\\n/opt/codex/codex-path/rg\\n.                                                                        [100%]\\n1 passed in 0.00s\\ndiff --git a/probe.py b/probe.py\\nindex b15b1b0..c8fcecd 100644\\n--- a/probe.py\\n+++ b/probe.py\\n@@ -1 +1 @@\\n-VALUE = 1\\n+VALUE = 2\\n\",\"exit_code\":0,\"status\":\"completed\"}}\n{\"type\":\"item.completed\",\"item\":{\"id\":\"item_4\",\"type\":\"agent_message\",\"text\":\"Deterministic offline fixture finished; this is not a model response.\"}}\n{\"type\":\"turn.completed\",\"usage\":{\"input_tokens\":0,\"cached_input_tokens\":0,\"cache_write_input_tokens\":0,\"output_tokens\":0,\"reasoning_output_tokens\":0}}\n",
+  "stderr": "Reading additional input from stdin...\n",
+  "real_model_calls": 0,
+  "local_fixture_requests": 5,
+  "tools": [],
+  "tool_outputs": [
+    {
+      "type": "custom_tool_call_output",
+      "id": "ctco_01a148b2-1c0c-7592-a8dd-2d56e9f78332",
+      "call_id": "call_audit_0",
+      "output": [
+        {
+          "type": "input_text",
+          "text": "Script completed\nWall time 0.1 seconds\nOutput:\n"
+        },
+        {
+          "type": "input_text",
+          "text": "{\"chunk_id\":\"ab4ee8\",\"wall_time_seconds\":0.00000275,\"exit_code\":0,\"original_token_count\":14,\"output\":\"/opt/pytest-python/bin/python\\n/opt/codex/codex-path/rg\\n\"}"
+        }
+      ]
+    },
+    {
+      "type": "custom_tool_call_output",
+      "id": "ctco_01a148b2-1c19-7581-b085-a4107d74430a",
+      "call_id": "call_audit_1",
+      "output": [
+        {
+          "type": "input_text",
+          "text": "Script completed\nWall time 0.0 seconds\nOutput:\n"
+        },
+        {
+          "type": "input_text",
+          "text": "{}"
+        }
+      ]
+    },
+    {
+      "type": "custom_tool_call_output",
+      "id": "ctco_01a148b2-1c4e-79a2-96cf-e1128c016eaf",
+      "call_id": "call_audit_2",
+      "output": [
+        {
+          "type": "input_text",
+          "text": "Script completed\nWall time 0.0 seconds\nOutput:\n"
+        },
+        {
+          "type": "input_text",
+          "text": "{\"chunk_id\":\"a1e344\",\"wall_time_seconds\":0.000002417,\"exit_code\":0,\"original_token_count\":206,\"output\":\"/usr/local/bin/python\\n/opt/codex/codex-path/rg\\nTraceback (most recent call last):\\n  File \\\"/usr/local/lib/python3.8/runpy.py\\\", line 194, in _run_module_as_main\\n    return _run_code(code, main_globals, None,\\n  File \\\"/usr/local/lib/python3.8/runpy.py\\\", line 87, in _run_code\\n    exec(code, run_globals)\\n  File \\\"/seed/workspace/src/pytest.py\\\", line 6, in <module>\\n    from _pytest.assertion import register_assert_rewrite\\n  File \\\"/seed/workspace/src/_pytest/assertion/__init__.py\\\", line 6, in <module>\\n    from _pytest.assertion import rewrite\\n  File \\\"/seed/workspace/src/_pytest/assertion/rewrite.py\\\", line 20, in <module>\\n    import atomicwrites\\nModuleNotFoundError: No module named 'atomicwrites'\\ndiff --git a/probe.py b/probe.py\\nindex b15b1b0..c8fcecd 100644\\n--- a/probe.py\\n+++ b/probe.py\\n@@ -1 +1 @@\\n-VALUE = 1\\n+VALUE = 2\\n\"}"
+        }
+      ]
+    },
+    {
+      "type": "custom_tool_call_output",
+      "id": "ctco_01a148b2-1cea-7980-9529-cdfcdc007617",
+      "call_id": "call_audit_3",
+      "output": [
+        {
+          "type": "input_text",
+          "text": "Script completed\nWall time 0.1 seconds\nOutput:\n"
+        },
+        {
+          "type": "input_text",
+          "text": "{\"chunk_id\":\"753266\",\"wall_time_seconds\":0.000008417,\"exit_code\":0,\"original_token_count\":70,\"output\":\"/opt/pytest-python/bin/python\\n/opt/codex/codex-path/rg\\n.                                                                        [100%]\\n1 passed in 0.00s\\ndiff --git a/probe.py b/probe.py\\nindex b15b1b0..c8fcecd 100644\\n--- a/probe.py\\n+++ b/probe.py\\n@@ -1 +1 @@\\n-VALUE = 1\\n+VALUE = 2\\n\"}"
+        }
+      ]
+    }
+  ],
+  "code_home": "/home/agent/.codex",
+  "toy_files": {
+    "probe.py": "VALUE = 2\n",
+    "test_probe.py": "from probe import VALUE\ndef test_value():\n    assert VALUE == 2\n"
+  }
+}

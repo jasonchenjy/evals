@@ -1,0 +1,138 @@
+test_distinct_requests (__main__.HiddenTests) ... ERROR
+test_invalid (__main__.HiddenTests) ... test_quantities (__main__.HiddenTests) ... 
+======================================================================
+ERROR: test_distinct_requests (__main__.HiddenTests)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/tmp/hidden_tests.py", line 19, in test_distinct_requests
+    self.assertEqual(build_order('kiwi|4')['quantity'],4)
+  File "/work/src/service.py", line 8, in build_order
+    validate_order(order)
+  File "/work/src/validator.py", line 4, in validate_order
+    if type(order['quantity']) is not int or not 1 <= order['quantity'] <= 100:
+KeyError: 'quantity'
+
+======================================================================
+ERROR: test_invalid (__main__.HiddenTests) (line=' |2')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/tmp/hidden_tests.py", line 16, in test_invalid
+    build_order(line)
+  File "/work/src/service.py", line 8, in build_order
+    validate_order(order)
+  File "/work/src/validator.py", line 4, in validate_order
+    if type(order['quantity']) is not int or not 1 <= order['quantity'] <= 100:
+KeyError: 'quantity'
+
+======================================================================
+ERROR: test_invalid (__main__.HiddenTests) (line='a|0')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/tmp/hidden_tests.py", line 16, in test_invalid
+    build_order(line)
+  File "/work/src/service.py", line 8, in build_order
+    validate_order(order)
+  File "/work/src/validator.py", line 4, in validate_order
+    if type(order['quantity']) is not int or not 1 <= order['quantity'] <= 100:
+KeyError: 'quantity'
+
+======================================================================
+ERROR: test_invalid (__main__.HiddenTests) (line='a|-1')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/tmp/hidden_tests.py", line 16, in test_invalid
+    build_order(line)
+  File "/work/src/service.py", line 8, in build_order
+    validate_order(order)
+  File "/work/src/validator.py", line 4, in validate_order
+    if type(order['quantity']) is not int or not 1 <= order['quantity'] <= 100:
+KeyError: 'quantity'
+
+======================================================================
+ERROR: test_invalid (__main__.HiddenTests) (line='a|101')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/tmp/hidden_tests.py", line 16, in test_invalid
+    build_order(line)
+  File "/work/src/service.py", line 8, in build_order
+    validate_order(order)
+  File "/work/src/validator.py", line 4, in validate_order
+    if type(order['quantity']) is not int or not 1 <= order['quantity'] <= 100:
+KeyError: 'quantity'
+
+======================================================================
+ERROR: test_invalid (__main__.HiddenTests) (line='a|x')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/tmp/hidden_tests.py", line 16, in test_invalid
+    build_order(line)
+  File "/work/src/service.py", line 8, in build_order
+    validate_order(order)
+  File "/work/src/validator.py", line 4, in validate_order
+    if type(order['quantity']) is not int or not 1 <= order['quantity'] <= 100:
+KeyError: 'quantity'
+
+======================================================================
+ERROR: test_invalid (__main__.HiddenTests) (line='a|1.5')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/tmp/hidden_tests.py", line 16, in test_invalid
+    build_order(line)
+  File "/work/src/service.py", line 8, in build_order
+    validate_order(order)
+  File "/work/src/validator.py", line 4, in validate_order
+    if type(order['quantity']) is not int or not 1 <= order['quantity'] <= 100:
+KeyError: 'quantity'
+
+======================================================================
+ERROR: test_quantities (__main__.HiddenTests) (n=1)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/tmp/hidden_tests.py", line 10, in test_quantities
+    self.assertEqual(build_order(' pears | '+str(n)+' '),
+  File "/work/src/service.py", line 8, in build_order
+    validate_order(order)
+  File "/work/src/validator.py", line 4, in validate_order
+    if type(order['quantity']) is not int or not 1 <= order['quantity'] <= 100:
+KeyError: 'quantity'
+
+======================================================================
+ERROR: test_quantities (__main__.HiddenTests) (n=3)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/tmp/hidden_tests.py", line 10, in test_quantities
+    self.assertEqual(build_order(' pears | '+str(n)+' '),
+  File "/work/src/service.py", line 8, in build_order
+    validate_order(order)
+  File "/work/src/validator.py", line 4, in validate_order
+    if type(order['quantity']) is not int or not 1 <= order['quantity'] <= 100:
+KeyError: 'quantity'
+
+======================================================================
+ERROR: test_quantities (__main__.HiddenTests) (n=17)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/tmp/hidden_tests.py", line 10, in test_quantities
+    self.assertEqual(build_order(' pears | '+str(n)+' '),
+  File "/work/src/service.py", line 8, in build_order
+    validate_order(order)
+  File "/work/src/validator.py", line 4, in validate_order
+    if type(order['quantity']) is not int or not 1 <= order['quantity'] <= 100:
+KeyError: 'quantity'
+
+======================================================================
+ERROR: test_quantities (__main__.HiddenTests) (n=100)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/tmp/hidden_tests.py", line 10, in test_quantities
+    self.assertEqual(build_order(' pears | '+str(n)+' '),
+  File "/work/src/service.py", line 8, in build_order
+    validate_order(order)
+  File "/work/src/validator.py", line 4, in validate_order
+    if type(order['quantity']) is not int or not 1 <= order['quantity'] <= 100:
+KeyError: 'quantity'
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.001s
+
+FAILED (errors=11)

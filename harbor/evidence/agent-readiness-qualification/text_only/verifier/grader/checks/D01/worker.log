@@ -1,0 +1,14 @@
+test_D01_ordinary_reports (eval_behavior.Behavior) ... ERROR
+
+======================================================================
+ERROR: test_D01_ordinary_reports (eval_behavior.Behavior)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/inputs/eval/private/tests/behavior.py", line 213, in test_D01_ordinary_reports
+    self.assertEqual(restored.longrepr.reprcrash.message, "ValueError: layer-0")
+AttributeError: 'str' object has no attribute 'reprcrash'
+
+----------------------------------------------------------------------
+Ran 1 test in 0.047s
+
+FAILED (errors=1)

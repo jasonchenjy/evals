@@ -1,0 +1,1 @@
+stdout='af8b8a8850eb\n41ffd0de9c7ece927733fadc2201491c5ae51be2\nhidden-absent\n' stderr='' return_code=0

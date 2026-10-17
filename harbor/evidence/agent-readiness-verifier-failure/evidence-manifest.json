@@ -1,0 +1,97 @@
+[
+  {
+    "path": "noop/agent/diagnostic.json",
+    "sha256": "b9bc246d4e8de60a40f23cf5bd817c90013658a9e9c615db1585e3c98c619cc6",
+    "bytes": 917
+  },
+  {
+    "path": "noop/agent/public-preflight.txt",
+    "sha256": "653a2e8346bf78ba08040c3654649785829d952e1b11e3a406e195df0f084952",
+    "bytes": 84
+  },
+  {
+    "path": "noop/agent-environment/cleanup.json",
+    "sha256": "07a611298ebf81adc7e847ad55888769a1f166de902fa5affac373bc536d90dd",
+    "bytes": 108
+  },
+  {
+    "path": "noop/agent-environment/docker-inspect.json",
+    "sha256": "e9a4fe45f6218bc9c9325b6b79ba4df5a0d51ffacb43ec5793e379ffd9ed7492",
+    "bytes": 3033
+  },
+  {
+    "path": "noop/agent-environment/effective-policy.json",
+    "sha256": "e9a4fe45f6218bc9c9325b6b79ba4df5a0d51ffacb43ec5793e379ffd9ed7492",
+    "bytes": 3033
+  },
+  {
+    "path": "noop/agent-environment/handoff.json",
+    "sha256": "f442737946f2b46fe16ec1290b9143f81e233616128e485cd234ed64c91787b4",
+    "bytes": 796
+  },
+  {
+    "path": "noop/agent-gate.json",
+    "sha256": "f96f902844ca103168fbfd5993e29dedf679b2c89652b095e5d73e995ce2502d",
+    "bytes": 447
+  },
+  {
+    "path": "noop/config.json",
+    "sha256": "3e40ef0d1b240eeca7efc401136a49da8a2f248fea2f2cd2f920e80ef6aaa92c",
+    "bytes": 577
+  },
+  {
+    "path": "noop/exception.txt",
+    "sha256": "c768c710cf6a85348f22d647260d7648bec8ac5c931058ac136ab4f6275c2882",
+    "bytes": 1943
+  },
+  {
+    "path": "noop/lock.json",
+    "sha256": "e970a5013645dea43becccb1fd2ca98d54bd79223204c7a0acc5f7f09f83fe19",
+    "bytes": 1174
+  },
+  {
+    "path": "noop/result.json",
+    "sha256": "ec9ea475a4d8af1b0986e479fd76c335057fb89df103e3ee4683e0659f6a8ff1",
+    "bytes": 6296
+  },
+  {
+    "path": "noop/submission/submission.json",
+    "sha256": "771f4a0d1e37c3389202bec0348388c90ee8a847729009712cb80c618c047a79",
+    "bytes": 530
+  },
+  {
+    "path": "noop/submission/submission.patch",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "bytes": 0
+  },
+  {
+    "path": "noop/trial.log",
+    "sha256": "51c3fe2fe6bc7319f51d00fb4b3a50e90183e452f423dee28e3a0bdd8cc22688",
+    "bytes": 1201
+  },
+  {
+    "path": "noop/verifier/initial-verifier.json",
+    "sha256": "21f280cae66e07bc035ba4fe9362cb56b12a5d303fd70084b3599f9b39421e2c",
+    "bytes": 200
+  },
+  {
+    "path": "noop/verifier-environment/cleanup.json",
+    "sha256": "d775e2f459fecd9eea7dd86b0dced62185c2d6b375f072f842da2463886f8991",
+    "bytes": 108
+  },
+  {
+    "path": "noop/verifier-environment/docker-inspect.json",
+    "sha256": "925f412012ef10cb26d155bc78ceaa204c1dd4d9957626a671677fb176d4d6dd",
+    "bytes": 3033
+  },
+  {
+    "path": "noop/verifier-environment/effective-policy.json",
+    "sha256": "925f412012ef10cb26d155bc78ceaa204c1dd4d9957626a671677fb176d4d6dd",
+    "bytes": 3033
+  },
+  {
+    "path": "summary.json",
+    "sha256": "a4891b0918fffbb3a695ef437ca77c4305306de2c44f3903a4f23753f21d7c0f",
+    "bytes": 15354
+  }
+]

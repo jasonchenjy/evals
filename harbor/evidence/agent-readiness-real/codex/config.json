@@ -1,0 +1,34 @@
+{
+    "task": {
+        "path": "/Users/junyuc/Documents/interview/SWE-bench/evals/harbor/generated/coding-preflight-live-v2"
+    },
+    "trial_name": "codex",
+    "trials_dir": "/Users/junyuc/Documents/interview/SWE-bench/evals/harbor/raw/coding-preflight-real-01",
+    "agent": {
+        "import_path": "codex_agent:PilotCodex",
+        "model_name": "openai/gpt-6.1-sol",
+        "kwargs": {
+            "version": "0.162.1",
+            "config": {
+                "web_search": "disabled",
+                "features": {
+                    "plugins": false,
+                    "apps": false,
+                    "remote_plugin": false,
+                    "skill_search": false,
+                    "skill_mcp_dependency_install": false,
+                    "multi_agent": false
+                }
+            }
+        },
+        "env": {
+            "CODEX_AUTH_JSON_PATH": "/Use****son"
+        }
+    },
+    "environment": {
+        "import_path": "environment:PilotEnvironment"
+    },
+    "verifier": {
+        "import_path": "coding_preflight:SyntheticVerifier"
+    }
+}

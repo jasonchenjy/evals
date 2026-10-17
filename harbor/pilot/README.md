@@ -5,12 +5,17 @@ All changes and outputs stay under `harbor/`. It uses installed Harbor **0.24.0*
 Codex **0.162.1**, the original Eval package and Python **3.8.20**.
 No original grader, hidden test, Oracle, or H02 rule is changed.
 
-**Current live blocker:** the generated live image omits `codex-code-mode-host`.
-The newly authorized `pilot-real-02` reached the model but both tool calls failed
-before execution. Its empty patch was graded, but it is not a valid coding-agent
-evaluation. Do not treat the runner's completion flags as readiness. Repair the
-runtime bundle and verify real tool dispatch without inference before another
-authorized live attempt. Full evidence is in `../PILOT_REPORT.md`.
+The missing Code Mode host, login-shell Python mismatch and invalid completion
+classification have been repaired. A complete CLI bundle is required. Native
+plugins/apps are disabled for this local single-agent MVP: background marketplace
+cloning exhausted the bounded fresh HOME during actual preflight.
+
+Current scope is **Agent readiness**, not a real pytest coding trial. See
+[../preflight/README.md](../preflight/README.md) and
+[../agent_readiness_report.md](../agent_readiness_report.md). The environment-only
+pytest preflight uses fake authentication and fixed local Responses events,
+never model inference or issue solving. The full inventory is in
+[../RUNTIME_FACTORS.md](../RUNTIME_FACTORS.md).
 
 ## Execution boundary
 
@@ -24,15 +29,16 @@ The Agent runs as UID 1000 with zero effective capabilities and no-new-privilege
 The root filesystem is read-only. Four bounded tmpfs mounts provide working space,
 home, temporary files and logs (1984 MiB total plus 16 MiB shm). CPU=2,
 memory=4 GiB without swap, PID limit=128, individual file limit=32 MiB, transport
-output limit=16 MiB and wall budget=1800 seconds. There are no host mounts, ports,
+output limit=16 MiB and agent budget=1800 seconds. Verifier time is bounded separately; this is not an end-to-end 1800-second deadline. There are no host mounts, ports,
 host PID namespace, Docker socket or devices. Trusted PID 1 and controller exec
 retain only CAP_KILL to terminate candidate descendants; candidate exec does not
 receive that capability. Host control remains outside the container.
 
 The `AGENT_END` hook stops and kills every process whose kernel-reported UIDs
 include 1000. It checks `/proc/*/status`, not directory ownership (a nondumpable
-process changes its /proc ownership). The root-owned immutable system interpreter
-then checks source inode types, link counts and sizes. No candidate process remains
+process changes its /proc ownership). After termination, a fresh controller exec uses the immutable system interpreter
+with -I as UID 1000 to inspect source metadata and read owner-only files. No
+additional capability is granted. No candidate process remains
 running while collecting. The archive transport is bounded and parsed without
 `extractall`: links, devices, FIFOs, duplicate paths, traversal, non-UTF8 Python,
 unexpected executable bits and size excess are rejected. Non-Python regular files
@@ -111,13 +117,23 @@ checks config permissions, the auth link, fresh-session state and native cleanup
 and intercepts the model command before execution. It makes no model call and
 cannot validate backend login or model availability. All outputs must be new;
 preserve prior attempts.
-The live task builder needs `--live --codex <preprovisioned Linux binary>`.
+The live task builder needs `--live --codex <bundle-root>/bin/codex`. It validates
+and copies the six-file Linux aarch64 0.162.1 package, keeping its layout. The
+system Bash and pinned Python are used; bundled zsh needs a newer glibc and is
+not used. No dependency or base-image upgrade is required.
+
+The expanded preflight also runs native read/search/edit/exec/PTY tools against a
+localhost fixed-response fixture. It checks default and non-login shell Python,
+all pinned dependencies, public serial and explicitly enabled xdist tests,
+nonzero exit status, HOME free space, and frozen patch transfer to a separate
+network-none verifier. A fixture pass is never counted as genuine Agent reasoning.
+Task contents, CLI bundle and current adapter hashes bind the evidence.
 
 Live execution requires `--live --model ... --auth-file ...`, passing paths for
 `--qualification`, `--security`, `--worker-checks`, `--preflight`, plus both
 `--approve-container-credentials` and `--approve-public-network`. The flags record
 an **already obtained human approval**, never create authorization themselves.
-The runner checks both qualifying and native-preflight adapter hashes before
+The runner checks qualifying adapter hashes and all native-preflight task/bundle hashes before
 invoking the model. The older setup-only preflight is no longer sufficient.
 Use no `-O`; optimized Python is refused. Do not rerun a live attempt to improve
 the coding score. Curate using `harbor/curate_pilot.py`; do not commit raw workspaces,

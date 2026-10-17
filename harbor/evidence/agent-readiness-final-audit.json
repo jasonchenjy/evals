@@ -1,0 +1,19 @@
+{
+  "status": "AGENT_READY",
+  "recorded_at": "2026-10-17T07:46:30.527421+00:00",
+  "real_synthetic_trials": 1,
+  "real_pytest_agent_trials": 0,
+  "automatic_trial_retries": 0,
+  "synthetic_controls": 3,
+  "synthetic_controls_matched": 3,
+  "pytest_controls": 7,
+  "pytest_check_statuses_matched": 91,
+  "focused_tests": 23,
+  "harbor_containers_removed": 25,
+  "grading_workers_removed": 105,
+  "original_eval_locked_files": 21,
+  "original_eval_unchanged": true,
+  "runtime_helpers_changed": false,
+  "source_and_bundle_fingerprints_match_executed_evidence": true,
+  "pushed": false
+}

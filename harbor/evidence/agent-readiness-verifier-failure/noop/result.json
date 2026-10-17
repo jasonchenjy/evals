@@ -1,0 +1,120 @@
+{
+    "id": "d98858dc-7a91-4a6b-9985-5ea8d78bffa1",
+    "task_name": "coding-preflight-controls",
+    "trial_name": "noop",
+    "trial_uri": "file:///Users/junyuc/Documents/interview/SWE-bench/evals/harbor/raw/coding-preflight-controls-02/noop",
+    "task_id": {
+        "path": "/Users/junyuc/Documents/interview/SWE-bench/evals/harbor/generated/coding-preflight-controls"
+    },
+    "source": null,
+    "task_checksum": "ea5d74277803caaedc701c588a8f542b0bc05b7add14d269a65f03be68a1f558",
+    "config": {
+        "task": {
+            "path": "/Users/junyuc/Documents/interview/SWE-bench/evals/harbor/generated/coding-preflight-controls",
+            "git_url": null,
+            "git_commit_id": null,
+            "name": null,
+            "ref": null,
+            "overwrite": false,
+            "download_dir": null,
+            "source": null
+        },
+        "trial_name": "noop",
+        "trials_dir": "/Users/junyuc/Documents/interview/SWE-bench/evals/harbor/raw/coding-preflight-controls-02",
+        "install_only": false,
+        "timeout_multiplier": 1.0,
+        "agent_timeout_multiplier": null,
+        "verifier_timeout_multiplier": null,
+        "agent_setup_timeout_multiplier": null,
+        "environment_build_timeout_multiplier": null,
+        "agent": {
+            "name": null,
+            "import_path": "coding_preflight:ScriptedAgent",
+            "model_name": null,
+            "n_concurrent": null,
+            "concurrency_group": null,
+            "skills": [],
+            "override_timeout_sec": null,
+            "override_setup_timeout_sec": null,
+            "max_timeout_sec": null,
+            "resume_trajectory": false,
+            "load_trajectory": null,
+            "extra_allowed_hosts": [],
+            "kwargs": {
+                "control": "noop"
+            },
+            "mcp_servers": []
+        },
+        "user_agent": null,
+        "environment": {
+            "type": null,
+            "import_path": "environment:PilotEnvironment",
+            "force_build": false,
+            "delete": true,
+            "stream": false,
+            "cpu_enforcement_policy": "auto",
+            "memory_enforcement_policy": "auto",
+            "override_cpus": null,
+            "override_memory_mb": null,
+            "override_storage_mb": null,
+            "override_gpus": null,
+            "override_tpu": null,
+            "mounts": null,
+            "extra_docker_compose": [],
+            "kwargs": {},
+            "extra_allowed_hosts": []
+        },
+        "verifier": {
+            "override_timeout_sec": null,
+            "max_timeout_sec": null,
+            "import_path": "coding_preflight:SyntheticVerifier",
+            "disable": false
+        },
+        "artifacts": [],
+        "extra_instruction_paths": [],
+        "extra_instructions": [],
+        "job_id": null,
+        "source_trial": null
+    },
+    "agent_info": {
+        "name": "nop",
+        "version": "1.0.0",
+        "model_info": null
+    },
+    "agent_result": {
+        "n_input_tokens": null,
+        "n_cache_tokens": null,
+        "n_output_tokens": null,
+        "cost_usd": null,
+        "model_usage": null,
+        "rollout_details": null,
+        "metadata": null
+    },
+    "verifier_result": null,
+    "verifier_environment_mode": "separate",
+    "exception_info": {
+        "exception_type": "AssertionError",
+        "exception_message": "fatal: detected dubious ownership in repository at '/work'\nTo add an exception for this directory, call:\n\n\tgit config --global --add safe.directory /work\n",
+        "exception_traceback": "Traceback (most recent call last):\n  File \"/Users/junyuc/Documents/interview/SWE-bench/evals/harbor/.venv/lib/python3.13/site-packages/harbor/trial/trial.py\", line 500, in run\n    await self._run()\n  File \"/Users/junyuc/Documents/interview/SWE-bench/evals/harbor/.venv/lib/python3.13/site-packages/harbor/trial/single_step.py\", line 51, in _run\n    await self._run_verifier()\n  File \"/Users/junyuc/Documents/interview/SWE-bench/evals/harbor/.venv/lib/python3.13/site-packages/harbor/trial/single_step.py\", line 98, in _run_verifier\n    self.result.verifier_result = await self._run_separate_verifier(\n                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n    ...<4 lines>...\n    )\n    ^\n  File \"/Users/junyuc/Documents/interview/SWE-bench/evals/harbor/.venv/lib/python3.13/site-packages/harbor/trial/trial.py\", line 966, in _run_separate_verifier\n    return await self._verify_with_timeout(verifier, timeout_sec)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/junyuc/Documents/interview/SWE-bench/evals/harbor/.venv/lib/python3.13/site-packages/harbor/trial/trial.py\", line 859, in _verify_with_timeout\n    return await asyncio.wait_for(verifier.verify(), timeout=timeout_sec)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/homebrew/Cellar/python@3.13/3.13.7/Frameworks/Python.framework/Versions/3.13/lib/python3.13/asyncio/tasks.py\", line 507, in wait_for\n    return await fut\n           ^^^^^^^^^\n  File \"/Users/junyuc/Documents/interview/SWE-bench/evals/harbor/preflight/run.py\", line 105, in verify\n    assert before.return_code==0 and before.stdout.strip()==provenance['baseline'],before.stdout\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError: fatal: detected dubious ownership in repository at '/work'\nTo add an exception for this directory, call:\n\n\tgit config --global --add safe.directory /work\n\n",
+        "occurred_at": "2026-10-17T07:36:19.979687Z"
+    },
+    "started_at": "2026-10-17T07:36:12.750056Z",
+    "finished_at": "2026-10-17T07:36:19.980348Z",
+    "environment_setup": {
+        "started_at": "2026-10-17T07:36:13.003836Z",
+        "finished_at": "2026-10-17T07:36:16.179814Z"
+    },
+    "agent_setup": {
+        "started_at": "2026-10-17T07:36:16.179895Z",
+        "finished_at": "2026-10-17T07:36:16.280012Z"
+    },
+    "agent_execution": {
+        "started_at": "2026-10-17T07:36:16.402953Z",
+        "finished_at": "2026-10-17T07:36:16.526614Z"
+    },
+    "verifier": {
+        "started_at": "2026-10-17T07:36:17.465708Z",
+        "finished_at": "2026-10-17T07:36:19.977190Z"
+    },
+    "step_results": null
+}

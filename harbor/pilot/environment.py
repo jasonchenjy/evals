@@ -135,7 +135,7 @@ class PilotEnvironment(ColimaEnvironment):
         program = ('import sys,tarfile; '
                    't=tarfile.open(fileobj=sys.stdout.buffer,mode="w|"); '
                    't.add(sys.argv[1],arcname=sys.argv[2],recursive=True); t.close()')
-        record = bounded(docker('exec', '-u', '0', self.cid, '/usr/local/bin/python', '-I', '-c',
+        record = bounded(docker('exec', '-u', '1000:1000', self.cid, '/usr/local/bin/python', '-I', '-c',
                                 program, source, Path(source).name), self.evidence,
                          dict(os.environ), 30, self.evidence / label, output_limit=limit)
         if record['returncode'] or record['timeout'] or record['output_limit_exceeded']:
@@ -147,7 +147,13 @@ class PilotEnvironment(ColimaEnvironment):
             return
         self.inspect_policy()
         program = Path(__file__).with_name('quiesce.py').read_text()
-        result = await self.exec(command='/usr/local/bin/python -I -c ' + shlex.quote(program), user='root', timeout_sec=15)
+        result = await self.exec(command='/usr/local/bin/python -I -c ' + shlex.quote(program)+' --quiesce-only', user='root', timeout_sec=15)
+        if result.return_code:
+            raise RuntimeError('Candidate process quiescence failed: '+result.stdout[-1000:])
+        # Root has CAP_KILL only, not DAC bypass. A fresh controller-owned exec
+        # as the file owner can read legitimate 0600 source after all candidates
+        # are dead. -I and an immutable interpreter avoid candidate imports.
+        result = await self.exec(command='/usr/local/bin/python -I -c ' + shlex.quote(program)+' --source-only', user='1000:1000', timeout_sec=15)
         if result.return_code:
             raise RuntimeError('Candidate quiescence/source metadata check failed: ' + result.stdout[-1000:])
         observation = json.loads(result.stdout)
@@ -158,7 +164,7 @@ class PilotEnvironment(ColimaEnvironment):
         logs = self.copy_archive('/logs/agent', 'logs-tar', 34 * 1024 * 1024)
         extract(logs, self.evidence / 'logs', source=False)
         save(self.evidence / 'handoff.json', dict(candidate_processes_stopped=True,
-             collection='immutable system Python as controller-only root, after uid 1000 termination',
+             collection='root CAP_KILL quiescence, then immutable -I Python as file owner uid 1000',
              container_id=self.cid, source=inventory,
              source_archive_sha256=hashlib.sha256(source.read_bytes()).hexdigest()))
         self.frozen = True

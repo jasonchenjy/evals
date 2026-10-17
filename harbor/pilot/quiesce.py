@@ -9,6 +9,7 @@ import os
 from pathlib import Path
 import signal
 import stat
+import sys
 import time
 
 
@@ -27,33 +28,39 @@ def candidate_pids():
     return found
 
 
-deadline = time.monotonic() + 5
-while True:
-    pids = candidate_pids()
-    # Stop every live descendant before killing, so it cannot continue forking.
-    for pid in pids:
-        try:
-            os.kill(pid, signal.SIGSTOP)
-        except ProcessLookupError:
-            pass
-    for pid in pids:
-        try:
-            os.kill(pid, signal.SIGKILL)
-        except ProcessLookupError:
-            pass
-    live = []
-    for pid in candidate_pids():
-        try:
-            state = Path('/proc', str(pid), 'status').read_text().split('State:')[1].splitlines()[0]
-            if 'Z' not in state:
-                live.append(pid)
-        except FileNotFoundError:
-            pass
-    if not live:
-        break
-    if time.monotonic() > deadline:
-        raise RuntimeError("Candidate processes did not stop")
-    time.sleep(.01)
+if '--source-only' not in sys.argv:
+    deadline = time.monotonic() + 5
+    while True:
+        pids = candidate_pids()
+        # Stop every live descendant before killing, so it cannot continue forking.
+        for pid in pids:
+            try:
+                os.kill(pid, signal.SIGSTOP)
+            except ProcessLookupError:
+                pass
+        for pid in pids:
+            try:
+                os.kill(pid, signal.SIGKILL)
+            except ProcessLookupError:
+                pass
+        live = []
+        for pid in candidate_pids():
+            try:
+                state = Path('/proc', str(pid), 'status').read_text().split('State:')[1].splitlines()[0]
+                if 'Z' not in state:
+                    live.append(pid)
+            except FileNotFoundError:
+                pass
+        if not live:
+            break
+        if time.monotonic() > deadline:
+            raise RuntimeError("Candidate processes did not stop")
+        time.sleep(.01)
+
+
+if '--quiesce-only' in sys.argv:
+    print(json.dumps(dict(candidate_processes_stopped=True)))
+    raise SystemExit(0)
 
 root = Path('/work/src')
 assert root.is_dir() and not root.is_symlink()

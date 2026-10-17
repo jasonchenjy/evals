@@ -1,0 +1,39 @@
+{
+    "schema_version": 2,
+    "task": {
+        "name": "coding-preflight-controls-v2",
+        "type": "local",
+        "digest": "sha256:1ec5e8e0e44feb69316c06ce9833ba4f59a0d1fa0354e23a7ae8bff31a540243",
+        "path": "/Users/junyuc/Documents/interview/SWE-bench/evals/harbor/generated/coding-preflight-controls-v2"
+    },
+    "install_only": false,
+    "timeout_multiplier": 1.0,
+    "agent": {
+        "import_path": "coding_preflight:ScriptedAgent",
+        "skills": [],
+        "resume_trajectory": false,
+        "extra_allowed_hosts": [],
+        "kwargs": {
+            "control": "complete"
+        },
+        "mcp_servers": []
+    },
+    "bridge_inputs": {},
+    "skills": [],
+    "environment": {
+        "import_path": "environment:PilotEnvironment",
+        "force_build": false,
+        "delete": true,
+        "stream": false,
+        "cpu_enforcement_policy": "auto",
+        "memory_enforcement_policy": "auto",
+        "extra_docker_compose": [],
+        "kwargs": {},
+        "extra_allowed_hosts": []
+    },
+    "verifier": {
+        "import_path": "coding_preflight:SyntheticVerifier",
+        "disable": false,
+        "environment_mode": "separate"
+    }
+}

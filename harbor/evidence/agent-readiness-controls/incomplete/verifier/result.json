@@ -1,0 +1,18 @@
+{
+  "infrastructure_status": "ok",
+  "passed": false,
+  "hidden_test_exit_code": 1,
+  "source_sha256": {
+    "src/normalization.py": "1fa7c89adb0130e9d8454204074037e318deabb8acdff7772c11af1e7cd8afad",
+    "src/parser.py": "50c8e6d1efb1cfe762c82de6d176b3dfabad11b91a3460182f0fd2954c77b9dd",
+    "src/service.py": "f3b0b9786a322304c939ab85263501325d0ed77b6d82e3ee1df09f42291ad5fe",
+    "src/validator.py": "be1990f89fdec7eb94018169c450b663f5e8915be53ed327f2f9be77b2f12dee"
+  },
+  "separate_containers": true,
+  "clean_base": true,
+  "only_source_transferred": true,
+  "agent_container": "7d20034f30777f62554388002dcb855719312e3996460920291ccb785912fa02",
+  "verifier_container": "bc44d8cc8cfd5ba5aa1576c06424b94d9b3d71ab547e53c22f0373391b9ad6ba",
+  "known_solution_in_candidate": false,
+  "credential_in_verifier": false
+}

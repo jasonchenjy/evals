@@ -1,0 +1,51 @@
+{
+  "schema_version": 1,
+  "method": "test_B03_real_xdist",
+  "status": "failed",
+  "tests_run": 1,
+  "duration_seconds": 0.6007295039999008,
+  "failures": [
+    "Traceback (most recent call last):\n  File \"/inputs/eval/private/tests/behavior.py\", line 153, in test_B03_real_xdist\n    self.assertIn(\"ValueError: worker-inner-503\", result.stdout)\nAssertionError: 'ValueError: worker-inner-503' not found in 'bringing up nodes...\\nbringing up nodes...\\n\\n\\n==================================== ERRORS ====================================\\n______________________ ERROR collecting test_transport.py ______________________\\ntest_transport.py:9: in <module>\\n    fail()\\ntest_transport.py:7: in fail\\n    raise RuntimeError(\"worker-outer-509\") from e\\nE   RuntimeError: worker-outer-509\\n------------ generated xml file: /trial/scratch/collect/report.xml -------------\\n1 error in 0.15s\\n'\n"
+  ],
+  "skips": [],
+  "details": [
+    {
+      "command": [
+        "/opt/pytest-python/bin/python",
+        "-m",
+        "pytest",
+        "--color=no",
+        "-q",
+        "-p",
+        "xdist.plugin",
+        "-n",
+        "1",
+        "--tb=short",
+        "--junitxml=report.xml",
+        "test_transport.py"
+      ],
+      "cwd": "/trial/scratch/call",
+      "returncode": 1,
+      "log": "/trial/scratch/call.log"
+    },
+    {
+      "command": [
+        "/opt/pytest-python/bin/python",
+        "-m",
+        "pytest",
+        "--color=no",
+        "-q",
+        "-p",
+        "xdist.plugin",
+        "-n",
+        "1",
+        "--tb=short",
+        "--junitxml=report.xml",
+        "test_transport.py"
+      ],
+      "cwd": "/trial/scratch/collect",
+      "returncode": 1,
+      "log": "/trial/scratch/collect.log"
+    }
+  ]
+}

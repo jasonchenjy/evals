@@ -1,4 +1,7 @@
-# Harbor 替代 Runtime：实测评估
+# Harbor 替代 Runtime：历史 spike 评估
+
+本页保留早期机器与 spike 的历史结果。当前本机实现、真实多文件合成 Trial 和 readiness
+结论见 [agent_readiness_report.md](agent_readiness_report.md)；不要将本页旧版本/镜像配置视为当前入口。
 
 结论：**NEEDS_MORE_VALIDATION**。Harbor 已执行真实 Codex → 源码修改 → 独立 verifier，并可在不改评分逻辑的情况下复用 pytest_5786。它可以承接评测编排，但当前证据不足以替代自研 Runtime 的安全边界。runtime/ 保留，未推送。
 

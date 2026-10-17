@@ -1,0 +1,19 @@
+{
+    "task": {
+        "path": "/Users/junyuc/Documents/interview/SWE-bench/evals/harbor/generated/coding-preflight-controls-v2"
+    },
+    "trial_name": "noop",
+    "trials_dir": "/Users/junyuc/Documents/interview/SWE-bench/evals/harbor/raw/coding-preflight-controls-04",
+    "agent": {
+        "import_path": "coding_preflight:ScriptedAgent",
+        "kwargs": {
+            "control": "noop"
+        }
+    },
+    "environment": {
+        "import_path": "environment:PilotEnvironment"
+    },
+    "verifier": {
+        "import_path": "coding_preflight:SyntheticVerifier"
+    }
+}

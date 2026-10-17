@@ -10,7 +10,7 @@ import shlex
 import subprocess
 import sys
 
-from common import ROOT, REPO, adapter_hashes, docker, load_runtime, save
+from common import ROOT, REPO, adapter_hashes, task_hashes, validate_task, docker, load_runtime, save
 from snapshot import normalize_git_modes
 
 # Load our adapters by unique import names; do not shadow the installed package.
@@ -73,7 +73,7 @@ async def run(args):
     code_hashes = adapter_hashes()
     Package, _, _, collect, _ = load_runtime()
     package = Package(REPO / 'pytest_5786', args.repo)
-    provenance = json.loads((args.task / 'provenance.json').read_text())
+    provenance = validate_task(args.task,package)
     assert provenance['image'] == args.image
     # BuildKit requires a tag/reference in FROM, unlike the legacy builder.
     tag = 'harbor-pilot-base:' + args.image.removeprefix('sha256:')
@@ -94,6 +94,8 @@ async def run(args):
         assert preflight['passed'] and preflight['model_calls']==0 and not preflight['real_auth_used']
         assert preflight.get('native_model_command_blocked') and preflight.get('native_fake_auth_cleanup')
         assert preflight.get('adapter_hashes') == code_hashes, 'Preflight must exercise current native launch preparation'
+        assert preflight.get('task_hashes') == task_hashes(args.task), 'Generated task or CLI bundle changed since preflight'
+        assert preflight.get('tool_preflight_passed') and preflight.get('artifact_roundtrip_passed')
         assert args.auth_file.is_file()
         # One live attempt per output; creation precedes any model/auth operations.
         controls = ['codex']
@@ -118,7 +120,7 @@ async def run(args):
         agent = AgentConfig(import_path='pilot_controls:ControlAgent', kwargs={'patch': str(package.root/'private/oracle'/f'{name}.patch')})
         if args.live:
             agent = AgentConfig(import_path='pilot_codex:PilotCodex', model_name=args.model,
-                kwargs={'version':'0.162.1', 'config': {'web_search':'disabled'}},
+                kwargs={'version':'0.162.1', 'config': pilot_codex.pilot_config()},
                 env={'CODEX_AUTH_JSON_PATH': str(args.auth_file)})
         cfg = TrialConfig(task=TaskConfig(path=args.task), trial_name=name, trials_dir=args.output,
             agent=agent, environment=EnvironmentConfig(import_path='pilot_environment:PilotEnvironment'),
@@ -129,6 +131,8 @@ async def run(args):
             await public_gate(trial, provenance, canaries)
         async def freeze(event):
             await trial.agent_environment.freeze()
+            if args.live and not getattr(trial.agent_environment,'agent_infrastructure_ok',False):
+                raise RuntimeError('Codex did not complete a healthy turn; refusing to grade an infrastructure failure')
             normalize_git_modes(trial.agent_environment.captured, args.task/'environment/base')
             record = collect(package, trial.agent_environment.captured, provenance['baseline'], trial.paths.trial_dir/'submission')
             assert record['status'] == 'accepted'
@@ -136,6 +140,13 @@ async def run(args):
         trial.add_hook(TrialEvent.AGENT_END, freeze)
         result = await trial.run()
         entry = dict(control=name, exception=result.exception_info.model_dump(mode='json') if result.exception_info else None)
+        if entry['exception']:
+            entry['infrastructure_status']='agent_or_trial_error'
+            entry['expectation_met']=False
+            summary['controls'].append(entry)
+            summary['live_completed']=False
+            save(args.output/'summary.json',summary)
+            raise RuntimeError('Trial infrastructure failed; no capability score and no automatic retry')
         path = trial.paths.verifier_dir/'grader/result.json'
         if path.exists():
             actual = json.loads(path.read_text())

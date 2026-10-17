@@ -1,0 +1,9 @@
+{
+  "passed": true,
+  "real_model_calls": 0,
+  "genuine_agent_behavior": false,
+  "content_search_command": "rg -n '^(def |from )|parse_order|validate_order' src",
+  "content_search_output": "src/parser.py:2:def parse_order(line):\nsrc/service.py:1:from parser import parse_order\nsrc/service.py:2:from validator import validate_order\nsrc/service.py:5:def build_order(line):\nsrc/service.py:6:    parsed = parse_order(line)\nsrc/service.py:8:    validate_order(order)\nsrc/validator.py:1:def validate_order(order):\n",
+  "exit_code": 7,
+  "merged_stdout_stderr": "STDERR_MARKER\nSTDOUT_MARKER\n"
+}

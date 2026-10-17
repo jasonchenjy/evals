@@ -1,0 +1,110 @@
+test_distinct_requests (__main__.HiddenTests) ... FAIL
+test_invalid (__main__.HiddenTests) ... test_quantities (__main__.HiddenTests) ... 
+======================================================================
+FAIL: test_distinct_requests (__main__.HiddenTests)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/tmp/hidden_tests.py", line 19, in test_distinct_requests
+    self.assertEqual(build_order('kiwi|4')['quantity'],4)
+AssertionError: 2 != 4
+
+======================================================================
+FAIL: test_invalid (__main__.HiddenTests) (line='a|0')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/tmp/hidden_tests.py", line 16, in test_invalid
+    build_order(line)
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_invalid (__main__.HiddenTests) (line='a|-1')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/tmp/hidden_tests.py", line 16, in test_invalid
+    build_order(line)
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_invalid (__main__.HiddenTests) (line='a|101')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/tmp/hidden_tests.py", line 16, in test_invalid
+    build_order(line)
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_invalid (__main__.HiddenTests) (line='a|x')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/tmp/hidden_tests.py", line 16, in test_invalid
+    build_order(line)
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_invalid (__main__.HiddenTests) (line='a|1.5')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/tmp/hidden_tests.py", line 16, in test_invalid
+    build_order(line)
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_quantities (__main__.HiddenTests) (n=1)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/tmp/hidden_tests.py", line 10, in test_quantities
+    self.assertEqual(build_order(' pears | '+str(n)+' '),
+AssertionError: {'item': 'pears', 'quantity': 2, 'total': 6} != {'item': 'pears', 'quantity': 1, 'total': 3}
+- {'item': 'pears', 'quantity': 2, 'total': 6}
+?                               ^           ^
+
++ {'item': 'pears', 'quantity': 1, 'total': 3}
+?                               ^           ^
+
+
+======================================================================
+FAIL: test_quantities (__main__.HiddenTests) (n=3)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/tmp/hidden_tests.py", line 10, in test_quantities
+    self.assertEqual(build_order(' pears | '+str(n)+' '),
+AssertionError: {'item': 'pears', 'quantity': 2, 'total': 6} != {'item': 'pears', 'quantity': 3, 'total': 9}
+- {'item': 'pears', 'quantity': 2, 'total': 6}
+?                               ^           ^
+
++ {'item': 'pears', 'quantity': 3, 'total': 9}
+?                               ^           ^
+
+
+======================================================================
+FAIL: test_quantities (__main__.HiddenTests) (n=17)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/tmp/hidden_tests.py", line 10, in test_quantities
+    self.assertEqual(build_order(' pears | '+str(n)+' '),
+AssertionError: {'item': 'pears', 'quantity': 2, 'total': 6} != {'item': 'pears', 'quantity': 17, 'total': 51}
+- {'item': 'pears', 'quantity': 2, 'total': 6}
+?                               ^           ^
+
++ {'item': 'pears', 'quantity': 17, 'total': 51}
+?                               ^^           ^^
+
+
+======================================================================
+FAIL: test_quantities (__main__.HiddenTests) (n=100)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/tmp/hidden_tests.py", line 10, in test_quantities
+    self.assertEqual(build_order(' pears | '+str(n)+' '),
+AssertionError: {'item': 'pears', 'quantity': 2, 'total': 6} != {'item': 'pears', 'quantity': 100, 'total': 300}
+- {'item': 'pears', 'quantity': 2, 'total': 6}
+?                               ^           ^
+
++ {'item': 'pears', 'quantity': 100, 'total': 300}
+?                               ^^^           ^^^
+
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.001s
+
+FAILED (failures=10)

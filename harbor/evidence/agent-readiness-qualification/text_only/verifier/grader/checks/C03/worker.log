@@ -1,0 +1,14 @@
+test_C03_missing_traceback (eval_behavior.Behavior) ... ERROR
+
+======================================================================
+ERROR: test_C03_missing_traceback (eval_behavior.Behavior)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/inputs/eval/private/tests/behavior.py", line 192, in test_C03_missing_traceback
+    self.assertEqual(restored.longrepr.reprcrash.message, "ValueError: outer-message-829")
+AttributeError: 'str' object has no attribute 'reprcrash'
+
+----------------------------------------------------------------------
+Ran 1 test in 0.044s
+
+FAILED (errors=1)

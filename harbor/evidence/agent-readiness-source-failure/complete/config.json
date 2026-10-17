@@ -1,0 +1,19 @@
+{
+    "task": {
+        "path": "/Users/junyuc/Documents/interview/SWE-bench/evals/harbor/generated/coding-preflight-controls-v2"
+    },
+    "trial_name": "complete",
+    "trials_dir": "/Users/junyuc/Documents/interview/SWE-bench/evals/harbor/raw/coding-preflight-controls-03",
+    "agent": {
+        "import_path": "coding_preflight:ScriptedAgent",
+        "kwargs": {
+            "control": "complete"
+        }
+    },
+    "environment": {
+        "import_path": "environment:PilotEnvironment"
+    },
+    "verifier": {
+        "import_path": "coding_preflight:SyntheticVerifier"
+    }
+}

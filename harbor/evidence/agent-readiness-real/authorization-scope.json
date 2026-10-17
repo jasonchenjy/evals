@@ -1,0 +1,13 @@
+{
+  "authorized_at_recorded": "2026-10-17T07:39:59.109331+00:00",
+  "task": "synthetic multi-file coding readiness only",
+  "model": "openai/gpt-6.1-sol",
+  "trials": 1,
+  "agent_timeout_sec": 300,
+  "verifier_timeout_sec": 300,
+  "automatic_trial_retry": false,
+  "container_injected_credentials_approved": true,
+  "public_candidate_network_approved": true,
+  "pytest_5786_agent_eval_authorized": false,
+  "credential_contents_recorded": false
+}

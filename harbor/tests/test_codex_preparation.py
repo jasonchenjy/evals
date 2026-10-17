@@ -4,6 +4,7 @@ import sys
 import tempfile
 from types import SimpleNamespace
 import unittest
+import json
 from unittest.mock import AsyncMock
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / 'pilot'))
@@ -46,6 +47,24 @@ class PreparationTests(unittest.IsolatedAsyncioTestCase):
         with self.assertRaises(RuntimeError):
             await self.agent.exec_as_root(self.env, 'chown root /tmp/auth.json')
         self.agent.exec_as_agent.assert_not_awaited()
+
+    def test_harness_failure_is_not_a_valid_empty_submission(self):
+        log='\n'.join(json.dumps(x) for x in [
+            {'type':'item.completed','item':{'type':'error','message':'Code Mode is unavailable'}},
+            {'type':'turn.completed'}])
+        with self.assertRaisesRegex(RuntimeError,'infrastructure failure'):
+            PilotCodex.check_launch(SimpleNamespace(return_code=0,stdout=log))
+
+    def test_shell_failure_and_healthy_noop_are_valid(self):
+        for events in [[{'type':'turn.completed'}],
+                       [{'type':'item.completed','item':{'type':'command_execution','exit_code':7,'status':'failed'}},
+                        {'type':'turn.completed'}]]:
+            PilotCodex.check_launch(SimpleNamespace(return_code=0,stdout='\n'.join(map(json.dumps,events))))
+
+    def test_incomplete_or_nonzero_launch_rejected(self):
+        for code,log in [(0,''),(1,'{"type":"turn.completed"}'),(0,'{"type":"turn.failed"}')]:
+            with self.assertRaises(RuntimeError):
+                PilotCodex.check_launch(SimpleNamespace(return_code=code,stdout=log))
 
 
 if __name__ == '__main__':

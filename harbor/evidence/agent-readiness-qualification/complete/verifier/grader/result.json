@@ -1,0 +1,766 @@
+{
+  "schema_version": 1,
+  "eval_id": "pytest_5786",
+  "eval_version": "0.1.0",
+  "timestamp": "2026-10-17T07:42:04.124713+00:00",
+  "base_commit": "955e54221008aba577ecbaefa15679f6777d3bf8",
+  "overall_resolved": true,
+  "infrastructure_status": "ok",
+  "submission_status": "accepted",
+  "dimensions": {
+    "original_bug_resolution": {
+      "satisfied": true,
+      "checks": {
+        "A01": "passed",
+        "A02": "passed"
+      }
+    },
+    "cross_component_consistency": {
+      "satisfied": true,
+      "checks": {
+        "B01": "passed",
+        "B02": "passed",
+        "B03": "passed"
+      }
+    },
+    "edge_case_robustness": {
+      "satisfied": true,
+      "checks": {
+        "C01": "passed",
+        "C02": "passed",
+        "C03": "passed"
+      }
+    },
+    "non_regression": {
+      "satisfied": true,
+      "checks": {
+        "D01": "passed",
+        "D02": "passed",
+        "D03": "passed"
+      }
+    }
+  },
+  "tests": [
+    {
+      "id": "A01",
+      "dimensions": [
+        "A"
+      ],
+      "mandatory": true,
+      "execution": {
+        "command": [
+          "/opt/pytest-python/bin/python",
+          "/inputs/eval/private/check.py",
+          "--method",
+          "test_A01_explicit",
+          "--output",
+          "/trial/scratch/observation.json"
+        ],
+        "cwd": "/trial/workspace",
+        "started_at": "2026-10-17T07:42:09.822458+00:00",
+        "timeout": false,
+        "output_limit_exceeded": false,
+        "returncode": 0,
+        "stdout": "/Users/junyuc/Documents/interview/SWE-bench/evals/harbor/raw/pilot-readiness-qualification-final/complete/verifier/grader/checks/A01/worker.stdout",
+        "stderr": "/Users/junyuc/Documents/interview/SWE-bench/evals/harbor/raw/pilot-readiness-qualification-final/complete/verifier/grader/checks/A01/worker.stderr",
+        "output_bytes_seen": 147,
+        "elapsed_seconds": 0.11289106399999582,
+        "finished_at": "2026-10-17T07:42:09.935351+00:00",
+        "container_receipt": "/Users/junyuc/Documents/interview/SWE-bench/evals/harbor/raw/pilot-readiness-qualification-final/complete/workers/worker-003/worker-receipt.json",
+        "boundary": "colima-linux-container",
+        "handoff_status": "accepted",
+        "log": "/Users/junyuc/Documents/interview/SWE-bench/evals/harbor/raw/pilot-readiness-qualification-final/complete/verifier/grader/checks/A01/worker.log"
+      },
+      "observation": {
+        "schema_version": 1,
+        "method": "test_A01_explicit",
+        "status": "passed",
+        "tests_run": 1,
+        "duration_seconds": 0.07226927100055036,
+        "failures": [],
+        "skips": [],
+        "details": []
+      },
+      "status": "passed"
+    },
+    {
+      "id": "A02",
+      "dimensions": [
+        "A"
+      ],
+      "mandatory": true,
+      "execution": {
+        "command": [
+          "/opt/pytest-python/bin/python",
+          "/inputs/eval/private/check.py",
+          "--method",
+          "test_A02_implicit",
+          "--output",
+          "/trial/scratch/observation.json"
+        ],
+        "cwd": "/trial/workspace",
+        "started_at": "2026-10-17T07:42:11.073129+00:00",
+        "timeout": false,
+        "output_limit_exceeded": false,
+        "returncode": 0,
+        "stdout": "/Users/junyuc/Documents/interview/SWE-bench/evals/harbor/raw/pilot-readiness-qualification-final/complete/verifier/grader/checks/A02/worker.stdout",
+        "stderr": "/Users/junyuc/Documents/interview/SWE-bench/evals/harbor/raw/pilot-readiness-qualification-final/complete/verifier/grader/checks/A02/worker.stderr",
+        "output_bytes_seen": 147,
+        "elapsed_seconds": 0.11922838500049693,
+        "finished_at": "2026-10-17T07:42:11.192359+00:00",
+        "container_receipt": "/Users/junyuc/Documents/interview/SWE-bench/evals/harbor/raw/pilot-readiness-qualification-final/complete/workers/worker-004/worker-receipt.json",
+        "boundary": "colima-linux-container",
+        "handoff_status": "accepted",
+        "log": "/Users/junyuc/Documents/interview/SWE-bench/evals/harbor/raw/pilot-readiness-qualification-final/complete/verifier/grader/checks/A02/worker.log"
+      },
+      "observation": {
+        "schema_version": 1,
+        "method": "test_A02_implicit",
+        "status": "passed",
+        "tests_run": 1,
+        "duration_seconds": 0.0775572739994459,
+        "failures": [],
+        "skips": [],
+        "details": []
+      },
+      "status": "passed"
+    },
+    {
+      "id": "B01",
+      "dimensions": [
+        "B"
+      ],
+      "mandatory": true,
+      "execution": {
+        "command": [
+          "/opt/pytest-python/bin/python",
+          "/inputs/eval/private/check.py",
+          "--method",
+          "test_B01_collect_report",
+          "--output",
+          "/trial/scratch/observation.json"
+        ],
+        "cwd": "/trial/workspace",
+        "started_at": "2026-10-17T07:42:12.281442+00:00",
+        "timeout": false,
+        "output_limit_exceeded": false,
+        "returncode": 0,
+        "stdout": "/Users/junyuc/Documents/interview/SWE-bench/evals/harbor/raw/pilot-readiness-qualification-final/complete/verifier/grader/checks/B01/worker.stdout",
+        "stderr": "/Users/junyuc/Documents/interview/SWE-bench/evals/harbor/raw/pilot-readiness-qualification-final/complete/verifier/grader/checks/B01/worker.stderr",
+        "output_bytes_seen": 153,
+        "elapsed_seconds": 0.11238537600002019,
+        "finished_at": "2026-10-17T07:42:12.393828+00:00",
+        "container_receipt": "/Users/junyuc/Documents/interview/SWE-bench/evals/harbor/raw/pilot-readiness-qualification-final/complete/workers/worker-005/worker-receipt.json",
+        "boundary": "colima-linux-container",
+        "handoff_status": "accepted",
+        "log": "/Users/junyuc/Documents/interview/SWE-bench/evals/harbor/raw/pilot-readiness-qualification-final/complete/verifier/grader/checks/B01/worker.log"
+      },
+      "observation": {
+        "schema_version": 1,
+        "method": "test_B01_collect_report",
+        "status": "passed",
+        "tests_run": 1,
+        "duration_seconds": 0.07126946300013515,
+        "failures": [],
+        "skips": [],
+        "details": []
+      },
+      "status": "passed"
+    },
+    {
+      "id": "B02",
+      "dimensions": [
+        "B"
+      ],
+      "mandatory": true,
+      "execution": {
+        "command": [
+          "/opt/pytest-python/bin/python",
+          "/inputs/eval/private/check.py",
+          "--method",
+          "test_B02_structured_consumer",
+          "--output",
+          "/trial/scratch/observation.json"
+        ],
+        "cwd": "/trial/workspace",
+        "started_at": "2026-10-17T07:42:13.490237+00:00",
+        "timeout": false,
+        "output_limit_exceeded": false,
+        "returncode": 0,
+        "stdout": "/Users/junyuc/Documents/interview/SWE-bench/evals/harbor/raw/pilot-readiness-qualification-final/complete/verifier/grader/checks/B02/worker.stdout",
+        "stderr": "/Users/junyuc/Documents/interview/SWE-bench/evals/harbor/raw/pilot-readiness-qualification-final/complete/verifier/grader/checks/B02/worker.stderr",
+        "output_bytes_seen": 158,
+        "elapsed_seconds": 0.10602448300051037,
+        "finished_at": "2026-10-17T07:42:13.596264+00:00",
+        "container_receipt": "/Users/junyuc/Documents/interview/SWE-bench/evals/harbor/raw/pilot-readiness-qualification-final/complete/workers/worker-006/worker-receipt.json",
+        "boundary": "colima-linux-container",
+        "handoff_status": "accepted",
+        "log": "/Users/junyuc/Documents/interview/SWE-bench/evals/harbor/raw/pilot-readiness-qualification-final/complete/verifier/grader/checks/B02/worker.log"
+      },
+      "observation": {
+        "schema_version": 1,
+        "method": "test_B02_structured_consumer",
+        "status": "passed",
+        "tests_run": 1,
+        "duration_seconds": 0.06598084300003393,
+        "failures": [],
+        "skips": [],
+        "details": []
+      },
+      "status": "passed"
+    },
+    {
+      "id": "B03",
+      "dimensions": [
+        "B"
+      ],
+      "mandatory": true,
+      "execution": {
+        "command": [
+          "/opt/pytest-python/bin/python",
+          "/inputs/eval/private/check.py",
+          "--method",
+          "test_B03_real_xdist",
+          "--output",
+          "/trial/scratch/observation.json"
+        ],
+        "cwd": "/trial/workspace",
+        "started_at": "2026-10-17T07:42:14.804206+00:00",
+        "timeout": false,
+        "output_limit_exceeded": false,
+        "returncode": 0,
+        "stdout": "/Users/junyuc/Documents/interview/SWE-bench/evals/harbor/raw/pilot-readiness-qualification-final/complete/verifier/grader/checks/B03/worker.stdout",
+        "stderr": "/Users/junyuc/Documents/interview/SWE-bench/evals/harbor/raw/pilot-readiness-qualification-final/complete/verifier/grader/checks/B03/worker.stderr",
+        "output_bytes_seen": 149,
+        "elapsed_seconds": 0.6564850719996684,
+        "finished_at": "2026-10-17T07:42:15.460696+00:00",
+        "container_receipt": "/Users/junyuc/Documents/interview/SWE-bench/evals/harbor/raw/pilot-readiness-qualification-final/complete/workers/worker-007/worker-receipt.json",
+        "boundary": "colima-linux-container",
+        "handoff_status": "accepted",
+        "log": "/Users/junyuc/Documents/interview/SWE-bench/evals/harbor/raw/pilot-readiness-qualification-final/complete/verifier/grader/checks/B03/worker.log"
+      },
+      "observation": {
+        "schema_version": 1,
+        "method": "test_B03_real_xdist",
+        "status": "passed",
+        "tests_run": 1,
+        "duration_seconds": 0.5580754160000652,
+        "failures": [],
+        "skips": [],
+        "details": [
+          {
+            "command": [
+              "/opt/pytest-python/bin/python",
+              "-m",
+              "pytest",
+              "--color=no",
+              "-q",
+              "-p",
+              "xdist.plugin",
+              "-n",
+              "1",
+              "--tb=short",
+              "--junitxml=report.xml",
+              "test_transport.py"
+            ],
+            "cwd": "/trial/scratch/call",
+            "returncode": 1,
+            "log": "/trial/scratch/call.log"
+          },
+          {
+            "command": [
+              "/opt/pytest-python/bin/python",
+              "-m",
+              "pytest",
+              "--color=no",
+              "-q",
+              "-p",
+              "xdist.plugin",
+              "-n",
+              "1",
+              "--tb=short",
+              "--junitxml=report.xml",
+              "test_transport.py"
+            ],
+            "cwd": "/trial/scratch/collect",
+            "returncode": 1,
+            "log": "/trial/scratch/collect.log"
+          }
+        ]
+      },
+      "status": "passed"
+    },
+    {
+      "id": "C01",
+      "dimensions": [
+        "C"
+      ],
+      "mandatory": true,
+      "execution": {
+        "command": [
+          "/opt/pytest-python/bin/python",
+          "/inputs/eval/private/check.py",
+          "--method",
+          "test_C01_suppressed_context",
+          "--output",
+          "/trial/scratch/observation.json"
+        ],
+        "cwd": "/trial/workspace",
+        "started_at": "2026-10-17T07:42:16.540529+00:00",
+        "timeout": false,
+        "output_limit_exceeded": false,
+        "returncode": 0,
+        "stdout": "/Users/junyuc/Documents/interview/SWE-bench/evals/harbor/raw/pilot-readiness-qualification-final/complete/verifier/grader/checks/C01/worker.stdout",
+        "stderr": "/Users/junyuc/Documents/interview/SWE-bench/evals/harbor/raw/pilot-readiness-qualification-final/complete/verifier/grader/checks/C01/worker.stderr",
+        "output_bytes_seen": 157,
+        "elapsed_seconds": 0.10387794700000086,
+        "finished_at": "2026-10-17T07:42:16.644409+00:00",
+        "container_receipt": "/Users/junyuc/Documents/interview/SWE-bench/evals/harbor/raw/pilot-readiness-qualification-final/complete/workers/worker-008/worker-receipt.json",
+        "boundary": "colima-linux-container",
+        "handoff_status": "accepted",
+        "log": "/Users/junyuc/Documents/interview/SWE-bench/evals/harbor/raw/pilot-readiness-qualification-final/complete/verifier/grader/checks/C01/worker.log"
+      },
+      "observation": {
+        "schema_version": 1,
+        "method": "test_C01_suppressed_context",
+        "status": "passed",
+        "tests_run": 1,
+        "duration_seconds": 0.06406975700065232,
+        "failures": [],
+        "skips": [],
+        "details": []
+      },
+      "status": "passed"
+    },
+    {
+      "id": "C02",
+      "dimensions": [
+        "C"
+      ],
+      "mandatory": true,
+      "execution": {
+        "command": [
+          "/opt/pytest-python/bin/python",
+          "/inputs/eval/private/check.py",
+          "--method",
+          "test_C02_long_chain_and_render_option",
+          "--output",
+          "/trial/scratch/observation.json"
+        ],
+        "cwd": "/trial/workspace",
+        "started_at": "2026-10-17T07:42:17.824068+00:00",
+        "timeout": false,
+        "output_limit_exceeded": false,
+        "returncode": 0,
+        "stdout": "/Users/junyuc/Documents/interview/SWE-bench/evals/harbor/raw/pilot-readiness-qualification-final/complete/verifier/grader/checks/C02/worker.stdout",
+        "stderr": "/Users/junyuc/Documents/interview/SWE-bench/evals/harbor/raw/pilot-readiness-qualification-final/complete/verifier/grader/checks/C02/worker.stderr",
+        "output_bytes_seen": 167,
+        "elapsed_seconds": 0.12813976800043747,
+        "finished_at": "2026-10-17T07:42:17.952211+00:00",
+        "container_receipt": "/Users/junyuc/Documents/interview/SWE-bench/evals/harbor/raw/pilot-readiness-qualification-final/complete/workers/worker-009/worker-receipt.json",
+        "boundary": "colima-linux-container",
+        "handoff_status": "accepted",
+        "log": "/Users/junyuc/Documents/interview/SWE-bench/evals/harbor/raw/pilot-readiness-qualification-final/complete/verifier/grader/checks/C02/worker.log"
+      },
+      "observation": {
+        "schema_version": 1,
+        "method": "test_C02_long_chain_and_render_option",
+        "status": "passed",
+        "tests_run": 1,
+        "duration_seconds": 0.08820541099976253,
+        "failures": [],
+        "skips": [],
+        "details": []
+      },
+      "status": "passed"
+    },
+    {
+      "id": "C03",
+      "dimensions": [
+        "C"
+      ],
+      "mandatory": true,
+      "execution": {
+        "command": [
+          "/opt/pytest-python/bin/python",
+          "/inputs/eval/private/check.py",
+          "--method",
+          "test_C03_missing_traceback",
+          "--output",
+          "/trial/scratch/observation.json"
+        ],
+        "cwd": "/trial/workspace",
+        "started_at": "2026-10-17T07:42:19.133505+00:00",
+        "timeout": false,
+        "output_limit_exceeded": false,
+        "returncode": 0,
+        "stdout": "/Users/junyuc/Documents/interview/SWE-bench/evals/harbor/raw/pilot-readiness-qualification-final/complete/verifier/grader/checks/C03/worker.stdout",
+        "stderr": "/Users/junyuc/Documents/interview/SWE-bench/evals/harbor/raw/pilot-readiness-qualification-final/complete/verifier/grader/checks/C03/worker.stderr",
+        "output_bytes_seen": 156,
+        "elapsed_seconds": 0.10989423699993495,
+        "finished_at": "2026-10-17T07:42:19.243401+00:00",
+        "container_receipt": "/Users/junyuc/Documents/interview/SWE-bench/evals/harbor/raw/pilot-readiness-qualification-final/complete/workers/worker-010/worker-receipt.json",
+        "boundary": "colima-linux-container",
+        "handoff_status": "accepted",
+        "log": "/Users/junyuc/Documents/interview/SWE-bench/evals/harbor/raw/pilot-readiness-qualification-final/complete/verifier/grader/checks/C03/worker.log"
+      },
+      "observation": {
+        "schema_version": 1,
+        "method": "test_C03_missing_traceback",
+        "status": "passed",
+        "tests_run": 1,
+        "duration_seconds": 0.06849706799948763,
+        "failures": [],
+        "skips": [],
+        "details": []
+      },
+      "status": "passed"
+    },
+    {
+      "id": "D01",
+      "dimensions": [
+        "D"
+      ],
+      "mandatory": true,
+      "execution": {
+        "command": [
+          "/opt/pytest-python/bin/python",
+          "/inputs/eval/private/check.py",
+          "--method",
+          "test_D01_ordinary_reports",
+          "--output",
+          "/trial/scratch/observation.json"
+        ],
+        "cwd": "/trial/workspace",
+        "started_at": "2026-10-17T07:42:20.424123+00:00",
+        "timeout": false,
+        "output_limit_exceeded": false,
+        "returncode": 0,
+        "stdout": "/Users/junyuc/Documents/interview/SWE-bench/evals/harbor/raw/pilot-readiness-qualification-final/complete/verifier/grader/checks/D01/worker.stdout",
+        "stderr": "/Users/junyuc/Documents/interview/SWE-bench/evals/harbor/raw/pilot-readiness-qualification-final/complete/verifier/grader/checks/D01/worker.stderr",
+        "output_bytes_seen": 155,
+        "elapsed_seconds": 0.10320126500027982,
+        "finished_at": "2026-10-17T07:42:20.527326+00:00",
+        "container_receipt": "/Users/junyuc/Documents/interview/SWE-bench/evals/harbor/raw/pilot-readiness-qualification-final/complete/workers/worker-011/worker-receipt.json",
+        "boundary": "colima-linux-container",
+        "handoff_status": "accepted",
+        "log": "/Users/junyuc/Documents/interview/SWE-bench/evals/harbor/raw/pilot-readiness-qualification-final/complete/verifier/grader/checks/D01/worker.log"
+      },
+      "observation": {
+        "schema_version": 1,
+        "method": "test_D01_ordinary_reports",
+        "status": "passed",
+        "tests_run": 1,
+        "duration_seconds": 0.06372239600023022,
+        "failures": [],
+        "skips": [],
+        "details": []
+      },
+      "status": "passed"
+    },
+    {
+      "id": "D02",
+      "dimensions": [
+        "D"
+      ],
+      "mandatory": true,
+      "execution": {
+        "command": [
+          "/opt/pytest-python/bin/python",
+          "/inputs/eval/private/check.py",
+          "--method",
+          "test_D02_existing_behavior",
+          "--output",
+          "/trial/scratch/observation.json"
+        ],
+        "cwd": "/trial/workspace",
+        "started_at": "2026-10-17T07:42:21.605128+00:00",
+        "timeout": false,
+        "output_limit_exceeded": false,
+        "returncode": 0,
+        "stdout": "/Users/junyuc/Documents/interview/SWE-bench/evals/harbor/raw/pilot-readiness-qualification-final/complete/verifier/grader/checks/D02/worker.stdout",
+        "stderr": "/Users/junyuc/Documents/interview/SWE-bench/evals/harbor/raw/pilot-readiness-qualification-final/complete/verifier/grader/checks/D02/worker.stderr",
+        "output_bytes_seen": 156,
+        "elapsed_seconds": 1.1352020249996713,
+        "finished_at": "2026-10-17T07:42:22.740332+00:00",
+        "container_receipt": "/Users/junyuc/Documents/interview/SWE-bench/evals/harbor/raw/pilot-readiness-qualification-final/complete/workers/worker-012/worker-receipt.json",
+        "boundary": "colima-linux-container",
+        "handoff_status": "accepted",
+        "log": "/Users/junyuc/Documents/interview/SWE-bench/evals/harbor/raw/pilot-readiness-qualification-final/complete/verifier/grader/checks/D02/worker.log"
+      },
+      "observation": {
+        "schema_version": 1,
+        "method": "test_D02_existing_behavior",
+        "status": "passed",
+        "tests_run": 1,
+        "duration_seconds": 1.0965998909996415,
+        "failures": [],
+        "skips": [],
+        "details": [
+          {
+            "command": [
+              "/opt/pytest-python/bin/python",
+              "-m",
+              "pytest",
+              "--color=no",
+              "-q",
+              "--tb=short",
+              "--junitxml=/trial/scratch/existing.xml",
+              "testing/test_reports.py",
+              "testing/code/test_code.py",
+              "testing/code/test_excinfo.py",
+              "-k",
+              "not test_chained_exceptions and not test_xdist_longrepr_to_str_issue_241 and not test_deserialization_failure and not test_paths_support and not TestHooks"
+            ],
+            "cwd": "/trial/workspace",
+            "returncode": 0,
+            "log": "/trial/scratch/existing.log"
+          },
+          {
+            "existing_tests": 118,
+            "passed": 118,
+            "skipped": 0
+          }
+        ]
+      },
+      "status": "passed"
+    },
+    {
+      "id": "D03",
+      "dimensions": [
+        "D"
+      ],
+      "mandatory": true,
+      "execution": {
+        "command": [
+          "/opt/pytest-python/bin/python",
+          "/inputs/eval/private/check.py",
+          "--method",
+          "test_D03_missing_traceback_no_new_crash",
+          "--output",
+          "/trial/scratch/observation.json"
+        ],
+        "cwd": "/trial/workspace",
+        "started_at": "2026-10-17T07:42:23.872399+00:00",
+        "timeout": false,
+        "output_limit_exceeded": false,
+        "returncode": 0,
+        "stdout": "/Users/junyuc/Documents/interview/SWE-bench/evals/harbor/raw/pilot-readiness-qualification-final/complete/verifier/grader/checks/D03/worker.stdout",
+        "stderr": "/Users/junyuc/Documents/interview/SWE-bench/evals/harbor/raw/pilot-readiness-qualification-final/complete/verifier/grader/checks/D03/worker.stderr",
+        "output_bytes_seen": 169,
+        "elapsed_seconds": 0.106093231000159,
+        "finished_at": "2026-10-17T07:42:23.978493+00:00",
+        "container_receipt": "/Users/junyuc/Documents/interview/SWE-bench/evals/harbor/raw/pilot-readiness-qualification-final/complete/workers/worker-013/worker-receipt.json",
+        "boundary": "colima-linux-container",
+        "handoff_status": "accepted",
+        "log": "/Users/junyuc/Documents/interview/SWE-bench/evals/harbor/raw/pilot-readiness-qualification-final/complete/verifier/grader/checks/D03/worker.log"
+      },
+      "observation": {
+        "schema_version": 1,
+        "method": "test_D03_missing_traceback_no_new_crash",
+        "status": "passed",
+        "tests_run": 1,
+        "duration_seconds": 0.06538608600021689,
+        "failures": [],
+        "skips": [],
+        "details": []
+      },
+      "status": "passed"
+    },
+    {
+      "id": "H01",
+      "dimensions": [],
+      "mandatory": false,
+      "execution": {
+        "command": [
+          "/opt/pytest-python/bin/python",
+          "/inputs/eval/private/check.py",
+          "--method",
+          "test_H01_historical_focused",
+          "--output",
+          "/trial/scratch/observation.json"
+        ],
+        "cwd": "/trial/workspace",
+        "started_at": "2026-10-17T07:42:25.122244+00:00",
+        "timeout": false,
+        "output_limit_exceeded": false,
+        "returncode": 0,
+        "stdout": "/Users/junyuc/Documents/interview/SWE-bench/evals/harbor/raw/pilot-readiness-qualification-final/complete/verifier/grader/checks/H01/worker.stdout",
+        "stderr": "/Users/junyuc/Documents/interview/SWE-bench/evals/harbor/raw/pilot-readiness-qualification-final/complete/verifier/grader/checks/H01/worker.stderr",
+        "output_bytes_seen": 157,
+        "elapsed_seconds": 0.2504412879998199,
+        "finished_at": "2026-10-17T07:42:25.372686+00:00",
+        "container_receipt": "/Users/junyuc/Documents/interview/SWE-bench/evals/harbor/raw/pilot-readiness-qualification-final/complete/workers/worker-014/worker-receipt.json",
+        "boundary": "colima-linux-container",
+        "handoff_status": "accepted",
+        "log": "/Users/junyuc/Documents/interview/SWE-bench/evals/harbor/raw/pilot-readiness-qualification-final/complete/verifier/grader/checks/H01/worker.log"
+      },
+      "observation": {
+        "schema_version": 1,
+        "method": "test_H01_historical_focused",
+        "status": "passed",
+        "tests_run": 1,
+        "duration_seconds": 0.21154748700064374,
+        "failures": [],
+        "skips": [],
+        "details": [
+          {
+            "command": [
+              "/opt/pytest-python/bin/python",
+              "-m",
+              "pytest",
+              "--color=no",
+              "-q",
+              "--tb=short",
+              "--junitxml=/trial/scratch/historical.xml",
+              "testing/test_reports.py::TestReportSerialization::test_chained_exceptions"
+            ],
+            "cwd": "/trial/workspace",
+            "returncode": 0,
+            "log": "/trial/scratch/historical.log"
+          },
+          {
+            "historical_cases": 2,
+            "passed": 2,
+            "failures": 0,
+            "skips": 0
+          }
+        ]
+      },
+      "status": "passed"
+    },
+    {
+      "id": "H02",
+      "dimensions": [],
+      "mandatory": false,
+      "execution": {
+        "command": [
+          "/opt/pytest-python/bin/python",
+          "/inputs/eval/private/check.py",
+          "--method",
+          "test_H02_full_existing_suite",
+          "--output",
+          "/trial/scratch/observation.json"
+        ],
+        "cwd": "/trial/workspace",
+        "started_at": "2026-10-17T07:42:26.826510+00:00",
+        "timeout": false,
+        "output_limit_exceeded": false,
+        "returncode": 0,
+        "stdout": "/Users/junyuc/Documents/interview/SWE-bench/evals/harbor/raw/pilot-readiness-qualification-final/complete/verifier/grader/checks/H02/worker.stdout",
+        "stderr": "/Users/junyuc/Documents/interview/SWE-bench/evals/harbor/raw/pilot-readiness-qualification-final/complete/verifier/grader/checks/H02/worker.stderr",
+        "output_bytes_seen": 158,
+        "elapsed_seconds": 1.227462832999663,
+        "finished_at": "2026-10-17T07:42:28.053972+00:00",
+        "container_receipt": "/Users/junyuc/Documents/interview/SWE-bench/evals/harbor/raw/pilot-readiness-qualification-final/complete/workers/worker-015/worker-receipt.json",
+        "boundary": "colima-linux-container",
+        "handoff_status": "accepted",
+        "log": "/Users/junyuc/Documents/interview/SWE-bench/evals/harbor/raw/pilot-readiness-qualification-final/complete/verifier/grader/checks/H02/worker.log"
+      },
+      "observation": {
+        "schema_version": 1,
+        "method": "test_H02_full_existing_suite",
+        "status": "passed",
+        "tests_run": 1,
+        "duration_seconds": 1.1832726550001098,
+        "failures": [],
+        "skips": [],
+        "details": [
+          {
+            "command": [
+              "/opt/pytest-python/bin/python",
+              "-m",
+              "pytest",
+              "--color=no",
+              "-q",
+              "--tb=short",
+              "--junitxml=/trial/scratch/full-existing.xml",
+              "testing/test_reports.py",
+              "testing/code/test_code.py",
+              "testing/code/test_excinfo.py",
+              "-k",
+              "not test_chained_exceptions"
+            ],
+            "cwd": "/trial/workspace",
+            "returncode": 0,
+            "log": "/trial/scratch/full-existing.log"
+          },
+          {
+            "existing_tests": 125,
+            "passed": 125,
+            "skipped": 0
+          }
+        ]
+      },
+      "status": "passed"
+    }
+  ],
+  "execution": [
+    {
+      "command": [
+        "/opt/pytest-python/bin/python",
+        "-c",
+        "import sys,json,pytest,pkg_resources; assert sys.version_info[:3] == (3,8,20), sys.version; reqs=[pkg_resources.Requirement.parse(x) for x in open(sys.argv[1]).read().splitlines()]; assert all(pkg_resources.get_distribution(r.project_name) in r for r in reqs); print(json.dumps({'python':sys.version,'pytest_file':pytest.__file__,'pytest_version':pytest.__version__,'packages':sorted(str(x) for x in pkg_resources.working_set)}))",
+        "/inputs/eval/requirements.txt"
+      ],
+      "cwd": "/trial/workspace",
+      "started_at": "2026-10-17T07:42:07.523632+00:00",
+      "timeout": false,
+      "output_limit_exceeded": false,
+      "returncode": 0,
+      "stdout": "/Users/junyuc/Documents/interview/SWE-bench/evals/harbor/raw/pilot-readiness-qualification-final/complete/verifier/grader/preflight.stdout",
+      "stderr": "/Users/junyuc/Documents/interview/SWE-bench/evals/harbor/raw/pilot-readiness-qualification-final/complete/verifier/grader/preflight.stderr",
+      "output_bytes_seen": 587,
+      "elapsed_seconds": 0.1113166219993218,
+      "finished_at": "2026-10-17T07:42:07.634949+00:00",
+      "container_receipt": "/Users/junyuc/Documents/interview/SWE-bench/evals/harbor/raw/pilot-readiness-qualification-final/complete/workers/worker-002/worker-receipt.json",
+      "boundary": "colima-linux-container",
+      "handoff_status": "accepted",
+      "log": "/Users/junyuc/Documents/interview/SWE-bench/evals/harbor/raw/pilot-readiness-qualification-final/complete/verifier/grader/preflight.log"
+    },
+    {
+      "command": [
+        "git",
+        "apply",
+        "--whitespace=nowarn",
+        "--check",
+        "/Users/junyuc/Documents/interview/SWE-bench/evals/harbor/raw/pilot-readiness-qualification-final/complete/submission/submission.patch"
+      ],
+      "cwd": "/Users/junyuc/Documents/interview/SWE-bench/evals/harbor/raw/pilot-readiness-qualification-final/complete/verifier/grader/workspace",
+      "returncode": 0,
+      "stderr": ""
+    },
+    {
+      "command": [
+        "git",
+        "apply",
+        "--whitespace=nowarn",
+        "/Users/junyuc/Documents/interview/SWE-bench/evals/harbor/raw/pilot-readiness-qualification-final/complete/submission/submission.patch"
+      ],
+      "cwd": "/Users/junyuc/Documents/interview/SWE-bench/evals/harbor/raw/pilot-readiness-qualification-final/complete/verifier/grader/workspace",
+      "returncode": 0,
+      "stderr": ""
+    },
+    {
+      "command": [
+        "git",
+        "apply",
+        "--whitespace=nowarn",
+        "/Users/junyuc/Documents/interview/SWE-bench/evals/pytest_5786/private/oracle/historical_tests.patch"
+      ],
+      "cwd": "/Users/junyuc/Documents/interview/SWE-bench/evals/harbor/raw/pilot-readiness-qualification-final/complete/verifier/grader/workspace",
+      "returncode": 0,
+      "stderr": ""
+    }
+  ],
+  "security_mode": "trusted-local-qualification-not-a-sandbox",
+  "package_lock_sha256": "067f222eccfbf8d40fe520a7f4196426e82a4e5d4861e506cb96e60d11732e03",
+  "patch_sha256": "7c03c2f686afd933dc9f57f4882641c04b4c0716511935763b261903feea5bea",
+  "submitted_paths": [
+    "src/_pytest/reports.py"
+  ],
+  "applied_source_sha256": {
+    "src/_pytest/reports.py": "2058adae12754efdfc07600c08437d8eb56127dcfa0d7f00203c480161e6431d"
+  },
+  "historical_test_patch_sha256": "33f35e4ba9dde34f1ecf09f7dd1873b1bbed43cf1fb0680a258e8853905e63eb"
+}

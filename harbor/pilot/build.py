@@ -37,20 +37,28 @@ network_mode = "no-network"
     dockerfile = f'''FROM harbor-pilot-base:{image.removeprefix('sha256:')}
 COPY base /base
 WORKDIR /work
-ENV PATH=/opt/pytest-python/bin:$PATH PYTHONPATH=/work/src HOME=/home/agent
+ENV PATH=/opt/pytest-python/bin:$PATH PYTHONPATH=/work/src HOME=/home/agent SHELL=/bin/bash
 RUN mkdir -p /home/agent /work /logs /installed-agent && chmod -R a+rX /base
+RUN printf '%s\\n' 'export PATH=/opt/pytest-python/bin:/opt/codex/bin:/opt/codex/codex-path:$PATH' > /etc/profile.d/pytest-runtime.sh
 '''
+    verifier_dockerfile = dockerfile
     if live:
         if codex is None or not codex.is_file():
             raise ValueError('Explicit preprovisioned Linux Codex binary required')
-        shutil.copyfile(codex, output / 'environment/codex')
-        (output / 'environment/codex').chmod(0o755)
-        dockerfile += 'COPY codex /usr/local/bin/codex\n'
+        bundle = codex.parent.parent
+        metadata = json.loads((bundle / 'codex-package.json').read_text())
+        assert metadata['version'] == '0.162.1' and metadata['target'] == 'aarch64-unknown-linux-musl'
+        required = {'bin/codex', 'bin/codex-code-mode-host', 'codex-package.json',
+                    'codex-path/rg', 'codex-resources/bwrap', 'codex-resources/zsh/bin/zsh'}
+        assert {str(p.relative_to(bundle)) for p in bundle.rglob('*') if p.is_file()} == required
+        assert all(not p.is_symlink() for p in bundle.rglob('*'))
+        shutil.copytree(bundle, output / 'environment/codex-bundle')
+        dockerfile += 'COPY codex-bundle /opt/codex\nRUN chmod -R a+rX /opt/codex\nENV PATH=/opt/pytest-python/bin:/opt/codex/bin:/opt/codex/codex-path:$PATH\n'
     (output / 'environment/Dockerfile').write_text(dockerfile)
     # A real separate Harbor verifier container remains public-only. The custom
     # BaseVerifier delegates candidate execution to restricted sibling workers.
     shutil.copytree(output / 'environment/base', output / 'tests/base')
-    (output / 'tests/Dockerfile').write_text(dockerfile.split('COPY codex')[0])
+    (output / 'tests/Dockerfile').write_text(verifier_dockerfile)
     (output / 'tests/test.sh').write_text('#!/bin/sh\nexit 99 # Only the trusted custom verifier may grade.\n')
     for name, mode in [('environment', network), ('tests', 'no-network')]:
         compose = {'services': {'main': {
@@ -71,6 +79,7 @@ RUN mkdir -p /home/agent /work /logs /installed-agent && chmod -R a+rX /base
                       instruction_sha256=hashlib.sha256((output/'instruction.md').read_bytes()).hexdigest())
     if live:
         provenance['codex_binary_sha256'] = hashlib.sha256(codex.read_bytes()).hexdigest()
+        provenance['codex_bundle_sha256'] = {n: hashlib.sha256((bundle/n).read_bytes()).hexdigest() for n in sorted(required)}
     save(output / 'provenance.json', provenance)
     return provenance
 

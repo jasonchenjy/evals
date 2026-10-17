@@ -21,6 +21,28 @@ def adapter_hashes():
     return {str(p.relative_to(ROOT)): hashlib.sha256(p.read_bytes()).hexdigest() for p in sorted(paths)}
 
 
+def task_hashes(task):
+    """Bind evidence to all generated inputs, including the complete CLI bundle."""
+    return {str(p.relative_to(task)): hashlib.sha256(p.read_bytes()).hexdigest()
+            for p in sorted(task.rglob('*')) if p.is_file()}
+
+
+def validate_task(task, package):
+    provenance = json.loads((task/'provenance.json').read_text())
+    for key in ('eval_id','eval_version','eval_lock_sha256','source_base_commit'):
+        assert provenance[key] == package.provenance[key], 'Task provenance changed: '+key
+    instruction = (task/'instruction.md').read_bytes()
+    assert instruction == (package.root/'instruction.md').read_bytes(), 'Original instruction required'
+    assert hashlib.sha256(instruction).hexdigest() == provenance['instruction_sha256']
+    for name,digest in package.files.items():
+        assert hashlib.sha256((task/'environment/base'/name).read_bytes()).hexdigest() == digest, name
+    if provenance['live']:
+        bundle = task/'environment/codex-bundle'
+        assert {str(p.relative_to(bundle)): hashlib.sha256(p.read_bytes()).hexdigest()
+                for p in bundle.rglob('*') if p.is_file()} == provenance['codex_bundle_sha256']
+    return provenance
+
+
 def load_runtime():
     if sys.flags.optimize:
         raise RuntimeError('Pilot security assertions require Python without -O')
