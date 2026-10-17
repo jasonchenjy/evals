@@ -1,0 +1,7 @@
+{"argv": ["/opt/pytest-python/bin/python", "/tests/eval/private/check.py", "--method", "test_C03_missing_traceback", "--output", "/logs/verifier/grader/checks/C03/observation.json"], "cwd": "/logs/verifier/grader/workspace"}
+test_C03_missing_traceback (eval_behavior.Behavior) ... ok
+
+----------------------------------------------------------------------
+Ran 1 test in 0.046s
+
+OK

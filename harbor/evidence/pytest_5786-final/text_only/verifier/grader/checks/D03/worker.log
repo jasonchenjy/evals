@@ -1,0 +1,7 @@
+{"argv": ["/opt/pytest-python/bin/python", "/tests/eval/private/check.py", "--method", "test_D03_missing_traceback_no_new_crash", "--output", "/logs/verifier/grader/checks/D03/observation.json"], "cwd": "/logs/verifier/grader/workspace"}
+test_D03_missing_traceback_no_new_crash (eval_behavior.Behavior) ... ok
+
+----------------------------------------------------------------------
+Ran 1 test in 0.042s
+
+OK

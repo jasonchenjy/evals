@@ -1,0 +1,7 @@
+.venv/
+vendor/
+upstream/
+generated/
+raw/
+__pycache__/
+tools/

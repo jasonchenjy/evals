@@ -1,0 +1,7 @@
+{"argv": ["/opt/pytest-python/bin/python", "/tests/eval/private/check.py", "--method", "test_B03_real_xdist", "--output", "/logs/verifier/grader/checks/B03/observation.json"], "cwd": "/logs/verifier/grader/workspace"}
+test_B03_real_xdist (eval_behavior.Behavior) ... ok
+
+----------------------------------------------------------------------
+Ran 1 test in 0.589s
+
+OK

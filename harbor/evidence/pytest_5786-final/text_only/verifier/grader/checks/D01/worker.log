@@ -1,0 +1,15 @@
+{"argv": ["/opt/pytest-python/bin/python", "/tests/eval/private/check.py", "--method", "test_D01_ordinary_reports", "--output", "/logs/verifier/grader/checks/D01/observation.json"], "cwd": "/logs/verifier/grader/workspace"}
+test_D01_ordinary_reports (eval_behavior.Behavior) ... ERROR
+
+======================================================================
+ERROR: test_D01_ordinary_reports (eval_behavior.Behavior)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/tests/eval/private/tests/behavior.py", line 213, in test_D01_ordinary_reports
+    self.assertEqual(restored.longrepr.reprcrash.message, "ValueError: layer-0")
+AttributeError: 'str' object has no attribute 'reprcrash'
+
+----------------------------------------------------------------------
+Ran 1 test in 0.041s
+
+FAILED (errors=1)

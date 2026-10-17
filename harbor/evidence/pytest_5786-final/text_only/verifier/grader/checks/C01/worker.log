@@ -1,0 +1,7 @@
+{"argv": ["/opt/pytest-python/bin/python", "/tests/eval/private/check.py", "--method", "test_C01_suppressed_context", "--output", "/logs/verifier/grader/checks/C01/observation.json"], "cwd": "/logs/verifier/grader/workspace"}
+test_C01_suppressed_context (eval_behavior.Behavior) ... ok
+
+----------------------------------------------------------------------
+Ran 1 test in 0.042s
+
+OK

@@ -1,0 +1,13 @@
+{
+  "original_eval_files_verified": 3368,
+  "original_eval_unchanged": true,
+  "python_syntax_files": 11,
+  "planned_files": 766,
+  "all_planned_paths_under_harbor": true,
+  "credential_files_excluded": true,
+  "runtime_hash_differences_since_initial": [],
+  "note": "Runtime is a shared live worktree. No Runtime/Eval path is staged by this integration; hash differences alone do not identify the writer.",
+  "final_qualification": "pytest-003",
+  "all_7_expectations_met": true,
+  "all_91_reference_statuses_identical": true
+}

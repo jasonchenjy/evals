@@ -1,0 +1,122 @@
+{
+    "id": "a1cdc758-e9d9-4cfc-bf4e-e06ab2aeff94",
+    "task_name": "pytest_5786",
+    "trial_name": "text_only",
+    "trial_uri": "file:///Users/junyu/Projects/agent-evals/harbor/raw/pytest-002/text_only",
+    "task_id": {
+        "path": "/Users/junyu/Projects/agent-evals/harbor/generated/pytest_5786"
+    },
+    "source": null,
+    "task_checksum": "20a4490bea439363b1383ab435924857e72713e53dc3543b216dd41020e1fe90",
+    "config": {
+        "task": {
+            "path": "/Users/junyu/Projects/agent-evals/harbor/generated/pytest_5786",
+            "git_url": null,
+            "git_commit_id": null,
+            "name": null,
+            "ref": null,
+            "overwrite": false,
+            "download_dir": null,
+            "source": null
+        },
+        "trial_name": "text_only",
+        "trials_dir": "/Users/junyu/Projects/agent-evals/harbor/raw/pytest-002",
+        "install_only": false,
+        "timeout_multiplier": 1.0,
+        "agent_timeout_multiplier": null,
+        "verifier_timeout_multiplier": null,
+        "agent_setup_timeout_multiplier": null,
+        "environment_build_timeout_multiplier": null,
+        "agent": {
+            "name": null,
+            "import_path": "harbor_controls:ControlAgent",
+            "model_name": null,
+            "n_concurrent": null,
+            "concurrency_group": null,
+            "skills": [],
+            "override_timeout_sec": null,
+            "override_setup_timeout_sec": null,
+            "max_timeout_sec": null,
+            "resume_trajectory": false,
+            "load_trajectory": null,
+            "extra_allowed_hosts": [],
+            "kwargs": {
+                "patch": "/Users/junyu/Projects/agent-evals/pytest_5786/private/oracle/text_only.patch"
+            },
+            "mcp_servers": []
+        },
+        "user_agent": null,
+        "environment": {
+            "type": null,
+            "import_path": "harbor_colima:ColimaEnvironment",
+            "force_build": false,
+            "delete": true,
+            "stream": false,
+            "cpu_enforcement_policy": "auto",
+            "memory_enforcement_policy": "auto",
+            "override_cpus": null,
+            "override_memory_mb": null,
+            "override_storage_mb": null,
+            "override_gpus": null,
+            "override_tpu": null,
+            "mounts": null,
+            "extra_docker_compose": [],
+            "kwargs": {},
+            "extra_allowed_hosts": []
+        },
+        "verifier": {
+            "override_timeout_sec": null,
+            "max_timeout_sec": null,
+            "disable": false
+        },
+        "artifacts": [],
+        "extra_instruction_paths": [],
+        "extra_instructions": [],
+        "job_id": null,
+        "source_trial": null
+    },
+    "agent_info": {
+        "name": "evals-control",
+        "version": "1.0.0",
+        "model_info": null
+    },
+    "agent_result": {
+        "n_input_tokens": null,
+        "n_cache_tokens": null,
+        "n_output_tokens": null,
+        "cost_usd": null,
+        "model_usage": null,
+        "rollout_details": null,
+        "metadata": null
+    },
+    "verifier_result": {
+        "rewards": {
+            "reward": 0.0,
+            "original_bug_resolution": 1.0,
+            "cross_component_consistency": 0.0,
+            "edge_case_robustness": 0.0,
+            "non_regression": 0.0
+        }
+    },
+    "verifier_environment_mode": "separate",
+    "exception_info": null,
+    "started_at": "2026-10-17T06:03:47.150907Z",
+    "finished_at": "2026-10-17T06:04:22.888782Z",
+    "environment_setup": {
+        "started_at": "2026-10-17T06:03:47.198566Z",
+        "finished_at": "2026-10-17T06:03:51.321409Z"
+    },
+    "agent_setup": {
+        "started_at": "2026-10-17T06:03:51.321551Z",
+        "finished_at": "2026-10-17T06:03:51.388103Z"
+    },
+    "agent_execution": {
+        "started_at": "2026-10-17T06:03:51.388210Z",
+        "finished_at": "2026-10-17T06:03:51.496741Z"
+    },
+    "verifier": {
+        "started_at": "2026-10-17T06:04:02.098768Z",
+        "finished_at": "2026-10-17T06:04:22.888766Z"
+    },
+    "step_results": null
+}

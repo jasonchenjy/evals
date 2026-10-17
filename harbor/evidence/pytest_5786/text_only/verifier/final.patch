@@ -1,0 +1,13 @@
+diff --git a/src/_pytest/reports.py b/src/_pytest/reports.py
+index 4682d5b..4eedce9 100644
+--- a/src/_pytest/reports.py
++++ b/src/_pytest/reports.py
+@@ -189,7 +189,7 @@ class BaseReport:
+             if hasattr(self.longrepr, "reprtraceback") and hasattr(
+                 self.longrepr, "reprcrash"
+             ):
+-                d["longrepr"] = disassembled_report(self)
++                d["longrepr"] = str(self.longrepr)
+             else:
+                 d["longrepr"] = str(self.longrepr)
+         else:

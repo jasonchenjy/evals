@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "method": "test_B03_real_xdist",
+  "status": "passed",
+  "tests_run": 1,
+  "duration_seconds": 0.5457123930000307,
+  "failures": [],
+  "skips": [],
+  "details": [
+    {
+      "command": [
+        "/opt/pytest-python/bin/python",
+        "-m",
+        "pytest",
+        "--color=no",
+        "-q",
+        "-p",
+        "xdist.plugin",
+        "-n",
+        "1",
+        "--tb=short",
+        "--junitxml=report.xml",
+        "test_transport.py"
+      ],
+      "cwd": "/logs/verifier/grader/checks/B03/call",
+      "returncode": 1,
+      "log": "/logs/verifier/grader/checks/B03/call.log"
+    },
+    {
+      "command": [
+        "/opt/pytest-python/bin/python",
+        "-m",
+        "pytest",
+        "--color=no",
+        "-q",
+        "-p",
+        "xdist.plugin",
+        "-n",
+        "1",
+        "--tb=short",
+        "--junitxml=report.xml",
+        "test_transport.py"
+      ],
+      "cwd": "/logs/verifier/grader/checks/B03/collect",
+      "returncode": 1,
+      "log": "/logs/verifier/grader/checks/B03/collect.log"
+    }
+  ]
+}

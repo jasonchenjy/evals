@@ -1,0 +1,637 @@
+{
+  "schema_version": 1,
+  "eval_id": "pytest_5786",
+  "eval_version": "0.1.0",
+  "timestamp": "2026-10-17T06:02:55.426607+00:00",
+  "base_commit": "955e54221008aba577ecbaefa15679f6777d3bf8",
+  "overall_resolved": false,
+  "infrastructure_status": "ok",
+  "submission_status": "accepted",
+  "dimensions": {
+    "original_bug_resolution": {
+      "satisfied": false,
+      "checks": {
+        "A01": "failed",
+        "A02": "failed"
+      }
+    },
+    "cross_component_consistency": {
+      "satisfied": false,
+      "checks": {
+        "B01": "failed",
+        "B02": "failed",
+        "B03": "failed"
+      }
+    },
+    "edge_case_robustness": {
+      "satisfied": false,
+      "checks": {
+        "C01": "passed",
+        "C02": "failed",
+        "C03": "failed"
+      }
+    },
+    "non_regression": {
+      "satisfied": true,
+      "checks": {
+        "D01": "passed",
+        "D02": "passed",
+        "D03": "passed"
+      }
+    }
+  },
+  "tests": [
+    {
+      "id": "A01",
+      "dimensions": [
+        "A"
+      ],
+      "mandatory": true,
+      "execution": {
+        "command": [
+          "/opt/pytest-python/bin/python",
+          "/tests/eval/private/check.py",
+          "--method",
+          "test_A01_explicit",
+          "--output",
+          "/logs/verifier/grader/checks/A01/observation.json"
+        ],
+        "cwd": "/logs/verifier/grader/workspace",
+        "returncode": 1,
+        "timeout": false,
+        "elapsed_seconds": 0.16558051199990587,
+        "log": "/logs/verifier/grader/checks/A01/worker.log"
+      },
+      "observation": {
+        "schema_version": 1,
+        "method": "test_A01_explicit",
+        "status": "failed",
+        "tests_run": 1,
+        "duration_seconds": 0.07660344099986105,
+        "failures": [
+          "Traceback (most recent call last):\n  File \"/tests/eval/private/tests/behavior.py\", line 95, in test_A01_explicit\n    self.assert_chain(rep, 2, \"direct cause of the following exception\")\n  File \"/tests/eval/private/tests/behavior.py\", line 87, in assert_chain\n    self.assertIn(marker, text)\nAssertionError: 'ValueError: layer-0' not found in '/tests/eval/private/tests/behavior.py:36: in exception_info\\n    raise_level(depth - 1)\\n/tests/eval/private/tests/behavior.py:31: in raise_level\\n    raise ValueError(\"layer-%d\" % level) from cause\\nE   ValueError: layer-1'\n"
+        ],
+        "skips": [],
+        "details": []
+      },
+      "status": "failed"
+    },
+    {
+      "id": "A02",
+      "dimensions": [
+        "A"
+      ],
+      "mandatory": true,
+      "execution": {
+        "command": [
+          "/opt/pytest-python/bin/python",
+          "/tests/eval/private/check.py",
+          "--method",
+          "test_A02_implicit",
+          "--output",
+          "/logs/verifier/grader/checks/A02/observation.json"
+        ],
+        "cwd": "/logs/verifier/grader/workspace",
+        "returncode": 1,
+        "timeout": false,
+        "elapsed_seconds": 0.1672046310004589,
+        "log": "/logs/verifier/grader/checks/A02/worker.log"
+      },
+      "observation": {
+        "schema_version": 1,
+        "method": "test_A02_implicit",
+        "status": "failed",
+        "tests_run": 1,
+        "duration_seconds": 0.07600737099983235,
+        "failures": [
+          "Traceback (most recent call last):\n  File \"/tests/eval/private/tests/behavior.py\", line 100, in test_A02_implicit\n    self.assert_chain(transport(original), 3, \"During handling of the above exception\")\n  File \"/tests/eval/private/tests/behavior.py\", line 87, in assert_chain\n    self.assertIn(marker, text)\nAssertionError: 'ValueError: layer-0' not found in '/tests/eval/private/tests/behavior.py:36: in exception_info\\n    raise_level(depth - 1)\\n/tests/eval/private/tests/behavior.py:34: in raise_level\\n    raise ValueError(\"layer-%d\" % level)\\nE   ValueError: layer-2'\n"
+        ],
+        "skips": [],
+        "details": []
+      },
+      "status": "failed"
+    },
+    {
+      "id": "B01",
+      "dimensions": [
+        "B"
+      ],
+      "mandatory": true,
+      "execution": {
+        "command": [
+          "/opt/pytest-python/bin/python",
+          "/tests/eval/private/check.py",
+          "--method",
+          "test_B01_collect_report",
+          "--output",
+          "/logs/verifier/grader/checks/B01/observation.json"
+        ],
+        "cwd": "/logs/verifier/grader/workspace",
+        "returncode": 1,
+        "timeout": false,
+        "elapsed_seconds": 0.11583875799988164,
+        "log": "/logs/verifier/grader/checks/B01/worker.log"
+      },
+      "observation": {
+        "schema_version": 1,
+        "method": "test_B01_collect_report",
+        "status": "failed",
+        "tests_run": 1,
+        "duration_seconds": 0.07046580800033553,
+        "failures": [
+          "Traceback (most recent call last):\n  File \"/tests/eval/private/tests/behavior.py\", line 107, in test_B01_collect_report\n    self.assert_chain(restored, 2, \"direct cause of the following exception\")\n  File \"/tests/eval/private/tests/behavior.py\", line 87, in assert_chain\n    self.assertIn(marker, text)\nAssertionError: 'ValueError: layer-0' not found in '/tests/eval/private/tests/behavior.py:36: in exception_info\\n    raise_level(depth - 1)\\n/tests/eval/private/tests/behavior.py:31: in raise_level\\n    raise ValueError(\"layer-%d\" % level) from cause\\nE   ValueError: layer-1\\n=============================== collector-detail ===============================\\npayload-443'\n"
+        ],
+        "skips": [],
+        "details": []
+      },
+      "status": "failed"
+    },
+    {
+      "id": "B02",
+      "dimensions": [
+        "B"
+      ],
+      "mandatory": true,
+      "execution": {
+        "command": [
+          "/opt/pytest-python/bin/python",
+          "/tests/eval/private/check.py",
+          "--method",
+          "test_B02_structured_consumer",
+          "--output",
+          "/logs/verifier/grader/checks/B02/observation.json"
+        ],
+        "cwd": "/logs/verifier/grader/workspace",
+        "returncode": 1,
+        "timeout": false,
+        "elapsed_seconds": 0.11640686600003392,
+        "log": "/logs/verifier/grader/checks/B02/worker.log"
+      },
+      "observation": {
+        "schema_version": 1,
+        "method": "test_B02_structured_consumer",
+        "status": "failed",
+        "tests_run": 1,
+        "duration_seconds": 0.07179524599996512,
+        "failures": [
+          "Traceback (most recent call last):\n  File \"/tests/eval/private/tests/behavior.py\", line 130, in test_B02_structured_consumer\n    self.assert_chain(again, 2, \"direct cause of the following exception\")\n  File \"/tests/eval/private/tests/behavior.py\", line 87, in assert_chain\n    self.assertIn(marker, text)\nAssertionError: 'ValueError: layer-0' not found in '/tests/eval/private/tests/behavior.py:36: in exception_info\\n    raise_level(depth - 1)\\n/tests/eval/private/tests/behavior.py:31: in raise_level\\n    raise ValueError(\"layer-%d\" % level) from cause\\nE   ValueError: layer-1\\n=============================== before-transport ===============================\\nsection-457\\n------------------------------- after-transport --------------------------------\\nsection-461'\n"
+        ],
+        "skips": [],
+        "details": []
+      },
+      "status": "failed"
+    },
+    {
+      "id": "B03",
+      "dimensions": [
+        "B"
+      ],
+      "mandatory": true,
+      "execution": {
+        "command": [
+          "/opt/pytest-python/bin/python",
+          "/tests/eval/private/check.py",
+          "--method",
+          "test_B03_real_xdist",
+          "--output",
+          "/logs/verifier/grader/checks/B03/observation.json"
+        ],
+        "cwd": "/logs/verifier/grader/workspace",
+        "returncode": 1,
+        "timeout": false,
+        "elapsed_seconds": 0.36699119500008237,
+        "log": "/logs/verifier/grader/checks/B03/worker.log"
+      },
+      "observation": {
+        "schema_version": 1,
+        "method": "test_B03_real_xdist",
+        "status": "failed",
+        "tests_run": 1,
+        "duration_seconds": 0.29434628399940266,
+        "failures": [
+          "Traceback (most recent call last):\n  File \"/tests/eval/private/tests/behavior.py\", line 153, in test_B03_real_xdist\n    self.assertIn(\"ValueError: worker-inner-503\", result.stdout)\nAssertionError: 'ValueError: worker-inner-503' not found in 'bringing up nodes...\\nbringing up nodes...\\n\\nF                                                                        [100%]\\n=================================== FAILURES ===================================\\n_________________________________ test_remote __________________________________\\n[gw0] linux -- Python 3.8.20 /opt/pytest-python/bin/python\\ntest_transport.py:10: in test_remote\\n    fail()\\ntest_transport.py:7: in fail\\n    raise RuntimeError(\"worker-outer-509\") from e\\nE   RuntimeError: worker-outer-509\\n----- generated xml file: /logs/verifier/grader/checks/B03/call/report.xml -----\\n1 failed in 0.14s\\n'\n"
+        ],
+        "skips": [],
+        "details": [
+          {
+            "command": [
+              "/opt/pytest-python/bin/python",
+              "-m",
+              "pytest",
+              "--color=no",
+              "-q",
+              "-p",
+              "xdist.plugin",
+              "-n",
+              "1",
+              "--tb=short",
+              "--junitxml=report.xml",
+              "test_transport.py"
+            ],
+            "cwd": "/logs/verifier/grader/checks/B03/call",
+            "returncode": 1,
+            "log": "/logs/verifier/grader/checks/B03/call.log"
+          }
+        ]
+      },
+      "status": "failed"
+    },
+    {
+      "id": "C01",
+      "dimensions": [
+        "C"
+      ],
+      "mandatory": true,
+      "execution": {
+        "command": [
+          "/opt/pytest-python/bin/python",
+          "/tests/eval/private/check.py",
+          "--method",
+          "test_C01_suppressed_context",
+          "--output",
+          "/logs/verifier/grader/checks/C01/observation.json"
+        ],
+        "cwd": "/logs/verifier/grader/workspace",
+        "returncode": 0,
+        "timeout": false,
+        "elapsed_seconds": 0.11638169900015782,
+        "log": "/logs/verifier/grader/checks/C01/worker.log"
+      },
+      "observation": {
+        "schema_version": 1,
+        "method": "test_C01_suppressed_context",
+        "status": "passed",
+        "tests_run": 1,
+        "duration_seconds": 0.06593934300053661,
+        "failures": [],
+        "skips": [],
+        "details": []
+      },
+      "status": "passed"
+    },
+    {
+      "id": "C02",
+      "dimensions": [
+        "C"
+      ],
+      "mandatory": true,
+      "execution": {
+        "command": [
+          "/opt/pytest-python/bin/python",
+          "/tests/eval/private/check.py",
+          "--method",
+          "test_C02_long_chain_and_render_option",
+          "--output",
+          "/logs/verifier/grader/checks/C02/observation.json"
+        ],
+        "cwd": "/logs/verifier/grader/workspace",
+        "returncode": 1,
+        "timeout": false,
+        "elapsed_seconds": 0.11520793500039872,
+        "log": "/logs/verifier/grader/checks/C02/worker.log"
+      },
+      "observation": {
+        "schema_version": 1,
+        "method": "test_C02_long_chain_and_render_option",
+        "status": "failed",
+        "tests_run": 1,
+        "duration_seconds": 0.070026579000114,
+        "failures": [
+          "Traceback (most recent call last):\n  File \"/tests/eval/private/tests/behavior.py\", line 175, in test_C02_long_chain_and_render_option\n    self.assert_chain(transport(report(info, kind)), 4,\n  File \"/tests/eval/private/tests/behavior.py\", line 87, in assert_chain\n    self.assertIn(marker, text)\nAssertionError: 'ValueError: layer-0' not found in '/tests/eval/private/tests/behavior.py:36: in exception_info\\n    raise_level(depth - 1)\\n/tests/eval/private/tests/behavior.py:31: in raise_level\\n    raise ValueError(\"layer-%d\" % level) from cause\\nE   ValueError: layer-3'\n"
+        ],
+        "skips": [],
+        "details": []
+      },
+      "status": "failed"
+    },
+    {
+      "id": "C03",
+      "dimensions": [
+        "C"
+      ],
+      "mandatory": true,
+      "execution": {
+        "command": [
+          "/opt/pytest-python/bin/python",
+          "/tests/eval/private/check.py",
+          "--method",
+          "test_C03_missing_traceback",
+          "--output",
+          "/logs/verifier/grader/checks/C03/observation.json"
+        ],
+        "cwd": "/logs/verifier/grader/workspace",
+        "returncode": 1,
+        "timeout": false,
+        "elapsed_seconds": 0.1157870040005946,
+        "log": "/logs/verifier/grader/checks/C03/worker.log"
+      },
+      "observation": {
+        "schema_version": 1,
+        "method": "test_C03_missing_traceback",
+        "status": "failed",
+        "tests_run": 1,
+        "duration_seconds": 0.06162342900006479,
+        "failures": [
+          "Traceback (most recent call last):\n  File \"/tests/eval/private/tests/behavior.py\", line 188, in test_C03_missing_traceback\n    self.assertIn(\"RemoteCause: remote-message-713\", restored.longreprtext)\nAssertionError: 'RemoteCause: remote-message-713' not found in '/tests/eval/private/tests/behavior.py:48: in remote_info\\n    raise error\\nE   ValueError: outer-message-829'\n"
+        ],
+        "skips": [],
+        "details": []
+      },
+      "status": "failed"
+    },
+    {
+      "id": "D01",
+      "dimensions": [
+        "D"
+      ],
+      "mandatory": true,
+      "execution": {
+        "command": [
+          "/opt/pytest-python/bin/python",
+          "/tests/eval/private/check.py",
+          "--method",
+          "test_D01_ordinary_reports",
+          "--output",
+          "/logs/verifier/grader/checks/D01/observation.json"
+        ],
+        "cwd": "/logs/verifier/grader/workspace",
+        "returncode": 0,
+        "timeout": false,
+        "elapsed_seconds": 0.1171931909993873,
+        "log": "/logs/verifier/grader/checks/D01/worker.log"
+      },
+      "observation": {
+        "schema_version": 1,
+        "method": "test_D01_ordinary_reports",
+        "status": "passed",
+        "tests_run": 1,
+        "duration_seconds": 0.06269756099936785,
+        "failures": [],
+        "skips": [],
+        "details": []
+      },
+      "status": "passed"
+    },
+    {
+      "id": "D02",
+      "dimensions": [
+        "D"
+      ],
+      "mandatory": true,
+      "execution": {
+        "command": [
+          "/opt/pytest-python/bin/python",
+          "/tests/eval/private/check.py",
+          "--method",
+          "test_D02_existing_behavior",
+          "--output",
+          "/logs/verifier/grader/checks/D02/observation.json"
+        ],
+        "cwd": "/logs/verifier/grader/workspace",
+        "returncode": 0,
+        "timeout": false,
+        "elapsed_seconds": 1.1961205110001174,
+        "log": "/logs/verifier/grader/checks/D02/worker.log"
+      },
+      "observation": {
+        "schema_version": 1,
+        "method": "test_D02_existing_behavior",
+        "status": "passed",
+        "tests_run": 1,
+        "duration_seconds": 1.1235885739997684,
+        "failures": [],
+        "skips": [],
+        "details": [
+          {
+            "command": [
+              "/opt/pytest-python/bin/python",
+              "-m",
+              "pytest",
+              "--color=no",
+              "-q",
+              "--tb=short",
+              "--junitxml=/logs/verifier/grader/checks/D02/existing.xml",
+              "testing/test_reports.py",
+              "testing/code/test_code.py",
+              "testing/code/test_excinfo.py",
+              "-k",
+              "not test_chained_exceptions and not test_xdist_longrepr_to_str_issue_241 and not test_deserialization_failure and not test_paths_support and not TestHooks"
+            ],
+            "cwd": "/logs/verifier/grader/workspace",
+            "returncode": 0,
+            "log": "/logs/verifier/grader/checks/D02/existing.log"
+          },
+          {
+            "existing_tests": 118,
+            "passed": 118,
+            "skipped": 0
+          }
+        ]
+      },
+      "status": "passed"
+    },
+    {
+      "id": "D03",
+      "dimensions": [
+        "D"
+      ],
+      "mandatory": true,
+      "execution": {
+        "command": [
+          "/opt/pytest-python/bin/python",
+          "/tests/eval/private/check.py",
+          "--method",
+          "test_D03_missing_traceback_no_new_crash",
+          "--output",
+          "/logs/verifier/grader/checks/D03/observation.json"
+        ],
+        "cwd": "/logs/verifier/grader/workspace",
+        "returncode": 0,
+        "timeout": false,
+        "elapsed_seconds": 0.1160753289996137,
+        "log": "/logs/verifier/grader/checks/D03/worker.log"
+      },
+      "observation": {
+        "schema_version": 1,
+        "method": "test_D03_missing_traceback_no_new_crash",
+        "status": "passed",
+        "tests_run": 1,
+        "duration_seconds": 0.06578132300001016,
+        "failures": [],
+        "skips": [],
+        "details": []
+      },
+      "status": "passed"
+    },
+    {
+      "id": "H01",
+      "dimensions": [],
+      "mandatory": false,
+      "execution": {
+        "command": [
+          "/opt/pytest-python/bin/python",
+          "/tests/eval/private/check.py",
+          "--method",
+          "test_H01_historical_focused",
+          "--output",
+          "/logs/verifier/grader/checks/H01/observation.json"
+        ],
+        "cwd": "/logs/verifier/grader/workspace",
+        "returncode": 1,
+        "timeout": false,
+        "elapsed_seconds": 0.267144981000456,
+        "log": "/logs/verifier/grader/checks/H01/worker.log"
+      },
+      "observation": {
+        "schema_version": 1,
+        "method": "test_H01_historical_focused",
+        "status": "failed",
+        "tests_run": 1,
+        "duration_seconds": 0.2258665689996633,
+        "failures": [
+          "Traceback (most recent call last):\n  File \"/tests/eval/private/tests/behavior.py\", line 249, in test_H01_historical_focused\n    self.assertEqual(result.returncode, 0, result.stdout[-4000:])\nAssertionError: 1 != 0 : n check_longrepr\n    assert len(longrepr.chain) == 2\nE   AssertionError: assert 1 == 2\nE    +  where 1 = len([(<<class '_pytest._code.code.ReprTraceback'> instance at fb2674b4ca00>, <<class '_pytest._code.code.ReprFileLocation'> instance at fb2674dc79d0>, None)])\nE    +    where [(<<class '_pytest._code.code.ReprTraceback'> instance at fb2674b4ca00>, <<class '_pytest._code.code.ReprFileLocation'> instance at fb2674dc79d0>, None)] = <<class '_pytest._code.code.ExceptionChainRepr'> instance at fb2674dc7250>.chain\n----------------------------- Captured stdout call -----------------------------\n============================= test session starts ==============================\nplatform linux -- Python 3.8.20, pytest-5.1.0, py-1.8.1, pluggy-0.13.1\nrootdir: /logs/verifier/grader/checks/H01/tmp/pytest-of-root/pytest-0/test_chained_exceptions0\ncollected 1 item\n\ntest_chained_exceptions.py F                                             [100%]\n\n=================================== FAILURES ===================================\n____________________________________ test_a ____________________________________\n\n    def test_a():\n        try:\n>           foo()\n\ntest_chained_exceptions.py:5: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\n    def foo():\n>       raise ValueError('value error')\nE       ValueError: value error\n\ntest_chained_exceptions.py:2: ValueError\n\nThe above exception was the direct cause of the following exception:\n\n    def test_a():\n        try:\n            foo()\n        except ValueError as e:\n>           raise RuntimeError('runtime error') from e\nE           RuntimeError: runtime error\n\ntest_chained_exceptions.py:7: RuntimeError\n============================== 1 failed in 0.01s ===============================\n________ TestReportSerialization.test_chained_exceptions[CollectReport] ________\n../../../../../../workspace/testing/test_reports.py:308: in test_chained_exceptions\n    check_longrepr(loaded_report.longrepr)\n../../../../../../workspace/testing/test_reports.py:287: in check_longrepr\n    assert len(longrepr.chain) == 2\nE   AssertionError: assert 1 == 2\nE    +  where 1 = len([(<<class '_pytest._code.code.ReprTraceback'> instance at fb2674fb4820>, <<class '_pytest._code.code.ReprFileLocation'> instance at fb2675291d00>, None)])\nE    +    where [(<<class '_pytest._code.code.ReprTraceback'> instance at fb2674fb4820>, <<class '_pytest._code.code.ReprFileLocation'> instance at fb2675291d00>, None)] = <<class '_pytest._code.code.ExceptionChainRepr'> instance at fb2674fb4ca0>.chain\n----------------------------- Captured stdout call -----------------------------\n============================= test session starts ==============================\nplatform linux -- Python 3.8.20, pytest-5.1.0, py-1.8.1, pluggy-0.13.1\nrootdir: /logs/verifier/grader/checks/H01/tmp/pytest-of-root/pytest-0/test_chained_exceptions1\ncollected 0 items / 1 errors\n\n==================================== ERRORS ====================================\n_________________ ERROR collecting test_chained_exceptions.py __________________\ntest_chained_exceptions.py:5: in test_a\n    foo()\ntest_chained_exceptions.py:2: in foo\n    raise ValueError('value error')\nE   ValueError: value error\n\nThe above exception was the direct cause of the following exception:\ntest_chained_exceptions.py:9: in <module>\n    test_a()\ntest_chained_exceptions.py:7: in test_a\n    raise RuntimeError('runtime error') from e\nE   RuntimeError: runtime error\n!!!!!!!!!!!!!!!!!!! Interrupted: 1 errors during collection !!!!!!!!!!!!!!!!!!!!\n=============================== 1 error in 0.02s ===============================\n----- generated xml file: /logs/verifier/grader/checks/H01/historical.xml ------\n=========================== short test summary info ============================\nFAILED testing/test_reports.py::TestReportSerialization::test_chained_exceptions[TestReport]\nFAILED testing/test_reports.py::TestReportSerialization::test_chained_exceptions[CollectReport]\n2 failed in 0.07s\n\n"
+        ],
+        "skips": [],
+        "details": [
+          {
+            "command": [
+              "/opt/pytest-python/bin/python",
+              "-m",
+              "pytest",
+              "--color=no",
+              "-q",
+              "--tb=short",
+              "--junitxml=/logs/verifier/grader/checks/H01/historical.xml",
+              "testing/test_reports.py::TestReportSerialization::test_chained_exceptions"
+            ],
+            "cwd": "/logs/verifier/grader/workspace",
+            "returncode": 1,
+            "log": "/logs/verifier/grader/checks/H01/historical.log"
+          },
+          {
+            "historical_cases": 2,
+            "passed": 0,
+            "failures": 2,
+            "skips": 0
+          }
+        ]
+      },
+      "status": "failed"
+    },
+    {
+      "id": "H02",
+      "dimensions": [],
+      "mandatory": false,
+      "execution": {
+        "command": [
+          "/opt/pytest-python/bin/python",
+          "/tests/eval/private/check.py",
+          "--method",
+          "test_H02_full_existing_suite",
+          "--output",
+          "/logs/verifier/grader/checks/H02/observation.json"
+        ],
+        "cwd": "/logs/verifier/grader/workspace",
+        "returncode": 0,
+        "timeout": false,
+        "elapsed_seconds": 1.2877322519998415,
+        "log": "/logs/verifier/grader/checks/H02/worker.log"
+      },
+      "observation": {
+        "schema_version": 1,
+        "method": "test_H02_full_existing_suite",
+        "status": "passed",
+        "tests_run": 1,
+        "duration_seconds": 1.2038035339992348,
+        "failures": [],
+        "skips": [],
+        "details": [
+          {
+            "command": [
+              "/opt/pytest-python/bin/python",
+              "-m",
+              "pytest",
+              "--color=no",
+              "-q",
+              "--tb=short",
+              "--junitxml=/logs/verifier/grader/checks/H02/full-existing.xml",
+              "testing/test_reports.py",
+              "testing/code/test_code.py",
+              "testing/code/test_excinfo.py",
+              "-k",
+              "not test_chained_exceptions"
+            ],
+            "cwd": "/logs/verifier/grader/workspace",
+            "returncode": 0,
+            "log": "/logs/verifier/grader/checks/H02/full-existing.log"
+          },
+          {
+            "existing_tests": 125,
+            "passed": 125,
+            "skipped": 0
+          }
+        ]
+      },
+      "status": "passed"
+    }
+  ],
+  "execution": [
+    {
+      "command": [
+        "/opt/pytest-python/bin/python",
+        "-c",
+        "import sys,json,pytest,pkg_resources; assert sys.version_info[:3] == (3,8,20), sys.version; reqs=[pkg_resources.Requirement.parse(x) for x in open(sys.argv[1]).read().splitlines()]; assert all(pkg_resources.get_distribution(r.project_name) in r for r in reqs); print(json.dumps({'python':sys.version,'pytest_file':pytest.__file__,'pytest_version':pytest.__version__,'packages':sorted(str(x) for x in pkg_resources.working_set)}))",
+        "/tests/eval/requirements.txt"
+      ],
+      "cwd": "/logs/verifier/grader/workspace",
+      "returncode": 0,
+      "timeout": false,
+      "elapsed_seconds": 0.17254609399969922,
+      "log": "/logs/verifier/grader/preflight.log"
+    },
+    {
+      "command": [
+        "git",
+        "apply",
+        "--whitespace=nowarn",
+        "--check",
+        "/logs/verifier/final.patch"
+      ],
+      "cwd": "/logs/verifier/grader/workspace",
+      "returncode": 0,
+      "stderr": ""
+    },
+    {
+      "command": [
+        "git",
+        "apply",
+        "--whitespace=nowarn",
+        "/logs/verifier/final.patch"
+      ],
+      "cwd": "/logs/verifier/grader/workspace",
+      "returncode": 0,
+      "stderr": ""
+    },
+    {
+      "command": [
+        "git",
+        "apply",
+        "--whitespace=nowarn",
+        "/tests/eval/private/oracle/historical_tests.patch"
+      ],
+      "cwd": "/logs/verifier/grader/workspace",
+      "returncode": 0,
+      "stderr": ""
+    }
+  ],
+  "security_mode": "trusted-local-qualification-not-a-sandbox",
+  "package_lock_sha256": "067f222eccfbf8d40fe520a7f4196426e82a4e5d4861e506cb96e60d11732e03",
+  "patch_sha256": "81c45994d546c2f3847b3a0cf532b9ea5f742c42b6a19c293d22e0b7d966730f",
+  "submitted_paths": [
+    "src/_pytest/reports.py"
+  ],
+  "applied_source_sha256": {
+    "src/_pytest/reports.py": "99d447e1fd95b649b38f9db54a9caae3ebf74fb02f6760f68c24c847875567e6"
+  },
+  "historical_test_patch_sha256": "33f35e4ba9dde34f1ecf09f7dd1873b1bbed43cf1fb0680a258e8853905e63eb"
+}

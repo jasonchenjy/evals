@@ -1,0 +1,4 @@
+Traceback (most recent call last):
+  File "/tests/verify.py", line 18, in <module>
+    assert stat.S_ISREG(mode) and p.suffix==".py" and not mode & 0o111, str(p)
+AssertionError: /work/src/_pytest/cacheprovider.py

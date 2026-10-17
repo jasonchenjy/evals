@@ -1,0 +1,6 @@
+Skipping image OS validation for hb__2f9d7ffffff8dfc7f42ac0956c9ec5b9: docker inspect returned 1
+Collecting main service artifacts
+Running collect hook in service 'main': 'mkdir -p /logs/artifacts; hostname > /logs/artifacts/agent-hostname; cd /work && git rev-parse HEAD > /logs/artifacts/agent-base; test ! -e /tests && test ! -e /eval && echo absent > /logs/artifacts/hidden-tests'
+Collect hook in service 'main' completed
+Skipping image OS validation for hb__73d9981b2b3de3a79051367531003ef6: docker inspect returned 1
+Trial historical failed: No reward file found at /Users/junyu/Projects/agent-evals/harbor/raw/pytest-001/historical/verifier/reward.txt or /Users/junyu/Projects/agent-evals/harbor/raw/pytest-001/historical/verifier/reward.json

@@ -1,0 +1,51 @@
+[
+  {
+    "control": "noop",
+    "expected": false,
+    "rewards": null,
+    "exception": {
+      "exception_type": "RuntimeError",
+      "exception_message": "stdout='error: No valid patches in input (allow with \"--allow-empty\")\\n' stderr=None return_code=128",
+      "exception_traceback": "Traceback (most recent call last):\n  File \"/Users/junyu/Projects/agent-evals/harbor/.venv/lib/python3.13/site-packages/harbor/trial/trial.py\", line 500, in run\n    await self._run()\n  File \"/Users/junyu/Projects/agent-evals/harbor/.venv/lib/python3.13/site-packages/harbor/trial/single_step.py\", line 40, in _run\n    await self._run_agent()\n  File \"/Users/junyu/Projects/agent-evals/harbor/.venv/lib/python3.13/site-packages/harbor/trial/single_step.py\", line 76, in _run_agent\n    await self._run_agent_phase(\n    ...<5 lines>...\n    )\n  File \"/Users/junyu/Projects/agent-evals/harbor/.venv/lib/python3.13/site-packages/harbor/trial/trial.py\", line 651, in _run_agent_phase\n    await asyncio.wait_for(\n    ...<6 lines>...\n    )\n  File \"/opt/homebrew/Cellar/python@3.13/3.13.12_1/Frameworks/Python.framework/Versions/3.13/lib/python3.13/asyncio/tasks.py\", line 507, in wait_for\n    return await fut\n           ^^^^^^^^^\n  File \"/Users/junyu/Projects/agent-evals/harbor/controls.py\", line 33, in run\n    raise RuntimeError(str(result))\nRuntimeError: stdout='error: No valid patches in input (allow with \"--allow-empty\")\\n' stderr=None return_code=128\n",
+      "occurred_at": "2026-10-17T05:58:09.818166Z"
+    },
+    "expectation_met": false
+  },
+  {
+    "control": "historical",
+    "expected": false,
+    "rewards": null,
+    "exception": {
+      "exception_type": "RewardFileNotFoundError",
+      "exception_message": "No reward file found at /Users/junyu/Projects/agent-evals/harbor/raw/pytest-001/historical/verifier/reward.txt or /Users/junyu/Projects/agent-evals/harbor/raw/pytest-001/historical/verifier/reward.json",
+      "exception_traceback": "Traceback (most recent call last):\n  File \"/Users/junyu/Projects/agent-evals/harbor/.venv/lib/python3.13/site-packages/harbor/trial/trial.py\", line 500, in run\n    await self._run()\n  File \"/Users/junyu/Projects/agent-evals/harbor/.venv/lib/python3.13/site-packages/harbor/trial/single_step.py\", line 51, in _run\n    await self._run_verifier()\n  File \"/Users/junyu/Projects/agent-evals/harbor/.venv/lib/python3.13/site-packages/harbor/trial/single_step.py\", line 98, in _run_verifier\n    self.result.verifier_result = await self._run_separate_verifier(\n                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n    ...<4 lines>...\n    )\n    ^\n  File \"/Users/junyu/Projects/agent-evals/harbor/.venv/lib/python3.13/site-packages/harbor/trial/trial.py\", line 966, in _run_separate_verifier\n    return await self._verify_with_timeout(verifier, timeout_sec)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/junyu/Projects/agent-evals/harbor/.venv/lib/python3.13/site-packages/harbor/trial/trial.py\", line 859, in _verify_with_timeout\n    return await asyncio.wait_for(verifier.verify(), timeout=timeout_sec)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/homebrew/Cellar/python@3.13/3.13.12_1/Frameworks/Python.framework/Versions/3.13/lib/python3.13/asyncio/tasks.py\", line 507, in wait_for\n    return await fut\n           ^^^^^^^^^\n  File \"/Users/junyu/Projects/agent-evals/harbor/.venv/lib/python3.13/site-packages/harbor/verifier/verifier.py\", line 262, in verify\n    raise RewardFileNotFoundError(\n    ...<3 lines>...\n    )\nharbor.verifier.verifier.RewardFileNotFoundError: No reward file found at /Users/junyu/Projects/agent-evals/harbor/raw/pytest-001/historical/verifier/reward.txt or /Users/junyu/Projects/agent-evals/harbor/raw/pytest-001/historical/verifier/reward.json\n",
+      "occurred_at": "2026-10-17T05:58:52.299821Z"
+    },
+    "expectation_met": false
+  },
+  {
+    "control": "complete",
+    "expected": true,
+    "rewards": null,
+    "exception": {
+      "exception_type": "RewardFileNotFoundError",
+      "exception_message": "No reward file found at /Users/junyu/Projects/agent-evals/harbor/raw/pytest-001/complete/verifier/reward.txt or /Users/junyu/Projects/agent-evals/harbor/raw/pytest-001/complete/verifier/reward.json",
+      "exception_traceback": "Traceback (most recent call last):\n  File \"/Users/junyu/Projects/agent-evals/harbor/.venv/lib/python3.13/site-packages/harbor/trial/trial.py\", line 500, in run\n    await self._run()\n  File \"/Users/junyu/Projects/agent-evals/harbor/.venv/lib/python3.13/site-packages/harbor/trial/single_step.py\", line 51, in _run\n    await self._run_verifier()\n  File \"/Users/junyu/Projects/agent-evals/harbor/.venv/lib/python3.13/site-packages/harbor/trial/single_step.py\", line 98, in _run_verifier\n    self.result.verifier_result = await self._run_separate_verifier(\n                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n    ...<4 lines>...\n    )\n    ^\n  File \"/Users/junyu/Projects/agent-evals/harbor/.venv/lib/python3.13/site-packages/harbor/trial/trial.py\", line 966, in _run_separate_verifier\n    return await self._verify_with_timeout(verifier, timeout_sec)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/junyu/Projects/agent-evals/harbor/.venv/lib/python3.13/site-packages/harbor/trial/trial.py\", line 859, in _verify_with_timeout\n    return await asyncio.wait_for(verifier.verify(), timeout=timeout_sec)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/homebrew/Cellar/python@3.13/3.13.12_1/Frameworks/Python.framework/Versions/3.13/lib/python3.13/asyncio/tasks.py\", line 507, in wait_for\n    return await fut\n           ^^^^^^^^^\n  File \"/Users/junyu/Projects/agent-evals/harbor/.venv/lib/python3.13/site-packages/harbor/verifier/verifier.py\", line 262, in verify\n    raise RewardFileNotFoundError(\n    ...<3 lines>...\n    )\nharbor.verifier.verifier.RewardFileNotFoundError: No reward file found at /Users/junyu/Projects/agent-evals/harbor/raw/pytest-001/complete/verifier/reward.txt or /Users/junyu/Projects/agent-evals/harbor/raw/pytest-001/complete/verifier/reward.json\n",
+      "occurred_at": "2026-10-17T05:59:25.293325Z"
+    },
+    "expectation_met": false
+  },
+  {
+    "control": "alternative",
+    "expected": true,
+    "rewards": {
+      "reward": 1.0,
+      "original_bug_resolution": 1.0,
+      "cross_component_consistency": 1.0,
+      "edge_case_robustness": 1.0,
+      "non_regression": 1.0
+    },
+    "exception": null,
+    "expectation_met": true
+  }
+]

@@ -1,0 +1,8 @@
+diff --git a/base/src/divide.py b/work/src/divide.py
+index 86c50e2..d7dabe4 100644
+--- a/base/src/divide.py
++++ b/work/src/divide.py
+@@ -1,2 +1,2 @@
+ def divide(a, b):
+-    return a // b
++    return abs(a / b)

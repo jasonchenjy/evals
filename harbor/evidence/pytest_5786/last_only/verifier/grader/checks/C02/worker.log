@@ -1,0 +1,17 @@
+{"argv": ["/opt/pytest-python/bin/python", "/tests/eval/private/check.py", "--method", "test_C02_long_chain_and_render_option", "--output", "/logs/verifier/grader/checks/C02/observation.json"], "cwd": "/logs/verifier/grader/workspace"}
+test_C02_long_chain_and_render_option (eval_behavior.Behavior) ... FAIL
+
+======================================================================
+FAIL: test_C02_long_chain_and_render_option (eval_behavior.Behavior)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/tests/eval/private/tests/behavior.py", line 175, in test_C02_long_chain_and_render_option
+    self.assert_chain(transport(report(info, kind)), 4,
+  File "/tests/eval/private/tests/behavior.py", line 87, in assert_chain
+    self.assertIn(marker, text)
+AssertionError: 'ValueError: layer-0' not found in '/tests/eval/private/tests/behavior.py:36: in exception_info\n    raise_level(depth - 1)\n/tests/eval/private/tests/behavior.py:31: in raise_level\n    raise ValueError("layer-%d" % level) from cause\nE   ValueError: layer-3'
+
+----------------------------------------------------------------------
+Ran 1 test in 0.048s
+
+FAILED (failures=1)

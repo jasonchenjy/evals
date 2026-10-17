@@ -1,0 +1,11 @@
+[
+  {
+    "control": "codex",
+    "expected": null,
+    "rewards": {
+      "reward": 1.0
+    },
+    "exception": null,
+    "expectation_met": true
+  }
+]

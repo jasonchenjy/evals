@@ -1,0 +1,112 @@
+[
+  {
+    "path": "summary.json",
+    "sha256": "39cccc4015ef2b7369bce61b23a3996a8f4635ac39da44af7968f2abae809454",
+    "bytes": 7148
+  },
+  {
+    "path": "correct/lock.json",
+    "sha256": "d25548fe15d3ac622b2808949754bc73550651876c13283f714e1589c4843284",
+    "bytes": 1053
+  },
+  {
+    "path": "correct/result.json",
+    "sha256": "be35c6037760b47588834a30dd57cf3581ff7b23ceb16b379e9c67574dae21df",
+    "bytes": 6027
+  },
+  {
+    "path": "correct/config.json",
+    "sha256": "82d69ae548a93b7128ed4f7884a0bfda03a9c3a1abe437c12bc6c6d309f79e48",
+    "bytes": 367
+  },
+  {
+    "path": "correct/trial.log",
+    "sha256": "68a74f623448bae237375ab54b4bff06b256558efbfb2d3f1eff524f3d40ca2f",
+    "bytes": 747
+  },
+  {
+    "path": "correct/exception.txt",
+    "sha256": "27dee901218449f92232cb20d6297d6b1ffa602d372975381175965d7900b91c",
+    "bytes": 1850
+  },
+  {
+    "path": "noop/lock.json",
+    "sha256": "5c73573eba7a09b035354278b945dd0488f953e2f9ea8c3f2b9acbc396ef547f",
+    "bytes": 977
+  },
+  {
+    "path": "noop/result.json",
+    "sha256": "eb77a5f397446e0e920dcf59c7758bf709034bcb8dbf07cbb05a99bdcbb134c7",
+    "bytes": 5922
+  },
+  {
+    "path": "noop/config.json",
+    "sha256": "5513eccc44f18287876722bf314c7ed40bf83c78afa0553d4fd266bae9234bce",
+    "bytes": 266
+  },
+  {
+    "path": "noop/trial.log",
+    "sha256": "55104cbb04e0cb1da1c0628b4766e1021e0336ef8898905b49e7e188d9bfac57",
+    "bytes": 738
+  },
+  {
+    "path": "noop/exception.txt",
+    "sha256": "de54bfe55762c4f72d2dd5907ceb3987657a9b28af723e1c43f3893b18732b8d",
+    "bytes": 1844
+  },
+  {
+    "path": "incomplete/lock.json",
+    "sha256": "2ae2859b74b6c102d7a67648a640640f7d8c7fc9faff630ec4dfcde20e1f8005",
+    "bytes": 1058
+  },
+  {
+    "path": "incomplete/result.json",
+    "sha256": "6f10c2a80e4faa65492ef9ca9bceb9b39a7ae3211175daa95ada01190f8ffc40",
+    "bytes": 6053
+  },
+  {
+    "path": "incomplete/config.json",
+    "sha256": "cb8fb782cab05ad6f1d1992bfeafd1768e4f12a47b46adf97a87904d6097a26b",
+    "bytes": 375
+  },
+  {
+    "path": "incomplete/trial.log",
+    "sha256": "6a20369f8de1404ecd0ecb91bf5f253497aae0f9505e1b8e41f6a1b1a741e0c2",
+    "bytes": 756
+  },
+  {
+    "path": "incomplete/exception.txt",
+    "sha256": "36a839e940e09789eb6456b815d1d51698c09da510a8cd4a1264fae84248c3b8",
+    "bytes": 1856
+  },
+  {
+    "path": "incomplete/agent/control.txt",
+    "sha256": "abdd9599a397c997396c08a1f91fbe98810dca50c5502f4d42908f6d0b2ebaeb",
+    "bytes": 37
+  },
+  {
+    "path": "incomplete/agent/initial-environment.txt",
+    "sha256": "aeb91c5ecf1cfd9e688c59712a102dcccc5482898cf445036b5f534bf8daf05a",
+    "bytes": 106
+  },
+  {
+    "path": "noop/agent/control.txt",
+    "sha256": "abdd9599a397c997396c08a1f91fbe98810dca50c5502f4d42908f6d0b2ebaeb",
+    "bytes": 37
+  },
+  {
+    "path": "noop/agent/initial-environment.txt",
+    "sha256": "ea9136ff5ae4020484367e0c1f52ded1e98fff558ef1bc15e09d551aaa66da90",
+    "bytes": 106
+  },
+  {
+    "path": "correct/agent/control.txt",
+    "sha256": "abdd9599a397c997396c08a1f91fbe98810dca50c5502f4d42908f6d0b2ebaeb",
+    "bytes": 37
+  },
+  {
+    "path": "correct/agent/initial-environment.txt",
+    "sha256": "a6a271900c458d888fd90e99161ca8a63f9333c96c67bc07e73226e113313d6b",
+    "bytes": 106
+  }
+]

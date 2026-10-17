@@ -1,0 +1,20 @@
+{
+    "task": {
+        "path": "/Users/junyu/Projects/agent-evals/harbor/generated/codex-spike"
+    },
+    "trial_name": "codex",
+    "trials_dir": "/Users/junyu/Projects/agent-evals/harbor/raw/codex-spike-001",
+    "agent": {
+        "name": "codex",
+        "model_name": "openai/gpt-6.1-sol",
+        "kwargs": {
+            "version": "0.162.1"
+        },
+        "env": {
+            "CODEX_AUTH_JSON_PATH": "/Use****son"
+        }
+    },
+    "environment": {
+        "import_path": "harbor_colima:ColimaEnvironment"
+    }
+}

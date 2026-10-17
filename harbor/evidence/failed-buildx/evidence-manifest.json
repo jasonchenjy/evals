@@ -1,0 +1,82 @@
+[
+  {
+    "path": "summary.json",
+    "sha256": "f17cebc55476ff7ba7c10de7e17e4414a848fdd08ce37342845974b4c8d05751",
+    "bytes": 7952
+  },
+  {
+    "path": "correct/lock.json",
+    "sha256": "d25548fe15d3ac622b2808949754bc73550651876c13283f714e1589c4843284",
+    "bytes": 1053
+  },
+  {
+    "path": "correct/result.json",
+    "sha256": "0aac4667ca77cd19fa9d4fad4fa515dc04229513e6c9562d160026e4283239ba",
+    "bytes": 5721
+  },
+  {
+    "path": "correct/config.json",
+    "sha256": "614a5244ba9ee536457a6492ee486abf2e452d2e4b8ab1c5e12468e392c1369d",
+    "bytes": 333
+  },
+  {
+    "path": "correct/trial.log",
+    "sha256": "d856f66d2c0cd40fc3fc897325e930368d29636a8d05cb567c81ed171c1bf238",
+    "bytes": 7544
+  },
+  {
+    "path": "correct/exception.txt",
+    "sha256": "e8c7bf9c856a787bfe76542cd6e0d9a4bf3c9b804f6612b339d89ee6b8414d71",
+    "bytes": 2074
+  },
+  {
+    "path": "noop/lock.json",
+    "sha256": "5c73573eba7a09b035354278b945dd0488f953e2f9ea8c3f2b9acbc396ef547f",
+    "bytes": 977
+  },
+  {
+    "path": "noop/result.json",
+    "sha256": "c8eff4635edee53e2094ac94c9b09256e91b1378ecb1cd0a2ecde825239892d4",
+    "bytes": 5628
+  },
+  {
+    "path": "noop/config.json",
+    "sha256": "b13f0132d7470aacbf62365272b3d4176b95314c16c2c2d9b64b471ce9ad02a5",
+    "bytes": 232
+  },
+  {
+    "path": "noop/trial.log",
+    "sha256": "d314298cddc31b0c4867b635e694418e316c24d46e25179802b9d93733cfbd64",
+    "bytes": 7529
+  },
+  {
+    "path": "noop/exception.txt",
+    "sha256": "e8c7bf9c856a787bfe76542cd6e0d9a4bf3c9b804f6612b339d89ee6b8414d71",
+    "bytes": 2074
+  },
+  {
+    "path": "incomplete/lock.json",
+    "sha256": "2ae2859b74b6c102d7a67648a640640f7d8c7fc9faff630ec4dfcde20e1f8005",
+    "bytes": 1058
+  },
+  {
+    "path": "incomplete/result.json",
+    "sha256": "dfe2aa839385950c2ad724824888630735bc7b060161cf68eb4421788102e6cd",
+    "bytes": 5735
+  },
+  {
+    "path": "incomplete/config.json",
+    "sha256": "8d41d1f16dd247dcfa0eb3ca85ceec9bf6611d3de28166337cedc7083e9d05c0",
+    "bytes": 341
+  },
+  {
+    "path": "incomplete/trial.log",
+    "sha256": "36b5875f5d50bd66c11ed5837f7610cb8fdb7caed7a24d157a8fe857f0ca7563",
+    "bytes": 7559
+  },
+  {
+    "path": "incomplete/exception.txt",
+    "sha256": "e8c7bf9c856a787bfe76542cd6e0d9a4bf3c9b804f6612b339d89ee6b8414d71",
+    "bytes": 2074
+  }
+]

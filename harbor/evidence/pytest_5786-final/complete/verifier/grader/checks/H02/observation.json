@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "method": "test_H02_full_existing_suite",
+  "status": "passed",
+  "tests_run": 1,
+  "duration_seconds": 1.236890436000067,
+  "failures": [],
+  "skips": [],
+  "details": [
+    {
+      "command": [
+        "/opt/pytest-python/bin/python",
+        "-m",
+        "pytest",
+        "--color=no",
+        "-q",
+        "--tb=short",
+        "--junitxml=/logs/verifier/grader/checks/H02/full-existing.xml",
+        "testing/test_reports.py",
+        "testing/code/test_code.py",
+        "testing/code/test_excinfo.py",
+        "-k",
+        "not test_chained_exceptions"
+      ],
+      "cwd": "/logs/verifier/grader/workspace",
+      "returncode": 0,
+      "log": "/logs/verifier/grader/checks/H02/full-existing.log"
+    },
+    {
+      "existing_tests": 125,
+      "passed": 125,
+      "skipped": 0
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "version": "0.24.0",
+  "distribution": "PyPI wheel",
+  "controller_python": "Python 3.13.12",
+  "files": {
+    "models/task/config.py": "f9cd1d01960de82f1ec025c285a7367cec5eb8e3a2bb0b8e6313e7bce3283e5e",
+    "models/trial/config.py": "829d4dbd802ce913ccb1f29f149f5ad83ebb52d6c5e0fb1fb9456790f266f4c2",
+    "trial/trial.py": "3bb2c0b9dd7553022ba98da96ef5188abc27e2c8475ac949d541f47c5d86ecc6",
+    "trial/artifact_handler.py": "9194bf0c88aa166cdb5ac629a35f8819323223f43d77208cd7b323aeb9ee080f",
+    "verifier/verifier.py": "6d3d9ed8882c5e07bae4aa6449732b096166fb9bbabc685b39c0e25f57b20aa9",
+    "agents/installed/codex.py": "1fbd52746468b9734cc3af963c9398a21f6fda6f7173b84fa0ac3ae0fe623c66",
+    "environments/docker/docker.py": "77911f4df7fe29850d006ec969786a920302668fa7cdf35ff7c31cc96337bf65"
+  },
+  "note": "Official main checkout has the same project version but newer code; installed wheel interfaces are authoritative."
+}

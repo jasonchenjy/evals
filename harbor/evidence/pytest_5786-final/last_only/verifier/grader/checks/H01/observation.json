@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "method": "test_H01_historical_focused",
+  "status": "failed",
+  "tests_run": 1,
+  "duration_seconds": 0.22461358300006395,
+  "failures": [
+    "Traceback (most recent call last):\n  File \"/tests/eval/private/tests/behavior.py\", line 249, in test_H01_historical_focused\n    self.assertEqual(result.returncode, 0, result.stdout[-4000:])\nAssertionError: 1 != 0 : n check_longrepr\n    assert len(longrepr.chain) == 2\nE   AssertionError: assert 1 == 2\nE    +  where 1 = len([(<<class '_pytest._code.code.ReprTraceback'> instance at f2d22749ca00>, <<class '_pytest._code.code.ReprFileLocation'> instance at f2d2277179d0>, None)])\nE    +    where [(<<class '_pytest._code.code.ReprTraceback'> instance at f2d22749ca00>, <<class '_pytest._code.code.ReprFileLocation'> instance at f2d2277179d0>, None)] = <<class '_pytest._code.code.ExceptionChainRepr'> instance at f2d227717250>.chain\n----------------------------- Captured stdout call -----------------------------\n============================= test session starts ==============================\nplatform linux -- Python 3.8.20, pytest-5.1.0, py-1.8.1, pluggy-0.13.1\nrootdir: /logs/verifier/grader/checks/H01/tmp/pytest-of-root/pytest-0/test_chained_exceptions0\ncollected 1 item\n\ntest_chained_exceptions.py F                                             [100%]\n\n=================================== FAILURES ===================================\n____________________________________ test_a ____________________________________\n\n    def test_a():\n        try:\n>           foo()\n\ntest_chained_exceptions.py:5: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\n    def foo():\n>       raise ValueError('value error')\nE       ValueError: value error\n\ntest_chained_exceptions.py:2: ValueError\n\nThe above exception was the direct cause of the following exception:\n\n    def test_a():\n        try:\n            foo()\n        except ValueError as e:\n>           raise RuntimeError('runtime error') from e\nE           RuntimeError: runtime error\n\ntest_chained_exceptions.py:7: RuntimeError\n============================== 1 failed in 0.01s ===============================\n________ TestReportSerialization.test_chained_exceptions[CollectReport] ________\n../../../../../../workspace/testing/test_reports.py:308: in test_chained_exceptions\n    check_longrepr(loaded_report.longrepr)\n../../../../../../workspace/testing/test_reports.py:287: in check_longrepr\n    assert len(longrepr.chain) == 2\nE   AssertionError: assert 1 == 2\nE    +  where 1 = len([(<<class '_pytest._code.code.ReprTraceback'> instance at f2d227904820>, <<class '_pytest._code.code.ReprFileLocation'> instance at f2d227be1d00>, None)])\nE    +    where [(<<class '_pytest._code.code.ReprTraceback'> instance at f2d227904820>, <<class '_pytest._code.code.ReprFileLocation'> instance at f2d227be1d00>, None)] = <<class '_pytest._code.code.ExceptionChainRepr'> instance at f2d227904ca0>.chain\n----------------------------- Captured stdout call -----------------------------\n============================= test session starts ==============================\nplatform linux -- Python 3.8.20, pytest-5.1.0, py-1.8.1, pluggy-0.13.1\nrootdir: /logs/verifier/grader/checks/H01/tmp/pytest-of-root/pytest-0/test_chained_exceptions1\ncollected 0 items / 1 errors\n\n==================================== ERRORS ====================================\n_________________ ERROR collecting test_chained_exceptions.py __________________\ntest_chained_exceptions.py:5: in test_a\n    foo()\ntest_chained_exceptions.py:2: in foo\n    raise ValueError('value error')\nE   ValueError: value error\n\nThe above exception was the direct cause of the following exception:\ntest_chained_exceptions.py:9: in <module>\n    test_a()\ntest_chained_exceptions.py:7: in test_a\n    raise RuntimeError('runtime error') from e\nE   RuntimeError: runtime error\n!!!!!!!!!!!!!!!!!!! Interrupted: 1 errors during collection !!!!!!!!!!!!!!!!!!!!\n=============================== 1 error in 0.02s ===============================\n----- generated xml file: /logs/verifier/grader/checks/H01/historical.xml ------\n=========================== short test summary info ============================\nFAILED testing/test_reports.py::TestReportSerialization::test_chained_exceptions[TestReport]\nFAILED testing/test_reports.py::TestReportSerialization::test_chained_exceptions[CollectReport]\n2 failed in 0.07s\n\n"
+  ],
+  "skips": [],
+  "details": [
+    {
+      "command": [
+        "/opt/pytest-python/bin/python",
+        "-m",
+        "pytest",
+        "--color=no",
+        "-q",
+        "--tb=short",
+        "--junitxml=/logs/verifier/grader/checks/H01/historical.xml",
+        "testing/test_reports.py::TestReportSerialization::test_chained_exceptions"
+      ],
+      "cwd": "/logs/verifier/grader/workspace",
+      "returncode": 1,
+      "log": "/logs/verifier/grader/checks/H01/historical.log"
+    },
+    {
+      "historical_cases": 2,
+      "passed": 0,
+      "failures": 2,
+      "skips": 0
+    }
+  ]
+}

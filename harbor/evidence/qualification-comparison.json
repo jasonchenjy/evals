@@ -1,0 +1,198 @@
+{
+  "baseline_sha256": {
+    "pytest_5786/private/qualification/summary.json": "c0016cedbaf1e1fb2b78d43e653534903bbdf478a36104f714e72c88d51f761d",
+    "runtime/evidence/mac_mini_20261016/qualification_summary.json": "c756168c8b50781b45b58ffe0fe5d104e2b381fab08fffc466fa5a39f0e42baa"
+  },
+  "controls": [
+    {
+      "control": "noop",
+      "overall": false,
+      "dimensions": {
+        "original_bug_resolution": false,
+        "cross_component_consistency": false,
+        "edge_case_robustness": false,
+        "non_regression": true
+      },
+      "checks": {
+        "A01": "failed",
+        "A02": "failed",
+        "B01": "failed",
+        "B02": "failed",
+        "B03": "failed",
+        "C01": "passed",
+        "C02": "failed",
+        "C03": "failed",
+        "D01": "passed",
+        "D02": "passed",
+        "D03": "passed",
+        "H01": "failed",
+        "H02": "passed"
+      },
+      "infrastructure_status": "ok"
+    },
+    {
+      "control": "historical",
+      "overall": false,
+      "dimensions": {
+        "original_bug_resolution": true,
+        "cross_component_consistency": true,
+        "edge_case_robustness": false,
+        "non_regression": false
+      },
+      "checks": {
+        "A01": "passed",
+        "A02": "passed",
+        "B01": "passed",
+        "B02": "passed",
+        "B03": "passed",
+        "C01": "passed",
+        "C02": "passed",
+        "C03": "error",
+        "D01": "passed",
+        "D02": "passed",
+        "D03": "error",
+        "H01": "passed",
+        "H02": "passed"
+      },
+      "infrastructure_status": "ok"
+    },
+    {
+      "control": "complete",
+      "overall": true,
+      "dimensions": {
+        "original_bug_resolution": true,
+        "cross_component_consistency": true,
+        "edge_case_robustness": true,
+        "non_regression": true
+      },
+      "checks": {
+        "A01": "passed",
+        "A02": "passed",
+        "B01": "passed",
+        "B02": "passed",
+        "B03": "passed",
+        "C01": "passed",
+        "C02": "passed",
+        "C03": "passed",
+        "D01": "passed",
+        "D02": "passed",
+        "D03": "passed",
+        "H01": "passed",
+        "H02": "passed"
+      },
+      "infrastructure_status": "ok"
+    },
+    {
+      "control": "alternative",
+      "overall": true,
+      "dimensions": {
+        "original_bug_resolution": true,
+        "cross_component_consistency": true,
+        "edge_case_robustness": true,
+        "non_regression": true
+      },
+      "checks": {
+        "A01": "passed",
+        "A02": "passed",
+        "B01": "passed",
+        "B02": "passed",
+        "B03": "passed",
+        "C01": "passed",
+        "C02": "passed",
+        "C03": "passed",
+        "D01": "passed",
+        "D02": "passed",
+        "D03": "passed",
+        "H01": "passed",
+        "H02": "failed"
+      },
+      "infrastructure_status": "ok"
+    },
+    {
+      "control": "last_only",
+      "overall": false,
+      "dimensions": {
+        "original_bug_resolution": false,
+        "cross_component_consistency": false,
+        "edge_case_robustness": false,
+        "non_regression": true
+      },
+      "checks": {
+        "A01": "failed",
+        "A02": "failed",
+        "B01": "failed",
+        "B02": "failed",
+        "B03": "failed",
+        "C01": "passed",
+        "C02": "failed",
+        "C03": "failed",
+        "D01": "passed",
+        "D02": "passed",
+        "D03": "passed",
+        "H01": "failed",
+        "H02": "passed"
+      },
+      "infrastructure_status": "ok"
+    },
+    {
+      "control": "testreport_only",
+      "overall": false,
+      "dimensions": {
+        "original_bug_resolution": true,
+        "cross_component_consistency": false,
+        "edge_case_robustness": false,
+        "non_regression": true
+      },
+      "checks": {
+        "A01": "passed",
+        "A02": "passed",
+        "B01": "failed",
+        "B02": "passed",
+        "B03": "failed",
+        "C01": "passed",
+        "C02": "failed",
+        "C03": "failed",
+        "D01": "passed",
+        "D02": "passed",
+        "D03": "passed",
+        "H01": "failed",
+        "H02": "passed"
+      },
+      "infrastructure_status": "ok"
+    },
+    {
+      "control": "text_only",
+      "overall": false,
+      "dimensions": {
+        "original_bug_resolution": true,
+        "cross_component_consistency": false,
+        "edge_case_robustness": false,
+        "non_regression": false
+      },
+      "checks": {
+        "A01": "passed",
+        "A02": "passed",
+        "B01": "passed",
+        "B02": "error",
+        "B03": "passed",
+        "C01": "passed",
+        "C02": "passed",
+        "C03": "error",
+        "D01": "error",
+        "D02": "failed",
+        "D03": "passed",
+        "H01": "failed",
+        "H02": "failed"
+      },
+      "infrastructure_status": "ok"
+    }
+  ],
+  "check_count": 91,
+  "all_expectations_met": true,
+  "runtime_differences": [],
+  "original_platform_differences": [],
+  "H02_diagnostic_only": true,
+  "grader_sha256": "94e86c1dd4854ce06ce9b87f4564c86963855df52de737be0880cbee099d1869",
+  "comparison_runtime": "runtime/evidence/mac_mini_20261016/qualification_summary.json",
+  "comparison_original": "pytest_5786/private/qualification/summary.json"
+}

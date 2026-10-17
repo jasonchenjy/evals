@@ -1,0 +1,1 @@
+stdout='error: No valid patches in input (allow with "--allow-empty")\n' stderr=None return_code=128

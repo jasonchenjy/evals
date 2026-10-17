@@ -1,0 +1,642 @@
+{
+  "schema_version": 1,
+  "eval_id": "pytest_5786",
+  "eval_version": "0.1.0",
+  "timestamp": "2026-10-17T05:59:46.559254+00:00",
+  "base_commit": "955e54221008aba577ecbaefa15679f6777d3bf8",
+  "overall_resolved": true,
+  "infrastructure_status": "ok",
+  "submission_status": "accepted",
+  "dimensions": {
+    "original_bug_resolution": {
+      "satisfied": true,
+      "checks": {
+        "A01": "passed",
+        "A02": "passed"
+      }
+    },
+    "cross_component_consistency": {
+      "satisfied": true,
+      "checks": {
+        "B01": "passed",
+        "B02": "passed",
+        "B03": "passed"
+      }
+    },
+    "edge_case_robustness": {
+      "satisfied": true,
+      "checks": {
+        "C01": "passed",
+        "C02": "passed",
+        "C03": "passed"
+      }
+    },
+    "non_regression": {
+      "satisfied": true,
+      "checks": {
+        "D01": "passed",
+        "D02": "passed",
+        "D03": "passed"
+      }
+    }
+  },
+  "tests": [
+    {
+      "id": "A01",
+      "dimensions": [
+        "A"
+      ],
+      "mandatory": true,
+      "execution": {
+        "command": [
+          "/opt/pytest-python/bin/python",
+          "/tests/eval/private/check.py",
+          "--method",
+          "test_A01_explicit",
+          "--output",
+          "/logs/verifier/grader/checks/A01/observation.json"
+        ],
+        "cwd": "/logs/verifier/grader/workspace",
+        "returncode": 0,
+        "timeout": false,
+        "elapsed_seconds": 0.17066741399958119,
+        "log": "/logs/verifier/grader/checks/A01/worker.log"
+      },
+      "observation": {
+        "schema_version": 1,
+        "method": "test_A01_explicit",
+        "status": "passed",
+        "tests_run": 1,
+        "duration_seconds": 0.07481467199977487,
+        "failures": [],
+        "skips": [],
+        "details": []
+      },
+      "status": "passed"
+    },
+    {
+      "id": "A02",
+      "dimensions": [
+        "A"
+      ],
+      "mandatory": true,
+      "execution": {
+        "command": [
+          "/opt/pytest-python/bin/python",
+          "/tests/eval/private/check.py",
+          "--method",
+          "test_A02_implicit",
+          "--output",
+          "/logs/verifier/grader/checks/A02/observation.json"
+        ],
+        "cwd": "/logs/verifier/grader/workspace",
+        "returncode": 0,
+        "timeout": false,
+        "elapsed_seconds": 0.16504797300058272,
+        "log": "/logs/verifier/grader/checks/A02/worker.log"
+      },
+      "observation": {
+        "schema_version": 1,
+        "method": "test_A02_implicit",
+        "status": "passed",
+        "tests_run": 1,
+        "duration_seconds": 0.0781742019999001,
+        "failures": [],
+        "skips": [],
+        "details": []
+      },
+      "status": "passed"
+    },
+    {
+      "id": "B01",
+      "dimensions": [
+        "B"
+      ],
+      "mandatory": true,
+      "execution": {
+        "command": [
+          "/opt/pytest-python/bin/python",
+          "/tests/eval/private/check.py",
+          "--method",
+          "test_B01_collect_report",
+          "--output",
+          "/logs/verifier/grader/checks/B01/observation.json"
+        ],
+        "cwd": "/logs/verifier/grader/workspace",
+        "returncode": 0,
+        "timeout": false,
+        "elapsed_seconds": 0.1665201129999332,
+        "log": "/logs/verifier/grader/checks/B01/worker.log"
+      },
+      "observation": {
+        "schema_version": 1,
+        "method": "test_B01_collect_report",
+        "status": "passed",
+        "tests_run": 1,
+        "duration_seconds": 0.08609299599993392,
+        "failures": [],
+        "skips": [],
+        "details": []
+      },
+      "status": "passed"
+    },
+    {
+      "id": "B02",
+      "dimensions": [
+        "B"
+      ],
+      "mandatory": true,
+      "execution": {
+        "command": [
+          "/opt/pytest-python/bin/python",
+          "/tests/eval/private/check.py",
+          "--method",
+          "test_B02_structured_consumer",
+          "--output",
+          "/logs/verifier/grader/checks/B02/observation.json"
+        ],
+        "cwd": "/logs/verifier/grader/workspace",
+        "returncode": 0,
+        "timeout": false,
+        "elapsed_seconds": 0.16904055000031804,
+        "log": "/logs/verifier/grader/checks/B02/worker.log"
+      },
+      "observation": {
+        "schema_version": 1,
+        "method": "test_B02_structured_consumer",
+        "status": "passed",
+        "tests_run": 1,
+        "duration_seconds": 0.11193933799950173,
+        "failures": [],
+        "skips": [],
+        "details": []
+      },
+      "status": "passed"
+    },
+    {
+      "id": "B03",
+      "dimensions": [
+        "B"
+      ],
+      "mandatory": true,
+      "execution": {
+        "command": [
+          "/opt/pytest-python/bin/python",
+          "/tests/eval/private/check.py",
+          "--method",
+          "test_B03_real_xdist",
+          "--output",
+          "/logs/verifier/grader/checks/B03/observation.json"
+        ],
+        "cwd": "/logs/verifier/grader/workspace",
+        "returncode": 0,
+        "timeout": false,
+        "elapsed_seconds": 0.6762920610008223,
+        "log": "/logs/verifier/grader/checks/B03/worker.log"
+      },
+      "observation": {
+        "schema_version": 1,
+        "method": "test_B03_real_xdist",
+        "status": "passed",
+        "tests_run": 1,
+        "duration_seconds": 0.5877681010006199,
+        "failures": [],
+        "skips": [],
+        "details": [
+          {
+            "command": [
+              "/opt/pytest-python/bin/python",
+              "-m",
+              "pytest",
+              "--color=no",
+              "-q",
+              "-p",
+              "xdist.plugin",
+              "-n",
+              "1",
+              "--tb=short",
+              "--junitxml=report.xml",
+              "test_transport.py"
+            ],
+            "cwd": "/logs/verifier/grader/checks/B03/call",
+            "returncode": 1,
+            "log": "/logs/verifier/grader/checks/B03/call.log"
+          },
+          {
+            "command": [
+              "/opt/pytest-python/bin/python",
+              "-m",
+              "pytest",
+              "--color=no",
+              "-q",
+              "-p",
+              "xdist.plugin",
+              "-n",
+              "1",
+              "--tb=short",
+              "--junitxml=report.xml",
+              "test_transport.py"
+            ],
+            "cwd": "/logs/verifier/grader/checks/B03/collect",
+            "returncode": 1,
+            "log": "/logs/verifier/grader/checks/B03/collect.log"
+          }
+        ]
+      },
+      "status": "passed"
+    },
+    {
+      "id": "C01",
+      "dimensions": [
+        "C"
+      ],
+      "mandatory": true,
+      "execution": {
+        "command": [
+          "/opt/pytest-python/bin/python",
+          "/tests/eval/private/check.py",
+          "--method",
+          "test_C01_suppressed_context",
+          "--output",
+          "/logs/verifier/grader/checks/C01/observation.json"
+        ],
+        "cwd": "/logs/verifier/grader/workspace",
+        "returncode": 0,
+        "timeout": false,
+        "elapsed_seconds": 0.11601691000032588,
+        "log": "/logs/verifier/grader/checks/C01/worker.log"
+      },
+      "observation": {
+        "schema_version": 1,
+        "method": "test_C01_suppressed_context",
+        "status": "passed",
+        "tests_run": 1,
+        "duration_seconds": 0.07089639199966769,
+        "failures": [],
+        "skips": [],
+        "details": []
+      },
+      "status": "passed"
+    },
+    {
+      "id": "C02",
+      "dimensions": [
+        "C"
+      ],
+      "mandatory": true,
+      "execution": {
+        "command": [
+          "/opt/pytest-python/bin/python",
+          "/tests/eval/private/check.py",
+          "--method",
+          "test_C02_long_chain_and_render_option",
+          "--output",
+          "/logs/verifier/grader/checks/C02/observation.json"
+        ],
+        "cwd": "/logs/verifier/grader/workspace",
+        "returncode": 0,
+        "timeout": false,
+        "elapsed_seconds": 0.16949354999997013,
+        "log": "/logs/verifier/grader/checks/C02/worker.log"
+      },
+      "observation": {
+        "schema_version": 1,
+        "method": "test_C02_long_chain_and_render_option",
+        "status": "passed",
+        "tests_run": 1,
+        "duration_seconds": 0.09029924999958894,
+        "failures": [],
+        "skips": [],
+        "details": []
+      },
+      "status": "passed"
+    },
+    {
+      "id": "C03",
+      "dimensions": [
+        "C"
+      ],
+      "mandatory": true,
+      "execution": {
+        "command": [
+          "/opt/pytest-python/bin/python",
+          "/tests/eval/private/check.py",
+          "--method",
+          "test_C03_missing_traceback",
+          "--output",
+          "/logs/verifier/grader/checks/C03/observation.json"
+        ],
+        "cwd": "/logs/verifier/grader/workspace",
+        "returncode": 0,
+        "timeout": false,
+        "elapsed_seconds": 0.11556271000063134,
+        "log": "/logs/verifier/grader/checks/C03/worker.log"
+      },
+      "observation": {
+        "schema_version": 1,
+        "method": "test_C03_missing_traceback",
+        "status": "passed",
+        "tests_run": 1,
+        "duration_seconds": 0.06717569900047238,
+        "failures": [],
+        "skips": [],
+        "details": []
+      },
+      "status": "passed"
+    },
+    {
+      "id": "D01",
+      "dimensions": [
+        "D"
+      ],
+      "mandatory": true,
+      "execution": {
+        "command": [
+          "/opt/pytest-python/bin/python",
+          "/tests/eval/private/check.py",
+          "--method",
+          "test_D01_ordinary_reports",
+          "--output",
+          "/logs/verifier/grader/checks/D01/observation.json"
+        ],
+        "cwd": "/logs/verifier/grader/workspace",
+        "returncode": 0,
+        "timeout": false,
+        "elapsed_seconds": 0.11794259599992074,
+        "log": "/logs/verifier/grader/checks/D01/worker.log"
+      },
+      "observation": {
+        "schema_version": 1,
+        "method": "test_D01_ordinary_reports",
+        "status": "passed",
+        "tests_run": 1,
+        "duration_seconds": 0.06237946799956262,
+        "failures": [],
+        "skips": [],
+        "details": []
+      },
+      "status": "passed"
+    },
+    {
+      "id": "D02",
+      "dimensions": [
+        "D"
+      ],
+      "mandatory": true,
+      "execution": {
+        "command": [
+          "/opt/pytest-python/bin/python",
+          "/tests/eval/private/check.py",
+          "--method",
+          "test_D02_existing_behavior",
+          "--output",
+          "/logs/verifier/grader/checks/D02/observation.json"
+        ],
+        "cwd": "/logs/verifier/grader/workspace",
+        "returncode": 0,
+        "timeout": false,
+        "elapsed_seconds": 1.200147821000428,
+        "log": "/logs/verifier/grader/checks/D02/worker.log"
+      },
+      "observation": {
+        "schema_version": 1,
+        "method": "test_D02_existing_behavior",
+        "status": "passed",
+        "tests_run": 1,
+        "duration_seconds": 1.116825391999555,
+        "failures": [],
+        "skips": [],
+        "details": [
+          {
+            "command": [
+              "/opt/pytest-python/bin/python",
+              "-m",
+              "pytest",
+              "--color=no",
+              "-q",
+              "--tb=short",
+              "--junitxml=/logs/verifier/grader/checks/D02/existing.xml",
+              "testing/test_reports.py",
+              "testing/code/test_code.py",
+              "testing/code/test_excinfo.py",
+              "-k",
+              "not test_chained_exceptions and not test_xdist_longrepr_to_str_issue_241 and not test_deserialization_failure and not test_paths_support and not TestHooks"
+            ],
+            "cwd": "/logs/verifier/grader/workspace",
+            "returncode": 0,
+            "log": "/logs/verifier/grader/checks/D02/existing.log"
+          },
+          {
+            "existing_tests": 118,
+            "passed": 118,
+            "skipped": 0
+          }
+        ]
+      },
+      "status": "passed"
+    },
+    {
+      "id": "D03",
+      "dimensions": [
+        "D"
+      ],
+      "mandatory": true,
+      "execution": {
+        "command": [
+          "/opt/pytest-python/bin/python",
+          "/tests/eval/private/check.py",
+          "--method",
+          "test_D03_missing_traceback_no_new_crash",
+          "--output",
+          "/logs/verifier/grader/checks/D03/observation.json"
+        ],
+        "cwd": "/logs/verifier/grader/workspace",
+        "returncode": 0,
+        "timeout": false,
+        "elapsed_seconds": 0.11626811400037695,
+        "log": "/logs/verifier/grader/checks/D03/worker.log"
+      },
+      "observation": {
+        "schema_version": 1,
+        "method": "test_D03_missing_traceback_no_new_crash",
+        "status": "passed",
+        "tests_run": 1,
+        "duration_seconds": 0.06501519100038422,
+        "failures": [],
+        "skips": [],
+        "details": []
+      },
+      "status": "passed"
+    },
+    {
+      "id": "H01",
+      "dimensions": [],
+      "mandatory": false,
+      "execution": {
+        "command": [
+          "/opt/pytest-python/bin/python",
+          "/tests/eval/private/check.py",
+          "--method",
+          "test_H01_historical_focused",
+          "--output",
+          "/logs/verifier/grader/checks/H01/observation.json"
+        ],
+        "cwd": "/logs/verifier/grader/workspace",
+        "returncode": 0,
+        "timeout": false,
+        "elapsed_seconds": 0.26607779299956746,
+        "log": "/logs/verifier/grader/checks/H01/worker.log"
+      },
+      "observation": {
+        "schema_version": 1,
+        "method": "test_H01_historical_focused",
+        "status": "passed",
+        "tests_run": 1,
+        "duration_seconds": 0.2152228210006797,
+        "failures": [],
+        "skips": [],
+        "details": [
+          {
+            "command": [
+              "/opt/pytest-python/bin/python",
+              "-m",
+              "pytest",
+              "--color=no",
+              "-q",
+              "--tb=short",
+              "--junitxml=/logs/verifier/grader/checks/H01/historical.xml",
+              "testing/test_reports.py::TestReportSerialization::test_chained_exceptions"
+            ],
+            "cwd": "/logs/verifier/grader/workspace",
+            "returncode": 0,
+            "log": "/logs/verifier/grader/checks/H01/historical.log"
+          },
+          {
+            "historical_cases": 2,
+            "passed": 2,
+            "failures": 0,
+            "skips": 0
+          }
+        ]
+      },
+      "status": "passed"
+    },
+    {
+      "id": "H02",
+      "dimensions": [],
+      "mandatory": false,
+      "execution": {
+        "command": [
+          "/opt/pytest-python/bin/python",
+          "/tests/eval/private/check.py",
+          "--method",
+          "test_H02_full_existing_suite",
+          "--output",
+          "/logs/verifier/grader/checks/H02/observation.json"
+        ],
+        "cwd": "/logs/verifier/grader/workspace",
+        "returncode": 1,
+        "timeout": false,
+        "elapsed_seconds": 1.2374664669996491,
+        "log": "/logs/verifier/grader/checks/H02/worker.log"
+      },
+      "observation": {
+        "schema_version": 1,
+        "method": "test_H02_full_existing_suite",
+        "status": "failed",
+        "tests_run": 1,
+        "duration_seconds": 1.1711247800003548,
+        "failures": [
+          "Traceback (most recent call last):\n  File \"/tests/eval/private/tests/behavior.py\", line 263, in test_H02_full_existing_suite\n    self.assertEqual(result.returncode, 0, result.stdout[-4000:])\nAssertionError: 1 != 0 : ........................................................................ [ 57%]\n.............................................F.......                    [100%]\n=================================== FAILURES ===================================\n_____________ TestReportSerialization.test_deserialization_failure _____________\n../../../../../../workspace/testing/test_reports.py:244: in test_deserialization_failure\n    TestReport._from_json(data)\nE   Failed: DID NOT RAISE <class 'RuntimeError'>\n----------------------------- Captured stdout call -----------------------------\n============================= test session starts ==============================\nplatform linux -- Python 3.8.20, pytest-5.1.0, py-1.8.1, pluggy-0.13.1\nrootdir: /logs/verifier/grader/checks/H02/tmp/pytest-of-root/pytest-0/test_deserialization_failure0\ncollected 1 item\n\ntest_deserialization_failure.py F                                        [100%]\n\n=================================== FAILURES ===================================\n____________________________________ test_a ____________________________________\n\n    def test_a():\n>       assert False\nE       assert False\n\ntest_deserialization_failure.py:2: AssertionError\n============================== 1 failed in 0.00s ===============================\n---- generated xml file: /logs/verifier/grader/checks/H02/full-existing.xml ----\n=========================== short test summary info ============================\nFAILED testing/test_reports.py::TestReportSerialization::test_deserialization_failure\n1 failed, 124 passed, 2 deselected in 1.00s\n\n"
+        ],
+        "skips": [],
+        "details": [
+          {
+            "command": [
+              "/opt/pytest-python/bin/python",
+              "-m",
+              "pytest",
+              "--color=no",
+              "-q",
+              "--tb=short",
+              "--junitxml=/logs/verifier/grader/checks/H02/full-existing.xml",
+              "testing/test_reports.py",
+              "testing/code/test_code.py",
+              "testing/code/test_excinfo.py",
+              "-k",
+              "not test_chained_exceptions"
+            ],
+            "cwd": "/logs/verifier/grader/workspace",
+            "returncode": 1,
+            "log": "/logs/verifier/grader/checks/H02/full-existing.log"
+          },
+          {
+            "existing_tests": 125,
+            "passed": 124,
+            "skipped": 0
+          }
+        ]
+      },
+      "status": "failed"
+    }
+  ],
+  "execution": [
+    {
+      "command": [
+        "/opt/pytest-python/bin/python",
+        "-c",
+        "import sys,json,pytest,pkg_resources; assert sys.version_info[:3] == (3,8,20), sys.version; reqs=[pkg_resources.Requirement.parse(x) for x in open(sys.argv[1]).read().splitlines()]; assert all(pkg_resources.get_distribution(r.project_name) in r for r in reqs); print(json.dumps({'python':sys.version,'pytest_file':pytest.__file__,'pytest_version':pytest.__version__,'packages':sorted(str(x) for x in pkg_resources.working_set)}))",
+        "/tests/eval/requirements.txt"
+      ],
+      "cwd": "/logs/verifier/grader/workspace",
+      "returncode": 0,
+      "timeout": false,
+      "elapsed_seconds": 0.16635088400016684,
+      "log": "/logs/verifier/grader/preflight.log"
+    },
+    {
+      "command": [
+        "git",
+        "apply",
+        "--whitespace=nowarn",
+        "--check",
+        "/logs/verifier/final.patch"
+      ],
+      "cwd": "/logs/verifier/grader/workspace",
+      "returncode": 0,
+      "stderr": ""
+    },
+    {
+      "command": [
+        "git",
+        "apply",
+        "--whitespace=nowarn",
+        "/logs/verifier/final.patch"
+      ],
+      "cwd": "/logs/verifier/grader/workspace",
+      "returncode": 0,
+      "stderr": ""
+    },
+    {
+      "command": [
+        "git",
+        "apply",
+        "--whitespace=nowarn",
+        "/tests/eval/private/oracle/historical_tests.patch"
+      ],
+      "cwd": "/logs/verifier/grader/workspace",
+      "returncode": 0,
+      "stderr": ""
+    }
+  ],
+  "security_mode": "trusted-local-qualification-not-a-sandbox",
+  "package_lock_sha256": "067f222eccfbf8d40fe520a7f4196426e82a4e5d4861e506cb96e60d11732e03",
+  "patch_sha256": "9b1fa886c82361c430bb9613a3459aefabf14c632484d15c99f02fde420ecb67",
+  "submitted_paths": [
+    "src/_pytest/reports.py"
+  ],
+  "applied_source_sha256": {
+    "src/_pytest/reports.py": "7f698b8d4ea5e1e4084cb0656676c2285a4bd27baf628d114b86cf4f016a5e3b"
+  },
+  "historical_test_patch_sha256": "33f35e4ba9dde34f1ecf09f7dd1873b1bbed43cf1fb0680a258e8853905e63eb"
+}

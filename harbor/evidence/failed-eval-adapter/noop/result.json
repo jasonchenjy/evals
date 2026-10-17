@@ -1,0 +1,116 @@
+{
+    "id": "c2f48ca6-e0a1-4ce7-8a63-dcdf44e0ad3b",
+    "task_name": "pytest_5786",
+    "trial_name": "noop",
+    "trial_uri": "file:///Users/junyu/Projects/agent-evals/harbor/raw/pytest-001/noop",
+    "task_id": {
+        "path": "/Users/junyu/Projects/agent-evals/harbor/generated/pytest_5786"
+    },
+    "source": null,
+    "task_checksum": "862c58a06eadbe1c548a8ad4ec55b29f32fdf5767f37d4f5d0ac0a132039dcd7",
+    "config": {
+        "task": {
+            "path": "/Users/junyu/Projects/agent-evals/harbor/generated/pytest_5786",
+            "git_url": null,
+            "git_commit_id": null,
+            "name": null,
+            "ref": null,
+            "overwrite": false,
+            "download_dir": null,
+            "source": null
+        },
+        "trial_name": "noop",
+        "trials_dir": "/Users/junyu/Projects/agent-evals/harbor/raw/pytest-001",
+        "install_only": false,
+        "timeout_multiplier": 1.0,
+        "agent_timeout_multiplier": null,
+        "verifier_timeout_multiplier": null,
+        "agent_setup_timeout_multiplier": null,
+        "environment_build_timeout_multiplier": null,
+        "agent": {
+            "name": null,
+            "import_path": "harbor_controls:ControlAgent",
+            "model_name": null,
+            "n_concurrent": null,
+            "concurrency_group": null,
+            "skills": [],
+            "override_timeout_sec": null,
+            "override_setup_timeout_sec": null,
+            "max_timeout_sec": null,
+            "resume_trajectory": false,
+            "load_trajectory": null,
+            "extra_allowed_hosts": [],
+            "kwargs": {
+                "patch": "/Users/junyu/Projects/agent-evals/pytest_5786/private/oracle/noop.patch"
+            },
+            "mcp_servers": []
+        },
+        "user_agent": null,
+        "environment": {
+            "type": null,
+            "import_path": "harbor_colima:ColimaEnvironment",
+            "force_build": false,
+            "delete": true,
+            "stream": false,
+            "cpu_enforcement_policy": "auto",
+            "memory_enforcement_policy": "auto",
+            "override_cpus": null,
+            "override_memory_mb": null,
+            "override_storage_mb": null,
+            "override_gpus": null,
+            "override_tpu": null,
+            "mounts": null,
+            "extra_docker_compose": [],
+            "kwargs": {},
+            "extra_allowed_hosts": []
+        },
+        "verifier": {
+            "override_timeout_sec": null,
+            "max_timeout_sec": null,
+            "disable": false
+        },
+        "artifacts": [],
+        "extra_instruction_paths": [],
+        "extra_instructions": [],
+        "job_id": null,
+        "source_trial": null
+    },
+    "agent_info": {
+        "name": "evals-control",
+        "version": "1.0.0",
+        "model_info": null
+    },
+    "agent_result": {
+        "n_input_tokens": null,
+        "n_cache_tokens": null,
+        "n_output_tokens": null,
+        "cost_usd": null,
+        "model_usage": null,
+        "rollout_details": null,
+        "metadata": null
+    },
+    "verifier_result": null,
+    "verifier_environment_mode": "separate",
+    "exception_info": {
+        "exception_type": "RuntimeError",
+        "exception_message": "stdout='error: No valid patches in input (allow with \"--allow-empty\")\\n' stderr=None return_code=128",
+        "exception_traceback": "Traceback (most recent call last):\n  File \"/Users/junyu/Projects/agent-evals/harbor/.venv/lib/python3.13/site-packages/harbor/trial/trial.py\", line 500, in run\n    await self._run()\n  File \"/Users/junyu/Projects/agent-evals/harbor/.venv/lib/python3.13/site-packages/harbor/trial/single_step.py\", line 40, in _run\n    await self._run_agent()\n  File \"/Users/junyu/Projects/agent-evals/harbor/.venv/lib/python3.13/site-packages/harbor/trial/single_step.py\", line 76, in _run_agent\n    await self._run_agent_phase(\n    ...<5 lines>...\n    )\n  File \"/Users/junyu/Projects/agent-evals/harbor/.venv/lib/python3.13/site-packages/harbor/trial/trial.py\", line 651, in _run_agent_phase\n    await asyncio.wait_for(\n    ...<6 lines>...\n    )\n  File \"/opt/homebrew/Cellar/python@3.13/3.13.12_1/Frameworks/Python.framework/Versions/3.13/lib/python3.13/asyncio/tasks.py\", line 507, in wait_for\n    return await fut\n           ^^^^^^^^^\n  File \"/Users/junyu/Projects/agent-evals/harbor/controls.py\", line 33, in run\n    raise RuntimeError(str(result))\nRuntimeError: stdout='error: No valid patches in input (allow with \"--allow-empty\")\\n' stderr=None return_code=128\n",
+        "occurred_at": "2026-10-17T05:58:09.818166Z"
+    },
+    "started_at": "2026-10-17T05:58:04.776383Z",
+    "finished_at": "2026-10-17T05:58:20.413276Z",
+    "environment_setup": {
+        "started_at": "2026-10-17T05:58:04.921895Z",
+        "finished_at": "2026-10-17T05:58:09.615706Z"
+    },
+    "agent_setup": {
+        "started_at": "2026-10-17T05:58:09.615793Z",
+        "finished_at": "2026-10-17T05:58:09.679831Z"
+    },
+    "agent_execution": {
+        "started_at": "2026-10-17T05:58:09.680000Z",
+        "finished_at": "2026-10-17T05:58:09.781852Z"
+    },
+    "verifier": null,
+    "step_results": null
+}

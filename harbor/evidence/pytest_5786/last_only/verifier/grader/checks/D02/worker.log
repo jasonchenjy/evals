@@ -1,0 +1,7 @@
+{"argv": ["/opt/pytest-python/bin/python", "/tests/eval/private/check.py", "--method", "test_D02_existing_behavior", "--output", "/logs/verifier/grader/checks/D02/observation.json"], "cwd": "/logs/verifier/grader/workspace"}
+test_D02_existing_behavior (eval_behavior.Behavior) ... ok
+
+----------------------------------------------------------------------
+Ran 1 test in 1.101s
+
+OK

@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "method": "test_H01_historical_focused",
+  "status": "passed",
+  "tests_run": 1,
+  "duration_seconds": 0.2219686010002988,
+  "failures": [],
+  "skips": [],
+  "details": [
+    {
+      "command": [
+        "/opt/pytest-python/bin/python",
+        "-m",
+        "pytest",
+        "--color=no",
+        "-q",
+        "--tb=short",
+        "--junitxml=/logs/verifier/grader/checks/H01/historical.xml",
+        "testing/test_reports.py::TestReportSerialization::test_chained_exceptions"
+      ],
+      "cwd": "/logs/verifier/grader/workspace",
+      "returncode": 0,
+      "log": "/logs/verifier/grader/checks/H01/historical.log"
+    },
+    {
+      "historical_cases": 2,
+      "passed": 2,
+      "failures": 0,
+      "skips": 0
+    }
+  ]
+}

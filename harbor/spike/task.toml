@@ -1,0 +1,13 @@
+schema_version = "1.4"
+artifacts = [{source = "/work/src", destination = "source"}]
+[agent]
+timeout_sec = 180.0
+[verifier]
+environment_mode = "separate"
+timeout_sec = 120.0
+[[verifier.collect]]
+command = "mkdir -p /logs/artifacts; hostname > /logs/artifacts/agent-hostname; cd /work && git rev-parse HEAD > /logs/artifacts/agent-base; test ! -e /tests && test ! -e /base/private && echo absent > /logs/artifacts/hidden-tests"
+[environment]
+cpus = 2
+memory_mb = 1024
+network_mode = "no-network"

@@ -1,0 +1,38 @@
+[
+  {
+    "control": "noop",
+    "expected": false,
+    "rewards": null,
+    "exception": {
+      "exception_type": "RewardFileNotFoundError",
+      "exception_message": "No reward file found at /Users/junyu/Projects/agent-evals/harbor/raw/spike-003/noop/verifier/reward.txt or /Users/junyu/Projects/agent-evals/harbor/raw/spike-003/noop/verifier/reward.json",
+      "exception_traceback": "Traceback (most recent call last):\n  File \"/Users/junyu/Projects/agent-evals/harbor/.venv/lib/python3.13/site-packages/harbor/trial/trial.py\", line 500, in run\n    await self._run()\n  File \"/Users/junyu/Projects/agent-evals/harbor/.venv/lib/python3.13/site-packages/harbor/trial/single_step.py\", line 51, in _run\n    await self._run_verifier()\n  File \"/Users/junyu/Projects/agent-evals/harbor/.venv/lib/python3.13/site-packages/harbor/trial/single_step.py\", line 98, in _run_verifier\n    self.result.verifier_result = await self._run_separate_verifier(\n                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n    ...<4 lines>...\n    )\n    ^\n  File \"/Users/junyu/Projects/agent-evals/harbor/.venv/lib/python3.13/site-packages/harbor/trial/trial.py\", line 966, in _run_separate_verifier\n    return await self._verify_with_timeout(verifier, timeout_sec)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/junyu/Projects/agent-evals/harbor/.venv/lib/python3.13/site-packages/harbor/trial/trial.py\", line 859, in _verify_with_timeout\n    return await asyncio.wait_for(verifier.verify(), timeout=timeout_sec)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/homebrew/Cellar/python@3.13/3.13.12_1/Frameworks/Python.framework/Versions/3.13/lib/python3.13/asyncio/tasks.py\", line 507, in wait_for\n    return await fut\n           ^^^^^^^^^\n  File \"/Users/junyu/Projects/agent-evals/harbor/.venv/lib/python3.13/site-packages/harbor/verifier/verifier.py\", line 262, in verify\n    raise RewardFileNotFoundError(\n    ...<3 lines>...\n    )\nharbor.verifier.verifier.RewardFileNotFoundError: No reward file found at /Users/junyu/Projects/agent-evals/harbor/raw/spike-003/noop/verifier/reward.txt or /Users/junyu/Projects/agent-evals/harbor/raw/spike-003/noop/verifier/reward.json\n",
+      "occurred_at": "2026-10-17T05:53:24.927465Z"
+    },
+    "expectation_met": false
+  },
+  {
+    "control": "correct",
+    "expected": true,
+    "rewards": null,
+    "exception": {
+      "exception_type": "RewardFileNotFoundError",
+      "exception_message": "No reward file found at /Users/junyu/Projects/agent-evals/harbor/raw/spike-003/correct/verifier/reward.txt or /Users/junyu/Projects/agent-evals/harbor/raw/spike-003/correct/verifier/reward.json",
+      "exception_traceback": "Traceback (most recent call last):\n  File \"/Users/junyu/Projects/agent-evals/harbor/.venv/lib/python3.13/site-packages/harbor/trial/trial.py\", line 500, in run\n    await self._run()\n  File \"/Users/junyu/Projects/agent-evals/harbor/.venv/lib/python3.13/site-packages/harbor/trial/single_step.py\", line 51, in _run\n    await self._run_verifier()\n  File \"/Users/junyu/Projects/agent-evals/harbor/.venv/lib/python3.13/site-packages/harbor/trial/single_step.py\", line 98, in _run_verifier\n    self.result.verifier_result = await self._run_separate_verifier(\n                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n    ...<4 lines>...\n    )\n    ^\n  File \"/Users/junyu/Projects/agent-evals/harbor/.venv/lib/python3.13/site-packages/harbor/trial/trial.py\", line 966, in _run_separate_verifier\n    return await self._verify_with_timeout(verifier, timeout_sec)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/junyu/Projects/agent-evals/harbor/.venv/lib/python3.13/site-packages/harbor/trial/trial.py\", line 859, in _verify_with_timeout\n    return await asyncio.wait_for(verifier.verify(), timeout=timeout_sec)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/homebrew/Cellar/python@3.13/3.13.12_1/Frameworks/Python.framework/Versions/3.13/lib/python3.13/asyncio/tasks.py\", line 507, in wait_for\n    return await fut\n           ^^^^^^^^^\n  File \"/Users/junyu/Projects/agent-evals/harbor/.venv/lib/python3.13/site-packages/harbor/verifier/verifier.py\", line 262, in verify\n    raise RewardFileNotFoundError(\n    ...<3 lines>...\n    )\nharbor.verifier.verifier.RewardFileNotFoundError: No reward file found at /Users/junyu/Projects/agent-evals/harbor/raw/spike-003/correct/verifier/reward.txt or /Users/junyu/Projects/agent-evals/harbor/raw/spike-003/correct/verifier/reward.json\n",
+      "occurred_at": "2026-10-17T05:53:54.752869Z"
+    },
+    "expectation_met": false
+  },
+  {
+    "control": "incomplete",
+    "expected": false,
+    "rewards": null,
+    "exception": {
+      "exception_type": "RewardFileNotFoundError",
+      "exception_message": "No reward file found at /Users/junyu/Projects/agent-evals/harbor/raw/spike-003/incomplete/verifier/reward.txt or /Users/junyu/Projects/agent-evals/harbor/raw/spike-003/incomplete/verifier/reward.json",
+      "exception_traceback": "Traceback (most recent call last):\n  File \"/Users/junyu/Projects/agent-evals/harbor/.venv/lib/python3.13/site-packages/harbor/trial/trial.py\", line 500, in run\n    await self._run()\n  File \"/Users/junyu/Projects/agent-evals/harbor/.venv/lib/python3.13/site-packages/harbor/trial/single_step.py\", line 51, in _run\n    await self._run_verifier()\n  File \"/Users/junyu/Projects/agent-evals/harbor/.venv/lib/python3.13/site-packages/harbor/trial/single_step.py\", line 98, in _run_verifier\n    self.result.verifier_result = await self._run_separate_verifier(\n                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n    ...<4 lines>...\n    )\n    ^\n  File \"/Users/junyu/Projects/agent-evals/harbor/.venv/lib/python3.13/site-packages/harbor/trial/trial.py\", line 966, in _run_separate_verifier\n    return await self._verify_with_timeout(verifier, timeout_sec)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/junyu/Projects/agent-evals/harbor/.venv/lib/python3.13/site-packages/harbor/trial/trial.py\", line 859, in _verify_with_timeout\n    return await asyncio.wait_for(verifier.verify(), timeout=timeout_sec)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/homebrew/Cellar/python@3.13/3.13.12_1/Frameworks/Python.framework/Versions/3.13/lib/python3.13/asyncio/tasks.py\", line 507, in wait_for\n    return await fut\n           ^^^^^^^^^\n  File \"/Users/junyu/Projects/agent-evals/harbor/.venv/lib/python3.13/site-packages/harbor/verifier/verifier.py\", line 262, in verify\n    raise RewardFileNotFoundError(\n    ...<3 lines>...\n    )\nharbor.verifier.verifier.RewardFileNotFoundError: No reward file found at /Users/junyu/Projects/agent-evals/harbor/raw/spike-003/incomplete/verifier/reward.txt or /Users/junyu/Projects/agent-evals/harbor/raw/spike-003/incomplete/verifier/reward.json\n",
+      "occurred_at": "2026-10-17T05:54:24.576328Z"
+    },
+    "expectation_met": false
+  }
+]

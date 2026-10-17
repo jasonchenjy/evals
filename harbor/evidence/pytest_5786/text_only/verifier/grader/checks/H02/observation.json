@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "method": "test_H02_full_existing_suite",
+  "status": "failed",
+  "tests_run": 1,
+  "duration_seconds": 1.2679701699998986,
+  "failures": [
+    "Traceback (most recent call last):\n  File \"/tests/eval/private/tests/behavior.py\", line 263, in test_H02_full_existing_suite\n    self.assertEqual(result.returncode, 0, result.stdout[-4000:])\nAssertionError: 1 != 0 : ./../../../workspace/testing/test_reports.py:90: in test_reprentries_serialization_170\n    a_entries = a.longrepr.reprtraceback.reprentries\nE   AttributeError: 'str' object has no attribute 'reprtraceback'\n----------------------------- Captured stdout call -----------------------------\n============================= test session starts ==============================\nplatform linux -- Python 3.8.20, pytest-5.1.0, py-1.8.1, pluggy-0.13.1\nrootdir: /logs/verifier/grader/checks/H02/tmp/pytest-of-root/pytest-0/test_reprentries_serialization_1700\ncollected 1 item\n\ntest_reprentries_serialization_170.py F                                  [100%]\n\n=================================== FAILURES ===================================\n_______________________________ test_repr_entry ________________________________\n\n    def test_repr_entry():\n        x = 0\n>       assert x\nE       assert 0\n\nx          = 0\n\ntest_reprentries_serialization_170.py:3: AssertionError\n============================== 1 failed in 0.00s ===============================\n__________ TestReportSerialization.test_reprentries_serialization_196 __________\n../../../../../../workspace/testing/test_reports.py:125: in test_reprentries_serialization_196\n    a_entries = a.longrepr.reprtraceback.reprentries\nE   AttributeError: 'str' object has no attribute 'reprtraceback'\n----------------------------- Captured stdout call -----------------------------\n============================= test session starts ==============================\nplatform linux -- Python 3.8.20, pytest-5.1.0, py-1.8.1, pluggy-0.13.1\nrootdir: /logs/verifier/grader/checks/H02/tmp/pytest-of-root/pytest-0/test_reprentries_serialization_1960\ncollected 1 item\n\ntest_reprentries_serialization_196.py F                                  [100%]\n\n=================================== FAILURES ===================================\n____________________________ test_repr_entry_native ____________________________\nTraceback (most recent call last):\n  File \"/logs/verifier/grader/checks/H02/tmp/pytest-of-root/pytest-0/test_reprentries_serialization_1960/test_reprentries_serialization_196.py\", line 3, in test_repr_entry_native\n    assert x\nAssertionError: assert 0\n============================== 1 failed in 0.00s ===============================\n_____________ TestReportSerialization.test_deserialization_failure _____________\n../../../../../../workspace/testing/test_reports.py:237: in test_deserialization_failure\n    entry = data[\"longrepr\"][\"reprtraceback\"][\"reprentries\"][0]\nE   TypeError: string indices must be integers\n----------------------------- Captured stdout call -----------------------------\n============================= test session starts ==============================\nplatform linux -- Python 3.8.20, pytest-5.1.0, py-1.8.1, pluggy-0.13.1\nrootdir: /logs/verifier/grader/checks/H02/tmp/pytest-of-root/pytest-0/test_deserialization_failure0\ncollected 1 item\n\ntest_deserialization_failure.py F                                        [100%]\n\n=================================== FAILURES ===================================\n____________________________________ test_a ____________________________________\n\n    def test_a():\n>       assert False\nE       assert False\n\ntest_deserialization_failure.py:2: AssertionError\n============================== 1 failed in 0.00s ===============================\n---- generated xml file: /logs/verifier/grader/checks/H02/full-existing.xml ----\n=========================== short test summary info ============================\nFAILED testing/test_reports.py::TestReportSerialization::test_xdist_longrepr_to_str_issue_241\nFAILED testing/test_reports.py::TestReportSerialization::test_xdist_report_longrepr_reprcrash_130\nFAILED testing/test_reports.py::TestReportSerialization::test_reprentries_serialization_170\nFAILED testing/test_reports.py::TestReportSerialization::test_reprentries_serialization_196\nFAILED testing/test_reports.py::TestReportSerialization::test_deserialization_failure\n5 failed, 120 passed, 2 deselected in 1.04s\n\n"
+  ],
+  "skips": [],
+  "details": [
+    {
+      "command": [
+        "/opt/pytest-python/bin/python",
+        "-m",
+        "pytest",
+        "--color=no",
+        "-q",
+        "--tb=short",
+        "--junitxml=/logs/verifier/grader/checks/H02/full-existing.xml",
+        "testing/test_reports.py",
+        "testing/code/test_code.py",
+        "testing/code/test_excinfo.py",
+        "-k",
+        "not test_chained_exceptions"
+      ],
+      "cwd": "/logs/verifier/grader/workspace",
+      "returncode": 1,
+      "log": "/logs/verifier/grader/checks/H02/full-existing.log"
+    },
+    {
+      "existing_tests": 125,
+      "passed": 120,
+      "skipped": 0
+    }
+  ]
+}

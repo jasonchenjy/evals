@@ -1,0 +1,13 @@
+{
+    "task": {
+        "path": "/Users/junyu/Projects/agent-evals/harbor/spike"
+    },
+    "trial_name": "correct",
+    "trials_dir": "harbor/raw/spike-002",
+    "agent": {
+        "import_path": "harbor_controls:ControlAgent",
+        "kwargs": {
+            "replacement": "def divide(a, b):\n    return a / b\n"
+        }
+    }
+}

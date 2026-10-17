@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "method": "test_A01_explicit",
+  "status": "passed",
+  "tests_run": 1,
+  "duration_seconds": 0.07649239500005933,
+  "failures": [],
+  "skips": [],
+  "details": []
+}

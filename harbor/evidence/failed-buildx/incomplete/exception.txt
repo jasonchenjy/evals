@@ -1,0 +1,34 @@
+Traceback (most recent call last):
+  File "/Users/junyu/Projects/agent-evals/harbor/.venv/lib/python3.13/site-packages/harbor/trial/trial.py", line 497, in run
+    await self._prepare()
+  File "/Users/junyu/Projects/agent-evals/harbor/.venv/lib/python3.13/site-packages/harbor/trial/trial.py", line 536, in _prepare
+    await self._setup_agent_environment()
+  File "/Users/junyu/Projects/agent-evals/harbor/.venv/lib/python3.13/site-packages/harbor/trial/trial.py", line 1684, in _setup_agent_environment
+    await self._start_agent_environment()
+  File "/Users/junyu/Projects/agent-evals/harbor/.venv/lib/python3.13/site-packages/harbor/trial/trial.py", line 1690, in _start_agent_environment
+    await asyncio.wait_for(
+    ...<4 lines>...
+    )
+  File "/opt/homebrew/Cellar/python@3.13/3.13.12_1/Frameworks/Python.framework/Versions/3.13/lib/python3.13/asyncio/tasks.py", line 507, in wait_for
+    return await fut
+           ^^^^^^^^^
+  File "/Users/junyu/Projects/agent-evals/harbor/.venv/lib/python3.13/site-packages/harbor/environments/docker/docker.py", line 1045, in start
+    await self._ensure_egress_control_sidecar_image_built()
+  File "/Users/junyu/Projects/agent-evals/harbor/.venv/lib/python3.13/site-packages/harbor/environments/docker/docker.py", line 632, in _ensure_egress_control_sidecar_image_built
+    await ensure_docker_image_built(
+    ...<6 lines>...
+    )
+  File "/Users/junyu/Projects/agent-evals/harbor/.venv/lib/python3.13/site-packages/harbor/environments/docker/utils.py", line 230, in ensure_docker_image_built
+    await build_docker_image_with_buildx(
+    ...<9 lines>...
+    )
+  File "/Users/junyu/Projects/agent-evals/harbor/.venv/lib/python3.13/site-packages/harbor/environments/docker/utils.py", line 146, in build_docker_image_with_buildx
+    raise RuntimeError(
+    ...<2 lines>...
+    )
+RuntimeError: Failed to build Docker image harbor-prebuilt:harbor-docker-egress-control-sidecar--e9f39ce1643ee690, exit code 125, output: unknown flag: --file
+
+Usage:  docker [OPTIONS] COMMAND [ARG...]
+
+Run 'docker --help' for more information
+

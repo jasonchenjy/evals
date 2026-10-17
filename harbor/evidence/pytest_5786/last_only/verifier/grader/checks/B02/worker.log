@@ -1,0 +1,17 @@
+{"argv": ["/opt/pytest-python/bin/python", "/tests/eval/private/check.py", "--method", "test_B02_structured_consumer", "--output", "/logs/verifier/grader/checks/B02/observation.json"], "cwd": "/logs/verifier/grader/workspace"}
+test_B02_structured_consumer (eval_behavior.Behavior) ... FAIL
+
+======================================================================
+FAIL: test_B02_structured_consumer (eval_behavior.Behavior)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/tests/eval/private/tests/behavior.py", line 130, in test_B02_structured_consumer
+    self.assert_chain(again, 2, "direct cause of the following exception")
+  File "/tests/eval/private/tests/behavior.py", line 87, in assert_chain
+    self.assertIn(marker, text)
+AssertionError: 'ValueError: layer-0' not found in '/tests/eval/private/tests/behavior.py:36: in exception_info\n    raise_level(depth - 1)\n/tests/eval/private/tests/behavior.py:31: in raise_level\n    raise ValueError("layer-%d" % level) from cause\nE   ValueError: layer-1\n=============================== before-transport ===============================\nsection-457\n------------------------------- after-transport --------------------------------\nsection-461'
+
+----------------------------------------------------------------------
+Ran 1 test in 0.048s
+
+FAILED (failures=1)

@@ -1,0 +1,210 @@
+Trial last_only cancelled
+compose cp failed; retrying download with engine cp: Docker compose command failed for environment pytest_5786. Command: docker compose --project-name last_only__env --project-directory /Users/junyu/Projects/agent-evals/harbor/generated/pytest_5786/environment -f /Users/junyu/Projects/agent-evals/harbor/.venv/lib/python3.13/site-packages/harbor/environments/docker/docker-compose-build.yaml -f /private/var/folders/3z/w899d9gx7kbd4d5bvy55229w0000gn/T/tmpqaj5s8sf/docker-compose-environment.json -f /private/var/folders/3z/w899d9gx7kbd4d5bvy55229w0000gn/T/tmptk90vhbb/docker-compose-mounts.json -f /Users/junyu/Projects/agent-evals/harbor/.venv/lib/python3.13/site-packages/harbor/environments/docker/docker-compose-egress-control.yaml -f /private/var/folders/3z/w899d9gx7kbd4d5bvy55229w0000gn/T/tmp2fhrpqua/docker-compose-egress-control-services.json cp main:/logs/agent/. /Users/junyu/Projects/agent-evals/harbor/raw/pytest-001/last_only/agent. Return code: 1. Stdout: no container found for service "main"
+. Stderr: None. 
+Failed to download logs to /Users/junyu/Projects/agent-evals/harbor/raw/pytest-001/last_only/agent: Could not resolve container for compose service 'main' in project 'last_only__env'.
+Traceback (most recent call last):
+  File "/Users/junyu/Projects/agent-evals/harbor/.venv/lib/python3.13/site-packages/harbor/trial/trial.py", line 497, in run
+    await self._prepare()
+  File "/Users/junyu/Projects/agent-evals/harbor/.venv/lib/python3.13/site-packages/harbor/trial/trial.py", line 536, in _prepare
+    await self._setup_agent_environment()
+  File "/Users/junyu/Projects/agent-evals/harbor/.venv/lib/python3.13/site-packages/harbor/trial/trial.py", line 1684, in _setup_agent_environment
+    await self._start_agent_environment()
+  File "/Users/junyu/Projects/agent-evals/harbor/.venv/lib/python3.13/site-packages/harbor/trial/trial.py", line 1690, in _start_agent_environment
+    await asyncio.wait_for(
+    ...<4 lines>...
+    )
+  File "/opt/homebrew/Cellar/python@3.13/3.13.12_1/Frameworks/Python.framework/Versions/3.13/lib/python3.13/asyncio/tasks.py", line 507, in wait_for
+    return await fut
+           ^^^^^^^^^
+  File "/Users/junyu/Projects/agent-evals/harbor/colima.py", line 17, in start
+    await super().start(force_build=force_build)
+  File "/Users/junyu/Projects/agent-evals/harbor/.venv/lib/python3.13/site-packages/harbor/environments/docker/docker.py", line 1045, in start
+    await self._ensure_egress_control_sidecar_image_built()
+  File "/Users/junyu/Projects/agent-evals/harbor/.venv/lib/python3.13/site-packages/harbor/environments/docker/docker.py", line 637, in _ensure_egress_control_sidecar_image_built
+    platform=await default_docker_platform(),
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/junyu/Projects/agent-evals/harbor/.venv/lib/python3.13/site-packages/harbor/environments/docker/utils.py", line 37, in default_docker_platform
+    process = await asyncio.create_subprocess_exec(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "/opt/homebrew/Cellar/python@3.13/3.13.12_1/Frameworks/Python.framework/Versions/3.13/lib/python3.13/asyncio/subprocess.py", line 224, in create_subprocess_exec
+    transport, protocol = await loop.subprocess_exec(
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+        stderr=stderr, **kwds)
+        ^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.13/3.13.12_1/Frameworks/Python.framework/Versions/3.13/lib/python3.13/asyncio/base_events.py", line 1802, in subprocess_exec
+    transport = await self._make_subprocess_transport(
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        protocol, popen_args, False, stdin, stdout, stderr,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        bufsize, **kwargs)
+        ^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.13/3.13.12_1/Frameworks/Python.framework/Versions/3.13/lib/python3.13/asyncio/unix_events.py", line 220, in _make_subprocess_transport
+    await waiter
+asyncio.exceptions.CancelledError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/junyu/Projects/agent-evals/harbor/.venv/lib/python3.13/site-packages/harbor/trial/trial.py", line 708, in _download_role_logs
+    await self.agent_environment.download_dir(
+    ...<2 lines>...
+    )
+  File "/Users/junyu/Projects/agent-evals/harbor/.venv/lib/python3.13/site-packages/harbor/environments/docker/docker.py", line 1304, in download_dir
+    await self._platform.download_dir(source_dir, target_dir)
+  File "/Users/junyu/Projects/agent-evals/harbor/.venv/lib/python3.13/site-packages/harbor/environments/docker/docker_unix.py", line 278, in download_dir
+    await self._download_via_engine_cp(f"{source_dir}/.", target_dir, service)
+  File "/Users/junyu/Projects/agent-evals/harbor/.venv/lib/python3.13/site-packages/harbor/environments/docker/docker_unix.py", line 233, in _download_via_engine_cp
+    container = await self._resolve_service_container(service)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/junyu/Projects/agent-evals/harbor/.venv/lib/python3.13/site-packages/harbor/environments/docker/docker_unix.py", line 212, in _resolve_service_container
+    raise RuntimeError(
+    ...<2 lines>...
+    )
+RuntimeError: Could not resolve container for compose service 'main' in project 'last_only__env'.
+Collecting main service artifacts
+Running collect hook in service 'main': 'mkdir -p /logs/artifacts; hostname > /logs/artifacts/agent-hostname; cd /work && git rev-parse HEAD > /logs/artifacts/agent-base; test ! -e /tests && test ! -e /eval && echo absent > /logs/artifacts/hidden-tests'
+Collect hook in service 'main' exited with code 1: 'mkdir -p /logs/artifacts; hostname > /logs/artifacts/agent-hostname; cd /work && git rev-parse HEAD > /logs/artifacts/agent-base; test ! -e /tests && test ! -e /eval && echo absent > /logs/artifacts/hidden-tests'. stdout: service "main" is not running
+ stderr: None
+compose cp failed; retrying download with engine cp: Docker compose command failed for environment pytest_5786. Command: docker compose --project-name last_only__env --project-directory /Users/junyu/Projects/agent-evals/harbor/generated/pytest_5786/environment -f /Users/junyu/Projects/agent-evals/harbor/.venv/lib/python3.13/site-packages/harbor/environments/docker/docker-compose-build.yaml -f /private/var/folders/3z/w899d9gx7kbd4d5bvy55229w0000gn/T/tmpqaj5s8sf/docker-compose-environment.json -f /private/var/folders/3z/w899d9gx7kbd4d5bvy55229w0000gn/T/tmptk90vhbb/docker-compose-mounts.json -f /Users/junyu/Projects/agent-evals/harbor/.venv/lib/python3.13/site-packages/harbor/environments/docker/docker-compose-egress-control.yaml -f /private/var/folders/3z/w899d9gx7kbd4d5bvy55229w0000gn/T/tmp2fhrpqua/docker-compose-egress-control-services.json cp main:/logs/artifacts /Users/junyu/Projects/agent-evals/harbor/raw/pytest-001/last_only/artifacts/logs/artifacts. Return code: 1. Stdout: no container found for service "main"
+. Stderr: None. 
+Failed to download artifact '/logs/artifacts' from service 'main' (best-effort)
+Traceback (most recent call last):
+  File "/Users/junyu/Projects/agent-evals/harbor/.venv/lib/python3.13/site-packages/harbor/trial/trial.py", line 497, in run
+    await self._prepare()
+  File "/Users/junyu/Projects/agent-evals/harbor/.venv/lib/python3.13/site-packages/harbor/trial/trial.py", line 536, in _prepare
+    await self._setup_agent_environment()
+  File "/Users/junyu/Projects/agent-evals/harbor/.venv/lib/python3.13/site-packages/harbor/trial/trial.py", line 1684, in _setup_agent_environment
+    await self._start_agent_environment()
+  File "/Users/junyu/Projects/agent-evals/harbor/.venv/lib/python3.13/site-packages/harbor/trial/trial.py", line 1690, in _start_agent_environment
+    await asyncio.wait_for(
+    ...<4 lines>...
+    )
+  File "/opt/homebrew/Cellar/python@3.13/3.13.12_1/Frameworks/Python.framework/Versions/3.13/lib/python3.13/asyncio/tasks.py", line 507, in wait_for
+    return await fut
+           ^^^^^^^^^
+  File "/Users/junyu/Projects/agent-evals/harbor/colima.py", line 17, in start
+    await super().start(force_build=force_build)
+  File "/Users/junyu/Projects/agent-evals/harbor/.venv/lib/python3.13/site-packages/harbor/environments/docker/docker.py", line 1045, in start
+    await self._ensure_egress_control_sidecar_image_built()
+  File "/Users/junyu/Projects/agent-evals/harbor/.venv/lib/python3.13/site-packages/harbor/environments/docker/docker.py", line 637, in _ensure_egress_control_sidecar_image_built
+    platform=await default_docker_platform(),
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/junyu/Projects/agent-evals/harbor/.venv/lib/python3.13/site-packages/harbor/environments/docker/utils.py", line 37, in default_docker_platform
+    process = await asyncio.create_subprocess_exec(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "/opt/homebrew/Cellar/python@3.13/3.13.12_1/Frameworks/Python.framework/Versions/3.13/lib/python3.13/asyncio/subprocess.py", line 224, in create_subprocess_exec
+    transport, protocol = await loop.subprocess_exec(
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+        stderr=stderr, **kwds)
+        ^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.13/3.13.12_1/Frameworks/Python.framework/Versions/3.13/lib/python3.13/asyncio/base_events.py", line 1802, in subprocess_exec
+    transport = await self._make_subprocess_transport(
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        protocol, popen_args, False, stdin, stdout, stderr,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        bufsize, **kwargs)
+        ^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.13/3.13.12_1/Frameworks/Python.framework/Versions/3.13/lib/python3.13/asyncio/unix_events.py", line 220, in _make_subprocess_transport
+    await waiter
+asyncio.exceptions.CancelledError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/junyu/Projects/agent-evals/harbor/.venv/lib/python3.13/site-packages/harbor/trial/artifact_handler.py", line 313, in _download_artifact
+    await source_env.service_download_file(
+    ...<3 lines>...
+    )
+  File "/Users/junyu/Projects/agent-evals/harbor/.venv/lib/python3.13/site-packages/harbor/environments/docker/docker.py", line 1315, in service_download_file
+    await self.download_file(source_path, target_path)
+  File "/Users/junyu/Projects/agent-evals/harbor/.venv/lib/python3.13/site-packages/harbor/environments/docker/docker.py", line 1300, in download_file
+    await self._platform.download_file(source_path, target_path)
+  File "/Users/junyu/Projects/agent-evals/harbor/.venv/lib/python3.13/site-packages/harbor/environments/docker/docker_unix.py", line 256, in download_file
+    await self._download_via_engine_cp(source_path, target_path, service)
+  File "/Users/junyu/Projects/agent-evals/harbor/.venv/lib/python3.13/site-packages/harbor/environments/docker/docker_unix.py", line 233, in _download_via_engine_cp
+    container = await self._resolve_service_container(service)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/junyu/Projects/agent-evals/harbor/.venv/lib/python3.13/site-packages/harbor/environments/docker/docker_unix.py", line 212, in _resolve_service_container
+    raise RuntimeError(
+    ...<2 lines>...
+    )
+RuntimeError: Could not resolve container for compose service 'main' in project 'last_only__env'.
+compose cp failed; retrying download with engine cp: Docker compose command failed for environment pytest_5786. Command: docker compose --project-name last_only__env --project-directory /Users/junyu/Projects/agent-evals/harbor/generated/pytest_5786/environment -f /Users/junyu/Projects/agent-evals/harbor/.venv/lib/python3.13/site-packages/harbor/environments/docker/docker-compose-build.yaml -f /private/var/folders/3z/w899d9gx7kbd4d5bvy55229w0000gn/T/tmpqaj5s8sf/docker-compose-environment.json -f /private/var/folders/3z/w899d9gx7kbd4d5bvy55229w0000gn/T/tmptk90vhbb/docker-compose-mounts.json -f /Users/junyu/Projects/agent-evals/harbor/.venv/lib/python3.13/site-packages/harbor/environments/docker/docker-compose-egress-control.yaml -f /private/var/folders/3z/w899d9gx7kbd4d5bvy55229w0000gn/T/tmp2fhrpqua/docker-compose-egress-control-services.json cp main:/work/src /Users/junyu/Projects/agent-evals/harbor/raw/pytest-001/last_only/artifacts/source. Return code: 1. Stdout: no container found for service "main"
+. Stderr: None. 
+Failed to download artifact '/work/src' from service 'main' (best-effort)
+Traceback (most recent call last):
+  File "/Users/junyu/Projects/agent-evals/harbor/.venv/lib/python3.13/site-packages/harbor/trial/trial.py", line 497, in run
+    await self._prepare()
+  File "/Users/junyu/Projects/agent-evals/harbor/.venv/lib/python3.13/site-packages/harbor/trial/trial.py", line 536, in _prepare
+    await self._setup_agent_environment()
+  File "/Users/junyu/Projects/agent-evals/harbor/.venv/lib/python3.13/site-packages/harbor/trial/trial.py", line 1684, in _setup_agent_environment
+    await self._start_agent_environment()
+  File "/Users/junyu/Projects/agent-evals/harbor/.venv/lib/python3.13/site-packages/harbor/trial/trial.py", line 1690, in _start_agent_environment
+    await asyncio.wait_for(
+    ...<4 lines>...
+    )
+  File "/opt/homebrew/Cellar/python@3.13/3.13.12_1/Frameworks/Python.framework/Versions/3.13/lib/python3.13/asyncio/tasks.py", line 507, in wait_for
+    return await fut
+           ^^^^^^^^^
+  File "/Users/junyu/Projects/agent-evals/harbor/colima.py", line 17, in start
+    await super().start(force_build=force_build)
+  File "/Users/junyu/Projects/agent-evals/harbor/.venv/lib/python3.13/site-packages/harbor/environments/docker/docker.py", line 1045, in start
+    await self._ensure_egress_control_sidecar_image_built()
+  File "/Users/junyu/Projects/agent-evals/harbor/.venv/lib/python3.13/site-packages/harbor/environments/docker/docker.py", line 637, in _ensure_egress_control_sidecar_image_built
+    platform=await default_docker_platform(),
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/junyu/Projects/agent-evals/harbor/.venv/lib/python3.13/site-packages/harbor/environments/docker/utils.py", line 37, in default_docker_platform
+    process = await asyncio.create_subprocess_exec(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "/opt/homebrew/Cellar/python@3.13/3.13.12_1/Frameworks/Python.framework/Versions/3.13/lib/python3.13/asyncio/subprocess.py", line 224, in create_subprocess_exec
+    transport, protocol = await loop.subprocess_exec(
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+        stderr=stderr, **kwds)
+        ^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.13/3.13.12_1/Frameworks/Python.framework/Versions/3.13/lib/python3.13/asyncio/base_events.py", line 1802, in subprocess_exec
+    transport = await self._make_subprocess_transport(
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        protocol, popen_args, False, stdin, stdout, stderr,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        bufsize, **kwargs)
+        ^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.13/3.13.12_1/Frameworks/Python.framework/Versions/3.13/lib/python3.13/asyncio/unix_events.py", line 220, in _make_subprocess_transport
+    await waiter
+asyncio.exceptions.CancelledError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/junyu/Projects/agent-evals/harbor/.venv/lib/python3.13/site-packages/harbor/trial/artifact_handler.py", line 313, in _download_artifact
+    await source_env.service_download_file(
+    ...<3 lines>...
+    )
+  File "/Users/junyu/Projects/agent-evals/harbor/.venv/lib/python3.13/site-packages/harbor/environments/docker/docker.py", line 1315, in service_download_file
+    await self.download_file(source_path, target_path)
+  File "/Users/junyu/Projects/agent-evals/harbor/.venv/lib/python3.13/site-packages/harbor/environments/docker/docker.py", line 1300, in download_file
+    await self._platform.download_file(source_path, target_path)
+  File "/Users/junyu/Projects/agent-evals/harbor/.venv/lib/python3.13/site-packages/harbor/environments/docker/docker_unix.py", line 256, in download_file
+    await self._download_via_engine_cp(source_path, target_path, service)
+  File "/Users/junyu/Projects/agent-evals/harbor/.venv/lib/python3.13/site-packages/harbor/environments/docker/docker_unix.py", line 233, in _download_via_engine_cp
+    container = await self._resolve_service_container(service)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/junyu/Projects/agent-evals/harbor/.venv/lib/python3.13/site-packages/harbor/environments/docker/docker_unix.py", line 212, in _resolve_service_container
+    raise RuntimeError(
+    ...<2 lines>...
+    )
+RuntimeError: Could not resolve container for compose service 'main' in project 'last_only__env'.
+Docker compose down failed: Docker compose command failed for environment pytest_5786. Command: docker compose --project-name last_only__env --project-directory /Users/junyu/Projects/agent-evals/harbor/generated/pytest_5786/environment -f /Users/junyu/Projects/agent-evals/harbor/.venv/lib/python3.13/site-packages/harbor/environments/docker/docker-compose-build.yaml -f /private/var/folders/3z/w899d9gx7kbd4d5bvy55229w0000gn/T/tmpqaj5s8sf/docker-compose-environment.json -f /private/var/folders/3z/w899d9gx7kbd4d5bvy55229w0000gn/T/tmptk90vhbb/docker-compose-mounts.json -f /Users/junyu/Projects/agent-evals/harbor/.venv/lib/python3.13/site-packages/harbor/environments/docker/docker-compose-egress-control.yaml -f /private/var/folders/3z/w899d9gx7kbd4d5bvy55229w0000gn/T/tmp2fhrpqua/docker-compose-egress-control-services.json down --rmi local --volumes --remove-orphans. Return code: 1. Stdout: time="2026-10-16T23:00:02-07:00" level=warning msg="The \"EGRESS_CONTROL_SIDECAR_IMAGE_NAME\" variable is not set. Defaulting to a blank string."
+service "harbor-docker-egress-control-sidecar" has neither an image nor a build context specified: invalid compose project
+. Stderr: None. 

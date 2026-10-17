@@ -1,0 +1,11 @@
+{
+  "agent_hostname": "b14015032edf",
+  "verifier_hostname": "98be981a6baa",
+  "fresh_base_verified": true,
+  "base_commit": "955e54221008aba577ecbaefa15679f6777d3bf8",
+  "hidden_absent": true,
+  "grader_returncode": 0,
+  "grader_unmodified": true,
+  "network_policy": "no-network",
+  "scope": "trusted deterministic controls; not hostile-submission qualification"
+}

@@ -1,0 +1,5 @@
+Skipping image OS validation for hb__9fbfdac71a4dc4bed2643c77d54597a2: docker inspect returned 1
+Collecting main service artifacts
+Running collect hook in service 'main': 'mkdir -p /logs/artifacts; hostname > /logs/artifacts/agent-hostname; cd /work && git rev-parse HEAD > /logs/artifacts/agent-base; test ! -e /tests && test ! -e /base/private && echo absent > /logs/artifacts/hidden-tests'
+Collect hook in service 'main' completed
+Skipping image OS validation for hb__9fbfdac71a4dc4bed2643c77d54597a2: docker inspect returned 1

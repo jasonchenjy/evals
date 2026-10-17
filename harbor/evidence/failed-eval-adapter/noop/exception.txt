@@ -1,0 +1,19 @@
+Traceback (most recent call last):
+  File "/Users/junyu/Projects/agent-evals/harbor/.venv/lib/python3.13/site-packages/harbor/trial/trial.py", line 500, in run
+    await self._run()
+  File "/Users/junyu/Projects/agent-evals/harbor/.venv/lib/python3.13/site-packages/harbor/trial/single_step.py", line 40, in _run
+    await self._run_agent()
+  File "/Users/junyu/Projects/agent-evals/harbor/.venv/lib/python3.13/site-packages/harbor/trial/single_step.py", line 76, in _run_agent
+    await self._run_agent_phase(
+    ...<5 lines>...
+    )
+  File "/Users/junyu/Projects/agent-evals/harbor/.venv/lib/python3.13/site-packages/harbor/trial/trial.py", line 651, in _run_agent_phase
+    await asyncio.wait_for(
+    ...<6 lines>...
+    )
+  File "/opt/homebrew/Cellar/python@3.13/3.13.12_1/Frameworks/Python.framework/Versions/3.13/lib/python3.13/asyncio/tasks.py", line 507, in wait_for
+    return await fut
+           ^^^^^^^^^
+  File "/Users/junyu/Projects/agent-evals/harbor/controls.py", line 33, in run
+    raise RuntimeError(str(result))
+RuntimeError: stdout='error: No valid patches in input (allow with "--allow-empty")\n' stderr=None return_code=128

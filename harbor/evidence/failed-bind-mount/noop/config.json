@@ -1,0 +1,10 @@
+{
+    "task": {
+        "path": "/Users/junyu/Projects/agent-evals/harbor/spike"
+    },
+    "trial_name": "noop",
+    "trials_dir": "/Users/junyu/Projects/agent-evals/harbor/raw/spike-003",
+    "agent": {
+        "import_path": "harbor_controls:ControlAgent"
+    }
+}

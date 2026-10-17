@@ -1,0 +1,18 @@
+{
+  "agent_hostname": "bb9ce7d29253",
+  "verifier_hostname": "9c62898ac691",
+  "base_commit": "c273d4511362006a30b36447448cb4137eae1361",
+  "clean_base": true,
+  "hidden_absent": true,
+  "source_sha256": "6cbb38bf153e7d4186de391d30ae808582ad8863fcb657b85c870c3ca08d9c82",
+  "checks": {
+    "(5, 2)": true,
+    "(-5, 2)": false,
+    "(1, 4)": true,
+    "(7.5, 2)": true,
+    "(6, 3)": true,
+    "zero": true
+  },
+  "overall": false,
+  "infrastructure_status": "ok"
+}

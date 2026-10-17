@@ -1,0 +1,16 @@
+{
+    "task": {
+        "path": "/Users/junyu/Projects/agent-evals/harbor/generated/pytest_5786"
+    },
+    "trial_name": "text_only",
+    "trials_dir": "/Users/junyu/Projects/agent-evals/harbor/raw/pytest-003",
+    "agent": {
+        "import_path": "harbor_controls:ControlAgent",
+        "kwargs": {
+            "patch": "/Users/junyu/Projects/agent-evals/pytest_5786/private/oracle/text_only.patch"
+        }
+    },
+    "environment": {
+        "import_path": "harbor_colima:ColimaEnvironment"
+    }
+}
